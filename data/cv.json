@@ -1,0 +1,290 @@
+{
+  "_comment": "© 2020-2022 Carlos González Marco - Última actualización: 21/07/2022",
+  "category": [
+    {
+      "icon": "img/icons/briefcase.svg",
+      "title": "Experiencia laboral",
+      "entry": [
+        {
+          "logo": "img/logos/upv.png",
+          "date": "<span class=\"current\">11/2021 - acte.<\/span>",
+          "title": "<span class=\"current\">Técnico superior de investigación",
+          "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
+          "description": "Participación en el proyecto \"Monitorización y gestión del mantenimiento predictivo de vías interurbanas mediante técnicas de inteligencia artificial\" (NEUROVÍAS), adscrito al <a href=\"https://www.upv.es/entidades/DIC/\" target=\"_blank\">Departamento de Ingeniería de la Construcción y Proyectos de Ingeniería Civil</a> de la UPV."
+        },
+        {
+          "logo": "img/logos/outsourcing.png",
+          "date": "02/2022 - 07/2022<br/><p style=\"margin-left: -38.0px;\">11/2020 - 05/2021</p>",
+          "title": "Ingeniero técnico de telecomunicación",
+          "centre": "<a href=\"https://outsourcinggroup.es/\" target=\"_blank\">Outsourcing Group Desarrollo S. L.</a>",
+          "description": "Elaboración y firma de proyectos radioeléctricos de fase 1 para instalaciones de telefonía móvil."
+        },
+        {
+          "logo": "img/logos/servipoli.png",
+          "date": "10/2020 - 07/2021",
+          "title": "Analista auxiliar de sistemas",
+          "centre": "<a href=\"https://www.servipoli.es/\" target=\"_blank\">Fundación Servipoli de la Comunitat Valenciana</a>",
+          "description": "Tareas de programación y desarrollo web para la plataforma Sakai-PoliformaT, integrado en el <a href=\"https://www.upv.es/entidades/ASIC/indexc.html\" target=\"_blank\">Área de Servicios de la Información y de las Comunicaciones (ASIC)</a> de la UPV."
+        },
+        {
+          "logo": "img/logos/capgemini.png",
+          "date": "11/2019 - 03/2020<br/><p>09/2018 - 02/2019</p>",
+          "title": "Programador (prácticas)",
+          "centre": "<a href=\"https://www.capgemini.com/es-es/\" target=\"_blank\">Capgemini España S. L.</a>",
+          "description": "Prácticas curriculares del Máster Universitario en Ingeniería de Telecomunicación (UPV 19-20), y prácticas curriculares y extracurriculares del Grado en Ingeniería Telemática (UV 18-19)."
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/cap.svg",
+      "title": "Formación técnica reglada",
+      "entry": [
+        {
+          "logo": "img/logos/upv.png",
+          "date": "<span class=\"current\">09/2019 - acte.<\/span>",
+          "title": "<span class=\"current\">Máster Universitario en Ingeniería de Telecomunicación<\/span>",
+          "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
+          "description": ""
+        },
+        {
+          "logo": "img/logos/uv.png",
+          "date": "09/2016 - 09/2019",
+          "title": "Grado en Ingeniería Telemática <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
+          "description": "Trabajo de Fin de Grado: <a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">\"Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas\"</a>, calificado con sobresaliente."
+        },
+        {
+          "logo": "img/logos/gva.png",
+          "date": "09/2008 - 07/2012",
+          "title": "Bachillerato LOE (rama Ciencias y Tecnología) <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "centre": "<a href=\"https://portal.edu.gva.es/ieslluisvives/\" target=\"_blank\">IES Lluís Vives</a>",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/instrument.svg",
+      "title": "Formación artística reglada",
+      "entry": [
+        {
+          "logo": "img/logos/micalet.png",
+          "date": "09/2021 - 06/2022<br/><p>09/2010 - 06/2013</p>",
+          "title": "Enseñanzas profesionales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "centre": "<a href=\"http://elmicalet.cat/\" target=\"_blank\">Institut Musical Giner (S. C. El Micalet)</a>",
+          "description": "Especialidad: trompeta (<a href=\"https://actiweb.one/javiergonzalez/servicios.html\" target=\"_blank\">Francisco Javier González Arnal</a>)."
+        },
+        {
+          "logo": "img/logos/agrupacion.png",
+          "date": "03/2008 - 07/2010",
+          "title": "Enseñanzas elementales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "centre": "<a href=\"https://sites.google.com/view/musicalsanluis/escuela-de-m%C3%BAsica\" target=\"_blank\">Escuela de Música Carrera Fuente de San Luis</a>",
+          "description": "Especialidad: trompeta (<a href=\"https://sites.google.com/site/musicapcsantaana/profesorado-1\" target=\"_blank\">José Ignacio Barreiro Sanchís</a>)."
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/language.svg",
+      "title": "Conocimiento de idiomas",
+      "entry": [
+        {
+          "logo": "img/logos/es.png",
+          "date": "Español",
+          "title": "Nativo",
+          "centre": "Lengua materna",
+          "description": ""
+        },
+        {
+          "logo": "img/logos/va.png",
+          "date": "Valenciano",
+          "title": "Certificado C1",
+          "centre": "<a href=\"http://www.jqcv.gva.es/\" target=\"_blank\">Generalitat Valenciana - Junta Qualificadora de Coneixements de Valencià</a>",
+          "description": ""
+        },
+        {
+          "logo": "img/logos/en.png",
+          "date": "Inglés",
+          "title": "Certificado C1",
+          "centre": "<a href=\"https://mestreacasa.gva.es/web/eoibenicalap\" target=\"_blank\">Generalitat Valenciana - EOI València-Benicalap</a>",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/conference.svg",
+      "title": "Conferencias y concursos",
+      "entry": [
+        {
+          "logo": "img/logos/santander.png",
+          "date": "01/2021 - 05/2021",
+          "title": "Programa Explorer 2021 (equipo Rûstic)",
+          "centre": "<a href=\"https://www.cise.es/\" target=\"_blank\">Centro Internacional Santander Emprendimiento</a>",
+          "description": "Elaboración del proyecto \"Rûstic\", para el desarrollo del tejido industrial en las zonas rurales y con menor densidad de población de España."
+        },
+        {
+          "logo": "img/logos/ideasupv.png",
+          "date": "11/2020",
+          "title": "IX Challenge Ideas UPV (equipo AOUDA)",
+          "centre": "<a href=\"https://www.ideas.upv.es/\" target=\"_blank\">Ideas UPV - Universitat Politècnica de València</a>",
+          "description": "Propuesta multiplataforma para ayudar en la planificación de viajes, centrada en las necesidades de las personas y con el foco puesto en la legislación y restricciones de los países de origen y destino. Función de recolección, filtrado y verificación de colecciones de datos procedentes de canales oficiales (embajadas, consulados...) y medios de comunicación."
+        },
+        {
+          "logo": "img/logos/ideasupv.png",
+          "date": "04/2020",
+          "title": "Hackaton UPV #MuchoPorHacer (equipo GreenMask)",
+          "centre": "<a href=\"https://www.ideas.upv.es/\" target=\"_blank\">Ideas UPV - Universitat Politècnica de València</a>",
+          "description": "Presentación de un producto sanitario con tecnología IoT bajo el título de \"GreenMask\". Planteamiento desarrollado por un equipo multidisciplinar relacionado con la ingeniería y la ciencia."
+        },
+        {
+          "logo": "img/logos/gva.png",
+          "date": "12/2018",
+          "title": "Comunicación \"El fenómeno bandístico en la Carrera de la Fuente de San Luis de Valencia\"",
+          "centre": "<a href=\"https://www.musicaalallum.es/es/congreso/\" target=\"_blank\">I Congrés \"Música a la Llum\"</a>",
+          "description": "Conferencia impartida durante la celebración del I Congrés \"Música a la Llum\", organizado por el Institut Valencià de Cultura (Generalitat Valenciana) en el Centre Cultural La Nau de la Universitat de València."
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/tool.svg",
+      "title": "Asociaciones profesionales",
+      "entry": [
+        {
+          "logo": "img/logos/coitt.png",
+          "date": "2018 - acte.",
+          "title": "<a href=\"https://www.telecos.zone/\" target=\"_blank\">Colegio Oficial/Asociación de Graduados e Ingenieros Técnicos de Telecomunicación (COITT/AGEITT)</a>",
+          "centre": "Madrid (C. de Madrid, España)",
+          "description": "Colegiado n. 17030, asociado n. 16899"
+        },
+        {
+          "logo": "img/logos/ccoo.png",
+          "date": "2016 - acte.",
+          "title": "<a href=\"https://www.pv.ccoo.es/\" target=\"_blank\">Comissions Obreres del País Valencià</a>",
+          "centre": "Valencia (C. Valenciana, España)",
+          "description": "Serveis a la ciutadania"
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/people.svg",
+      "title": "Asociaciones artísticas",
+      "entry": [
+        {
+          "logo": "img/logos/kandinska.png",
+          "date": "2022 - acte.",
+          "title": "<a href=\"https://sites.google.com/view/kandinska/\" target=\"_blank\">Kandinska (grupo de Ska)</a>",
+          "centre": "Alboraia (C. Valenciana, España)",
+          "description": "Músico. Administración web, edición multimedia y gestión de RR. SS."
+        },
+        {
+          "logo": "img/logos/ofmisv.png",
+          "date": "2013 - acte.",
+          "title": "<a href=\"https://cursosmusicammm.com/es/ofmisv/\" target=\"_blank\">Orquesta Filarmónica Martín y Soler de Valencia</a>",
+          "centre": "Valencia (C. Valenciana, España)",
+          "description": "Músico bajo la dirección de <a href=\"https://cursosmusicammm.com/es/cv-carmen-mas-arocas/\" target=\"_blank\">Carmen Más Arocas<\/a>."
+        },
+        {
+          "logo": "img/logos/gea.png",
+          "date": "2012 - acte.",
+          "title": "<a href=\"https://sites.google.com/site/musicalgea/\" target=\"_blank\">Banda de Música de Gea de Albarracín</a>",
+          "centre": "Gea de Albarracín (Aragón, España)",
+          "description": "Músico, director y arreglista. Administración web, edición multimedia y gestión de RR. SS."
+        },
+        {
+          "logo": "img/logos/agrupacion.png",
+          "date": "2010 - acte.",
+          "title": "<a href=\"https://sites.google.com/view/musicalsanluis/\" target=\"_blank\">Agrupación Musical Carrera Fuente de San Luis</a>",
+          "centre": "Valencia (C. Valenciana, España)",
+          "description": "Músico bajo la dirección de <a href=\"https://didacbosch.wordpress.com/\" target=\"_blank\">Dídac Bosch Alcaina<\/a>. Administración web, edición multimedia y gestión de RR. SS."
+        },
+        {
+          "logo": "img/logos/cella.png",
+          "date": "2010 - acte.",
+          "title": "<a href=\"https://bandamusica.cella.es/\" target=\"_blank\">Asociación Cultural Musical de Cella</a>",
+          "centre": "Cella (Aragón, España)",
+          "description": "Músico bajo la dirección de <a href=\"http://www.conservatoriodeteruel.es/conservatorio/k-Teacher/vicente-carot-gil/\" target=\"_blank\">Vicente Carot Gil<\/a>."
+        },
+        {
+          "logo": "img/logos/upv.png",
+          "date": "2015 - 2016<br/><p>2012 - 2013</p>",
+          "title": "<a href=\"http://bandasinfonica.webs.upv.es/\" target=\"_blank\">Banda Simfònica de la Universitat Politècnica de València</a>",
+          "centre": "Valencia (C. Valenciana, España)",
+          "description": "Músico bajo la dirección de <a href=\"https://dialnet.unirioja.es/servlet/autor?codigo=1656923\" target=\"_blank\">José Manuel Miñana Juan<\/a> y <a href=\"https://web.archive.org/web/20220926032640/http://www.franciscovalero.es/biografia/\" target=\"_blank\">Francisco José Valero García<\/a>."
+        },
+        {
+          "logo": "img/logos/micalet.png",
+          "date": "2010 - 2013",
+          "title": "<a href=\"https://www.elmicalet.cat/seccions/jove-orquestra\" target=\"_blank\">Jove Orquestra Salvador Giner (S. C. El Micalet)</a>",
+          "centre": "Valencia (C. Valenciana, España)",
+          "description": "Músico bajo la dirección de <a href=\"https://s3-eu-west-1.amazonaws.com/compromis-primaries/candidates/cvs/HSl0jUSa6GMsFBgpVnpq0V6GdzCGply8RyzVYPI4.pdf\" target=\"_blank\">Miquel Juan García.<\/a>"
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/book.svg",
+      "title": "Obras literarias registradas",
+      "entry": [
+        {
+          "logo": "",
+          "date": "2021 (Valencia)",
+          "title": "<a href=\"https://www.uv.es/mia1/MiA24.pdf\" target=\"_blank\">Música a la llum: documentació i patrimoni de les bandes de música</a>",
+          "centre": "Ed. Institut Valencià de Cultura, Bankia, FSMCV",
+          "description": "Participación como coautor de las actas del I Congrés \"Música a la Llum\" (2018), publicadas en febrero de 2021, bajo la coordinación de D. Jorge García y D. Regimi Morant. ISBN 978-84-482-6487-1"
+        },
+        {
+          "logo": "",
+          "date": "2020 (Valencia)",
+          "title": "Historia de las Bandas de Música en la Carrera de la Fuente de San Luis de Valencia",
+          "centre": "Obra inédita",
+          "description": "Recopilación de la investigación histórica desarrollada entre 2014 y 2020, con la participación de diversas personalidades y entidades del mundo de la música de bandas, con el objetivo de recuperar la memoria de la trayectoria artística de la Carrera de la Fuente de San Luis de Valencia."
+        }
+      ]
+    },
+    {
+      "icon": "img/icons/score.svg",
+      "title": "Obras musicales registradas",
+      "entry": [
+        {
+          "logo": "",
+          "date": "2022 (Caudete)",
+          "title": "Reina y Dama (pasodoble)",
+          "centre": "Estrenado por: Sociedad Unión Musical Santa Cecilia de Caudete",
+          "description": "Compuesto para Nazaret Díaz Blanes, Dama de la Comparsa La Antigua y Reina de Fiestas de Caudete 2020-2022.<audio controls><source src=\"audio/reina_y_dama.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Sociedad Unión Musical Santa Cecilia de Caudete.</small><a href=\"audio/reina_y_dama.mp3\" download=\"Reina y Dama - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+        },
+        {
+          "logo": "",
+          "date": "2019 (Valencia)",
+          "title": "Falla Sur (pasodoble)",
+          "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
+          "description": "Pasodoble dedicado a la Falla Sur c. Rubén Vela - av. Dr. Waksman de Valencia, en su 50 aniversario.<audio controls><source src=\"audio/falla_sur.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/falla_sur.mp3\" download=\"Falla Sur - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+        },
+        {
+          "logo": "",
+          "date": "2016 (Valencia)",
+          "title": "Guillermo Molina (pasodoble)",
+          "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
+          "description": "Homenaje al músico fundador, expresidente y archivero de la Agrupación Musical Carrera Fuente de San Luis.<audio controls><source src=\"audio/guillermo_molina.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/guillermo_molina.mp3\" download=\"Guillermo Molina - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+        },
+        {
+          "logo": "",
+          "date": "2012 (Valencia)",
+          "title": "Antonio Soler (pasodoble)",
+          "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
+          "description": "Homenaje al músico fundador de la Agrupación Musical Carrera Fuente de San Luis, D. Antonio Soler Pons.<audio controls><source src=\"audio/antonio_soler.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Cercle Musical Primitiva d'Albaida.</small><a href=\"audio/antonio_soler.mp3\" download=\"Antonio Soler - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" alt=\"Descargar\" title=\"Descargar\"/></a>"
+        },
+        {
+          "logo": "",
+          "date": "2011 (Valencia)",
+          "title": "José Enrique Verdeguer (pasodoble)",
+          "centre": "Estrenado por: Sociedad Musical Poblados Marítimos",
+          "description": "Homenaje póstumo a D. José Enrique Verdeguer Félix, músico de la Sociedad Musical Poblados Marítimos.<audio controls><source src=\"audio/jose_enrique_verdeguer.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Sociedad Musical Poblados Marítimos.</small><a href=\"audio/jose_enrique_verdeguer.mp3\" download=\"José Enrique Verdeguer - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+        },
+        {
+          "logo": "",
+          "date": "2011 (Valencia)",
+          "title": "Tierra de Albarracín (pasodoble)",
+          "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
+          "description": "Pasodoble dedicado a todos los músicos de Gea de Albarracín (Teruel).<audio controls><source src=\"audio/tierra_de_albarracin.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/tierra_de_albarracin.mp3\" download=\"Tierra de Albarracín - Carlos González\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+        }
+      ]
+    }
+  ]
+}

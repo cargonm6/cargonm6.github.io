@@ -1,0 +1,753 @@
+/*
+© 2020-2021 Carlos González Marco
+Última actualización:  28/10/2021
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+
+:root {
+  --color-plain: rgb(241, 244, 255);
+  --color-light: rgb(224, 217, 191);
+  --color-medium: rgb(74, 110, 160);
+  --color-dark: rgb(42, 59, 85);
+  --color-shadow: rgb(56, 56, 56);
+  --color-green: rgb(110, 160, 74);
+}
+
+body {
+  background-color: var(--color-light);
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-dark);
+  font-size: medium;
+}
+
+/* a,
+img,
+button {
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-select: none;
+  -khtml-user-drag: none;
+  -moz-user-select: none;
+  -moz-user-drag: none;
+  -ms-user-select: none;
+  -ms-user-drag: none;
+  user-select: none;
+  user-drag: none;
+} */
+
+div.cv {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+  box-shadow: 10px 10px 10px var(--color-shadow);
+}
+
+div.body {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+div.left {
+  float: left;
+  width: 150px;
+  height: 100%;
+  background-color: var(--color-medium);
+  font-size: small;
+  color: var(--color-plain);
+  border-radius: 70px 0 0 0;
+}
+
+div.right {
+  float: right;
+  width: calc(100% - 160px);
+  height: calc(100% - 20px);
+  background-color: var(--color-plain);
+  overflow: hidden;
+  padding: 10px 0 10px 10px;
+}
+
+div#destination {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+div.foot {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-dark);
+  font-size: small;
+  color: var(--color-plain);
+  text-align: center;
+  line-height: 38px;
+}
+
+div.foot a {
+  margin-left: 10px;
+  color: var(--color-plain);
+}
+
+div.foot a:hover {
+  color: var(--color-medium);
+}
+
+div#cv_buttons {
+  padding: 5px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+div#cv_buttons:hover {
+  opacity: 1;
+}
+
+div#cv_buttons button {
+  font-size: 20px;
+  background-color: var(--color-medium);
+  color: var(--color-plain);
+  box-shadow: 0 0 3px var(--color-dark);
+  margin-left: 5px;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+  padding: 3px;
+}
+
+div#cv_buttons button span {
+  font-size: inherit;
+}
+
+div#cv_buttons button:hover {
+  background-color: var(--color-plain);
+  color: var(--color-medium);
+}
+
+div#cv_buttons button:active {
+  background-color: var(--color-light);
+  color: var(--color-medium);
+}
+
+div.foot #c1 {
+  color: var(--color-plain);
+  text-shadow: 2px 2px 2px var(--color-shadow);
+}
+
+div.foot #c2 {
+  color: var(--color-light);
+  text-shadow: 2px 2px 2px var(--color-dark);
+}
+
+div.foot #c3 {
+  color: var(--color-medium);
+  text-shadow: 2px 2px 2px var(--color-plain);
+}
+
+div.foot #c4 {
+  color: var(--color-shadow);
+  text-shadow: 2px 2px 2px var(--color-light);
+}
+
+div.foot #c5 {
+  color: var(--color-dark);
+  text-shadow: 2px 2px 2px var(--color-medium);
+}
+
+div.desc div.position {
+  margin-bottom: 10px;
+}
+
+div.desc a {
+  font-weight: bold;
+  margin-top: 3px;
+  display: inline-block;
+  width: 120px;
+  padding: 3px;
+  text-decoration: none;
+  border-radius: 0;
+  color: var(--color-plain);
+  border: 1px solid var(--color-plain);
+  background-color: var(--color-medium);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+div.left div.desc a {
+  border-radius: 0;
+}
+
+div.left div.desc>a:first-of-type {
+  margin-top: 7px;
+  border-radius: 10px 10px 0 0;
+}
+
+div.left div.desc>a:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+
+div.desc a:hover {
+  background-color: var(--color-plain);
+  color: var(--color-medium);
+}
+
+div.desc a:active {
+  background-color: var(--color-light);
+  color: var(--color-medium);
+}
+
+div.category+div.category {
+  margin-top: 10px;
+}
+
+div.category div.head div.icon {
+  float: left;
+  width: 50px;
+  height: 45px;
+}
+
+div.category div.head div.title {
+  float: right;
+  width: calc(100% - 50px);
+  line-height: 55px;
+  height: 45px;
+}
+
+span.current {
+  color: var(--color-green);
+}
+
+div.category div.head div.title button {
+  text-shadow: 2px 2px 5px var(--color-shadow);
+}
+
+div.category div.head div.icon img {
+  margin: 10px;
+  height: 30px;
+  width: auto;
+  filter: opacity(100%);
+  -webkit-filter: drop-shadow(2px 2px 5px var(--color-shadow));
+  filter: drop-shadow(2px 2px 5px var(--color-shadow));
+}
+
+div.category.collapsed div.head div.icon img {
+  filter: drop-shadow(2px 2px 5px var(--color-shadow)) opacity(50%);
+  -webkit-filter: drop-shadow(2px 2px 5px var(--color-shadow)) opacity(50%);
+}
+
+div.category.collapsed div.title button {
+  color: var(--color-shadow);
+}
+
+div.category div.content {
+  clear: both;
+  border-left: 2px solid var(--color-dark);
+  margin-left: 25px;
+  margin-right: 20px;
+  padding-left: 10px;
+  height: auto;
+  max-height: max-content;
+  transition: max-height 0.5s ease-out;
+}
+
+div.category.collapsed div.content {
+  max-height: 0;
+}
+
+div.category div.content div.entry {
+  clear: both;
+  display: flex;
+}
+
+div.category.collapsed div.content div.entry {
+  display: none;
+}
+
+div.left div.photo {
+  margin: 20px 20px 15px 20px;
+  padding: 3px;
+  width: calc(100% - 46px);
+  background-color: var(--color-light);
+  border-radius: 50%;
+}
+
+div.left div.photo img {
+  margin-bottom: -3px;
+  border-radius: 50%;
+  width: calc(100%);
+  height: auto;
+}
+
+div.left div.name {
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: 2px solid var(--color-plain);
+  padding-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+div.left div.desc {
+  width: 90%;
+  margin-top: 5px;
+  margin-left: 5%;
+  text-align: center;
+}
+
+div.entry div.date ul {
+  list-style: none;
+}
+
+div.entry div.date ul li::before {
+  content: "\25FC";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--color-dark);
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 20px;
+  margin-left: -57.5px;
+  /* Also needed for space (tweak if needed) */
+}
+
+div.date {
+  float: left;
+  /* width: 150px; */
+  font-family: "Roboto Condensed", sans-serif;
+  flex-grow: 1;
+  flex-basis: 160px;
+}
+
+div.rightblock {
+  float: right;
+  /* width: calc(100% - 150px); */
+  padding: 6px 0 0 0;
+  flex-grow: 1;
+  flex-basis: calc(100% - 160px);
+}
+
+div.date ul {
+  margin-bottom: 6px;
+}
+
+div.date ul p {
+  margin-left: -37px;
+}
+
+div.date ul br {
+  display: block;
+  margin: -5px;
+}
+
+div.entry div.title {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+div.entry div.title img {
+  height: 16px;
+  width: auto;
+  margin-right: 5px;
+}
+
+div.centre {
+  clear: both;
+  margin-bottom: 5px;
+  font-style: italic;
+  font-family: "Roboto Condensed", sans-serif;
+  color: var(--color-shadow);
+}
+
+div.right a {
+  text-decoration: none;
+  color: var(--color-medium);
+}
+
+div.right a:hover {
+  color: var(--color-dark);
+}
+
+div.description ul {
+  padding-left: 16px;
+  margin-top: 8px;
+  list-style: none;
+}
+
+div.description ul li::before {
+  content: "\25A0";
+  color: var(--color-medium);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+div.head button {
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--color-dark);
+}
+
+div.category div.head button:hover {
+  color: var(--color-medium);
+}
+
+div.subpage {
+  padding: 20px;
+}
+
+div.subpage p {
+  text-align: justify;
+}
+
+p table {
+  margin-top: 10px;
+}
+
+table.schedule,
+table.music {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.schedule th,
+table.music th,
+table.schedule td,
+table.music td {
+  width: calc(100% / 8 - 10px);
+  padding: 5px;
+  border: 1px solid var(--color-shadow);
+}
+
+table.music td:last-child,
+th:last-child {
+  width: 50%;
+}
+
+table.music td:last-child {
+  text-align: justify;
+}
+
+div#table {
+  display: inline-block;
+  margin: 10% 20% 10% 20%;
+  width: 60%;
+  height: 80%;
+}
+
+div#table table {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid var(--color-dark);
+  box-shadow: 5px 5px 5px var(--color-shadow);
+  cursor: pointer;
+}
+
+div#table tr,
+div#table td,
+div#table th {
+  border: 1px solid var(--color-dark);
+}
+
+div#table tr,
+div#table td {
+  background-color: var(--color-plain);
+}
+
+div#table th {
+  background-color: var(--color-medium);
+  color: var(--color-plain);
+}
+
+div#table th:hover {
+  background-color: var(--color-shadow);
+}
+
+div#table td:hover {
+  background-color: var(--color-light);
+}
+
+audio {
+  display: block;
+  margin: 5px 0 5px 0;
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+}
+
+audio+small {
+  color: var(--color-shadow);
+}
+
+i.script {
+  text-align: center;
+  margin: 5px;
+  padding: 2px;
+  display: block;
+  background-color: var(--color-light);
+  border-radius: 20px;
+  font-family: "Neucha", monospace;
+  font-weight: bold;
+}
+
+form {
+  text-align: center;
+}
+
+fieldset {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 5px;
+  font-size: small;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  vertical-align: top;
+  text-align: left;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  margin-top: 10px;
+  display: block;
+}
+
+input {
+  display: block;
+  width: 90%;
+}
+
+@media screen and (max-width: 640px),
+(-webkit-min-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(min--moz-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5) {
+  body {
+    font-size: small;
+  }
+
+  div.cv {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  div.body {
+    overflow-y: scroll;
+  }
+
+  div.left {
+    float: none;
+    width: 100%;
+    height: max-content;
+    padding: 10px 0 5px 0;
+    border-radius: 0;
+  }
+
+  div.right {
+    float: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
+
+  div#destination {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  div.left div.photo {
+    padding: 3px;
+    margin: 0 0 5px calc(50% - 50px);
+    width: 100px;
+    background-color: var(--color-light);
+    border-radius: 50%;
+  }
+
+  div.left div.photo img {
+    width: 100px;
+    height: auto;
+  }
+
+  div.left div.name {
+    text-align: center;
+    width: 240px;
+    margin-left: calc(50% - 120px);
+  }
+
+  div.left div.name #sep {
+    display: none;
+  }
+
+  div.left div.desc {
+    display: inline-block;
+  }
+
+  div.left div.desc a,
+  div.left div.desc>a:first-of-type,
+  div.left div.desc>a:last-of-type {
+    border-radius: 10px;
+  }
+
+  div.entry div.date ul li::before {
+    margin-left: -56.5px;
+    /* Also needed for space (tweak if needed) */
+  }
+
+  div#cv_buttons {
+    height: auto;
+    position: fixed;
+    top: unset;
+    right: 20px;
+    bottom: 50px;
+  }
+
+  div.date {
+    flex-basis: 140px;
+  }
+
+  div.rightblock {
+    padding: 3px;
+    flex-basis: calc(100% - 140px);
+  }
+}
+
+@media print {
+  div.cv {
+    position: unset;
+    box-shadow: none;
+  }
+
+  div#destination {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  div.category div.head div.icon img {
+    filter: none;
+  }
+
+  div.category div.head div.title button {
+    text-shadow: none;
+  }
+
+  div.category {
+    margin: 5px;
+    break-inside: avoid;
+    border-radius: 20px;
+    border: 3px solid var(--color-plain);
+  }
+
+  div#cv_buttons,
+  div.desc a,
+  div.foot,
+  audio,
+  audio+small,
+  a img {
+    display: none;
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+  width: 100%;
+  }
+}
