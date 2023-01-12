@@ -22,7 +22,7 @@ function updateModal() {
     console.log(img);
 
     modalImg.src = img.src;
-    captionText.innerHTML = number + " - " + img.alt;
+    captionText.innerHTML = img.alt;
 }
 
 // Next/previous controls
