@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
 :root {
   --color-plain: rgb(241, 244, 255);
@@ -112,10 +113,12 @@ div.foot {
 	padding-right: 20px;
 	text-align: right;
 	line-height: 42px;
+    font-size: large;
 }
 
-div.foot i.fa {
-  font-size: large;
+.refresh {
+	border-left: 2px solid var(--color-medium);
+	padding-left: 15px;
 }
 
 div.foot a {
@@ -471,6 +474,14 @@ th:last-child {
 
 table.music td:last-child {
   text-align: justify;
+}
+
+.instrument {
+	cursor: pointer;
+}
+
+.trademark a {
+	cursor: help;
 }
 
 div#table {

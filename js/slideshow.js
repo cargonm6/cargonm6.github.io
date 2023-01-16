@@ -9,6 +9,10 @@ document.addEventListener('keydown', function (event) {
         plusSlides(+1);
         updateModal()
     }
+	else if (event.key === 'Escape') {
+        var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+    }
 });
 
 function updateModal() {

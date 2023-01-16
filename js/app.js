@@ -261,6 +261,7 @@ function fillMUS(json, container) {
 
     // Imagen del instrumento
     var ins_img = document.createElement("img");
+	ins_img.classList.add("instrument");
     ins_img.setAttribute("src", json.instruments[i].image);
     ins_img.setAttribute("alt", json.instruments[i].name);
     ins_img.setAttribute("title", json.instruments[i].name);
