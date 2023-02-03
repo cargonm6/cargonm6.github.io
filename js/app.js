@@ -100,9 +100,6 @@ function loadPage(origin, destination, e) {
       else if (origin === "./pages/music.html") {
         loadJSON("music", "container", "fillMUS");
       }
-      else if (origin === "./pages/pci.html") {
-        loadJSON("pci", "container", "fillPCI");
-      }
     })
     .catch((error) => {
       console.warn(error);
@@ -261,7 +258,7 @@ function fillMUS(json, container) {
 
     // Imagen del instrumento
     var ins_img = document.createElement("img");
-	ins_img.classList.add("instrument");
+    ins_img.classList.add("instrument");
     ins_img.setAttribute("src", json.instruments[i].image);
     ins_img.setAttribute("alt", json.instruments[i].name);
     ins_img.setAttribute("title", json.instruments[i].name);
@@ -367,125 +364,4 @@ function fillMUS(json, container) {
   body.appendChild(buttons);
   body.appendChild(slideshow);
 
-}
-
-function fillPCI(json, container) {
-  // alert("¡Página en desarrollo!");
-  // Destino
-  var body = document.getElementById(container);
-  var form = document.createElement("form");
-
-  var button = document.createElement("button");
-  button.textContent = "Calcular";
-  button.onclick = function () { calc_pci(); }
-
-  body.appendChild(button);
-
-  body.appendChild(document.createElement("hr"));
-
-  var fieldset = document.createElement("fieldset");
-  var fieldname = document.createElement("legend");
-  fieldname.textContent = "Pavement data";
-  fieldset.appendChild(fieldname);
-  var input = document.createElement("input");
-  var label = document.createElement("label");
-  input.type = "number";
-  input.value = 0.0;
-  input.id = "width";
-  label.textContent = "width";
-  fieldset.appendChild(label);
-  fieldset.appendChild(input);
-  fieldset.appendChild(label);
-  fieldset.appendChild(input);
-  var input = document.createElement("input");
-  var label = document.createElement("label");
-  input.type = "number";
-  input.value = 0.0;
-  input.id = "length";
-  label.textContent = "length";
-  fieldset.appendChild(label);
-  fieldset.appendChild(input);
-  fieldset.appendChild(label);
-  fieldset.appendChild(input);
-  form.appendChild(fieldset);
-
-  for (var i = 0; i < json.distresses.length; i++) {
-    // Campo
-    var fieldset = document.createElement("fieldset");
-    var fieldname = document.createElement("legend");
-    fieldname.textContent = json.distresses[i].name.charAt(0).toUpperCase() + json.distresses[i].name.slice(1) + " (" + json.distresses[i].type + ")";
-    fieldset.appendChild(fieldname);
-
-    for (var j = 0; j < json.distresses[i].severities.length; j++) {
-      var input = document.createElement("input");
-      var label = document.createElement("label");
-      input.type = "number";
-      input.value = 0.0;
-      input.id = i + "_" + j;
-      label.textContent = json.distresses[i].severities[j].name;
-      fieldset.appendChild(label);
-      fieldset.appendChild(input);
-    }
-
-    form.appendChild(fieldset);
-  }
-
-  body.appendChild(form);
-
-}
-
-function calc_pci() {
-  var pci = new PCI();
-  pci.set_section(document.getElementById("width").value, document.getElementById("length").value)
-  pci.data;
-
-}
-
-class PCI {
-  constructor() {
-    this.survey_width = 0.0;
-    this.section_length = 500.0;
-    this.section_area = this.survey_width * this.section_length;
-    this.pci = 0.0;
-    this.dmg_density = 0.0;
-
-    this.distress = {
-      "distress_01": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_02": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_03": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_04": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_05": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_06": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_07": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_08": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_09": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_10": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_11": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_12": [[0.0, 0.0, 0.0]],
-      "distress_13": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_14": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_15": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_16": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_17": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_18": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]],
-      "distress_19": [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
-    };
-
-  }
-
-  set_section(p_survey_width = 0.0, p_section_length = 500.0) {
-    this.survey_width = p_survey_width;
-    this.section_length = p_section_length;
-    this.section_area = this.survey_width * this.section_length;
-    console.log("ok");
-  }
-
-  get data() {
-    console.log(this.survey_width);
-    console.log(this.section_length);
-    console.log(this.section_area);
-    console.log(this.pci);
-    console.log(this.dmg_density);
-    console.log(this.distress);
-  }
 }
