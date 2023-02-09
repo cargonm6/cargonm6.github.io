@@ -16,6 +16,7 @@
   --color-dark: rgb(42, 59, 85);
   --color-shadow: rgb(56, 56, 56);
   --color-green: rgb(110, 160, 74);
+  --trans-speed: 0.5s;
 }
 
 body {
@@ -49,6 +50,7 @@ div.cv {
   right: 10%;
   bottom: 5%;
   box-shadow: 10px 10px 10px var(--color-shadow);
+  transition: top var(--trans-speed), left var(--trans-speed), right var(--trans-speed), bottom var(--trans-speed);
 }
 
 div.body {
@@ -65,6 +67,7 @@ div.left {
   font-size: small;
   color: var(--color-plain);
   border-radius: 70px 0 0 0;
+  transition: border-radius var(--trans-speed);
 }
 
 div.right {
@@ -610,6 +613,7 @@ input {
 
 .app-table img {
   max-height: 50px;
+  max-width: 100px;
 }
 
 .tech img {
@@ -617,7 +621,22 @@ input {
   max-height: 30px;
 }
 
+@media screen and (max-width: 950px) {
+  div.cv {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: none;
+  }
+
+  div.left {
+    border-radius: 0;
+  }
+}
+
 @media screen and (max-width: 640px),
+(max-height: 420px),
 (-webkit-min-device-pixel-ratio: 1.5),
 (-o-min-device-pixel-ratio: 3/2),
 (min--moz-device-pixel-ratio: 1.5),
