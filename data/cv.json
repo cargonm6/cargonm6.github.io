@@ -10,7 +10,7 @@
           "date": "<span class=\"current\">11/2021 - acte.<\/span>",
           "title": "<span class=\"current\">Técnico superior de investigación",
           "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
-          "description": "Participación en el proyecto \"Monitorización y gestión del mantenimiento predictivo de vías interurbanas mediante técnicas de inteligencia artificial\" (NEUROVÍAS), adscrito al <a href=\"https://www.upv.es/entidades/DIC/\" target=\"_blank\">Departamento de Ingeniería de la Construcción y Proyectos de Ingeniería Civil</a> de la UPV."
+          "description": "Participación en el proyecto &#171;Monitorización y gestión del mantenimiento predictivo de vías interurbanas mediante técnicas de inteligencia artificial&#187; (NEUROVÍAS), adscrito al <a href=\"https://www.upv.es/entidades/DIC/\" target=\"_blank\">Departamento de Ingeniería de la Construcción y Proyectos de Ingeniería Civil</a> de la UPV."
         },
         {
           "logo": "img/logos/outsourcing.png",
@@ -51,7 +51,7 @@
           "date": "09/2016 - 09/2019",
           "title": "Grado en Ingeniería Telemática <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
           "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
-          "description": "Trabajo de Fin de Grado: <a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">\"Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas\"</a>, calificado con sobresaliente."
+          "description": "Trabajo de Fin de Grado: <a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">&#171;Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas&#187;</a>, calificado con sobresaliente."
         },
         {
           "logo": "img/logos/gva.png",
@@ -113,12 +113,19 @@
       "icon": "img/icons/conference.svg",
       "title": "Conferencias y concursos",
       "entry": [
+		{
+          "logo": "img/logos/gva.png",
+          "date": "03/2023",
+          "title": "Clase magistral &#171;Historia de las bandas de música&#187;",
+          "centre": "<a href=\"https://portal.edu.gva.es/serranomorales/\" target=\"_blank\">Centro Público de Educación de Personas Adultas Serrano Morales</a>",
+          "description": "Charla impartida al alumnado del Taller de Música e Historia, organizada por el profesorado y la dirección del centro."
+        },
         {
           "logo": "img/logos/santander.png",
           "date": "01/2021 - 05/2021",
           "title": "Programa Explorer 2021 (equipo Rûstic)",
           "centre": "<a href=\"https://www.cise.es/\" target=\"_blank\">Centro Internacional Santander Emprendimiento</a>",
-          "description": "Elaboración del proyecto \"Rûstic\", para el desarrollo del tejido industrial en las zonas rurales y con menor densidad de población de España."
+          "description": "Elaboración del proyecto &#171;Rûstic&#187;, para el desarrollo del tejido industrial en las zonas rurales y con menor densidad de población de España."
         },
         {
           "logo": "img/logos/ideasupv.png",
@@ -132,14 +139,14 @@
           "date": "04/2020",
           "title": "Hackaton UPV #MuchoPorHacer (equipo GreenMask)",
           "centre": "<a href=\"https://www.ideas.upv.es/\" target=\"_blank\">Ideas UPV - Universitat Politècnica de València</a>",
-          "description": "Presentación de un producto sanitario con tecnología IoT bajo el título de \"GreenMask\". Planteamiento desarrollado por un equipo multidisciplinar relacionado con la ingeniería y la ciencia."
+          "description": "Presentación de un producto sanitario con tecnología IoT bajo el título de &#171;GreenMask&#187;. Planteamiento desarrollado por un equipo multidisciplinar relacionado con la ingeniería y la ciencia."
         },
         {
           "logo": "img/logos/gva.png",
           "date": "12/2018",
-          "title": "Comunicación \"El fenómeno bandístico en la Carrera de la Fuente de San Luis de Valencia\"",
-          "centre": "<a href=\"https://www.musicaalallum.es/es/congreso/\" target=\"_blank\">I Congrés \"Música a la Llum\"</a>",
-          "description": "Conferencia impartida durante la celebración del I Congrés \"Música a la Llum\", organizado por el Institut Valencià de Cultura (Generalitat Valenciana) en el Centre Cultural La Nau de la Universitat de València."
+          "title": "Comunicación &#171;El fenómeno bandístico en la Carrera de la Fuente de San Luis de Valencia&#187;",
+          "centre": "<a href=\"https://www.musicaalallum.es/es/congreso/\" target=\"_blank\">I Congrés &#171;Música a la Llum&#187;</a>",
+          "description": "Conferencia impartida durante la celebración del I Congrés &#171;Música a la Llum&#187;, organizado por el Institut Valencià de Cultura (Generalitat Valenciana) en el Centre Cultural La Nau de la Universitat de València."
         }
       ]
     },
@@ -227,7 +234,7 @@
           "date": "2021 (Valencia)",
           "title": "<a href=\"https://www.uv.es/mia1/MiA24.pdf\" target=\"_blank\">Música a la llum: documentació i patrimoni de les bandes de música</a>",
           "centre": "Ed. Institut Valencià de Cultura, Bankia, FSMCV",
-          "description": "Participación como coautor de las actas del I Congrés \"Música a la Llum\" (2018), publicadas en febrero de 2021, bajo la coordinación de D. Jorge García y D. Regimi Morant. ISBN 978-84-482-6487-1"
+          "description": "Participación como coautor de las actas del I Congrés &#171;Música a la Llum&#187; (2018), publicadas en febrero de 2021, bajo la coordinación de D. Jorge García y D. Regimi Morant. ISBN 978-84-482-6487-1"
         },
         {
           "logo": "",

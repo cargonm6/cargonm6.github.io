@@ -17,8 +17,8 @@
       "const_place": "Praga (Bohemia)",
       "model": "4-92 (modelo \"español\")",
 	  "serialno": "",
-      "tunning": "Do (brillante)",
-      "system": "3 cilindros SARV",
+      "tunning": "Do (estándar)",
+      "system": "3 cilindros (SARV)",
       "description": "Tuba de construcción poco habitual con campana y tudel en posiciones opuestas, similar al modelo 101 \"español\" (catálogo de 1912) pero con 3 cilindros y mayor antigüedad. Fabricada durante la gestión de František Karel Rott. Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i>"
     },
 	{
@@ -38,7 +38,7 @@
       "model": "43",
 	  "serialno": "",
       "tunning": "Mi-Mi♭ (estándar)",
-      "system": "3 cilindros SARV",
+      "system": "3 cilindros (SARV)",
       "description": "Trompeta contralto construida por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una pieza intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i>"
     },
     {
@@ -58,7 +58,7 @@
       "model": "C",
 	  "serialno": "",
       "tunning": "Fa (estándar)",
-      "system": "3 cilindros SARV",
+      "system": "3 cilindros (SARV)",
       "description": "Trompa de configuración simple. Construída, probablemente, durante la dirección de Aloise Rottová y J. Pokorný), debido a la inscripción de origen del actual distrito municipal de la Gran Praga (Praga XII entre 1923-1949, anteriormente Královská Vinohrady). Tonillo original desaparecido, repuesto fabricado artesanalmente por Francisco Buendía Mudarra (Gea de Albarracín). Firma mecanizada en la campana, indicando: <i class=\"script\">A E Rott hijo / Praha XII Bohemia</i>"
     },
 	{
@@ -77,7 +77,7 @@
       "const_place": "Barcelona (España)",
       "model": "L. 19 \"Artista Solista\"",
 	  "serialno": "34837",
-      "tunning": "Si♭ (estándar)",
+      "tunning": "Si♭ (brillante)",
       "system": "Digitación antigua, con microafinador",
       "description": "Instrumento probablemente fabricado por la compañía catalana Francisca Montserrat, a partir de patrones de fabricación extranjeros (como la francesa H. Selmer o la estadounidense C. G. Conn). La marca \"Nilliet\" sería comercializada exclusivamente por la tienda valenciana Guillermo Lluquet S. L. (actualmente Centromúsica S. A.) entre los años 50 y 70. Presenta digitación antigua, con llaves inexistentes en modelos actuales, y un microafinador acoplado al tudel que permite desplazar milimétricamente la posición de la boquilla. En la campana, figura el siguiente grabado: <i class=\"script\">Nilliet / Artista / L. 19 / Guillermo Lluquet / Valencia</i>"
     },
@@ -103,7 +103,7 @@
       "model": "43B",
 	  "serialno": "",
       "tunning": "Si♭ (estándar)",
-      "system": "3 cilindros SARV",
+      "system": "3 cilindros (SARV)",
       "description": "Modelo similar al de Bohland & Fuchs, fabricado por la cooperativa Amati. El instrumento fue utilizado en el World Music Contest de Kerkrade (1970) por la banda de música de la cooperativa, donde fue premiada en la sección de armonía. En la campana, dentro de un grabado en forma de hoja trilobulada: <i class=\"script\">Rott / Czechoslovakia</i>"
     },
     {
@@ -128,12 +128,12 @@
       "model": "",
 	  "serialno": "3049",
       "tunning": "Si♭ (estándar)",
-      "system": "3 cilindros TARV",
+      "system": "3 cilindros (TARV)",
       "description": "Firma mecanizada en la campana, indicando: <i class=\"script\">N 3049 1984г / Ц 80р</i>"
     },
     {
       "name": "Corneta Bessons & Co.",
-      "image": "img/music/instruments/bessons-and-co_cornet.png",
+      "image": "img/music/instruments/bessons-and-co_pkt_cornet.png",
       "trademark": [
         {
           "name": "Bessons & Co.",
@@ -148,8 +148,28 @@
       "model": "",
 	  "serialno": "75983 (falsificado)",
       "tunning": "Si♭ (estándar)",
-      "system": "3 pistones Périnet",
+      "system": "3 pistones Périnet (top-sprung)",
       "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Firma mecanizada en la campana, indicando: <i class=\"script\">Trademark Boosey / Bessons & Co. / London.W.C.2 / H.75983</i>"
+    },
+	{
+      "name": "Corneta Bessons & Co.",
+      "image": "img/music/instruments/bessons-and-co_cornet.png",
+      "trademark": [
+        {
+          "name": "Bessons & Co.",
+          "image": "img/music/trademarks/bessons-and-co.svg",
+          "link": "#footnote-bessons"
+        }
+      ],
+      "type": "Corneta",
+      "company": "Bessons & Co.",
+      "const_year": "",
+      "const_place": "Nueva Delhi (India)",
+      "model": "",
+	  "serialno": "",
+      "tunning": "Si♭ (estándar)",
+      "system": "3 pistones Périnet (top-sprung)",
+      "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Sin ninguna marca ni señal en el cuerpo del instrumento."
     },
     {
       "name": "Trombón Amati",
