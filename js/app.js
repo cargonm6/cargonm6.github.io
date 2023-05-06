@@ -7,7 +7,7 @@
 //   loadPage("./pages/cv.html", "destination");
 // });
 
-
+gallery_status = 0;
 
 // --------------------
 
@@ -226,9 +226,48 @@ function loadImage(img) {
   }
 }
 
+function showGallery() {
+  var gallery = document.getElementById("gallery");
+  if (gallery_status == 0) {
+    gallery.style = "display: block;"
+    gallery_status = 1
+  }
+  else {
+    gallery.style = "display: none;"
+    gallery_status = 0
+  }
+}
+
 function fillMUS(json, container) {
   // Destino
   var body = document.getElementById(container);
+
+  gallery_status = 0
+
+  var hide_button = document.createElement("button");
+  hide_button.textContent = "Mostrar/ocultar galería"
+  hide_button.setAttribute('onclick', "showGallery()");
+  body.appendChild(hide_button);
+
+  var gallery = document.createElement("div");
+  gallery.setAttribute("id", "gallery");
+  gallery.style = "display: none;"
+
+  for (var i = 0; i < json.instruments.length; i++) {
+    var content = document.createElement("div");
+    content.style = "display: inline-block;"
+
+    var ins_img = document.createElement("img");
+    ins_img.setAttribute("src", json.instruments[i].image);
+    ins_img.style = "max-width: 150px; max-height: 100px;"
+    ins_img.setAttribute("alt", json.instruments[i].name);
+    ins_img.setAttribute("title", json.instruments[i].name);
+
+    content.appendChild(ins_img);
+    gallery.appendChild(content);
+  }
+
+  body.appendChild(gallery);
 
   var buttons = document.createElement("div");
   buttons.classList.add("dots");
