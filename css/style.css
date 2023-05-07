@@ -621,6 +621,56 @@ input {
   max-height: 30px;
 }
 
+.gallery {
+  display: none;
+  text-align: center;
+}
+
+.gallery_btn {
+  background-color: var(--color-medium);
+  color: var(--color-plain);
+  border-width: 0;
+  border-radius: 10px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.gallery_subdiv {
+  border: 2px solid var(--color-light);
+  border-radius: 20px;
+  cursor: pointer;
+  width: 150px;
+  height: 100%;
+  margin: 10px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.gallery_subdiv:hover {
+  border-color: var(--color-dark);
+  transition: border-color 0.5s ease-out;
+  background-color: var(--color-light);
+}
+
+.gallery_subdiv:active {
+  background-color: var(--color-plain);
+}
+
+.gallery_subdiv img {
+  max-width: 140px;
+  max-height: 90px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.subpage .gallery_subdiv p {
+  text-align: center;
+  font-size: small;
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 950px) {
   div.cv {
     top: 0;

@@ -247,23 +247,35 @@ function fillMUS(json, container) {
   var hide_button = document.createElement("button");
   hide_button.textContent = "Mostrar/ocultar galería"
   hide_button.setAttribute('onclick', "showGallery()");
+  hide_button.classList.add("gallery_btn");
   body.appendChild(hide_button);
+
+  body.appendChild(document.createElement("hr"));
 
   var gallery = document.createElement("div");
   gallery.setAttribute("id", "gallery");
-  gallery.style = "display: none;"
+  gallery.classList.add("gallery");
 
   for (var i = 0; i < json.instruments.length; i++) {
     var content = document.createElement("div");
     content.style = "display: inline-block;"
 
+    var div_img = document.createElement("div");
+    div_img.setAttribute("title", json.instruments[i].name);
+    div_img.setAttribute('onclick', "currentSlide(" + (i + 1) + ")");
+    div_img.classList.add("gallery_subdiv");
+
+    var txt_img = document.createElement("p");
+    txt_img.textContent = "(" + i +1 + ") " + json.instruments[i].name;
+    
     var ins_img = document.createElement("img");
     ins_img.setAttribute("src", json.instruments[i].image);
-    ins_img.style = "max-width: 150px; max-height: 100px;"
     ins_img.setAttribute("alt", json.instruments[i].name);
-    ins_img.setAttribute("title", json.instruments[i].name);
 
-    content.appendChild(ins_img);
+    div_img.appendChild(ins_img);
+    div_img.appendChild(txt_img);
+    
+    content.appendChild(div_img);
     gallery.appendChild(content);
   }
 
