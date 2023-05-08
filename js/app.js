@@ -230,10 +230,12 @@ function showGallery() {
   var gallery = document.getElementById("gallery");
   if (gallery_status == 0) {
     gallery.style = "display: block;"
+	img_show.style = "display: none;"
     gallery_status = 1
   }
   else {
     gallery.style = "display: none;"
+	img_show.style = "display: block;"
     gallery_status = 0
   }
 }
@@ -250,8 +252,6 @@ function fillMUS(json, container) {
   hide_button.classList.add("gallery_btn");
   body.appendChild(hide_button);
 
-  body.appendChild(document.createElement("hr"));
-
   var gallery = document.createElement("div");
   gallery.setAttribute("id", "gallery");
   gallery.classList.add("gallery");
@@ -262,11 +262,11 @@ function fillMUS(json, container) {
 
     var div_img = document.createElement("div");
     div_img.setAttribute("title", json.instruments[i].name);
-    div_img.setAttribute('onclick', "currentSlide(" + (i + 1) + ")");
+    div_img.setAttribute('onclick', "currentSlide(" + (i + 1) + "); showGallery()");
     div_img.classList.add("gallery_subdiv");
 
     var txt_img = document.createElement("p");
-    txt_img.textContent = "(" + i +1 + ") " + json.instruments[i].name;
+    txt_img.textContent = "(" + (i + 1).toString() + ") " + json.instruments[i].name;
     
     var ins_img = document.createElement("img");
     ins_img.setAttribute("src", json.instruments[i].image);
@@ -280,6 +280,9 @@ function fillMUS(json, container) {
   }
 
   body.appendChild(gallery);
+  
+  var img_show = document.createElement("div");
+  img_show.setAttribute("id", "img_show");
 
   var buttons = document.createElement("div");
   buttons.classList.add("dots");
@@ -320,14 +323,11 @@ function fillMUS(json, container) {
     var div_trademark = document.createElement("div");
     div_trademark.classList.add("trademark");
     for (var j = 0; j < json.instruments[i].trademark.length; j++) {
-      var tra_lnk = document.createElement("a");
-      tra_lnk.setAttribute("href", json.instruments[i].trademark[j].link);
       var tra_img = document.createElement("img");
       tra_img.setAttribute("src", json.instruments[i].trademark[j].image);
       tra_img.setAttribute("alt", json.instruments[i].trademark[j].name);
       tra_img.setAttribute("title", json.instruments[i].trademark[j].name);
-      tra_lnk.appendChild(tra_img);
-      div_trademark.appendChild(tra_lnk);
+      div_trademark.appendChild(tra_img);
     }
     content.appendChild(div_trademark);
 
@@ -412,7 +412,8 @@ function fillMUS(json, container) {
   lnk_next.textContent = "❯";
   slideshow.appendChild(lnk_next);
 
-  body.appendChild(buttons);
-  body.appendChild(slideshow);
+  img_show.appendChild(buttons);
+  img_show.appendChild(slideshow);
+  body.appendChild(img_show);
 
 }

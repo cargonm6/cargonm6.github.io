@@ -1,11 +1,11 @@
 let slideIndex = 1;
 
 document.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowLeft') {
+    if (event.key === 'ArrowLeft' && gallery_status === 0) {
         plusSlides(-1);
         updateModal()
     }
-    else if (event.key === 'ArrowRight') {
+    else if (event.key === 'ArrowRight' && gallery_status === 0) {
         plusSlides(+1);
         updateModal()
     }

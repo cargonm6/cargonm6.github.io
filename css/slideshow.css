@@ -20,17 +20,6 @@ body {
   height: 100px;
 }
 
-div.trademark {
-  margin-top: 10px;
-  display: block;
-}
-
-div.trademark img {
-  max-height: 75px;
-  max-width: 150px;
-  padding: 10px;
-}
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 750px;

@@ -7,8 +7,7 @@
       "trademark": [
         {
           "name": "Rott",
-          "image": "img/music/trademarks/rott.svg",
-          "link": "#footnote-rott"
+          "image": "img/music/trademarks/rott.svg"
         }
       ],
       "type": "Tuba",
@@ -19,7 +18,7 @@
 	  "serialno": "",
       "tunning": "Do (estándar)",
       "system": "3 cilindros (SARV)",
-      "description": "Tuba de construcción poco habitual con campana y tudel en posiciones opuestas, similar al modelo 101 \"español\" (catálogo de 1912) pero con 3 cilindros y mayor antigüedad. Fabricada durante la gestión de František Karel Rott. Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i>"
+      "description": "Tuba de construcción poco habitual con campana y tudel en posiciones opuestas, similar al modelo 101 \"español\" (catálogo de 1912) pero con 3 cilindros y mayor antigüedad. Fabricada durante la gestión de František Karel Rott. Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i><i class=\"descript\">Augusto Enrique Rott hijo / Praga, Bohemia</i>"
     },
 	{
       "name": "Fliscorno Josef Lídl",
@@ -27,8 +26,7 @@
       "trademark": [
         {
           "name": "Josef Lídl",
-          "image": "img/music/trademarks/lidl.svg",
-          "link": "#footnote-lidl"
+          "image": "img/music/trademarks/lidl.png"
         }
       ],
       "type": "Fliscorno",
@@ -39,7 +37,7 @@
 	  "serialno": "",
       "tunning": "Do",
       "system": "3 cilindros (SARV)",
-      "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl Brno<br>(Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real)</i>"
+      "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl Brno</i><i class=\"descript\">(Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real)</i>"
     },
 	{
       "name": "Trompeta Rampone & Cazzani",
@@ -47,8 +45,7 @@
       "trademark": [
         {
           "name": "Rott",
-          "image": "img/music/trademarks/rampone.svg",
-          "link": "#footnote-ramponecazzani"
+          "image": "img/music/trademarks/rampone.svg"
         }
       ],
       "type": "Trompeta contralto",
@@ -59,7 +56,7 @@
 	  "serialno": "",
       "tunning": "Mi-Mi♭ (estándar)",
       "system": "3 cilindros (SARV)",
-      "description": "Trompeta contralto construida por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una pieza intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i>"
+      "description": "Trompeta contralto construida por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una pieza intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i><i class=\"descript\">Sociedades Reunidas / A. Rampone & B. Cazzani & C.º / Establecimiento premiado / B. Cazzani e C.º / Milán / Exportación Mundial</i>"
     },
     {
       "name": "Trompa Rott",
@@ -67,8 +64,7 @@
       "trademark": [
         {
           "name": "Rott",
-          "image": "img/music/trademarks/rott.svg",
-          "link": "#footnote-rott"
+          "image": "img/music/trademarks/rott.svg"
         }
       ],
       "type": "Trompa",
@@ -87,8 +83,7 @@
       "trademark": [
         {
           "name": "Nilliet",
-          "image": "img/music/trademarks/nilliet.svg",
-          "link": "#footnote-nilliet"
+          "image": "img/music/trademarks/nilliet.svg"
         }
       ],
       "type": "Saxofón tenor",
@@ -107,13 +102,7 @@
       "trademark": [
         {
           "name": "Amati",
-          "image": "img/music/trademarks/amati.svg",
-          "link": "#footnote-amati"
-        },
-        {
-          "name": "Rott",
-          "image": "img/music/trademarks/rott.svg",
-          "link": "#footnote-rott"
+          "image": "img/music/trademarks/amati-rott.svg"
         }
       ],
       "type": "Fliscorno",
@@ -131,14 +120,8 @@
       "image": "img/music/instruments/orpheus_cornet.png",
       "trademark": [
         {
-          "name": "Ministerio de Industria Local de la República Socialista Soviética de Ucrania",
-          "image": "img/music/trademarks/kiev.svg",
-          "link": "#footnote-orfeo"
-        },
-        {
           "name": "Орфей (Orfeo)",
-          "image": "img/music/trademarks/orfeo.svg",
-          "link": "#footnote-orfeo"
+          "image": "img/music/trademarks/orfeo.svg"
         }
       ],
       "type": "Corneta",
@@ -152,13 +135,12 @@
       "description": "Firma mecanizada en la campana, indicando: <i class=\"script\">N 3049 1984г / Ц 80р</i>"
     },
     {
-      "name": "Corneta Bessons & Co.",
+      "name": "Cornetín Bessons & Co.",
       "image": "img/music/instruments/bessons-and-co_pkt_cornet.png",
       "trademark": [
         {
           "name": "Bessons & Co.",
-          "image": "img/music/trademarks/bessons-and-co.svg",
-          "link": "#footnote-bessons"
+          "image": "img/music/trademarks/bessons-and-co.svg"
         }
       ],
       "type": "Corneta de bolsillo",
@@ -177,8 +159,7 @@
       "trademark": [
         {
           "name": "Bessons & Co.",
-          "image": "img/music/trademarks/bessons-and-co.svg",
-          "link": "#footnote-bessons"
+          "image": "img/music/trademarks/bessons-and-co.svg"
         }
       ],
       "type": "Corneta",
@@ -197,8 +178,7 @@
       "trademark": [
         {
           "name": "Amati Denak",
-          "image": "img/music/trademarks/amati.svg",
-          "link": "#footnote-amati"
+          "image": "img/music/trademarks/amati.svg"
         }
       ],
       "type": "Trombón de varas",
@@ -217,8 +197,7 @@
       "trademark": [
         {
           "name": "Tianjin Binbao Musical Instruments Co.",
-          "image": "img/music/trademarks/jinbao.svg",
-          "link": ""
+          "image": "img/music/trademarks/jinbao.svg"
         }
       ],
       "type": "Caja piccolo",
@@ -237,8 +216,7 @@
       "trademark": [
         {
           "name": "Nova Percusió",
-          "image": "img/music/trademarks/np.png",
-          "link": ""
+          "image": "img/music/trademarks/np.png"
         }
       ],
       "type": "Bombo de charanga",
