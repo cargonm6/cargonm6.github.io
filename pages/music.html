@@ -2,30 +2,78 @@
 
 <!--
 © 2020-2022 Carlos González Marco
-Última actualización:  26/12/2022
+Última actualización:  09/05/2022
 -->
 
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <title>Carlos González Marco</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="../img/favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/slideshow.css">
+  <script src="../js/slideshow.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src='https://unpkg.com/spritespin@x.x.x/release/spritespin.js'></script>
+  <title>Carlos González Marco</title>
+  <meta id="viewport" name="viewport" content="width=device-width">
 </head>
 
-<div class="subpage">
+<body>
+  <div class="cv">
+    <div class="body">
+      <div class="left">
+        <div class="photo">
+          <img src="../img/img.jpg" alt="foto">
+        </div>
+        <div class="name">
+          CARLOS<br id="sep">
+          GONZÁLEZ MARCO
+        </div>
+        <div class="desc">
+          <div class="position">Ingeniero y Músico</div>
 
-    <h2>Museo de la música</h2>
-    <p>Navega con los botones y flechas del panel, o con las flechas del teclado.</p>
+          <a class="unique" href="../index.html"
+            title="Volver a la página principal">PÁGINA PRINCIPAL</a>
+        </div>
+      </div>
+      <div class="right">
+        <div id="destination">
+			<div class="subpage">
 
-    <div id="container"></div>
+				<h2>Museo de la música</h2>
+				<p>Navega con los botones y flechas del panel, o con las flechas del teclado.</p>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <div id="caption"></div>
-        <img class="modal-content" id="modal-content">
+				<div id="container"></div>
+
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+					<span class="close">&times;</span>
+					<div id="caption"></div>
+					<img class="modal-content" id="modal-content">
+				</div>
+
+			</div>
+		</div>
+      </div>
     </div>
-
-</div>
+    <div class="foot">
+      <div class="foot-left">&copy; <span id="year"></span> Carlos González Marco</div>
+      <div class="foot-right">
+        <a href="https://orcid.org/0000-0001-5953-120X" target="_blank" title="ORCID"><i class="fab fa-orcid"
+            aria-hidden="true"></i></a>
+        <a href="https://github.com/cargonm6" target="_blank" title="GitHub"><i class="fa-brands fa-github"
+            aria-hidden="true"></i></a>
+        <a href="https://es.linkedin.com/in/carlos-gonzalez-marco" target="_blank" title="LinkedIn"><i
+            class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCnLHz1gRoAVZQcYrkZhE2PQ" target="_blank"><i
+            class="fa-brands fa-youtube" aria-hidden="true" title="YouTube"></i></a>
+        <a class="refresh" href="JavaScript: location.reload(true);" title="Refrescar página"><i
+            class="fa fa-arrows-rotate" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
 
 </html>

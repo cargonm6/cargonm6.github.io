@@ -230,6 +230,10 @@ div.left div.desc>a:last-of-type {
   border-radius: 0 0 10px 10px;
 }
 
+div.left div.desc a.unique {
+  border-radius: 10px;
+}
+
 div.desc a:hover {
   background-color: var(--color-plain);
   color: var(--color-medium);

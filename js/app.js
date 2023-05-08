@@ -12,7 +12,14 @@ gallery_status = 0;
 // --------------------
 
 document.addEventListener("DOMContentLoaded", function () {
-  loadPage("./pages/main.html", "destination");
+  var path = window.location.pathname;
+  var page = path.split("/").pop();
+  if (page === "music.html") {
+    loadJSON("../data/music.json", "container", "fillMUS");
+  }
+  else {
+    loadPage("./pages/main.html", "destination");
+  }
 
   document.getElementById("year").innerHTML = new Date().getFullYear();
 });
@@ -65,7 +72,7 @@ function closeOtherTabs(category) {
 }
 
 function loadJSON(name, container, func) {
-  const urlJSON = "./data/" + name + ".json";
+  const urlJSON = name;
   const request = new XMLHttpRequest();
   request.open("GET", urlJSON);
   request.responseType = "json";
@@ -95,7 +102,7 @@ function loadPage(origin, destination, e) {
       document.getElementById(destination).innerHTML = html;
 
       if (origin === "./pages/main.html") {
-        loadJSON("cv", "container", "fillCV");
+        loadJSON("./data/cv.json", "container", "fillCV");
       }
       else if (origin === "./pages/music.html") {
         loadJSON("music", "container", "fillMUS");

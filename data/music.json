@@ -3,18 +3,18 @@
   "instruments": [
     {
       "name": "Tuba Rott",
-      "image": "img/music/instruments/rott_tuba.png",
+      "image": "../img/music/instruments/rott_tuba.png",
       "trademark": [
         {
           "name": "Rott",
-          "image": "img/music/trademarks/rott.svg"
+          "image": "../img/music/trademarks/rott.svg"
         }
       ],
       "type": "Tuba",
       "company": "Rott",
       "const_year": "1869-1917",
-      "const_place": "Praga (Bohemia)",
-      "model": "4-92 (modelo \"español\")",
+      "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Praga\" target=\"_blank\">Praga</a> (<a href=\"https:\/\/es.wikipedia.org\/wiki\/Bohemia\" target=\"_blank\">Bohemia</a>)",
+      "model": "4-92",
 	  "serialno": "",
       "tunning": "Do (estándar)",
       "system": "3 cilindros (SARV)",
@@ -22,36 +22,36 @@
     },
 	{
       "name": "Fliscorno Josef Lídl",
-      "image": "img/music/instruments/lidl_flugelhorn.png",
+      "image": "../img/music/instruments/lidl_flugelhorn.png",
       "trademark": [
         {
           "name": "Josef Lídl",
-          "image": "img/music/trademarks/lidl.png"
+          "image": "../img/music/trademarks/lidl.png"
         }
       ],
       "type": "Fliscorno",
       "company": "Josef Lídl",
       "const_year": "1899-1917",
-      "const_place": "Brno (Moravia)",
+      "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Brno\" target=\"_blank\">Brno</a> (<a href=\"https:\/\/es.wikipedia.org\/wiki\/Moravia\" target=\"_blank\">Moravia</a>)",
       "model": "",
 	  "serialno": "",
       "tunning": "Do",
       "system": "3 cilindros (SARV)",
-      "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl Brno</i><i class=\"descript\">(Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real)</i>"
+      "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl Brno</i><i class=\"descript\">Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real</i>"
     },
 	{
       "name": "Trompeta Rampone & Cazzani",
-      "image": "img/music/instruments/rampone_trumpet.png",
+      "image": "../img/music/instruments/rampone_trumpet.png",
       "trademark": [
         {
           "name": "Rott",
-          "image": "img/music/trademarks/rampone.svg"
+          "image": "../img/music/trademarks/rampone.svg"
         }
       ],
       "type": "Trompeta contralto",
       "company": "Rampone & Cazzani",
       "const_year": "1910-1957",
-      "const_place": "Milán (Italia)",
+      "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Milán\" target=\"_blank\">Milán</a> (<a href=\"https:\/\/es.wikipedia.org\/wiki\/Italia\" target=\"_blank\">Italia</a>)",
       "model": "43",
 	  "serialno": "",
       "tunning": "Mi-Mi♭ (estándar)",
@@ -60,17 +60,17 @@
     },
     {
       "name": "Trompa Rott",
-      "image": "img/music/instruments/rott_french-horn.png",
+      "image": "../img/music/instruments/rott_french-horn.png",
       "trademark": [
         {
           "name": "Rott",
-          "image": "img/music/trademarks/rott.svg"
+          "image": "../img/music/trademarks/rott.svg"
         }
       ],
       "type": "Trompa",
       "company": "Rott",
       "const_year": "1923-1945",
-      "const_place": "Praga (Bohemia)",
+      "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Praga\" target=\"_blank\">Praga</a> (<a href=\"https:\/\/es.wikipedia.org\/wiki\/Bohemia\" target=\"_blank\">Bohemia</a>)",
       "model": "C",
 	  "serialno": "",
       "tunning": "Fa (estándar)",
@@ -79,11 +79,11 @@
     },
 	{
       "name": "Saxofón tenor Nilliet",
-      "image": "img/music/instruments/nilliet_tenor-sax.png",
+      "image": "../img/music/instruments/nilliet_tenor-sax.png",
       "trademark": [
         {
           "name": "Nilliet",
-          "image": "img/music/trademarks/nilliet.svg"
+          "image": "../img/music/trademarks/nilliet.svg"
         }
       ],
       "type": "Saxofón tenor",
@@ -98,11 +98,11 @@
     },
     {
       "name": "Fliscorno Rott",
-      "image": "img/music/instruments/rott_flugelhorn.png",
+      "image": "../img/music/instruments/rott_flugelhorn.png",
       "trademark": [
         {
           "name": "Amati",
-          "image": "img/music/trademarks/amati-rott.svg"
+          "image": "../img/music/trademarks/amati-rott.svg"
         }
       ],
       "type": "Fliscorno",
@@ -117,11 +117,11 @@
     },
     {
       "name": "Corneta Orfeo",
-      "image": "img/music/instruments/orpheus_cornet.png",
+      "image": "../img/music/instruments/orpheus_cornet.png",
       "trademark": [
         {
           "name": "Орфей (Orfeo)",
-          "image": "img/music/trademarks/orfeo.svg"
+          "image": "../img/music/trademarks/orfeo.svg"
         }
       ],
       "type": "Corneta",
@@ -136,11 +136,11 @@
     },
     {
       "name": "Cornetín Bessons & Co.",
-      "image": "img/music/instruments/bessons-and-co_pkt_cornet.png",
+      "image": "../img/music/instruments/bessons-and-co_pkt_cornet.png",
       "trademark": [
         {
           "name": "Bessons & Co.",
-          "image": "img/music/trademarks/bessons-and-co.svg"
+          "image": "../img/music/trademarks/bessons-and-co.svg"
         }
       ],
       "type": "Corneta de bolsillo",
@@ -150,16 +150,16 @@
       "model": "",
 	  "serialno": "75983 (falsificado)",
       "tunning": "Si♭ (estándar)",
-      "system": "3 pistones Périnet (top-sprung)",
+      "system": "3 pistones Périnet (bottom-sprung)",
       "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Firma mecanizada en la campana, indicando: <i class=\"script\">Trademark Boosey / Bessons & Co. / London.W.C.2 / H.75983</i>"
     },
 	{
       "name": "Corneta Bessons & Co.",
-      "image": "img/music/instruments/bessons-and-co_cornet.png",
+      "image": "../img/music/instruments/bessons-and-co_cornet.png",
       "trademark": [
         {
           "name": "Bessons & Co.",
-          "image": "img/music/trademarks/bessons-and-co.svg"
+          "image": "../img/music/trademarks/bessons-and-co.svg"
         }
       ],
       "type": "Corneta",
@@ -174,11 +174,11 @@
     },
     {
       "name": "Trombón Amati",
-      "image": "img/music/instruments/amati_trombone.png",
+      "image": "../img/music/instruments/amati_trombone.png",
       "trademark": [
         {
           "name": "Amati Denak",
-          "image": "img/music/trademarks/amati.svg"
+          "image": "../img/music/trademarks/amati.svg"
         }
       ],
       "type": "Trombón de varas",
@@ -192,12 +192,69 @@
       "description": "Trombón tenor <i>junior</i>, fabricado durante la transición de Checoslovaquia hacia las actuales repúblicas independientes de Chequia y Eslovaquia. En el tudel figura \"Czech F[ederative] Republic\", y en la campana aparece bajo el logotipo de Amati: <i class=\"script\">Amati Kraslice / ASL 211</i>"
     },
 	{
+      "name": "Trompeta Bach",
+      "image": "../img/music/instruments/bach_trumpet.png",
+      "trademark": [
+        {
+          "name": "Vincent Bach",
+          "image": "../img/music/trademarks/bach.svg"
+        }
+      ],
+      "type": "Trompeta",
+      "company": "Vincent Bach",
+      "const_year": "1990-1992",
+      "const_place": "Elkhart (Indiana, EE. UU.)",
+      "model": "TR-300S",
+	  "serialno": "E 69276",
+      "tunning": "Si♭ (estándar)",
+      "system": "3 pistones Périnet (top-sprung)",
+      "description": "Trompeta en Si♭ de nivel medio. Grabado sobre la campana: <i class=\"script\">Bach / ® / USA</i>"
+    },
+	{
+      "name": "Fliscorno Yamaha",
+      "image": "../img/music/instruments/yamaha_flugelhorn.png",
+      "trademark": [
+        {
+          "name": "Yamaha",
+          "image": "../img/music/trademarks/yamaha.svg"
+        }
+      ],
+      "type": "Fliscorno",
+      "company": "Yamaha",
+      "const_year": "2001-2010",
+      "const_place": "Elkhart (Japón)",
+      "model": "YFH-631G",
+	  "serialno": "440492",
+      "tunning": "Si♭ (estándar)",
+      "system": "3 pistones Périnet (bottom-sprung)",
+      "description": "Fliscorno profesional en Si♭, con campana dorada y <i>trigger</i> en la tercera bomba. Grabado sobre la campana: <i class=\"script\">Yamaha</i>"
+    },
+	{
+      "name": "Trompeta Fides",
+      "image": "../img/music/instruments/fides_trumpet.png",
+      "trademark": [
+        {
+          "name": "Fides",
+          "image": "../img/music/trademarks/fides.png"
+        }
+      ],
+      "type": "Trompeta",
+      "company": "Fides (Music Development S. L.)",
+      "const_year": "2010-2015",
+      "const_place": "Dettingen (Alemania)",
+      "model": "Pioneer+",
+	  "serialno": "ML 94878 H.G.",
+      "tunning": "Do (estándar)",
+      "system": "3 pistones Périnet (top-sprung)",
+      "description": "Trompeta en Do fabricada en la sede de Dettingen de Fides. La empresa está codirigida por Francisco Javier Montesinos Fides y Matthias Beck, teniendo sedes en España y Alemania. Inscrito sobre la campana: <i class=\"script\">Fides</i>"
+    },
+	{
       "name": "Caja Jinbao",
-      "image": "img/music/instruments/sdrum_jinbao.png",
+      "image": "../img/music/instruments/sdrum_jinbao.png",
       "trademark": [
         {
           "name": "Tianjin Binbao Musical Instruments Co.",
-          "image": "img/music/trademarks/jinbao.svg"
+          "image": "../img/music/trademarks/jinbao.svg"
         }
       ],
       "type": "Caja piccolo",
@@ -212,11 +269,11 @@
     },
 	{
       "name": "Bombo NP",
-      "image": "img/music/instruments/bdrum_np.png",
+      "image": "../img/music/instruments/bdrum_np.png",
       "trademark": [
         {
           "name": "Nova Percusió",
-          "image": "img/music/trademarks/np.png"
+          "image": "../img/music/trademarks/np.png"
         }
       ],
       "type": "Bombo de charanga",
@@ -228,6 +285,25 @@
       "tunning": "",
       "system": "",
       "description": ""
+    },
+    {
+      "name": "Platos Alchemy",
+      "image": "../img/music/instruments/alchemy_cymbals.png",
+      "trademark": [
+        {
+          "name": "Alchemy",
+          "image": "../img/music/trademarks/alchemy.svg"
+        }
+      ],
+      "type": "Platos de hi-hat",
+      "company": "Alchemy (Istanbul)",
+      "const_year": "",
+      "const_place": "Estanbul (Turquía)",
+      "model": "MS-X 14\" HI-HAT",
+	    "serialno": "",
+      "tunning": "",
+      "system": "",
+      "description": "Platos de hi-hat para batería, acondicionados como <i>clash cymbals</i>."
     }
   ]
 }
