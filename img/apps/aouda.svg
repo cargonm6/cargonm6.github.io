@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="169.85312mm"
+   height="46.298649mm"
+   viewBox="0 0 169.85312 46.298649"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="aouda.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.76435185"
+     inkscape:cx="111.85948"
+     inkscape:cy="162.8831"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-75.342669,-105.58047)">
+    <g
+       inkscape:label="Capa 1"
+       id="layer1-3"
+       transform="translate(-22.671247,74.301221)">
+      <text
+         xml:space="preserve"
+         style="font-size:52.4912px;line-height:1.25;font-family:'Franklin Gothic Demi';-inkscape-font-specification:'Franklin Gothic Demi';fill:#b85757;fill-opacity:1;stroke-width:1.09357"
+         x="98.013916"
+         y="66.264977"
+         id="text12"
+         inkscape:export-xdpi="100"
+         inkscape:export-ydpi="100"><tspan
+           sodipodi:role="line"
+           id="tspan10"
+           x="98.013916"
+           y="66.264977"
+           style="fill:#b85757;fill-opacity:1;stroke-width:1.09357">A   UDA</tspan></text>
+      <g
+         id="g121"
+         transform="matrix(0.51949503,0,0,0.51949503,-80.067405,-25.673281)"
+         inkscape:export-xdpi="100"
+         inkscape:export-ydpi="100"
+         style="fill:#b85757;fill-opacity:1">
+        <path
+           id="path48"
+           style="fill:#b85757;stroke:none;stroke-width:3.26013;stroke-linecap:square;paint-order:fill markers stroke"
+           d="m 479.92188,1412.4883 a 67.13197,67.13197 0 0 0 -67.09571,67.1328 67.13197,67.13197 0 0 0 67.13281,67.1309 67.13197,67.13197 0 0 0 67.13086,-67.1309 67.13197,67.13197 0 0 0 -67.13086,-67.1328 67.13197,67.13197 0 0 0 -0.0371,0 z m -0.26954,15.2851 a 51.847341,51.847341 0 0 1 0.30664,0 51.847341,51.847341 0 0 1 51.84766,51.8477 51.847341,51.847341 0 0 1 -51.84766,51.8457 51.847341,51.847341 0 0 1 -51.84765,-51.8457 51.847341,51.847341 0 0 1 51.54101,-51.8477 z"
+           transform="matrix(0.50930868,0,0,0.50930868,198.94075,-609.76199)" />
+        <rect
+           style="fill:#b85757;stroke:none;stroke-width:1.75475;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect50"
+           width="21.350897"
+           height="15.177144"
+           x="432.71234"
+           y="183.57582" />
+        <path
+           id="path48-4"
+           style="fill:#b85757;fill-opacity:1;stroke:none;stroke-width:2.60027;stroke-linecap:square;paint-order:fill markers stroke"
+           d="m 479.9043,1412.4883 a 42.706663,67.131962 0 0 0 -42.65235,67.1328 42.706663,67.131962 0 0 0 42.70703,67.1309 42.706663,67.131962 0 0 0 42.70704,-67.1309 42.706663,67.131962 0 0 0 -42.70704,-67.1328 42.706663,67.131962 0 0 0 -0.0547,0 z m 0.0547,15.2851 a 25.92378,51.847341 0 0 1 25.92383,51.8477 25.92378,51.847341 0 0 1 -25.92383,51.8457 25.92378,51.847341 0 0 1 -25.92382,-51.8457 25.92378,51.847341 0 0 1 25.92382,-51.8477 z"
+           transform="matrix(0.50930868,0,0,0.50930868,198.94075,-609.76199)" />
+        <rect
+           style="fill:#b85757;fill-opacity:1;stroke:none;stroke-width:2.04443;stroke-linecap:square;paint-order:fill markers stroke"
+           id="rect113"
+           width="9.4641266"
+           height="61.389435"
+           x="438.65573"
+           y="113.12679" />
+      </g>
+    </g>
+  </g>
+</svg>

@@ -616,16 +616,20 @@ input {
   width: 90%;
 }
 
-
 .app-table th,
 .app-table td {
   text-align: center;
-  width: calc(100% / 5);
+  width: calc(100% / 7);
   vertical-align: middle;
 }
 
 .app-table tr td:first-of-type {
   font-weight: bold;
+}
+
+.app-table tr td:nth-child(3) {
+  text-align: justify;
+  width: calc(2 * 100% / 7);
 }
 
 .app-table th {
