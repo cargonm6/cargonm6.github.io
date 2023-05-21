@@ -31,6 +31,14 @@ body {
   padding: 20px 0px 0px 0px;
 }
 
+.slideshow-container hr {
+  border: 1px solid var(--color-light);
+}
+
+.slideshow-container div {
+  margin: 2px 4px 2px 2px;
+}
+
 .slideshow-container * {
   box-sizing: border-box;
 }
@@ -91,6 +99,7 @@ div.right a.next:hover {
 
 .dots {
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .dot {

@@ -392,14 +392,27 @@ function fillMUS(json, container) {
       li_8.innerHTML = "<b>Mecanismo:</b>&ensp;" + json.instruments[i].system;
       ul_text.appendChild(li_8);
     }
-
-    if (json.instruments[i].description != "") {
-      var li_9 = document.createElement("li");
-      li_9.innerHTML = "<b>Descripción:</b>&ensp;" + json.instruments[i].description;
-      ul_text.appendChild(li_9);
+	
+	if (json.instruments[i].hlink != "") {
+      var li_8 = document.createElement("li");
+      li_8.innerHTML = "<b>Enlace:</b>&ensp;" + json.instruments[i].hlink;
+      ul_text.appendChild(li_8);
     }
 
-    div_text.appendChild(ul_text);
+	var subdiv = document.createElement("div");
+	
+	if (json.instruments[i].description != "") {
+		console.log("añado al" + i);
+	  var hr_text = document.createElement("hr");
+      var p_in = document.createElement("p");
+      p_in.innerHTML = "<b>Descripción:</b>&ensp;" + json.instruments[i].description;
+	  subdiv.appendChild(hr_text);
+      subdiv.appendChild(p_in);
+    }
+	
+	div_text.appendChild(ul_text);
+	div_text.appendChild(subdiv);
+	
     content.appendChild(div_text);
 
     slideshow.appendChild(content);
