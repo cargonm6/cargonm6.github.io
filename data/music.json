@@ -12,14 +12,14 @@
       ],
       "type": "Tuba",
       "company": "Rott",
-      "const_year": "1869-1917",
+      "const_year": "1869-1902",
       "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Praga\" target=\"_blank\">Praga (Reino de Bohemia, Austria-Hungría)</a>",
       "model": "92",
 	  "serialno": "4",
       "tunning": "Do (estándar)",
       "system": "3 cilindros (SARV)",
 	  "hlink": "",
-      "description": "Tuba de construcción poco habitual con campana y tudel en posiciones opuestas, similar al modelo 101 \"español\" (catálogo de 1902) pero con 3 cilindros y mayor antigüedad. Fabricada durante la gestión de František Karel Rott. Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i><i class=\"descript\">Augusto Enrique Rott hijo / Praga, Bohemia</i>"
+      "description": "Tuba de estética similar a los oficleidos de válvulas o bombardones, con la campana y tudel en posiciones opuestas. Similar al modelo 101 \"español\" (catálogo de 1902) pero con 3 cilindros y mayor antigüedad, fue fabricada durante la gestión de František Karel Rott (hijo del fundador de la compañía). Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i><i class=\"descript\">Augusto Enrique Rott hijo / Praga, Bohemia</i>"
     },
 	{
       "name": "Fliscorno Josef Lídl",
@@ -40,6 +40,26 @@
       "system": "3 cilindros (SARV)",
 	  "hlink": "",
       "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl, Brno</i><i class=\"descript\">Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real</i>"
+    },
+	{
+      "name": "Onnoven Stowasser",
+      "image": "../img/music/instruments/stowasser_althorn.png",
+      "trademark": [
+        {
+          "name": "Walter Stowasser",
+          "image": "../img/music/trademarks/stowasser.svg"
+        }
+      ],
+      "type": "Onnoven (trompa alto)",
+      "company": "Walter Stowasser",
+      "const_year": "1889-1930",
+      "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Verona\" target=\"_blank\">Verona (Reino de Italia)</a>",
+      "model": "",
+	  "serialno": "24",
+      "tunning": "Mi♭ (estándar)",
+      "system": "3 cilindros (SARV)",
+	  "hlink": "",
+      "description": "Onnoven fabricado por la familia de origen checo Stowasser en su sede italiana. Debido a que la empresa situó su sede en Verona a finales del S. XIX, y que ésta se trasladó en 1930, es posible determinar en ese rango la posible fecha de construcción. En la campana, acuñado con prensa, presenta un escudo nobiliario de origen desconocido y el texto: <i class=\"script\">Walter Stowasser / Fabbricazione artistica di strumenti musicale / Piazzetta Chiavica / Verona</i><i class=\"descript\">Walter Stowasser / Fabricación artística de instrumentos musicales / Plazoleta Chiavica / Verona</i>"
     },
 	{
       "name": "Trompeta Rampone & Cazzani",
