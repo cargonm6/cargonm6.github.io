@@ -1,5 +1,5 @@
 {
-  "_comment": "© 2020-2022 Carlos González Marco - Última actualización: 21/07/2022",
+  "_comment": "© 2020-2022 Carlos González Marco - Última actualización: 27/07/2023",
   "category": [
     {
       "icon": "img/icons/briefcase.svg",
@@ -14,7 +14,7 @@
         },
         {
           "logo": "img/logos/outsourcing.png",
-          "date": "02/2022 - 07/2022<br/><p style=\"margin-left: -38.0px;\">11/2020 - 05/2021</p>",
+          "date": "02/2022 - 07/2022<br/><p>11/2020 - 05/2021</p>",
           "title": "Ingeniero técnico de telecomunicación",
           "centre": "<a href=\"https://outsourcinggroup.es/\" target=\"_blank\">Outsourcing Group Desarrollo S. L.</a>",
           "description": "Elaboración y firma de proyectos radioeléctricos de fase 1 para instalaciones de telefonía móvil."
@@ -41,22 +41,22 @@
       "entry": [
         {
           "logo": "img/logos/upv.png",
-          "date": "<span class=\"current\">09/2019 - acte.<\/span>",
-          "title": "<span class=\"current\">Máster Universitario en Ingeniería de Telecomunicación<\/span>",
+          "date": "09/2019 - 07/2023",
+          "title": "Máster Universitario en Ingeniería de Telecomunicación <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
-          "description": ""
+          "description": "Trabajo de Fin de Máster: <a href=\"https://riunet.upv.es/handle/10251/195557\" target=\"_blank\">&#171;Diseño de antenas flexibles para circuitos biométricos integrables en prendas de vestir&#187;</a>."
         },
         {
           "logo": "img/logos/uv.png",
           "date": "09/2016 - 09/2019",
-          "title": "Grado en Ingeniería Telemática <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "title": "Grado en Ingeniería Telemática <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
-          "description": "Trabajo de Fin de Grado: <a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">&#171;Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas&#187;</a>, calificado con sobresaliente."
+          "description": "Trabajo de Fin de Grado: <a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">&#171;Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas&#187;</a>."
         },
         {
           "logo": "img/logos/gva.png",
           "date": "09/2008 - 07/2012",
-          "title": "Bachillerato LOE (rama Ciencias y Tecnología) <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "title": "Bachillerato LOE (rama Ciencias y Tecnología) <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"https://portal.edu.gva.es/ieslluisvives/\" target=\"_blank\">IES Lluís Vives</a>",
           "description": ""
         }
@@ -69,14 +69,14 @@
         {
           "logo": "img/logos/micalet.png",
           "date": "09/2021 - 06/2022<br/><p>09/2010 - 06/2013</p>",
-          "title": "Enseñanzas profesionales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "title": "Enseñanzas profesionales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"http://elmicalet.cat/\" target=\"_blank\">Institut Musical Giner (S. C. El Micalet)</a>",
           "description": "Especialidad: trompeta (<a href=\"https://actiweb.one/javiergonzalez/servicios.html\" target=\"_blank\">Francisco Javier González Arnal</a>)."
         },
         {
           "logo": "img/logos/agrupacion.png",
           "date": "03/2008 - 07/2010",
-          "title": "Enseñanzas elementales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación finalizada\"/>",
+          "title": "Enseñanzas elementales de música",
           "centre": "<a href=\"https://sites.google.com/view/musicalsanluis/escuela-de-m%C3%BAsica\" target=\"_blank\">Escuela de Música Carrera Fuente de San Luis</a>",
           "description": "Especialidad: trompeta (<a href=\"https://sites.google.com/site/musicapcsantaana/profesorado-1\" target=\"_blank\">José Ignacio Barreiro Sanchís</a>)."
         }
@@ -96,14 +96,14 @@
         {
           "logo": "img/logos/va.png",
           "date": "Valenciano",
-          "title": "Certificado C1",
+          "title": "Certificado C1 <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"http://www.jqcv.gva.es/\" target=\"_blank\">Generalitat Valenciana - Junta Qualificadora de Coneixements de Valencià</a>",
           "description": ""
         },
         {
           "logo": "img/logos/en.png",
           "date": "Inglés",
-          "title": "Certificado C1",
+          "title": "Certificado C1 <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"https://mestreacasa.gva.es/web/eoibenicalap\" target=\"_blank\">Generalitat Valenciana - EOI València-Benicalap</a>",
           "description": ""
         }
@@ -151,26 +151,6 @@
       ]
     },
     {
-      "icon": "img/icons/tool.svg",
-      "title": "Asociaciones profesionales",
-      "entry": [
-        {
-          "logo": "img/logos/coitt.png",
-          "date": "2018 - acte.",
-          "title": "<a href=\"https://www.telecos.zone/\" target=\"_blank\">Colegio Oficial/Asociación de Graduados e Ingenieros Técnicos de Telecomunicación (COITT/AGEITT)</a>",
-          "centre": "Madrid (C. de Madrid, España)",
-          "description": "Colegiado n. 17030, asociado n. 16899"
-        },
-        {
-          "logo": "img/logos/ccoo.png",
-          "date": "2016 - acte.",
-          "title": "<a href=\"https://www.pv.ccoo.es/\" target=\"_blank\">Comissions Obreres del País Valencià</a>",
-          "centre": "Valencia (C. Valenciana, España)",
-          "description": "Serveis a la ciutadania"
-        }
-      ]
-    },
-    {
       "icon": "img/icons/people.svg",
       "title": "Asociaciones artísticas",
       "entry": [
@@ -201,27 +181,6 @@
           "title": "<a href=\"https://sites.google.com/view/musicalsanluis/\" target=\"_blank\">Agrupación Musical Carrera Fuente de San Luis</a>",
           "centre": "Valencia (C. Valenciana, España)",
           "description": "Músico bajo la dirección de <a href=\"https://didacbosch.wordpress.com/\" target=\"_blank\">Dídac Bosch Alcaina<\/a>. Administración web, edición multimedia y gestión de RR. SS."
-        },
-        {
-          "logo": "img/logos/cella.png",
-          "date": "2010 - acte.",
-          "title": "<a href=\"https://bandamusica.cella.es/\" target=\"_blank\">Asociación Cultural Musical de Cella</a>",
-          "centre": "Cella (Aragón, España)",
-          "description": "Músico bajo la dirección de <a href=\"http://www.conservatoriodeteruel.es/conservatorio/k-Teacher/vicente-carot-gil/\" target=\"_blank\">Vicente Carot Gil<\/a>."
-        },
-        {
-          "logo": "img/logos/upv.png",
-          "date": "2015 - 2016<br/><p>2012 - 2013</p>",
-          "title": "<a href=\"http://bandasinfonica.webs.upv.es/\" target=\"_blank\">Banda Simfònica de la Universitat Politècnica de València</a>",
-          "centre": "Valencia (C. Valenciana, España)",
-          "description": "Músico bajo la dirección de <a href=\"https://dialnet.unirioja.es/servlet/autor?codigo=1656923\" target=\"_blank\">José Manuel Miñana Juan<\/a> y <a href=\"https://web.archive.org/web/20220926032640/http://www.franciscovalero.es/biografia/\" target=\"_blank\">Francisco José Valero García<\/a>."
-        },
-        {
-          "logo": "img/logos/micalet.png",
-          "date": "2010 - 2013",
-          "title": "<a href=\"https://www.elmicalet.cat/seccions/jove-orquestra\" target=\"_blank\">Jove Orquestra Salvador Giner (S. C. El Micalet)</a>",
-          "centre": "Valencia (C. Valenciana, España)",
-          "description": "Músico bajo la dirección de <a href=\"https://s3-eu-west-1.amazonaws.com/compromis-primaries/candidates/cvs/HSl0jUSa6GMsFBgpVnpq0V6GdzCGply8RyzVYPI4.pdf\" target=\"_blank\">Miquel Juan García.<\/a>"
         }
       ]
     },
