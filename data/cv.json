@@ -8,7 +8,7 @@
         {
           "logo": "img/logos/upv.png",
           "date": "<span class=\"current\">11/2021 - acte.<\/span>",
-          "title": "<span class=\"current\">Técnico superior de investigación",
+          "title": "<span class=\"current\">Técnico superior de investigación<\/span>",
           "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
           "description": "Participación en el proyecto &#171;Monitorización y gestión del mantenimiento predictivo de vías interurbanas mediante técnicas de inteligencia artificial&#187; (NEUROVÍAS), adscrito al <a href=\"https://www.upv.es/entidades/DIC/\" target=\"_blank\">Departamento de Ingeniería de la Construcción y Proyectos de Ingeniería Civil</a> de la UPV."
         },
@@ -39,6 +39,13 @@
       "icon": "img/icons/cap.svg",
       "title": "Formación técnica reglada",
       "entry": [
+		{
+          "logo": "img/logos/uv.png",
+          "date": "<span class=\"current\">09/2023 - acte.",
+          "title": "<span class=\"current\">Máster Universitario en Profesorado de Educación Secundaria<\/span> <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+          "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
+          "description": ""
+        },
         {
           "logo": "img/logos/upv.png",
           "date": "09/2019 - 07/2023",
