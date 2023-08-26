@@ -86,7 +86,7 @@
       "image": "../img/music/instruments/rampone_trumpet.png",
       "trademark": [
         {
-          "name": "Rott",
+          "name": "Rampone & Cazzani",
           "image": "../img/music/trademarks/rampone.svg"
         }
       ],
@@ -131,7 +131,7 @@
         }
       ],
       "type": "Saxofón tenor",
-      "company": "Nilliet",
+      "company": "Nilliet (Montserrat)",
       "const_year": "< 1961",
       "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Barcelona\" target=\"_blank\">Barcelona (Cataluña, España)</a>",
       "model": "L. 19 \"Artista Solista\"",
@@ -146,12 +146,12 @@
       "image": "../img/music/instruments/rott_flugelhorn.png",
       "trademark": [
         {
-          "name": "Amati",
+          "name": "Rott (Amati)",
           "image": "../img/music/trademarks/amati-rott.svg"
         }
       ],
       "type": "Fliscorno",
-      "company": "Amati - Rott",
+      "company": "Rott (Amati)",
       "const_year": "1970",
       "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Kraslice\" target=\"_blank\">Kraslice (Bohemia Occidental, Checoslovaquia)</a>",
       "model": "43B",
@@ -166,12 +166,12 @@
       "image": "../img/music/instruments/orpheus_cornet.png",
       "trademark": [
         {
-          "name": "Орфей (Orfeo)",
+          "name": "Orfeo",
           "image": "../img/music/trademarks/orfeo.svg"
         }
       ],
       "type": "Corneta",
-      "company": "Орфей (Orfeo)",
+      "company": "Orfeo",
       "const_year": "1984",
       "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Kiev\" target=\"_blank\">Kiev (RSS de Ucrania, Unión Soviética)</a>",
       "model": "",
@@ -179,7 +179,7 @@
       "tunning": "Si♭ (estándar)",
       "system": "3 cilindros (TARV)",
 	  "hlink": "",
-      "description": "Firma mecanizada en la campana, indicando: <i class=\"script\">N 3049 1984г / Ц 80р</i>"
+    "description": "Instrumento de curioso diseño, con válvulas rotativas accionadas verticalmente, producido en Kiev en 1984 por la empresa Орфей (Orfeo) bajo el auspicio del <a href=\"https:\/\/uk.wikipedia.org\/wiki\/%D0%9C%D1%96%D0%BD%D1%96%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE_%D0%BC%D1%96%D1%81%D1%86%D0%B5%D0%B2%D0%BE%D1%97_%D0%BF%D1%80%D0%BE%D0%BC%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%96_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%A0%D0%A1%D0%A0\">Ministerio de Industria Local de la RSS de Ucrania</a>. Tras el desastre de Chernóbil de 1986, la fábrica se trasladaría a la nueva ciudad de Slavútich, dando trabajo a muchos de los desplazados. En la campana, una firma mecanizada indica: <i class=\"script\">N 3049 1984г / Ц 80р</i>"
     },
     {
       "name": "Cornetín Bessons & Co.",
@@ -219,8 +219,8 @@
       "tunning": "Si♭ (estándar)",
       "system": "3 pistones Périnet (top-sprung)",
 	  "hlink": "",
-      "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Sin ninguna marca ni señal en el cuerpo del instrumento."
-    },
+    "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Sin ninguna marca ni señal en el cuerpo del instrumento (identificable por la factura de la mecanización y el tipo de piezas empleado)."
+  },
     {
       "name": "Trombón Amati",
       "image": "../img/music/instruments/amati_trombone.png",
@@ -259,7 +259,7 @@
       "tunning": "Si♭ (estándar)",
       "system": "3 pistones Périnet (top-sprung)",
 	  "hlink": "",
-      "description": "Trompeta en Si♭ de nivel medio. Grabado sobre la campana: <i class=\"script\">Bach / ® / USA</i>"
+    "description": "Trompeta en Si♭ construída en la factoría de Elkhart. Grabado sobre la campana: <i class=\"script\">Bach / ® / USA</i>"
     },
 	{
       "name": "Fliscorno Yamaha",
@@ -306,20 +306,20 @@
       "image": "../img/music/instruments/sdrum_jinbao.png",
       "trademark": [
         {
-          "name": "Tianjin Binbao Musical Instruments Co.",
+          "name": "Tianjin Jinbao Musical Instruments Co.",
           "image": "../img/music/trademarks/jinbao.svg"
         }
       ],
       "type": "Caja piccolo",
-      "company": "Tianjin Binbao Musical Instruments Co.",
-      "const_year": "",
+      "company": "Tianjin Jinbao Musical Instruments Co.",
+      "const_year": "~ 2000",
       "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Tianjin\" target=\"_blank\">Tianjin (R. P. China)</a>",
       "model": "JBS 1055",
 	  "serialno": "",
       "tunning": "",
       "system": "",
 	  "hlink": "",
-      "description": ""
+    "description": "Caja piccolo de acero fabricada por Jinbao en la década de los 2000. Inicialmente constituída como fábrica de herramientas agrícolas de Chengguan, en 1983 Jinbao comienza a cooperar con diversos fabricantes de instrumentos musicales, hasta saltar al mercado internacional en 1997 bajo su denominación actual."
     },
 	{
       "name": "Bombo NP",
