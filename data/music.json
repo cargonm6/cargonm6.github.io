@@ -19,7 +19,27 @@
       "tunning": "Do (estándar)",
       "system": "3 cilindros (SARV)",
 	  "hlink": "",
-      "description": "Tuba de estética similar a los oficleidos de válvulas o bombardones, con la campana y tudel en posiciones opuestas. Similar al modelo 101 \"español\" (catálogo de 1902) pero con 3 cilindros y mayor antigüedad, fue fabricada durante la gestión de František Karel Rott (hijo del fundador de la compañía). Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i><i class=\"descript\">Augusto Enrique Rott hijo / Praga, Bohemia</i>"
+      "description": "Tuba de estética similar a los oficleidos de válvulas o bombardones, con la campana y tudel en posiciones opuestas. Similar al modelo 101 \"español\" (catálogo de 1902) pero con 3 cilindros y mayor antigüedad, fue fabricada durante la gestión de František Karel Rott (hijo del fundador de la compañía). Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i><i class=\"descript\">(francés) Augusto Enrique Rott hijo / Praga, Bohemia</i>"
+    },
+	{
+      "name": "Fliscorno Winter & Schöner",
+      "image": "../img/music/instruments/winter_flugelhorn.png",
+      "trademark": [
+        {
+          "name": "Winter & Schöner",
+          "image": "../img/music/trademarks/winter.svg"
+        }
+      ],
+      "type": "Fliscorno",
+      "company": "Winter & Schöner",
+      "const_year": "1875-1908",
+      "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Linz\" target=\"_blank\">Linz (Alta Austria, Austria-Hungría)</a>",
+      "model": "",
+	  "serialno": "",
+      "tunning": "Do",
+      "system": "3 cilindros (SARV)",
+	  "hlink": "",
+      "description": "Fliscorno en Do fabricado entre 1875 y 1908 por la empresa de Josef Winter y Josef Schöner en la ciudad austríaca de Linz. La empresa, originalmente propiedad de Ignaz Lorenz (Linz, Spittelwiese 7), pasó a manos de Winter y Schöner como sucesores en 1875, y continuó su producción hasta mediados del S. XX. Josef Postl ejerció más tarde como tercer socio hasta su muerte en 1910, y tras el fallecimiento de Schöner en 1908 la empresa pasaría a manos de los herederos de Winter, Edmund y Maria hasta 1963. En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">Winter & Schöner, vormals Ig. Lorenz, Linz</i><i class=\"descript\">(alemán) Winter y Schöner, antes Ig. Lorenz, Linz</i>"
     },
 	{
       "name": "Fliscorno Josef Lídl",
@@ -39,7 +59,7 @@
       "tunning": "Do",
       "system": "3 cilindros (SARV)",
 	  "hlink": "",
-      "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl, Brno</i><i class=\"descript\">Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real</i>"
+      "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl, Brno</i><i class=\"descript\">(checo) Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real</i>"
     },
 	{
       "name": "Onnoven Stowasser",
@@ -59,7 +79,7 @@
       "tunning": "Mi♭ (estándar)",
       "system": "3 cilindros (SARV)",
 	  "hlink": "",
-      "description": "Onnoven fabricado por la familia de origen checo Stowasser en su sede italiana. Debido a que la empresa situó su sede en Verona a finales del S. XIX, y que ésta se trasladó en 1930, es posible determinar en ese rango la posible fecha de construcción. En la campana, acuñado con prensa, presenta un escudo nobiliario de origen desconocido y el texto: <i class=\"script\">Walter Stowasser / Fabbricazione artistica di strumenti musicale / Piazzetta Chiavica / Verona</i><i class=\"descript\">Walter Stowasser / Fabricación artística de instrumentos musicales / Plazoleta Chiavica / Verona</i>"
+      "description": "Onnoven fabricado por la familia de origen checo Stowasser en su sede italiana. Debido a que la empresa situó su sede en Verona a finales del S. XIX, y que ésta se trasladó en 1930, es posible determinar en ese rango la posible fecha de construcción. En la campana, acuñado con prensa, presenta un escudo nobiliario de origen desconocido y el texto: <i class=\"script\">Walter Stowasser / Fabbricazione artistica di strumenti musicale / Piazzetta Chiavica / Verona</i><i class=\"descript\">(italiano) Walter Stowasser / Fabricación artística de instrumentos musicales / Plazoleta Chiavica / Verona</i>"
     },
 	{
       "name": "Trompeta Rampone & Cazzani",
@@ -79,7 +99,7 @@
       "tunning": "Mi-Mi♭ (estándar)",
       "system": "3 cilindros (SARV)",
 	  "hlink": "",
-      "description": "Trompeta contralto construida por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una pieza intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i><i class=\"descript\">Sociedades Reunidas / A. Rampone & B. Cazzani & C.º / Establecimiento premiado / B. Cazzani e C.º / Milán / Exportación Mundial</i>"
+      "description": "Trompeta contralto construida por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una pieza intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i><i class=\"descript\">(italiano) Sociedades Reunidas / A. Rampone & B. Cazzani & C.º / Establecimiento premiado / B. Cazzani e C.º / Milán / Exportación Mundial</i>"
     },
     {
       "name": "Trompa Rott",
