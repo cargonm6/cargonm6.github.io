@@ -3,15 +3,15 @@
   "instruments": [
     {
       "name": "Tuba Rott",
-      "image": "../img/music/instruments/rott_tuba.png",
+      "image": "../../img/music/instruments/rott_tuba.png",
       "trademark": [
         {
           "name": "Rott",
-          "image": "../img/music/trademarks/rott.svg"
+          "image": "../../img/music/trademarks/rott.svg"
         }
       ],
       "type": "Tuba",
-      "company": "Rott",
+      "company": "<a href=\"music/makers.html#rott\">Rott</a>",
       "const_year": "1869-1902",
       "const_place": "<a href=\"https:\/\/es.wikipedia.org\/wiki\/Praga\" target=\"_blank\">Praga (Reino de Bohemia, Austria-Hungría)</a>",
       "model": "92",
@@ -23,11 +23,11 @@
     },
 	{
       "name": "Fliscorno Winter & Schöner",
-      "image": "../img/music/instruments/winter_flugelhorn.png",
+      "image": "../../img/music/instruments/winter_flugelhorn.png",
       "trademark": [
         {
           "name": "Winter & Schöner",
-          "image": "../img/music/trademarks/winter.svg"
+          "image": "../../img/music/trademarks/winter.svg"
         }
       ],
       "type": "Fliscorno",
@@ -43,11 +43,11 @@
     },
 	{
       "name": "Fliscorno Josef Lídl",
-      "image": "../img/music/instruments/lidl_flugelhorn.png",
+      "image": "../../img/music/instruments/lidl_flugelhorn.png",
       "trademark": [
         {
           "name": "Josef Lídl",
-          "image": "../img/music/trademarks/lidl.png"
+          "image": "../../img/music/trademarks/lidl.png"
         }
       ],
       "type": "Fliscorno",
@@ -63,11 +63,11 @@
     },
 	{
       "name": "Onnoven Stowasser",
-      "image": "../img/music/instruments/stowasser_althorn.png",
+      "image": "../../img/music/instruments/stowasser_althorn.png",
       "trademark": [
         {
           "name": "Walter Stowasser",
-          "image": "../img/music/trademarks/stowasser.svg"
+          "image": "../../img/music/trademarks/stowasser.svg"
         }
       ],
       "type": "Onnoven (trompa alto)",
@@ -83,11 +83,11 @@
     },
 	{
       "name": "Trompeta Rampone & Cazzani",
-      "image": "../img/music/instruments/rampone_trumpet.png",
+      "image": "../../img/music/instruments/rampone_trumpet.png",
       "trademark": [
         {
           "name": "Rampone & Cazzani",
-          "image": "../img/music/trademarks/rampone.svg"
+          "image": "../../img/music/trademarks/rampone.svg"
         }
       ],
       "type": "Trompeta contralto",
@@ -103,11 +103,11 @@
     },
     {
       "name": "Trompa Rott",
-      "image": "../img/music/instruments/rott_french-horn.png",
+      "image": "../../img/music/instruments/rott_french-horn.png",
       "trademark": [
         {
           "name": "Rott",
-          "image": "../img/music/trademarks/rott.svg"
+          "image": "../../img/music/trademarks/rott.svg"
         }
       ],
       "type": "Trompa",
@@ -123,11 +123,11 @@
     },
 	{
       "name": "Saxofón tenor Nilliet",
-      "image": "../img/music/instruments/nilliet_tenor-sax.png",
+      "image": "../../img/music/instruments/nilliet_tenor-sax.png",
       "trademark": [
         {
           "name": "Nilliet",
-          "image": "../img/music/trademarks/nilliet.svg"
+          "image": "../../img/music/trademarks/nilliet.svg"
         }
       ],
       "type": "Saxofón tenor",
@@ -143,11 +143,11 @@
     },
     {
       "name": "Fliscorno Rott",
-      "image": "../img/music/instruments/rott_flugelhorn.png",
+      "image": "../../img/music/instruments/rott_flugelhorn.png",
       "trademark": [
         {
           "name": "Rott (Amati)",
-          "image": "../img/music/trademarks/amati-rott.svg"
+          "image": "../../img/music/trademarks/amati-rott.svg"
         }
       ],
       "type": "Fliscorno",
@@ -163,11 +163,11 @@
     },
     {
       "name": "Corneta Orfeo",
-      "image": "../img/music/instruments/orpheus_cornet.png",
+      "image": "../../img/music/instruments/orpheus_cornet.png",
       "trademark": [
         {
           "name": "Orfeo",
-          "image": "../img/music/trademarks/orfeo.svg"
+          "image": "../../img/music/trademarks/orfeo.svg"
         }
       ],
       "type": "Corneta",
@@ -183,11 +183,11 @@
     },
     {
       "name": "Cornetín Bessons & Co.",
-      "image": "../img/music/instruments/bessons-and-co_pkt_cornet.png",
+      "image": "../../img/music/instruments/bessons-and-co_pkt_cornet.png",
       "trademark": [
         {
           "name": "Bessons & Co.",
-          "image": "../img/music/trademarks/bessons-and-co.svg"
+          "image": "../../img/music/trademarks/bessons-and-co.svg"
         }
       ],
       "type": "Corneta de bolsillo",
@@ -203,11 +203,11 @@
     },
 	{
       "name": "Corneta Bessons & Co.",
-      "image": "../img/music/instruments/bessons-and-co_cornet.png",
+      "image": "../../img/music/instruments/bessons-and-co_cornet.png",
       "trademark": [
         {
           "name": "Bessons & Co.",
-          "image": "../img/music/trademarks/bessons-and-co.svg"
+          "image": "../../img/music/trademarks/bessons-and-co.svg"
         }
       ],
       "type": "Corneta",
@@ -223,11 +223,11 @@
   },
     {
       "name": "Trombón Amati",
-      "image": "../img/music/instruments/amati_trombone.png",
+      "image": "../../img/music/instruments/amati_trombone.png",
       "trademark": [
         {
           "name": "Amati Denak",
-          "image": "../img/music/trademarks/amati.svg"
+          "image": "../../img/music/trademarks/amati.svg"
         }
       ],
       "type": "Trombón de varas",
@@ -243,11 +243,11 @@
     },
 	{
       "name": "Trompeta Bach",
-      "image": "../img/music/instruments/bach_trumpet.png",
+      "image": "../../img/music/instruments/bach_trumpet.png",
       "trademark": [
         {
           "name": "Vincent Bach",
-          "image": "../img/music/trademarks/bach.svg"
+          "image": "../../img/music/trademarks/bach.svg"
         }
       ],
       "type": "Trompeta",
@@ -263,11 +263,11 @@
     },
 	{
       "name": "Fliscorno Yamaha",
-      "image": "../img/music/instruments/yamaha_flugelhorn.png",
+      "image": "../../img/music/instruments/yamaha_flugelhorn.png",
       "trademark": [
         {
           "name": "Yamaha",
-          "image": "../img/music/trademarks/yamaha.svg"
+          "image": "../../img/music/trademarks/yamaha.svg"
         }
       ],
       "type": "Fliscorno",
@@ -283,11 +283,11 @@
     },
 	{
       "name": "Trompeta Fides",
-      "image": "../img/music/instruments/fides_trumpet.png",
+      "image": "../../img/music/instruments/fides_trumpet.png",
       "trademark": [
         {
           "name": "Fides",
-          "image": "../img/music/trademarks/fides.png"
+          "image": "../../img/music/trademarks/fides.png"
         }
       ],
       "type": "Trompeta",
@@ -303,11 +303,11 @@
     },
 	{
       "name": "Caja Jinbao",
-      "image": "../img/music/instruments/sdrum_jinbao.png",
+      "image": "../../img/music/instruments/sdrum_jinbao.png",
       "trademark": [
         {
           "name": "Tianjin Jinbao Musical Instruments Co.",
-          "image": "../img/music/trademarks/jinbao.svg"
+          "image": "../../img/music/trademarks/jinbao.svg"
         }
       ],
       "type": "Caja piccolo",
@@ -323,11 +323,11 @@
     },
 	{
       "name": "Bombo NP",
-      "image": "../img/music/instruments/bdrum_np.png",
+      "image": "../../img/music/instruments/bdrum_np.png",
       "trademark": [
         {
           "name": "Nova Percusió",
-          "image": "../img/music/trademarks/np.png"
+          "image": "../../img/music/trademarks/np.png"
         }
       ],
       "type": "Bombo de charanga",
@@ -343,11 +343,11 @@
     },
     {
       "name": "Platos Alchemy",
-      "image": "../img/music/instruments/alchemy_cymbals.png",
+      "image": "../../img/music/instruments/alchemy_cymbals.png",
       "trademark": [
         {
           "name": "Alchemy",
-          "image": "../img/music/trademarks/alchemy.svg"
+          "image": "../../img/music/trademarks/alchemy.svg"
         }
       ],
       "type": "Platos de hi-hat",

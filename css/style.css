@@ -7,7 +7,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
 
 :root {
   --color-plain: rgb(241, 244, 255);
@@ -979,4 +981,42 @@ button.gallery_btn:active {
   .modal-content {
     width: 100%;
   }
+}
+
+.maker {
+  position: relative;
+  margin: auto;
+
+  border: 2px solid var(--color-medium);
+  border-radius: 15px;
+  padding: 10px;
+
+  height: fit-content;
+}
+
+.maker+.maker {
+  margin-top: 10px;
+}
+
+.maker h3 {
+  font-family: 'Tangerine', serif;
+  font-size: x-large;
+  color: var(--color-medium);
+  margin: 0;
+}
+
+.maker p:last-child {
+  margin-bottom: 0;
+}
+
+.maker img{
+  float: right;
+  margin: 10px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+fieldset.info {
+  width: fit-content;
+  height: fit-content;
 }

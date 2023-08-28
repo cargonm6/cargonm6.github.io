@@ -14,8 +14,11 @@ gallery_status = 0;
 document.addEventListener("DOMContentLoaded", function () {
   var path = window.location.pathname;
   var page = path.split("/").pop();
-  if (page === "music.html") {
-    loadJSON("../data/music.json", "container", "fillMUS");
+  if (page === "gallery.html") {
+    loadJSON("../../data/music.json", "container", "fillMUS");
+  }
+  else if (page === "makers.html") {
+    // pass
   }
   else {
     loadPage("./pages/main.html", "destination");
@@ -237,12 +240,12 @@ function showGallery() {
   var gallery = document.getElementById("gallery");
   if (gallery_status == 0) {
     gallery.style = "display: block;"
-	img_show.style = "display: none;"
+    img_show.style = "display: none;"
     gallery_status = 1
   }
   else {
     gallery.style = "display: none;"
-	img_show.style = "display: block;"
+    img_show.style = "display: block;"
     gallery_status = 0
   }
 }
@@ -274,20 +277,20 @@ function fillMUS(json, container) {
 
     var txt_img = document.createElement("p");
     txt_img.textContent = "(" + (i + 1).toString() + ") " + json.instruments[i].name;
-    
+
     var ins_img = document.createElement("img");
     ins_img.setAttribute("src", json.instruments[i].image);
     ins_img.setAttribute("alt", json.instruments[i].name);
 
     div_img.appendChild(ins_img);
     div_img.appendChild(txt_img);
-    
+
     content.appendChild(div_img);
     gallery.appendChild(content);
   }
 
   body.appendChild(gallery);
-  
+
   var img_show = document.createElement("div");
   img_show.setAttribute("id", "img_show");
 
@@ -392,27 +395,27 @@ function fillMUS(json, container) {
       li_8.innerHTML = "<b>Mecanismo:</b>&ensp;" + json.instruments[i].system;
       ul_text.appendChild(li_8);
     }
-	
-	if (json.instruments[i].hlink != "") {
+
+    if (json.instruments[i].hlink != "") {
       var li_8 = document.createElement("li");
       li_8.innerHTML = "<b>Enlace:</b>&ensp;" + json.instruments[i].hlink;
       ul_text.appendChild(li_8);
     }
 
-	var subdiv = document.createElement("div");
-	
-	if (json.instruments[i].description != "") {
-		console.log("añado al" + i);
-	  var hr_text = document.createElement("hr");
+    var subdiv = document.createElement("div");
+
+    if (json.instruments[i].description != "") {
+      console.log("añado al" + i);
+      var hr_text = document.createElement("hr");
       var p_in = document.createElement("p");
       p_in.innerHTML = "<b>Descripción:</b>&ensp;" + json.instruments[i].description;
-	  subdiv.appendChild(hr_text);
+      subdiv.appendChild(hr_text);
       subdiv.appendChild(p_in);
     }
-	
-	div_text.appendChild(ul_text);
-	div_text.appendChild(subdiv);
-	
+
+    div_text.appendChild(ul_text);
+    div_text.appendChild(subdiv);
+
     content.appendChild(div_text);
 
     slideshow.appendChild(content);
