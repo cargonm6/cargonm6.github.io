@@ -94,24 +94,31 @@
       "title": "Conocimiento de idiomas",
       "entry": [
         {
-          "logo": "img/logos/es.png",
+          "logo": "img/logos/lang/es.png",
           "date": "Español",
           "title": "Nativo",
           "centre": "Lengua materna",
           "description": ""
         },
         {
-          "logo": "img/logos/va.png",
+          "logo": "img/logos/lang/va.png",
           "date": "Valenciano",
           "title": "Certificado C1 <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"http://www.jqcv.gva.es/\" target=\"_blank\">Generalitat Valenciana - Junta Qualificadora de Coneixements de Valencià</a>",
           "description": ""
         },
         {
-          "logo": "img/logos/en.png",
+          "logo": "img/logos/lang/en.png",
           "date": "Inglés",
           "title": "Certificado C1 <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
-          "centre": "<a href=\"https://mestreacasa.gva.es/web/eoibenicalap\" target=\"_blank\">Generalitat Valenciana - EOI València-Benicalap</a>",
+          "centre": "<a href=\"https://portal.edu.gva.es/eoibenicalap/\" target=\"_blank\">Generalitat Valenciana - EOI València-Benicalap</a>",
+          "description": ""
+        },
+        {
+          "logo": "img/logos/lang/de.png",
+          "date": "Alemán",
+          "title": "Nivel A2 (en curso) <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+          "centre": "<a href=\"https://portal.edu.gva.es/eoiquatrecarreres/\" target=\"_blank\">Generalitat Valenciana - EOI València-Quatre Carreres</a>",
           "description": ""
         }
       ]
