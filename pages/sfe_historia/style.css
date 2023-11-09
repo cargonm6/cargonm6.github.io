@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 
 * {
     box-sizing: border-box;
@@ -96,6 +97,10 @@ hr.hide {
 
 .header img {
     max-height: 100px;
+}
+
+.table_container {
+    overflow-x: auto;
 }
 
 table {

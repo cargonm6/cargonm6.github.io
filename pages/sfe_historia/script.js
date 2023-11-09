@@ -42,13 +42,14 @@ function fill_timeline(json, container) {
     console.log(json.periodos[0].leyes[0].escudo);
 
     for (var i = 0; i < json.periodos.length; i++) {
+        var div_table = Object.assign(document.createElement("div"), { className: "table_container" });
         var table = document.createElement("table");
 
         var t_head = document.createElement("tr");
         t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Escudo" }));
-        t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Denominación" }));
+        t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Estado" }));
         t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Descripción" }));
-        t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Marco legal" }));
+        t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Marco jurídico" }));
         t_head.appendChild(Object.assign(document.createElement("th"), { textContent: "Período" }));
         table.appendChild(t_head);
 
@@ -62,6 +63,7 @@ function fill_timeline(json, container) {
         t_head.appendChild(Object.assign(document.createElement("td"), { textContent: json.periodos[i].marco }));
         t_head.appendChild(Object.assign(document.createElement("td"), { textContent: json.periodos[i].periodo }));
         table.appendChild(t_head);
+        div_table.appendChild(table);
 
         var div = Object.assign(document.createElement("div"), { className: "timeline" });
 
@@ -100,7 +102,7 @@ function fill_timeline(json, container) {
             timeline_show(this);
         };
 
-        body.appendChild(table);
+        body.appendChild(div_table);
         body.appendChild(button);
         body.appendChild(div);
     }
