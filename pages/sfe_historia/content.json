@@ -1,0 +1,227 @@
+{
+    "periodos": [
+        {
+            "escudo": "img/logos/escudo_castilla.png",
+            "nombre": "Corona de Castilla",
+            "descripcion": "Reinado de Alfonso X «el Sabio»",
+            "marco": "Siete Partidas",
+            "periodo": "1252-1284",
+            "leyes": [
+                {
+                    "escudo": "img/logos/escudo_castilla.png",
+                    "fecha": "1265",
+                    "nombre": "Las Siete Partidas",
+                    "promotor": "Alfonso X",
+                    "enlace": "https://www.boe.es/biblioteca_juridica/publicacion.php?id=PUB-LH-2011-60",
+                    "descripcion": ""
+                }
+            ]
+        },
+        {
+            "escudo": "img/logos/escudo_borbonico.png",
+            "nombre": "Monarquía Española",
+            "descripcion": "Reinado de Fernando VII (Trienio Liberal)",
+            "marco": "Constitución de 1812",
+            "periodo": "1820-1823",
+            "leyes": [
+                {
+                    "escudo": "img/logos/escudo_borbonico.png",
+                    "fecha": "1821",
+                    "nombre": "Reglamento general de instrucción pública",
+                    "promotor": "José María Moscoso de Altamira",
+                    "enlace": "https://legishca.umh.es/1821/06/29/1821-06-29-reglamento-de-instruccion-publica/",
+                    "descripcion": "Basado en el Decreto de Enseñanza Pública (1814), que toma las tesis del Informe Quintana (1913). Conforma una educación pública y uniforme en tres etapas: primera enseñanza (universal), segunda enseñanza (general) y tercera enseñanza (particular)."
+                }
+            ]
+        },
+        {
+            "escudo": "img/logos/escudo_borbonico.png",
+            "nombre": "Monarquía Española",
+            "descripcion": "Reinado de Isabel II",
+            "marco": "Constitución de 1845",
+            "periodo": "1833-1868",
+            "leyes": [
+                {
+                    "escudo": "img/logos/escudo_borbonico.png",
+                    "fecha": "1857",
+                    "nombre": "Ley de Instrucción Pública",
+                    "promotor": "Claudio Moyano y Samaniego",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE//1857/1710/A00001-00003.pdf",
+                    "descripcion": "Asienta tres etapas: educación primaria, obligatoria y gratuita de 6 a 9 años (en realidad, depende de los municipios o iniciativas privadas); segunda enseñanza, conformada en institutos de bachillerato y escuelas normales de magisterio en cada provincia; enseñanza superior (universitaria), gestionada por el Estado."
+                }
+            ]
+        },
+        {
+            "escudo": "img/logos/escudo_borbonico.png",
+            "nombre": "Monarquía Española",
+            "descripcion": "Dictadura de Primo de Rivera",
+            "marco": "Constitución de 1876 (interrumpida)",
+            "periodo": "1923-1930",
+            "leyes": [
+                {
+                    "escudo": "img/logos/up.png",
+                    "fecha": "1924",
+                    "nombre": "Real Decreto de la Enseñanza Industrial",
+                    "promotor": "Antonio Magaz y Pers",
+                    "enlace": "https://www.boe.es/gazeta/dias/1924/11/05/pdfs/GMD-1924-310.pdf",
+                    "descripcion": "Reorganiza y regula las enseñanzas profesionales para acomodarla a las demandas de los sectores económicos."
+                },
+                {
+                    "escudo": "img/logos/up.png",
+                    "fecha": "1928",
+                    "nombre": "Real Decreto del Estatuto de Formación Profesional",
+                    "promotor": "Eduardo Aunós Pérez",
+                    "enlace": "https://www.todofp.es/dam/jcr:12026810-01bf-4448-ab9a-281cdc98d3b9/esatuto-fp-1928-segundo-pdf.pdf",
+                    "descripcion": "Amplía el RD de 1924, delineando las Escuelas de Orientación Profesional y las Escuelas Elementales y Superiores de Trabajo. Estructura la FP en: 2 cursos preparatorios de Aprendizaje Obrero, 4 de Oficialía, y 2 de Maestría."
+                }
+            ]
+        },
+        {
+            "escudo": "img/logos/escudo_republica.png",
+            "nombre": "II República Española",
+            "descripcion": "República parlamentaria",
+            "marco": "Constitución de 1931",
+            "periodo": "1931-1939",
+            "leyes": [
+                {
+                    "escudo": "img/logos/prrs.png",
+                    "fecha": "1931",
+                    "nombre": "Decreto de creación del Patronato de Misiones Pedagógicas",
+                    "promotor": "Marcelino Domingo y Sanjuán",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE/1931/150/A01033-01034.pdf",
+                    "descripcion": ""
+                },
+                {
+                    "escudo": "img/logos/prrs.png",
+                    "fecha": "1933",
+                    "nombre": "Ley de Confesiones y Congregaciones religiosas",
+                    "promotor": "Álvaro de Albornoz y Liminiana",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE/1933/154/A01651-01653.pdf",
+                    "descripcion": "Termina con el ejercicio de la enseñanza para todas las órdenes y congregaciones religiosas."
+                }
+            ]
+        },
+        {
+            "escudo": "img/logos/escudo_franco.png",
+            "nombre": "Estado Español",
+            "descripcion": "Dictadura de Francisco Franco",
+            "marco": "Leyes Fundamentales del Reino",
+            "periodo": "1936-1977",
+            "leyes": [
+                {
+                    "escudo": "img/logos/falange.png",
+                    "fecha": "1938",
+                    "nombre": "Ley de Reforma de la Enseñanza Media",
+                    "promotor": "Pedro Sainz Rodríguez",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE/1938/085/A01385-01395.pdf",
+                    "descripcion": "Asienta los principios del nacionalcatolicismo en la enseñanza, rehuyendo del modelo de la República y la ILE, reintroduciendo la moral y dogma católicos en todas las escuelas públcias y privadas, y desterrando la coeducación. Establece un modelo docente clásico y cíclico, y separa la función docente de la examinadora, mediante la introducción de un Examen de Estado, bajo supervisión de la autoridad inspectora: la Iglesia."
+                },
+                {
+                    "escudo": "img/logos/falange.png",
+                    "fecha": "1949",
+                    "nombre": "Ley de Bases de Enseñanza Media y Profesional",
+                    "promotor": "José Ibáñez Martín",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE//1949/198/A03164-03166.pdf",
+                    "descripcion": "Funda los Institutos Laborales y establece una modalidad laboral de Bachillerato, inicialmente en las especialidades Industrial, Marítimo-pesquera y Agrícola."
+                },
+                {
+                    "escudo": "img/logos/falange.png",
+                    "fecha": "1953",
+                    "nombre": "Ley de Ordenación de la Enseñanza Media",
+                    "promotor": "Joaquín Ruiz-Giménez Cortés",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE//1953/058/A01119-01130.pdf",
+                    "descripcion": "Divide el Bachillerato en dos etapas: una elemental de 4 cursos (desde los 10 años), y otra superior de 2 cursos (desde los 14 años). Tras el Bachiller Superior, una Prueba de Madurez permitía el acceso al Curso Preuniversitario."
+                },
+                {
+                    "escudo": "img/logos/falange.png",
+                    "fecha": "1955",
+                    "nombre": "Ley sobre Formación Profesional Industrial",
+                    "promotor": "Joaquín Ruiz-Giménez Cortés",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE//1955/202/A04442-04453.pdf",
+                    "descripcion": "Asienta tres tipos niveles de formación profesional: pre-aprendizaje, aprendizaje industrial y maestría industrial. Enfatiza el papel de la empresa como protagonista del proyecto educativo y su continuación ocupacional."
+                },
+                {
+                    "escudo": "img/logos/falange.png",
+                    "fecha": "1970",
+                    "nombre": "Ley General de Educación",
+                    "promotor": "José Luis Villar Palasí",
+                    "enlace": "https://www.boe.es/boe/dias/1970/08/06/pdfs/A12525-12546.pdf",
+                    "descripcion": "Establece la enseñanza obligatoria hasta los 14 años, dividiendo la educación en tres etapas: la EGB (ciclo inicial de 2 cursos, medio de 3 cursos, y superior de 3 cursos), el BUP (3 cursos) y el COU (1 curso). La EGB daba acceso al BUP y a la FP, y tras el COU se debía realizar la selectividad para acceder a la universidad (o cursar 5 los años de FP)."
+                }
+            ]
+        },
+        {
+            "escudo": "img/logos/escudo_actual.png",
+            "nombre": "Reino de España",
+            "descripcion": "Monarquía parlamentaria",
+            "marco": "Constitución de 1978",
+            "periodo": "1978-Acte.",
+            "leyes": [
+                {
+                    "escudo": "img/logos/ucd.png",
+                    "fecha": "1980",
+                    "nombre": "Ley Orgánica por la que se regula el Estatuto de Centros Escolares (LOECE)",
+                    "promotor": "José Manuel Otero",
+                    "enlace": "https://www.boe.es/eli/es/lo/1980/06/19/5",
+                    "descripcion": "Establece un marco legal para la organización y funcionamiento de instituciones educativas, definiendo su autonomía, estructura, y planificación curricular. La ley fija la posibilidad de elección de directores y consejos escolares, fomentando la participación de la comunidad educativa. También regula aspectos como la financiación, la inspección educativa y los derechos y deberes de los docentes y estudiantes. Esta ley representa un hito en la descentralización y democratización de la educación en España, otorgando un mayor grado de autonomía a los centros escolares."
+                },
+                {
+                    "escudo": "img/logos/psoe.png",
+                    "fecha": "1985",
+                    "nombre": "Ley Orgánica del Derecho a la Educación (LODE)",
+                    "promotor": "José María Maravall",
+                    "enlace": "https://www.boe.es/eli/es/lo/1985/07/03/8/con",
+                    "descripcion": "Establece los principios fundamentales de la educación en España. Sus puntos clave incluyen la universalidad y la igualdad de oportunidades en el acceso a la educación, la autonomía de los centros educativos, la participación de la comunidad educativa, la diversidad de opciones educativas, y la garantía de la calidad de la enseñanza. La LODE también destaca la importancia de la educación en la formación integral de los individuos y promueve la educación como un derecho fundamental de todos los ciudadanos."
+                },
+                {
+                    "escudo": "img/logos/psoe.png",
+                    "fecha": "1990",
+                    "nombre": "Ley Orgánica General del Sistema Educativo (LOGSE)",
+                    "promotor": "Javier Solana",
+                    "enlace": "https://www.boe.es/eli/es/lo/1990/10/03/1",
+                    "descripcion": "En virtud de esta ley, se promueve una educación obligatoria y gratuita para todos los ciudadanos, se establecen las etapas educativas, se fomenta la participación de la comunidad educativa y se enfatiza la igualdad de oportunidades en la educación. Además, la LOGSE subraya la importancia de la formación en valores, la diversidad cultural y el respeto por los derechos humanos. Esta ley sigue guiando el sistema educativo español en la actualidad, contribuyendo a la formación integral de los estudiantes y a la mejora de la calidad de la enseñanza."
+                },
+                {
+                    "escudo": "img/logos/psoe.png",
+                    "fecha": "1995",
+                    "nombre": "Ley Orgánica de Participación, Evaluación y Gobierno de los centros docentes (LOPEG)",
+                    "promotor": "Jerónimo Saavedra",
+                    "enlace": "https://www.boe.es/eli/es/lo/1995/11/20/9",
+                    "descripcion": "Desarrolla aspectos de la LOGSE para mejorar la calidad de la educación y garantizar la participación de todos los sectores de la comunidad educativa, así como el procedimiento de elección de la dirección del centro, además de regular los distintos contenidos y modalidades de evaluación y las competencias de cada institución. Finalmente, determina las funciones de Inspección de Educación."
+                },
+                {
+                    "escudo": "img/logos/pp.png",
+                    "fecha": "2002",
+                    "nombre": "Ley Orgánica de Calidad de la Educación (LOCE)",
+                    "promotor": "Pilar del Castillo",
+                    "enlace": "https://www.boe.es/eli/es/lo/2002/12/23/10",
+                    "descripcion": "Esta ley enfatiza la autonomía de los centros escolares y la elección de los padres en la educación de sus hijos. Además, busca mejorar la calidad de la enseñanza, establece evaluaciones y establece requisitos para la titulación de docentes. Sin embargo, la LOCE también ha sido objeto de críticas y controversias debido a su enfoque en la competitividad y la descentralización, lo que ha llevado a cambios posteriores en la legislación educativa en España."
+                },
+                {
+                    "escudo": "img/logos/psoe.png",
+                    "fecha": "2006",
+                    "nombre": "Ley Orgánica de Educación (LOE)",
+                    "promotor": "M.ª Jesús San Segundo",
+                    "enlace": "https://www.boe.es/eli/es/lo/2006/05/03/2",
+                    "descripcion": "Destaca por promover la igualdad de oportunidades, la calidad educativa y la atención a la diversidad. La LOE establece la educación como un derecho fundamental, otorga autonomía a las comunidades autónomas en la gestión de la enseñanza, y fomenta la participación de la comunidad educativa en la toma de decisiones. También aborda cuestiones como la formación del profesorado, la evaluación de los alumnos y la regulación de los distintos niveles educativos, incluyendo la Educación Infantil, Primaria, Secundaria y Bachillerato."
+                },
+                {
+                    "escudo": "img/logos/pp.png",
+                    "fecha": "2013",
+                    "nombre": "Ley Orgánica para la Mejora de la Calidad Educativa (LOMCE)",
+                    "promotor": "José Ignacio Wert",
+                    "enlace": "https://www.boe.es/eli/es/lo/2013/12/09/8/con",
+                    "descripcion": "Busca elevar los estándares de calidad en la educación a través de una serie de reformas. Introduce evaluaciones estandarizadas para medir el rendimiento de los estudiantes y promueve la enseñanza de valores cívicos y culturales. Además, establece un currículo académico más orientado hacia la excelencia y la competitividad, ofreciendo una mayor flexibilidad en la elección de asignaturas y promoviendo la educación bilingüe. Sin embargo, ha sido objeto de controversia debido a su enfoque centralizador y a la resistencia de algunos sectores de la comunidad educativa."
+                },
+                {
+                    "escudo": "img/logos/psoe.png",
+                    "fecha": "2020",
+                    "nombre": "Ley Orgánica por la que se modifica la LOE (LOMLOE)",
+                    "promotor": "Isabel Celaá",
+                    "enlace": "https://www.boe.es/eli/es/lo/2020/12/29/3/con",
+                    "descripcion": "Introduce cambios significativos, como la eliminación de la LOMCE, la promoción de la educación inclusiva, la ampliación de la educación de 0 a 3 años, y la renovación del currículo. También se enfoca en la formación del profesorado, la atención a la diversidad, y la participación de la comunidad educativa en la toma de decisiones. Además, busca fortalecer la educación en valores y fomentar el plurilingüismo, adaptándose a las necesidades del siglo XXI"
+                }
+            ]
+        }
+    ]
+}
