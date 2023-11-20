@@ -51,6 +51,23 @@
                 }
             ]
         },
+		{
+            "escudo": "img/logos/escudo_borbonico.png",
+            "nombre": "Monarquía Española",
+            "descripcion": "Regencia de María Cristina de Habsburgo",
+            "marco": "Constitución de 1876",
+            "periodo": "1885-1902",
+            "leyes": [
+                {
+                    "escudo": "img/logos/escudo_borbonico.png",
+                    "fecha": "1901",
+                    "nombre": "Real Decreto de 26 de octubre de 1901",
+                    "promotor": "Álvaro Figueroa y Torres, I conde de Romanones",
+                    "enlace": "https://www.boe.es/datos/pdfs/BOE//1901/303/A00497-00499.pdf",
+                    "descripcion": "Amplía la edad obligatoria de escolarización hasta los doce años, extiende las materias a cursar en primera enseñanza, y traspasa al Estado la asunción de pagos a los docentes."
+                }
+            ]
+        },
         {
             "escudo": "img/logos/escudo_borbonico.png",
             "nombre": "Monarquía Española",
