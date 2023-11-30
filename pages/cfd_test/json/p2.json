@@ -1,0 +1,125 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "El RD 243/2022...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es de aplicación sólo en las comunidades que no tienen transferidas las competencias en materia de educación.", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de la Secundaria Obligatoria y Bachillerato", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de la Secundaria Obligatoria", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de Bachillerato", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 3.º ESO tiene una carga horaria de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1 hora semana.", "verdadera": false },
+                { "opcion": "2 horas semanales.", "verdadera": true },
+                { "opcion": "3 horas semanales.", "verdadera": false },
+                { "opcion": "4 horas semanales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología de 4.º ESO es obligatoria para los alumnos.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": false },
+                { "opcion": "Falso.", "verdadera": true }
+            ]
+        },
+
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 1.º ESO tiene una carga horaria de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1 hora semana.", "verdadera": false },
+                { "opcion": "2 horas semanales.", "verdadera": true },
+                { "opcion": "3 horas semanales.", "verdadera": false },
+                { "opcion": "4 horas semanales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 3.º ESO es obligatoria para los alumnos.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": true },
+                { "opcion": "Falso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología de 4.º ESO tiene una carga horaria de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1 hora semana.", "verdadera": false },
+                { "opcion": "2 horas semanales.", "verdadera": false },
+                { "opcion": "3 horas semanales.", "verdadera": true },
+                { "opcion": "4 horas semanales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En 1.º ESO, la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Tecnología.", "verdadera": false },
+                { "opcion": "Tecnología y Digitalización", "verdadera": true },
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Según la LOMLOE, en 2.º ESO la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": true },
+                { "opcion": "Tecnología y Digitalización", "verdadera": false },
+                { "opcion": "Tecnología.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En 3.º ESO, la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": false },
+                { "opcion": "Tecnología y Digitalización", "verdadera": true },
+                { "opcion": "Tecnología.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 1.º ESO es obligatoria para los alumnos.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": true },
+                { "opcion": "Falso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Qué significan las siglas LOMLOE?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Ley Organizadora y Modificadora de la Ley Orgánica de Educación.", "verdadera": false },
+                { "opcion": "Ley Orgánica de Educación.", "verdadera": false },
+                { "opcion": "Ley Orgánica de Modificación de la Ley Orgánica de Educación.", "verdadera": true },
+                { "opcion": "Ley Organizadora y Modificadora de la Ley Orgánica de Empleo.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El RD 217/2022...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es de aplicación sólo en las comunidades que no tienen transferidas las competencias en materia de educación.", "verdadera": false },
+                { "opcion": "Sólo se aplica en Madrid.", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de la Secundaria.", "verdadera": true },
+                { "opcion": "No es necesario leerlo porque aquí en la Comunidad tenemos el nuestro.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En 4.º ESO, la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Tecnología.", "verdadera": true },
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": false },
+                { "opcion": "Tecnología y Digitalización", "verdadera": false }
+            ]
+        }
+    ]
+}

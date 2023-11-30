@@ -1,0 +1,52 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "La tecnología trata de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es como trabajos manuales...", "verdadera": false },
+                { "opcion": "Enseñar a los alumnos las técnicas de construcción más diversas y actuales.", "verdadera": false },
+                { "opcion": "Enseñar la esencia científica de los avances actuales", "verdadera": false },
+                { "opcion": "Dar solución a los problemas teniendo en cuenta criterios científicos, técnicos y éticos", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "¿Cuál de las siguientes opciones deben ser el centro de los problemas que planteemos a nuestros alumnos?",
+            "multiple": true,
+            "respuestas": [
+                { "opcion": "El envejecimiento de la población.", "verdadera": true },
+                { "opcion": "Dibujar los planos de una casa.", "verdadera": false },
+                { "opcion": "Cambio climático.", "verdadera": true },
+                { "opcion": "Construir un objeto de madera", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La tecnología ha sido un factor determinante en la transformación de la sociedad a lo largo de la historia.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": true },
+                { "opcion": "Falso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Los ODS son...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Objetivos de Desarrollo Sostenible.", "verdadera": true },
+                { "opcion": "Organización Desarrollo Sostenible.", "verdadera": false },
+                { "opcion": "Un grupo de música.", "verdadera": false },
+				{ "opcion": "Objeciones directas de servicio.", "verdadera": false }
+            ]
+        },
+		{
+            "enunciado": "Los grandes retos del siglo XXI y los ODS...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No sirven para nada.", "verdadera": false },
+                { "opcion": "Son sólo contenido de otras asignaturas.", "verdadera": false },
+                { "opcion": "Deben ser conocidos por los alumnos.", "verdadera": false },
+				{ "opcion": "Deben ser los temas centrales de los problemas propuestos a los alumnos para su resolución", "verdadera": true }
+            ]
+        }
+    ]
+}
