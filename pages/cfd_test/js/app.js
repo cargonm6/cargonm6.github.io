@@ -2,7 +2,7 @@ let score = 0;
 var questions;
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("cuestionarios").value = "v0";
+    document.getElementById("cuestionarios").value = "00_";
 });
 
 function changeJSON(sel) {
@@ -15,6 +15,7 @@ function changeJSON(sel) {
             // Barajar aleatoriamente las preguntas
             data.preguntas = shuffleArray(data.preguntas);
             renderQuestions(data.preguntas);
+            restore();
         })
         .catch((error) => console.error("Error fetching data:", error));
 }
