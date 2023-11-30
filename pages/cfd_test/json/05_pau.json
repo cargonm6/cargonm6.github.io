@@ -1,0 +1,200 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "Las Pruebas de Acceso a la Universidad...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Están formadas por una Fase general y otra específica"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Los alumnos de Formación Profesional no pueden realizarla para acceder a la Universidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Sólo las realizan alumnos de Bachillerato que van a la Universidad."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Son el conjunto de exámenes de todas las asignaturas cursadas por un alumno en 2.º de Bachillerato."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La Fase general de las PAU...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "consiste en un examen de cada asignatura cursada por el alumno en 2.º de Bachillerato"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Es igual para todo el alumnado"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Está formada por 5 exámenes: castellano, valenciano, idioma extranjero, Historia de España o Historia de la Filosofía y la asignatura troncal de modalidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Está formada por 5 exámenes: castellano, valenciano, idioma extranjero, Historia de España y Matemáticas"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La Fase general de la PAU tiene validez...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "para 5 años"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "para siempre"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Para dos años"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Para 10 años"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La fase específica de las PAU...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "es obligatoria"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "es voluntaria"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la fase específica de las PAU, el alumno se puede examimar de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "hasta de 4 asignaturas específicas diferentes a la de la fase general o idiomas que haya cursado"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "hasta de 4 asignaturas específicas diferentes a la de la fase general o idiomas aunque no los haya cursado"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de cualquier asignatura específica diferente a la de la fase general o idiomas aunque no los haya cursado"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de 2 asignaturas específicas diferentes a la de la fase general o idiomas aunque no los haya cursado"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La fase específica de las PAU tiene una validez...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "de 1 año"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de 5 años"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "indefinida"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "de dos años"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Para poder calcular la Nota de Acceso a la Universidad, la nota de la fase general debe ser mayor o igual a...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "5"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "No hay límite"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "6"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "4"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La nota de acceso a la Universidad se calcula...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "60% de la nota final de Bachillerato + 40% de la fase general PAU y a esto se le suma las notas obtenidas en las asignaturas de la fase específica aplicando los coeficientes de cada carrera"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota final de 2.º de Bachillerato + 40% de la fase general PAU y a esto se le suma las notas obtenidas en las asignaturas de la fase específica aplicando los coeficientes de cada carrera"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota final de Bachillerato + 40% de la fase general PAU"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "la fase general PAU y a esto se le suma las notas obtenidas en las asignaturas de la fase específica aplicando los coeficientes de cada carrera"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la fase general sólo son válidas las notas superiores a 5",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la fase específica sólo son válidas las notas superiores a 5",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

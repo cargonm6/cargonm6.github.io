@@ -1,0 +1,202 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "Es requisito específico para el acceso al cuerpo de Profesores de Enseñanza Secundaria...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "acreditar conocimiento lengua castellana y un B2 o superior de valenciano."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "No hay ningún requisito especifico referido a lenguas."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "acreditar conocimiento lengua castellana y un C1 o superior de valenciano."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "un C1 o superior de lengua castellana y un B2 o superior de valenciano."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La formación requerida para ser profesor de ESO y Bachillerato es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "tener los conocimientos necesarios"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Ser licenciado, ingeniero o arquitecto o grado equivalente"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "tener la formación pedagógica que marca la legislación"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Ser licenciado, ingeniero o arquitecto o grado equivalente y tener la formación pedagógica que marca la legislación"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La fase de oposición se divide en...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "una única prueba que consta de dos fases"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "dos pruebas de las cuales se hace media aritmética."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "una única prueba tipo test."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "dos pruebas de carácter eliminatorio más las pruebas de castellano y valenciano."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El objetivo de la parte A de la prueba es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "demostrar los conocimientos específicos de la especialidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "comprobar la aptitud pedagógica y el dominio de las técnicas necesarias para el ejercicio docente."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "comprobar el conocimiento general de la legislación vigente"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "compobar los conocimientos de las lenguas oficiales de la Comunidad,"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El objetivo de la parte B de la prueba es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "demostrar los conocimientos específicos de la especialidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "comprobar el conocimiento general de la legislación vigente"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "compobar los conocimientos de las lenguas oficiales de la Comunidad,"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "comprobar la aptitud pedagógica y el dominio de las técnicas necesarias para el ejercicio docente."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La primera prueba consiste en...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "en el desarrollo por escrito un tema del temario."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "una prueba práctica para comprobar el dominio de las habilidades técnicas."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "un test sobre el temario de tecnología."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "una prueba práctica para comprobar las habilidades didácticas."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La segunda prueba consiste en...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "un test sobre el temario de tecnología"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Exposición oral de un tema del temario."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Presentación de una programación didáctica."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "la exposición oral de una unidad didáctica o similar."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La calificación final de la oposición se obtiene...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "60% de la nota de la fase de oposición siempre que sea superior a 5 y 40% de la fase de concurso"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota de la fase de oposición y 40% de la fase de concurso"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota de la fase de oposición, 20% de la fase de concurso y 20% pruebas de idiomas"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "si apruebas la fase de oposición, ya tienes plaza"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Aprobada la oposición, ya eres funcionario/a...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Por supuesto."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Han de pasar 5 años"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Sí, si tu orden en el listado es menor o igual al número de plazas otorgadas a tu tribunal."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "No, debes realizar el periodo de prácticas"
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

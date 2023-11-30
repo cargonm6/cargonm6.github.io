@@ -1,0 +1,354 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "La asignatura dependiente del Departamento de Tecnología en 1.º de Bachillerato tiene una carga horaria de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "2 horas semanales"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "4 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "5 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "3 horas semanales"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, la asignatura dependiente del Departamento de Tecnología en 2.º de Bachillerato tiene una carga horaria de...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "4 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "2 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "3 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "5 horas semanales"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, la asignatura dependiente del departamento de Tecnología en 1.º de Bachillerato se llama...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología Industrial I"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología I"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Diseño y Tecnología I"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Tecnología e Ingeniería I"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, la asignatura específica dependiente del departamento de Tecnología en 2.º de Bachillerato se llama...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Diseño y Tecnología II"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología Industrial II"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Tecnología e Ingeniería II"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología II"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería I"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "No, no sólo de la asignatura de Imagen y Sonido."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería II"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería I y II"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La competencia específica 2 de la asignatura de Tecnología e Ingeniería \"Seleccionar materiales aplicando criterios técnicos....\" implica que el alumno...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Conoce aspectos relacionados con el conformado de los materiales."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Todas las opciones son correctas"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Conoce las propiedades técnicas de los materiales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Conoce aspectos de sostenibilidad de los materiales"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Impresoras 3D, cortadoras láser...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Son ciencia ficción en Bachillerato."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Son técnicas de fabricación que se trabajan en la asignatura de Tecnología e Ingeniería."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Se trabajan en la optativa de Diseño 3D de Bachillerato"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Las máquinas frigoríficas y bombas de calor...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "son un saber básico de la asignatura de Tecnología de 4.ºESO"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "son un saber básico de la asignatura de Tecnología e Ingeniería"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son una competencia específica de la asignatura de Tecnología e Ingeniería"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son un criterio de evaluación de la asignatura de Tecnología e Ingeniería"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Estudiar de forma exclusiva el consumo energético que se produce en la fase de diseño de un objeto, o en su fabricación o en su retirada corresponde a la competencia específica (sólo una opción es correcta)...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "CE6: Analizar sistemas tecnológicos del ámbito de la ingeniería desde el punto de vista de la generación y uso de la energía, evaluar su impacto ambiental, social y ético que tienen y aplicar criterios de sostenibilidad, accesibilidad y consumo responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE3: Aprovechar y configurar herramientas digitales adecuadas para resolver de manera eficiente tareas, presentar resultados y aplicar conocimientos interdisciplinarios."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE4: Resolver problemas del ámbito de la ingeniería transfiriendo y aplicando saberes interdisciplinares."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE1: Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE5: Diseñar y crear soluciones tecnológicas automatizadas o robóticas mediante control programado y regulación automática."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE2: Seleccionar materiales aplicando criterios técnicos, considerando estudios de impacto ecosocial y valorando criterios de sostenibilidad para fabricar productos eficientes que den respuesta a problemas planteados con un enfoque ético y responsable."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La automatización de una barrera de parquing correspondería a la competencia específica...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "CE3: Aprovechar y configurar herramientas digitales adecuadas para resolver de manera eficiente tareas, presentar resultados y aplicar conocimientos interdisciplinarios."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "CE5: Diseñar y crear soluciones tecnológicas automatizadas o robóticas mediante control programado y regulación automática."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE6: Analizar sistemas tecnológicos del ámbito de la ingeniería desde el punto de vista de la generación y uso de la energía, evaluar su impacto ambiental, social y ético que tienen y aplicar criterios de sostenibilidad, accesibilidad y consumo responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE4: Resolver problemas del ámbito de la ingeniería transfiriendo y aplicando saberes interdisciplinares."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE2: Seleccionar materiales aplicando criterios técnicos, considerando estudios de impacto ecosocial y valorando criterios de sostenibilidad para fabricar productos eficientes que den respuesta a problemas planteados con un enfoque ético y responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE1: Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Diseñar en grupo un dispositivo para guardar ordenadamente los destornilladores del taller de tecnología utilizando una metodología Design Thinking corresponde principalmente a la competencia específica...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "CE6: Analizar sistemas tecnológicos del ámbito de la ingeniería desde el punto de vista de la generación y uso de la energía, evaluar su impacto ambiental, social y ético que tienen y aplicar criterios de sostenibilidad, accesibilidad y consumo responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE4: Resolver problemas del ámbito de la ingeniería transfiriendo y aplicando saberes interdisciplinares."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "CE1: Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE3: Aprovechar y configurar herramientas digitales adecuadas para resolver de manera eficiente tareas, presentar resultados y aplicar conocimientos interdisciplinarios."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE5: Diseñar y crear soluciones tecnológicas automatizadas o robóticas mediante control programado y regulación automática."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE2: Seleccionar materiales aplicando criterios técnicos, considerando estudios de impacto ecosocial y valorando criterios de sostenibilidad para fabricar productos eficientes que den respuesta a problemas planteados con un enfoque ético y responsable."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Los principios de funcionamiento de la Corriente Alterna, su generación y transporte es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico de la asignatura Tecnología y Digitalización de 3.º ESO"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico de la asignatura Tecnología e Ingeniería II"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología y Digitalización de 3.º ESO"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la asignatura de Tecnología e Ingeniería, las situaciones de aprendizaje...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Son oportunidades para que los alumnos puedan consolidar sus aprendizajes y adquirir nuevos mediante tareas diversas que les permitan conseguir las competencias básicas."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son los objetivos que queremos que alcancen los alumnos"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son 8 y tratan los diferentes contenidos que hay que trabajar"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Son oportunidades para que los alumnos puedan consolidar sus aprendizajes y adquirir nuevos mediante tareas diversas que les permitan aprender todos los saberes básicos."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La asignatura de Imagen y Sonido es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una asignatura específica de Bachillerato"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una asignatura optativa de Bachillerato"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una asignatura optativa de 4.ºESO"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una asignatura optativa de 3.º ESO"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La asignatura de Imagen y Sonido tiene una carga lectiva de...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "4 horas semanales."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "3 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "5 horas semanales."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "2 horas semanales."
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

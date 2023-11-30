@@ -1,0 +1,348 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "Según la LOMLOE, el currículo es el conjunto de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Competencias específicas, contenidos, saberes básicos y criterios de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Contenidos, criterios de calificación y competencias clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Competencias clave, perfil de salida del alumno, competencias específicas, saberes básicos, criterios de evaluación y situaciones de aprendizaje."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencias clave, bloques de contenido y criterios de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Utilizar la tecnología poniéndola al servicio del desarrollo personal y profesional, social y comunitario y proponiendo soluciones creativas a los grandes desafíos del mundo actual.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Aprovechamiento sostenible de materias primas y recursos naturales\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Tecnología sostenible\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"La energía: tipos, producción, transporte y consumo\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Los elementos del currículo para la asignatura de Tecnología y digitalización en la Comunidad Valenciana pueden consultarse en...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Decreto 107/2022."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 87/2015."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 108/2022."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "RD 217/2022."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Estructuras y esfuerzos mecánicos\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Materiales (madera, materiales de construcción y metales), productos y soluciones tecnológicas\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Digitalización del entorno personal de aprendizaje\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, los elementos del currículo para la asignatura de Tecnología de 4.º ESO en la Comunidad Valenciana pueden consultarse en...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 87/2015."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "RD 217/2022."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 108/2022."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Decreto 107/2022."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Buscar, obtener, analizar y seleccionar información fiable y segura para poder gestionar el tiempo, los conocimientos y los recursos disponibles a la hora de abordar retos tecnológicos, siguiendo un plan de trabajo realista\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Configurar, utilizar y mantener máquinas, herramientas, aplicaciones y sistemas digitales, haciendo una selección idónea y un uso seguro y adecuado de los mismos en función de la tarea. \" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una situación de aprendizaje."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Identificar y resolver problemas tecnológicos sencillos aplicando el método de proyectos, propio de la ingeniería, ejecutando, si es necesario, sus fases características y utilizando los medios tecnológicos y digitales más adecuados al contexto.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Realizar un uso responsable y sostenible de los objetos, materiales, productos y soluciones tecnológicas y digitales existentes en su entorno, analizando críticamente sus implicaciones y repercusiones ambientales, sociales y éticas.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Crear, expresar, comprender y comunicar ideas, opiniones y propuestas utilizando correctamente los lenguajes y los medios propios de la tecnología y la digitalización, tanto en el ámbito académico como en el personal y social\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Analizar problemas sencillos y plantear su solución automatizando procesos con herramientas de programación, sistemas de control o robótica y aplicando pensamiento computacional.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

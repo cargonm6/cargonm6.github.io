@@ -14,30 +14,41 @@
                 <a href="https://www.uv.es/" target="_blank">Universitat de València</a> <span class="smooth">|</span>
                 <a href="https://www.uv.es/uvweb/master-profesorado-secundaria/es/master-universitario-profesor/educacion-secundaria-1285886102735.html" target="_blank">Máster Universitario en Profesor/a de Educación Secundaria</a>
             </p>
-            <b>Test de Complementos para la Formación Disciplinar</b>
-            <br />
+            <b>Test de Complementos para la Formación Disciplinar</b><br />
             <label>Seleccionar cuestionario:</label>
             <select id="cuestionarios" onchange="changeJSON(this)">
-                <option value="p0" selected="selected" disabled="disabled"></option>
-                <option value="p1">T 1.1. Historia y epistemología de la tecnología</option>
-                <option value="p2">T 1.2. Legislación en materia de educación</option>
-                <option value="p3" disabled="disabled">T 1.2. Currículo de las asignaturas de ESO</option>
-                <option value="p4" disabled="disabled">T 1.2. Currículo de las asignaturas de Bachillerato</option>
-                <option value="p5" disabled="disabled">T 1.2. Pruebas de Acceso a la Universidad</option>
-                <option value="p6" disabled="disabled">T 1.3. Competencias</option>
-                <option value="p7" disabled="disabled">T 1.4. Papel del profesorado en un centro</option>
-                <option value="p8" disabled="disabled">T 1.4. Acceso al trabajo de profesorado de tecnología</option>
-                <option value="p9" disabled="disabled">EXAMEN GLOBAL</option>
+                <option value="00_" selected="selected" disabled="disabled"></option>
+                <option value="01_historia">T 1.1. Historia y epistemología de la tecnología</option>
+                <option value="02_legislacion">T 1.2. (i) Legislación en materia de educación</option>
+                <option value="03_curriculo_eso">T 1.2. (ii) Currículo de las asignaturas de ESO</option>
+                <option value="04_curriculo_bac">T 1.2. (iii) Currículo de las asignaturas de Bachillerato</option>
+                <option value="05_pau">T 1.2. (iv) Pruebas de Acceso a la Universidad</option>
+                <option value="06_competencias">T 1.3. Competencias</option>
+                <option value="07_profesorado_centro">T 1.4. (i) Papel del profesorado en un centro</option>
+                <option value="08_profesorado_acceso">T 1.4. (ii) Acceso al trabajo de profesorado de tecnología</option>
+                <option value="09_global">EXAMEN GLOBAL</option>
             </select>
         </div>
         <div class="middle">
-            <div id="app"></div>
+            <div id="app">
+                <h2>Bienvenidas y bienvenidos a la prueba tipo test de CDF</h2>
+                <p>Para realizar un cuestionario, seleccione el temario en el desplegable que hay en la sección superior de la página.</p>
+                <p><b>&#9888; ¡Precaución!</b> Cambiar de formulario imposibilitará recuperar las respuestas anteriormente indicadas en otro formulario.</p>
+                <h2>Funcionamiento</h2>
+                <p>Las preguntas son de opción única (botón de opción o <i>radio button</i>) o multiopción (casilla de verificación o <i>checkbox</i>).</p>
+                <p>Una vez finalizado el formulario, en la sección inferior de la página aparecerán los botones "Corregir" y "Reiniciar".</p>
+                <p>
+                    "Corregir" permite comprobar las respuestas dadas en cada pregunta, coloreando en verde las soluciones y marcando en rojo las respuestas erróneas indicadas, además de añadir una marca que indica si la pregunta está
+                    correcta o no, y evaluando el número de aciertos sobre el número total de cuestiones.
+                </p>
+                <p>"Reiniciar" limpia el formulario, borrando todas las opciones marcadas y las indicaciones de respuesta.</p>
+            </div>
             <div id="result-box" style="display: none">
                 <button onclick="showResults()">Corregir</button>
                 <button onclick="restore(true)">Reiniciar</button>
-                <span id="result"></span>
+                <p id="result"></p>
             </div>
         </div>
-        <div class="footer">&copy;&nbsp;2023 Carlos González Marco</div>
+        <div class="footer">&copy;&nbsp;2023 Carlos González, Martí Huerta</div>
     </body>
 </html>

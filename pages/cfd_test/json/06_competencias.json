@@ -1,0 +1,156 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "Cuando los alumnos están construyendo un objeto en grupo y se reparten las tareas a realizar están practicando la competencia (sólo una respuesta es posible)...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Competencia emprendedora"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencia ciudadana"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencia plurilingüe"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencia digital"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Promover el uso de la agenda favorece la competencia...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Ninguna, no es relevante"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "La competencia personal, social y de aprender a aprender"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "La competencia ciudadana"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "La competencia digital"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "¿Cuál de las siguientes propuestas son las más adecuada para trabajar la competencia plurilingüe? (Más de una respuesta es posible, en concreto 3)",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Que los alumnos trabajen con tutoriales en castellano, inglés o valenciano de manera indiferente."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que las herramientas las aprendan en los idiomas oficiales de la Comunidad y en el idioma extranjero que el centro considere."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que la cartelería del Taller esté en Castellano, Valenciano e Inglés o cualquier otro idioma extranjero."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Que graben un video en inglés sobre un tema trabajado en clase en otro idioma."
+                }
+            ],
+            "multiple": true
+        },
+        {
+            "enunciado": "De entre las siguientes opciones, elige las 3 más adecuadas para trabajar la competencia lingüística....",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Que escuchen un videotutorial sobre una aplicación y luego sean capaces de reproducir las instrucciones"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Que todos los días hagan un resumen de lo trabajada en clase."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que expliquen a la clase, una vez acabado el proyecto, cuales son sus características y cual ha sido el proceso de obtención."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que, al buscar información en Internet, redacten un pequeño texto donde explican qué es lo que en ese enlace han encontrado"
+                }
+            ],
+            "multiple": true
+        },
+        {
+            "enunciado": "Los alumnos de 1º ESO están trabajando en grupo en un proyecto. Cada uno de ellos ha buscado información y ha elaborado un boceto de la solución al problema planteado. Para elegir la mejor solución el profesorado propone una Lluvia de ideas o brainstorming. Elige cual es la mejor manera de realizar esta actividad en clase y las competencias trabajadas.",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Les dejo 5 minutos para que lo decidan. Trabajo la competencia lingüística."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Les dejo 5 minutos para que lo decidan. Trabajo la competencia lingüística y la competencia personal, social y de aprender a aprender."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Les dejo 5 minutos para que lo decidan. Trabajo la competencia personal, social y de aprender a aprender."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Les pauto los turnos de la explicación de las ideas así como de crítica constructiva. Además les pido que hagan una tabla donde recojan los aspectos positivos y negativos de cada propuesta. Trabajo la competencia lingüística y la competencia personal, social y de aprender a aprender."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Cada asignatura desarrolla unas competencias diferentes.",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La adquisición de cada una de las competencias clave contribuye a la adquisición de todas las demás.",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La competencia digital es más importante que la lingüística.",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

@@ -1,0 +1,224 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "Son órganos colegiados de gobierno de un centro...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "El Consejo Escolar y el Claustro de profesores."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "El Consejo Escolar, el Claustro de profesores, la COCOPE y el equipo directivo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "El Consejo Escolar, el Claustro de profesores y la COCOPE."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "El Consejo Escolar, el Claustro de profesores, la COCOPE y los diferentes coordinadores."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El proyecto económico del centro es aprobado por...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "el Claustro de profesores."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el secretario del centro."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "el Consejo Escolar."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La organización de los centros de secundaria se regula en...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "El ROF (Decreto 252/2019)."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Se concreta cada año en las instrucciones de inicio de curso."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "El ROF (Decreto 252/2019) y se concreta cada año en las instrucciones de inicio de curso."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Depende de cada centro."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La Comisión de Coordinación Pedagógica (COCOPE) del centro está formado por...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los profesores coordinadores."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "la dirección y jefatura del centro, los jefes de departamento y otros profesores que nombre el centro."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los coordinadores docentes."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los jefes de departamento."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Las programaciones didácticas de una asignatura y su seguimiento es responsabilidad de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "del coordinador de ESO"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "del tutor."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de la jefatura de estudios."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "de todos los profesores de un departamento didáctico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El claustro del centro está formado por...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "la dirección del centro y todos los profesores del mismo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los coordinadores docentes."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los jefes de departamento."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los profesores coordinadores."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El PEC",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Tiene carácter anual"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Contiene las programaciones"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Todas las respuestas anteriores son correctas"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "contiene todos los planes y programas educativos a los que se acoge el centro"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Los equipos educativos (más de una respuesta es correcta)...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "lo coordina el tutor del grupo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "están formados por la dirección, jefatura del centro y los coordinadores de ESO."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "una de sus funciones es adoptar decisiones comunes relativas al proceso de aprendizaje de los alumnos del grupo"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "está formado por el conjunto de profesores de un grupo de alumnos."
+                }
+            ],
+            "multiple": true
+        },
+        {
+            "enunciado": "El tutor de un grupo...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "es un profesor que les da clase de alguna asignatura a todo el grupo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "es un profesor cualquiera del centro no necesariamente con destino definitivo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "es un profesor cualquiera del centro con destino definitivo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "es el profesor que les da más horas de clase."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Si un profesor no da su clase por estar enfermo, el profesor de guardia deberá:",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Ninguna de las anteriores respuestas es correcta."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Escribir la incidencia en el parte de guardia y quedarse en el aula con el alumnado tratando de que hagan trabajo de esa asignatura o de otras."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Avisar a Jefatura de Estudios de que falta un profesor para que se haga cargo de los alumnos."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Escribir la incidencia en el parte de guardia y dejar al alumnado sólo en clase procurando que no armen mucho jaleo."
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

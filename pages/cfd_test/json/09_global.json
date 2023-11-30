@@ -1,0 +1,1633 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "La tecnología trata de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es como trabajos manuales...", "verdadera": false },
+                { "opcion": "Enseñar a los alumnos las técnicas de construcción más diversas y actuales.", "verdadera": false },
+                { "opcion": "Enseñar la esencia científica de los avances actuales", "verdadera": false },
+                { "opcion": "Dar solución a los problemas teniendo en cuenta criterios científicos, técnicos y éticos", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "¿Cuál de las siguientes opciones deben ser el centro de los problemas que planteemos a nuestros alumnos?",
+            "multiple": true,
+            "respuestas": [
+                { "opcion": "El envejecimiento de la población.", "verdadera": true },
+                { "opcion": "Dibujar los planos de una casa.", "verdadera": false },
+                { "opcion": "Cambio climático.", "verdadera": true },
+                { "opcion": "Construir un objeto de madera", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La tecnología ha sido un factor determinante en la transformación de la sociedad a lo largo de la historia.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": true },
+                { "opcion": "Falso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Los ODS son...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Objetivos de Desarrollo Sostenible.", "verdadera": true },
+                { "opcion": "Organización Desarrollo Sostenible.", "verdadera": false },
+                { "opcion": "Un grupo de música.", "verdadera": false },
+                { "opcion": "Objeciones directas de servicio.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Los grandes retos del siglo XXI y los ODS...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No sirven para nada.", "verdadera": false },
+                { "opcion": "Son sólo contenido de otras asignaturas.", "verdadera": false },
+                { "opcion": "Deben ser conocidos por los alumnos.", "verdadera": false },
+                { "opcion": "Deben ser los temas centrales de los problemas propuestos a los alumnos para su resolución", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "El RD 243/2022...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es de aplicación sólo en las comunidades que no tienen transferidas las competencias en materia de educación.", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de la Secundaria Obligatoria y Bachillerato", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de la Secundaria Obligatoria", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de Bachillerato", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 3.º ESO tiene una carga horaria de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1 hora semana.", "verdadera": false },
+                { "opcion": "2 horas semanales.", "verdadera": true },
+                { "opcion": "3 horas semanales.", "verdadera": false },
+                { "opcion": "4 horas semanales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología de 4.º ESO es obligatoria para los alumnos.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": false },
+                { "opcion": "Falso.", "verdadera": true }
+            ]
+        },
+
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 1.º ESO tiene una carga horaria de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1 hora semana.", "verdadera": false },
+                { "opcion": "2 horas semanales.", "verdadera": true },
+                { "opcion": "3 horas semanales.", "verdadera": false },
+                { "opcion": "4 horas semanales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 3.º ESO es obligatoria para los alumnos.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": true },
+                { "opcion": "Falso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología de 4.º ESO tiene una carga horaria de...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1 hora semana.", "verdadera": false },
+                { "opcion": "2 horas semanales.", "verdadera": false },
+                { "opcion": "3 horas semanales.", "verdadera": true },
+                { "opcion": "4 horas semanales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En 1.º ESO, la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Tecnología.", "verdadera": false },
+                { "opcion": "Tecnología y Digitalización", "verdadera": true },
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Según la LOMLOE, en 2.º ESO la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": true },
+                { "opcion": "Tecnología y Digitalización", "verdadera": false },
+                { "opcion": "Tecnología.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En 3.º ESO, la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": false },
+                { "opcion": "Tecnología y Digitalización", "verdadera": true },
+                { "opcion": "Tecnología.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La asignatura de Tecnología y Digitalización de 1.º ESO es obligatoria para los alumnos.",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Verdadero.", "verdadera": true },
+                { "opcion": "Falso.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Qué significan las siglas LOMLOE?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Ley Organizadora y Modificadora de la Ley Orgánica de Educación.", "verdadera": false },
+                { "opcion": "Ley Orgánica de Educación.", "verdadera": false },
+                { "opcion": "Ley Orgánica de Modificación de la Ley Orgánica de Educación.", "verdadera": true },
+                { "opcion": "Ley Organizadora y Modificadora de la Ley Orgánica de Empleo.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El RD 217/2022...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es de aplicación sólo en las comunidades que no tienen transferidas las competencias en materia de educación.", "verdadera": false },
+                { "opcion": "Sólo se aplica en Madrid.", "verdadera": false },
+                { "opcion": "Establece las enseñanzas mínimas y la organización de la Secundaria.", "verdadera": true },
+                { "opcion": "No es necesario leerlo porque aquí en la Comunidad tenemos el nuestro.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En 4.º ESO, la asignatura dependiente del Departamento de Tecnología se llama...",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Tecnología.", "verdadera": true },
+                { "opcion": "No hay asignatura dependiente del Departamento de Tecnología en ese curso.", "verdadera": false },
+                { "opcion": "Tecnología y Digitalización", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Según la LOMLOE, el currículo es el conjunto de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Competencias específicas, contenidos, saberes básicos y criterios de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Contenidos, criterios de calificación y competencias clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Competencias clave, perfil de salida del alumno, competencias específicas, saberes básicos, criterios de evaluación y situaciones de aprendizaje."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencias clave, bloques de contenido y criterios de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Utilizar la tecnología poniéndola al servicio del desarrollo personal y profesional, social y comunitario y proponiendo soluciones creativas a los grandes desafíos del mundo actual.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Aprovechamiento sostenible de materias primas y recursos naturales\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Tecnología sostenible\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"La energía: tipos, producción, transporte y consumo\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Los elementos del currículo para la asignatura de Tecnología y digitalización en la Comunidad Valenciana pueden consultarse en...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Decreto 107/2022."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 87/2015."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 108/2022."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "RD 217/2022."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Estructuras y esfuerzos mecánicos\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Materiales (madera, materiales de construcción y metales), productos y soluciones tecnológicas\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Digitalización del entorno personal de aprendizaje\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, los elementos del currículo para la asignatura de Tecnología de 4.º ESO en la Comunidad Valenciana pueden consultarse en...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 87/2015."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "RD 217/2022."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Decreto 108/2022."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Decreto 107/2022."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Buscar, obtener, analizar y seleccionar información fiable y segura para poder gestionar el tiempo, los conocimientos y los recursos disponibles a la hora de abordar retos tecnológicos, siguiendo un plan de trabajo realista\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Configurar, utilizar y mantener máquinas, herramientas, aplicaciones y sistemas digitales, haciendo una selección idónea y un uso seguro y adecuado de los mismos en función de la tarea. \" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una situación de aprendizaje."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Identificar y resolver problemas tecnológicos sencillos aplicando el método de proyectos, propio de la ingeniería, ejecutando, si es necesario, sus fases características y utilizando los medios tecnológicos y digitales más adecuados al contexto.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Realizar un uso responsable y sostenible de los objetos, materiales, productos y soluciones tecnológicas y digitales existentes en su entorno, analizando críticamente sus implicaciones y repercusiones ambientales, sociales y éticas.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Crear, expresar, comprender y comunicar ideas, opiniones y propuestas utilizando correctamente los lenguajes y los medios propios de la tecnología y la digitalización, tanto en el ámbito académico como en el personal y social\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "\"Analizar problemas sencillos y plantear su solución automatizando procesos con herramientas de programación, sistemas de control o robótica y aplicando pensamiento computacional.\" es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia clave."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Un criterio de evaluación."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La asignatura dependiente del Departamento de Tecnología en 1.º de Bachillerato tiene una carga horaria de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "2 horas semanales"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "4 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "5 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "3 horas semanales"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, la asignatura dependiente del Departamento de Tecnología en 2.º de Bachillerato tiene una carga horaria de...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "4 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "2 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "3 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "5 horas semanales"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, la asignatura dependiente del departamento de Tecnología en 1.º de Bachillerato se llama...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología Industrial I"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología I"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Diseño y Tecnología I"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Tecnología e Ingeniería I"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Según la LOMLOE, la asignatura específica dependiente del departamento de Tecnología en 2.º de Bachillerato se llama...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Diseño y Tecnología II"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología Industrial II"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Tecnología e Ingeniería II"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Tecnología II"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería I"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "No, no sólo de la asignatura de Imagen y Sonido."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería II"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería I y II"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La competencia específica 2 de la asignatura de Tecnología e Ingeniería \"Seleccionar materiales aplicando criterios técnicos....\" implica que el alumno...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Conoce aspectos relacionados con el conformado de los materiales."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Todas las opciones son correctas"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Conoce las propiedades técnicas de los materiales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Conoce aspectos de sostenibilidad de los materiales"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Impresoras 3D, cortadoras láser...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Son ciencia ficción en Bachillerato."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Son técnicas de fabricación que se trabajan en la asignatura de Tecnología e Ingeniería."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Se trabajan en la optativa de Diseño 3D de Bachillerato"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Las máquinas frigoríficas y bombas de calor...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "son un saber básico de la asignatura de Tecnología de 4.ºESO"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "son un saber básico de la asignatura de Tecnología e Ingeniería"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son una competencia específica de la asignatura de Tecnología e Ingeniería"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son un criterio de evaluación de la asignatura de Tecnología e Ingeniería"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Estudiar de forma exclusiva el consumo energético que se produce en la fase de diseño de un objeto, o en su fabricación o en su retirada corresponde a la competencia específica (sólo una opción es correcta)...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "CE6: Analizar sistemas tecnológicos del ámbito de la ingeniería desde el punto de vista de la generación y uso de la energía, evaluar su impacto ambiental, social y ético que tienen y aplicar criterios de sostenibilidad, accesibilidad y consumo responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE3: Aprovechar y configurar herramientas digitales adecuadas para resolver de manera eficiente tareas, presentar resultados y aplicar conocimientos interdisciplinarios."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE4: Resolver problemas del ámbito de la ingeniería transfiriendo y aplicando saberes interdisciplinares."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE1: Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE5: Diseñar y crear soluciones tecnológicas automatizadas o robóticas mediante control programado y regulación automática."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE2: Seleccionar materiales aplicando criterios técnicos, considerando estudios de impacto ecosocial y valorando criterios de sostenibilidad para fabricar productos eficientes que den respuesta a problemas planteados con un enfoque ético y responsable."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La automatización de una barrera de parquing correspondería a la competencia específica...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "CE3: Aprovechar y configurar herramientas digitales adecuadas para resolver de manera eficiente tareas, presentar resultados y aplicar conocimientos interdisciplinarios."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "CE5: Diseñar y crear soluciones tecnológicas automatizadas o robóticas mediante control programado y regulación automática."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE6: Analizar sistemas tecnológicos del ámbito de la ingeniería desde el punto de vista de la generación y uso de la energía, evaluar su impacto ambiental, social y ético que tienen y aplicar criterios de sostenibilidad, accesibilidad y consumo responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE4: Resolver problemas del ámbito de la ingeniería transfiriendo y aplicando saberes interdisciplinares."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE2: Seleccionar materiales aplicando criterios técnicos, considerando estudios de impacto ecosocial y valorando criterios de sostenibilidad para fabricar productos eficientes que den respuesta a problemas planteados con un enfoque ético y responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE1: Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Diseñar en grupo un dispositivo para guardar ordenadamente los destornilladores del taller de tecnología utilizando una metodología Design Thinking corresponde principalmente a la competencia específica...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "CE6: Analizar sistemas tecnológicos del ámbito de la ingeniería desde el punto de vista de la generación y uso de la energía, evaluar su impacto ambiental, social y ético que tienen y aplicar criterios de sostenibilidad, accesibilidad y consumo responsable."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE4: Resolver problemas del ámbito de la ingeniería transfiriendo y aplicando saberes interdisciplinares."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "CE1: Diseñar, crear y mejorar productos y sistemas tecnológicos gestionando proyectos de investigación con técnicas eficientes y una actitud emprendedora."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE3: Aprovechar y configurar herramientas digitales adecuadas para resolver de manera eficiente tareas, presentar resultados y aplicar conocimientos interdisciplinarios."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE5: Diseñar y crear soluciones tecnológicas automatizadas o robóticas mediante control programado y regulación automática."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "CE2: Seleccionar materiales aplicando criterios técnicos, considerando estudios de impacto ecosocial y valorando criterios de sostenibilidad para fabricar productos eficientes que den respuesta a problemas planteados con un enfoque ético y responsable."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Los principios de funcionamiento de la Corriente Alterna, su generación y transporte es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Un saber básico de la asignatura Tecnología y Digitalización de 3.º ESO"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología e Ingeniería"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Un saber básico de la asignatura Tecnología e Ingeniería II"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una competencia específica de la asignatura Tecnología y Digitalización de 3.º ESO"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la asignatura de Tecnología e Ingeniería, las situaciones de aprendizaje...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Son oportunidades para que los alumnos puedan consolidar sus aprendizajes y adquirir nuevos mediante tareas diversas que les permitan conseguir las competencias básicas."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son los objetivos que queremos que alcancen los alumnos"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "son 8 y tratan los diferentes contenidos que hay que trabajar"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Son oportunidades para que los alumnos puedan consolidar sus aprendizajes y adquirir nuevos mediante tareas diversas que les permitan aprender todos los saberes básicos."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La asignatura de Imagen y Sonido es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Una asignatura específica de Bachillerato"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Una asignatura optativa de Bachillerato"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una asignatura optativa de 4.ºESO"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Una asignatura optativa de 3.º ESO"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La asignatura de Imagen y Sonido tiene una carga lectiva de...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "4 horas semanales."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "3 horas semanales"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "5 horas semanales."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "2 horas semanales."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Las Pruebas de Acceso a la Universidad...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Están formadas por una Fase general y otra específica"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Los alumnos de Formación Profesional no pueden realizarla para acceder a la Universidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Sólo las realizan alumnos de Bachillerato que van a la Universidad."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Son el conjunto de exámenes de todas las asignaturas cursadas por un alumno en 2.º de Bachillerato."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La Fase general de las PAU...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "consiste en un examen de cada asignatura cursada por el alumno en 2.º de Bachillerato"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Es igual para todo el alumnado"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Está formada por 5 exámenes: castellano, valenciano, idioma extranjero, Historia de España o Historia de la Filosofía y la asignatura troncal de modalidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Está formada por 5 exámenes: castellano, valenciano, idioma extranjero, Historia de España y Matemáticas"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La Fase general de la PAU tiene validez...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "para 5 años"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "para siempre"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Para dos años"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Para 10 años"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La fase específica de las PAU...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "es obligatoria"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "es voluntaria"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la fase específica de las PAU, el alumno se puede examimar de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "hasta de 4 asignaturas específicas diferentes a la de la fase general o idiomas que haya cursado"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "hasta de 4 asignaturas específicas diferentes a la de la fase general o idiomas aunque no los haya cursado"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de cualquier asignatura específica diferente a la de la fase general o idiomas aunque no los haya cursado"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de 2 asignaturas específicas diferentes a la de la fase general o idiomas aunque no los haya cursado"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La fase específica de las PAU tiene una validez...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "de 1 año"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de 5 años"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "indefinida"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "de dos años"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Para poder calcular la Nota de Acceso a la Universidad, la nota de la fase general debe ser mayor o igual a...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "5"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "No hay límite"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "6"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "4"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La nota de acceso a la Universidad se calcula...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "60% de la nota final de Bachillerato + 40% de la fase general PAU y a esto se le suma las notas obtenidas en las asignaturas de la fase específica aplicando los coeficientes de cada carrera"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota final de 2.º de Bachillerato + 40% de la fase general PAU y a esto se le suma las notas obtenidas en las asignaturas de la fase específica aplicando los coeficientes de cada carrera"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota final de Bachillerato + 40% de la fase general PAU"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "la fase general PAU y a esto se le suma las notas obtenidas en las asignaturas de la fase específica aplicando los coeficientes de cada carrera"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la fase general sólo son válidas las notas superiores a 5",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "En la fase específica sólo son válidas las notas superiores a 5",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Cuando los alumnos están construyendo un objeto en grupo y se reparten las tareas a realizar están practicando la competencia (sólo una respuesta es posible)...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Competencia emprendedora"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencia ciudadana"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencia plurilingüe"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Competencia digital"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Promover el uso de la agenda favorece la competencia...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Ninguna, no es relevante"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "La competencia personal, social y de aprender a aprender"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "La competencia ciudadana"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "La competencia digital"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "¿Cuál de las siguientes propuestas son las más adecuada para trabajar la competencia plurilingüe? (Más de una respuesta es posible, en concreto 3)",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Que los alumnos trabajen con tutoriales en castellano, inglés o valenciano de manera indiferente."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que las herramientas las aprendan en los idiomas oficiales de la Comunidad y en el idioma extranjero que el centro considere."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que la cartelería del Taller esté en Castellano, Valenciano e Inglés o cualquier otro idioma extranjero."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Que graben un video en inglés sobre un tema trabajado en clase en otro idioma."
+                }
+            ],
+            "multiple": true
+        },
+        {
+            "enunciado": "De entre las siguientes opciones, elige las 3 más adecuadas para trabajar la competencia lingüística....",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Que escuchen un videotutorial sobre una aplicación y luego sean capaces de reproducir las instrucciones"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Que todos los días hagan un resumen de lo trabajada en clase."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que expliquen a la clase, una vez acabado el proyecto, cuales son sus características y cual ha sido el proceso de obtención."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Que, al buscar información en Internet, redacten un pequeño texto donde explican qué es lo que en ese enlace han encontrado"
+                }
+            ],
+            "multiple": true
+        },
+        {
+            "enunciado": "Los alumnos de 1º ESO están trabajando en grupo en un proyecto. Cada uno de ellos ha buscado información y ha elaborado un boceto de la solución al problema planteado. Para elegir la mejor solución el profesorado propone una Lluvia de ideas o brainstorming. Elige cual es la mejor manera de realizar esta actividad en clase y las competencias trabajadas.",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Les dejo 5 minutos para que lo decidan. Trabajo la competencia lingüística."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Les dejo 5 minutos para que lo decidan. Trabajo la competencia lingüística y la competencia personal, social y de aprender a aprender."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Les dejo 5 minutos para que lo decidan. Trabajo la competencia personal, social y de aprender a aprender."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Les pauto los turnos de la explicación de las ideas así como de crítica constructiva. Además les pido que hagan una tabla donde recojan los aspectos positivos y negativos de cada propuesta. Trabajo la competencia lingüística y la competencia personal, social y de aprender a aprender."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Cada asignatura desarrolla unas competencias diferentes.",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La adquisición de cada una de las competencias clave contribuye a la adquisición de todas las demás.",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La competencia digital es más importante que la lingüística.",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Verdadero."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Falso."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Son órganos colegiados de gobierno de un centro...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "El Consejo Escolar y el Claustro de profesores."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "El Consejo Escolar, el Claustro de profesores, la COCOPE y el equipo directivo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "El Consejo Escolar, el Claustro de profesores y la COCOPE."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "El Consejo Escolar, el Claustro de profesores, la COCOPE y los diferentes coordinadores."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El proyecto económico del centro es aprobado por...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "el Claustro de profesores."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el secretario del centro."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "el Consejo Escolar."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La organización de los centros de secundaria se regula en...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "El ROF (Decreto 252/2019)."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Se concreta cada año en las instrucciones de inicio de curso."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "El ROF (Decreto 252/2019) y se concreta cada año en las instrucciones de inicio de curso."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Depende de cada centro."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La Comisión de Coordinación Pedagógica (COCOPE) del centro está formado por...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los profesores coordinadores."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "la dirección y jefatura del centro, los jefes de departamento y otros profesores que nombre el centro."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los coordinadores docentes."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los jefes de departamento."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Las programaciones didácticas de una asignatura y su seguimiento es responsabilidad de...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "del coordinador de ESO"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "del tutor."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "de la jefatura de estudios."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "de todos los profesores de un departamento didáctico."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El claustro del centro está formado por...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "la dirección del centro y todos los profesores del mismo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los coordinadores docentes."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los jefes de departamento."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "el equipo directivo y los profesores coordinadores."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El PEC",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Tiene carácter anual"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Contiene las programaciones"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Todas las respuestas anteriores son correctas"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "contiene todos los planes y programas educativos a los que se acoge el centro"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Los equipos educativos (más de una respuesta es correcta)...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "lo coordina el tutor del grupo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "están formados por la dirección, jefatura del centro y los coordinadores de ESO."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "una de sus funciones es adoptar decisiones comunes relativas al proceso de aprendizaje de los alumnos del grupo"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "está formado por el conjunto de profesores de un grupo de alumnos."
+                }
+            ],
+            "multiple": true
+        },
+        {
+            "enunciado": "El tutor de un grupo...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "es un profesor que les da clase de alguna asignatura a todo el grupo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "es un profesor cualquiera del centro no necesariamente con destino definitivo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "es un profesor cualquiera del centro con destino definitivo."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "es el profesor que les da más horas de clase."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Si un profesor no da su clase por estar enfermo, el profesor de guardia deberá:",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Ninguna de las anteriores respuestas es correcta."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Escribir la incidencia en el parte de guardia y quedarse en el aula con el alumnado tratando de que hagan trabajo de esa asignatura o de otras."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Avisar a Jefatura de Estudios de que falta un profesor para que se haga cargo de los alumnos."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Escribir la incidencia en el parte de guardia y dejar al alumnado sólo en clase procurando que no armen mucho jaleo."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Es requisito específico para el acceso al cuerpo de Profesores de Enseñanza Secundaria...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "acreditar conocimiento lengua castellana y un B2 o superior de valenciano."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "No hay ningún requisito especifico referido a lenguas."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "acreditar conocimiento lengua castellana y un C1 o superior de valenciano."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "un C1 o superior de lengua castellana y un B2 o superior de valenciano."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La formación requerida para ser profesor de ESO y Bachillerato es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "tener los conocimientos necesarios"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Ser licenciado, ingeniero o arquitecto o grado equivalente"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "tener la formación pedagógica que marca la legislación"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "Ser licenciado, ingeniero o arquitecto o grado equivalente y tener la formación pedagógica que marca la legislación"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La fase de oposición se divide en...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "una única prueba que consta de dos fases"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "dos pruebas de las cuales se hace media aritmética."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "una única prueba tipo test."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "dos pruebas de carácter eliminatorio más las pruebas de castellano y valenciano."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El objetivo de la parte A de la prueba es...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "demostrar los conocimientos específicos de la especialidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "comprobar la aptitud pedagógica y el dominio de las técnicas necesarias para el ejercicio docente."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "comprobar el conocimiento general de la legislación vigente"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "compobar los conocimientos de las lenguas oficiales de la Comunidad,"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "El objetivo de la parte B de la prueba es...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "demostrar los conocimientos específicos de la especialidad"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "comprobar el conocimiento general de la legislación vigente"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "compobar los conocimientos de las lenguas oficiales de la Comunidad,"
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "comprobar la aptitud pedagógica y el dominio de las técnicas necesarias para el ejercicio docente."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La primera prueba consiste en...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "en el desarrollo por escrito un tema del temario."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "una prueba práctica para comprobar el dominio de las habilidades técnicas."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "un test sobre el temario de tecnología."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "una prueba práctica para comprobar las habilidades didácticas."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La segunda prueba consiste en...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "un test sobre el temario de tecnología"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Exposición oral de un tema del temario."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Presentación de una programación didáctica."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "la exposición oral de una unidad didáctica o similar."
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "La calificación final de la oposición se obtiene...",
+            "respuestas": [
+                {
+                    "verdadera": true,
+                    "opcion": "60% de la nota de la fase de oposición siempre que sea superior a 5 y 40% de la fase de concurso"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota de la fase de oposición y 40% de la fase de concurso"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "60% de la nota de la fase de oposición, 20% de la fase de concurso y 20% pruebas de idiomas"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "si apruebas la fase de oposición, ya tienes plaza"
+                }
+            ],
+            "multiple": false
+        },
+        {
+            "enunciado": "Aprobada la oposición, ya eres funcionario/a...",
+            "respuestas": [
+                {
+                    "verdadera": false,
+                    "opcion": "Por supuesto."
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Han de pasar 5 años"
+                },
+                {
+                    "verdadera": false,
+                    "opcion": "Sí, si tu orden en el listado es menor o igual al número de plazas otorgadas a tu tribunal."
+                },
+                {
+                    "verdadera": true,
+                    "opcion": "No, debes realizar el periodo de prácticas"
+                }
+            ],
+            "multiple": false
+        }
+    ]
+}

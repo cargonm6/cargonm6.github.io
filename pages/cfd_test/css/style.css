@@ -1,12 +1,35 @@
 html,
 body {
-    height: calc(100vh - 190px);
+    min-height: calc(100vh - 215px);
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
+}
+
+.little-screen {
+    display: none;
+}
+
+@media screen and (min-width: 770px) {
+    .middle {
+        margin-left: 50px;
+        width: calc(100% - 100px);
+    }
+}
+
+@media screen and (max-width: 769px) {
+    body {
+        font-size: small;
+    }
+
+    .middle {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 .header {
@@ -14,7 +37,8 @@ body {
     line-height: 32px;
     padding: 10px 25px;
     text-align: center;
-    height: calc(100px);
+    border-bottom: 3px solid chocolate;
+    min-height: 97;
 }
 
 .header p {
@@ -22,17 +46,18 @@ body {
 }
 
 .middle {
-    padding-top: 25px;
-    height: calc(100vh - 190px);
-    min-height: calc(100vh - 190px);
-    overflow-y: scroll;
+    padding: 25px 0;
+    min-height: calc(100vh - 215px);
+
+    transition: margin-left 0.25s, width 0.25s;
 }
 
 .footer {
     background-color: bisque;
-    line-height: 25px;
+    line-height: 22px;
     padding: 10px 25px;
-    height: 25px;
+    border-top: 3px solid chocolate;
+    height: 22px;
     text-align: center;
 }
 
@@ -68,9 +93,10 @@ body {
 }
 
 .question-container {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid sandybrown;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px saddlebrown;
 }
 
 .question-container p:first-child {
@@ -84,9 +110,15 @@ body {
 }
 
 #result-box {
-    width: calc(100% - 60px);
+    width: calc(100% - 72px);
     margin-left: 25px;
-    border: 1px solid chocolate;
-    padding: 5px;
-    border-radius: 5px;
+    border: 1px solid greenyellow;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 5px green;
+}
+
+#result {
+    margin: 10px 0 0 0;
 }
