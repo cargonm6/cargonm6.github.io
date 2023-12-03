@@ -1,0 +1,546 @@
+{
+    "preguntas": [
+        {
+            "enunciado": "Los ciclos cortos pertenecen a la ley que se indica y tienen una duración de:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "LOE con 1400 h.", "verdadera": false },
+                { "opcion": "LOGSE con 1400 h.", "verdadera": true },
+                { "opcion": "LOE con 2000 h.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Qué es un módulo?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Cada una de las asignaturas que se cursan en un ciclo formativo.", "verdadera": true },
+                { "opcion": "Conjunto de asignaturas agrupadas según criterios de afinidad formativa.", "verdadera": false },
+                { "opcion": "Son títulos creados con el fin de proporcionar una formación básica y profesional a los alumnos que no alcancen los objetivos mínimos.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La LOGSE entró en vigor en …",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "1990.", "verdadera": true },
+                { "opcion": "1995.", "verdadera": false },
+                { "opcion": "2002.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Selecciona la afirmación falsa:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Podrán cursar un ciclo formativo de grado medio quienes se hallen en posesión del título de Bachillerato.", "verdadera": false },
+                { "opcion": "Podrán cursar un ciclo formativo de grado superior quienes se hallen en posesión del título de Graduado en Educación Secundaria.", "verdadera": false },
+                { "opcion": "Los ciclos de grado medio conducen al título de Técnico Auxiliar y forman parte de la ESO.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "¿Dónde podemos encontrar el número total de horas anuales de cada módulo?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "En el Boletín Oficial del Estado del título.", "verdadera": false },
+                { "opcion": "En el Currículo autonómico del título.", "verdadera": true },
+                { "opcion": "En el Real Decreto del título.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Lo dispuesto en el Real Decreto de un título será de aplicación?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "A nivel provincial.", "verdadera": false },
+                { "opcion": "A nivel autonómico.", "verdadera": false },
+                { "opcion": "A nivel nacional.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "El ámbito de aplicación del Currículo de un ciclo formativo es:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Autonómico.", "verdadera": true },
+                { "opcion": "Estatal.", "verdadera": false },
+                { "opcion": "Provincial.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Cuál de los siguientes puntos no lo establece el Real Decreto del título?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El tipo de profesorado que imparte cada módulo.", "verdadera": false },
+                { "opcion": "Las competencias profesionales a desarrollar.", "verdadera": false },
+                { "opcion": "El número de horas totales de cada módulo.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "En una oposición para profesor de FP, ¿qué tipo de pruebas hay?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Una prueba teórica y la defensa de una unidad didáctica.", "verdadera": false },
+                { "opcion": "Una prueba teórica y una práctica.", "verdadera": false },
+                { "opcion": "Una prueba teórica, una práctica y defensa de programación y unidad didáctica.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "¿Dónde podremos encontrar indicaciones sobre la parte práctica de la prueba?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "En el Currículo del título.", "verdadera": false },
+                { "opcion": "En la página de la Conselleria.", "verdadera": false },
+                { "opcion": "En la convocatoria de la oposición.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "Las FCT son obligatorias en:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "FP básica, grado medio y superior.", "verdadera": true },
+                { "opcion": "Sólo en FP básica y grado superior.", "verdadera": false },
+                { "opcion": "Sólo en grado superior.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Se pueden convalidar las FCT cuando se acredita el siguiente tiempo en un campo profesional directamente relacionado con el ciclo formativo:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Un año o más.", "verdadera": true },
+                { "opcion": "9 meses.", "verdadera": false },
+                { "opcion": "6 meses.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Indica qué no es un requisito para presentarse a oposiciones:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No haber sido condenado/a por algún delito contra la libertad e indemnidad sexual.", "verdadera": false },
+                { "opcion": "Estar en posesión de la formación pedagógica y didáctica de educación.", "verdadera": false },
+                { "opcion": "Poseer el nivel C2 de Valenciano.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "¿Cuál de las siguientes pruebas no pertenece a la segunda prueba de las oposiciones?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Exposición de una unidad didáctica.", "verdadera": false },
+                { "opcion": "Defensa de una programación didáctica.", "verdadera": false },
+                { "opcion": "Examen práctico.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "Si un funcionario consigue adquirir una nueva especialidad mediante oposición:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Pierde su especialidad previa.", "verdadera": false },
+                { "opcion": "Necesita tener el nivel C2 de lengua extranjera.", "verdadera": false },
+                { "opcion": "El examen consiste en una exposición y defensa oral de un tema.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "La fase de concurso en una oposición se divide en tres partes:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Experiencia docente, formación académica y otros méritos.", "verdadera": true },
+                { "opcion": "Experiencia docente, formación académica e idiomas.", "verdadera": false },
+                { "opcion": "Experiencia docente, formación profesional y otros méritos.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿A qué especialidades docentes se puede acceder con una diplomatura?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "A todas las especialidades del cuerpo de Profesores Técnicos de FP y algunas especialidades de Profesor de Secundaria.", "verdadera": true },
+                { "opcion": "Sólo a especialidades del cuerpo de Profesores Técnicos de FP.", "verdadera": false },
+                { "opcion": "Sólo a especialidades del cuerpo de Profesor de Secundaria.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Con la entrada de la LOE, todos los nuevos ciclos formativos pasan a tener una duración de:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "2000 horas", "verdadera": true },
+                { "opcion": "1000 horas", "verdadera": false },
+                { "opcion": "1400 horas", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Cada cualificación profesional está compuesta por:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Varios módulos.", "verdadera": false },
+                { "opcion": "Varias unidades de competencia.", "verdadera": true },
+                { "opcion": "Varias competencias profesionales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Quién elabora y mantiene actualizado el Catálogo Nacional de Cualificaciones Profesionales?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El INCUAL - El Instituto Nacional de Cualificaciones Profesionales", "verdadera": true },
+                { "opcion": "El Consejo General de la FP", "verdadera": false },
+                { "opcion": "El IVQP - Institut Valencià de les Qualificacions Professionals", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El profesorado técnico de FP puede:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Impartir docencia en los módulos específicos de su especialidad.", "verdadera": true },
+                { "opcion": "Impartir docencia en módulos tanto del cuerpo de secundaria como del cuerpo de profesores técnicos.", "verdadera": false },
+                { "opcion": "Impartir docencia en los módulos específicos de su especialidad y en algunos del cuerpo de secundaria.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Cómo está organizada la Formación Profesional Reglada?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Está organizada en tres niveles: Formación Profesional Básica, ciclos de grado medio y ciclos de grado superior.", "verdadera": true },
+                { "opcion": "Está organizada en dos niveles: ciclos de grado medio y ciclos de grado superior.", "verdadera": false },
+                { "opcion": "Sólo hay un nivel: Formación Profesional General.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La Formación Profesional Básica puede proporcionar:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El título de la ESO y acceso a ciclos de grado medio.", "verdadera": true },
+                { "opcion": "Sólo acceso a ciclos de grado medio.", "verdadera": false },
+                { "opcion": "Acceso a ciclos de grado superior.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Una diferencia entre el profesorado técnico (PT) y el profesorado de secundaria (PS) es:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "La remuneración básica de un PS es superior a la de un PT.", "verdadera": true },
+                { "opcion": "El PT está facultado para dar clases en la ESO mientras que el PS no lo está.", "verdadera": false },
+                { "opcion": "Para ejercer como PS es necesario disponer de un título de grado, licenciatura o ingeniería.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "¿Puede un/a funcionario/a público/a compatibilizar su trabajo con otro en el sector privado o público?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Sí, en cualquier circunstancia.", "verdadera": false },
+                { "opcion": "No.", "verdadera": false },
+                { "opcion": "Sí, pero cumpliendo una serie de requisitos.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "El profesorado de secundaria pertenece al grupo funcionarial:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "A2", "verdadera": false },
+                { "opcion": "A1", "verdadera": true },
+                { "opcion": "B", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Con un título de Grado una persona puede presentarse:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Sólo a especialidades del cuerpo de secundaria.", "verdadera": false },
+                { "opcion": "Sólo a especialidades del cuerpo de profesores técnicos de FP.", "verdadera": false },
+                { "opcion": "A cualquier especialidad existente.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "En el Real Decreto de cualquier título de FP:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Cada cualificación profesional está compuesta por una serie de unidades de competencia.", "verdadera": true },
+                { "opcion": "Cada unidad de competencia está compuesta por una serie de cualificaciones profesionales.", "verdadera": false },
+                { "opcion": "Cada cualificación profesional está formada por una serie de competencias profesionales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Un ciclo formativo de grado medio o superior LOE:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Consta de un curso de 2000 h.", "verdadera": false },
+                { "opcion": "Consta de 2 cursos de 2000 h.", "verdadera": true },
+                { "opcion": "Consta de 2 cursos de 1400 h.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "De forma general, las FCT se realizan:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "En el último trimestre del primer curso.", "verdadera": false },
+                { "opcion": "En el primer trimestre del segundo curso.", "verdadera": false },
+                { "opcion": "En el último trimestre del segundo curso.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "Para poder promocionar de 1º a 2º curso:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El alumnado no puede tener suspendidas más de 240 h anuales.", "verdadera": true },
+                { "opcion": "El alumnado puede tener suspendidas cualquier número de horas.", "verdadera": false },
+                { "opcion": "El alumnado no puede tener suspendidas más de 200 h anuales.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Con un ciclo de grado medio superado:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Se puede acceder al Bachillerato directamente.", "verdadera": false },
+                { "opcion": "Se puede acceder a un grado superior directamente.", "verdadera": true },
+                { "opcion": "Se puede acceder a un grado universitario directamente.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La diferencia básica entre la FP de la LOGSE y los actuales ciclos LOE es:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "La FP LOGSE contenía muchas asignaturas generales y pocas específicas.", "verdadera": true },
+                { "opcion": "La FP LOGSE contenían muchas asignaturas específicas y pocas generales.", "verdadera": false },
+                { "opcion": "La FP LOGSE era más corta que los ciclos LOE.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Los módulos que puede impartir el profesorado de FP vienen determinados por:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "La especialidad que ocupe.", "verdadera": true },
+                { "opcion": "La titulación universitaria que tenga.", "verdadera": false },
+                { "opcion": "Los méritos que haya acumulado.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En una oposición al cuerpo de profesores de educación secundaria:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Los méritos computan siempre.", "verdadera": false },
+                { "opcion": "Los méritos sólo computan si se aprueba la fase de oposición.", "verdadera": true },
+                { "opcion": "Los méritos no computan si no se ha trabajado como interino/a.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La última prueba de la oposición al cuerpo de profesores de educación secundaria consiste en:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "La realización de un examen práctico.", "verdadera": false },
+                { "opcion": "Únicamente la defensa de la programación didáctica.", "verdadera": false },
+                { "opcion": "La defensa de la programación didáctica y exposición de una unidad didáctica.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "La Formación en Centros de Trabajo (FCT):",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Es un módulo obligatorio para todo el alumnado.", "verdadera": true },
+                { "opcion": "Es una opción voluntaria para el alumnado.", "verdadera": false },
+                { "opcion": "Sólo se debe cursar si el ciclo se oferta en modalidad dual.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Un ciclo de FP dual:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Consiste en compatibilizar estudios en el ciclo y trabajo en una empresa.", "verdadera": true },
+                { "opcion": "Consiste en cursar dos ciclos al mismo tiempo.", "verdadera": false },
+                { "opcion": "Consiste en cursar un ciclo en algún país de Europa.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Una de las principales diferencias entre el Real Decreto y el Currículo de un ciclo es:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Las horas de cada módulo.", "verdadera": true },
+                { "opcion": "Los objetivos específicos de cada módulo.", "verdadera": false },
+                { "opcion": "Los criterios de evaluación de cada módulo.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Las horas totales anuales de cada módulo de un ciclo se especifican en:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El Real Decreto del título.", "verdadera": false },
+                { "opcion": "El Currículo autonómico del ciclo formativo.", "verdadera": true },
+                { "opcion": "La programación didáctica de cada equipo docente.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Los contenidos mínimos de cada módulo de un determinado ciclo formativo:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Aparecen en el Real Decreto del título.", "verdadera": true },
+                { "opcion": "Aparecen en el Currículo autonómico del ciclo formativo.", "verdadera": false },
+                { "opcion": "Los define cada centro de enseñanza.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Indica la respuesta correcta:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El Real Decreto de un título es de ámbito autonómico.", "verdadera": false },
+                { "opcion": "El Currículo de un ciclo formativo es de ámbito nacional.", "verdadera": false },
+                { "opcion": "El Real Decreto de un título es de ámbito nacional.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "La finalidad de cualquier ciclo de FP es:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Continuar los estudios en un nivel superior.", "verdadera": false },
+                { "opcion": "Aprender una profesión para insertarse en el mundo laboral.", "verdadera": true },
+                { "opcion": "No abandonar el sistema educativo.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El profesorado de FP de un centro concertado:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Ha tenido que superar una oposición para ocupar dicho puesto.", "verdadera": false },
+                { "opcion": "Recibe su nómina de las arcas públicas.", "verdadera": true },
+                { "opcion": "Trabaja las mismas horas semanales que un profesor funcionario.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El profesorado de FP de un centro privado:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Ha tenido que superar una oposición para ocupar dicho puesto.", "verdadera": false },
+                { "opcion": "Recibe su nómina de la entidad privada.", "verdadera": true },
+                { "opcion": "Trabaja las mismas horas semanales que un profesor funcionario.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La experiencia profesional en un determinado sector:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Permite convalidar un ciclo formativo completo.", "verdadera": false },
+                { "opcion": "Permite convalidar determinados módulos de un ciclo formativo.", "verdadera": true },
+                { "opcion": "No permite convalidar módulos de ningún ciclo formativo.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El módulo de Inglés técnico:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Solo es obligatorio en ciclos de grado superior.", "verdadera": false },
+                { "opcion": "Sólo es obligatorio en ciclos de grado medio.", "verdadera": false },
+                { "opcion": "Es obligatorio tanto en ciclos de grado medio como superior.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "Los módulos transversales de FOL y EIE:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Solo son obligatorios en ciclos de grado superior.", "verdadera": false },
+                { "opcion": "Sólo son obligatorios en ciclos de grado medio.", "verdadera": false },
+                { "opcion": "Son obligatorios tanto en ciclos de grado medio como superior.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "La FP ocupacional y continua:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Está dirigida a desempleados y trabajadores.", "verdadera": true },
+                { "opcion": "Está dirigida a alumnado sin el título de la ESO.", "verdadera": false },
+                { "opcion": "Está dirigida a alumnado menor de 17 años.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Indica la respuesta correcta:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El nivel de cualificación 1 corresponde a grado medio.", "verdadera": false },
+                { "opcion": "El nivel de cualificación 2 corresponde a FP Básica.", "verdadera": false },
+                { "opcion": "El nivel de cualificación 3 corresponde a grado superior.", "verdadera": true }
+            ]
+        },
+
+        {
+            "enunciado": "¿Quién desarrolla el Currículo de un ciclo formativo?",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "El Ministerio de Educación.", "verdadera": false },
+                { "opcion": "La Conselleria de Educación.", "verdadera": true },
+                { "opcion": "Los sindicatos en conjunto con las organizaciones empresariales.", "verdadera": false }
+            ]
+        },
+
+        {
+            "enunciado": "Las siglas CIPFP significan:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Centro Integral Privado de FP.", "verdadera": false },
+                { "opcion": "Centro Integrado Público de FP.", "verdadera": true },
+                { "opcion": "Centro Interno Público de FP.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "En un CIPFP:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Puede impartirse ESO, Bachillerato y ciclos de FP.", "verdadera": false },
+                { "opcion": "Sólo pueden impartirse ciclos de FP.", "verdadera": true },
+                { "opcion": "Puede impartirse Bachillerato y ciclos de FP.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "La obtención de un certificado de profesionalidad:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "No equivale a un título de un ciclo formativo completo.", "verdadera": true },
+                { "opcion": "Equivale a un título de un ciclo formativo completo.", "verdadera": false },
+                { "opcion": "Proporciona un título académico.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El Santo Patrón de la Formación Profesional es:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "San Juan Bosco y su festividad se celebra el 31 de Enero.", "verdadera": true },
+                { "opcion": "San Juan Bautista y su festividad se celebra el 23 de Junio.", "verdadera": false },
+                { "opcion": "San Carlos Borromeo y su festividad se celebra el 4 de Noviembre.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Las atribuciones docentes del profesorado funcionario de carrera vienen determinadas:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Por su titulación universitaria.", "verdadera": false },
+                { "opcion": "Por la especialidad que superó.", "verdadera": true },
+                { "opcion": "Por el centro de destino.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Un/a profesor/a con más de 10 años como funcionario/a de carrera:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Puede adquirir una nueva especialidad sin perder la suya.", "verdadera": true },
+                { "opcion": "Puede adquirir una nueva especialidad, pero perderá la suya.", "verdadera": false },
+                { "opcion": "No puede adquirir una nueva especialidad.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Una de las modalidades de FP dual consiste en:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Acudir a la empresa sin cursar ningún módulo en el centro de enseñanza.", "verdadera": false },
+                { "opcion": "Realizar 400 h remuneradas en una empresa.", "verdadera": true },
+                { "opcion": "Realizar 400 h no remuneradas en una empresa.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "Se puede acceder a un grado universitario:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Tras superar un ciclo formativo de grado medio.", "verdadera": false },
+                { "opcion": "Tras superar un certificado de profesionalidad.", "verdadera": false },
+                { "opcion": "Tras superar un ciclo formativo de grado superior.", "verdadera": true }
+            ]
+        },
+        {
+            "enunciado": "El horario concreto de un/a profesor/a en un centro de FP:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Vendrá determinado por el equipo directivo del centro.", "verdadera": true },
+                { "opcion": "Vendrá determinado por la Conselleria de Educació.", "verdadera": false },
+                { "opcion": "Vendrá determinado por el departamento al que pertenezca.", "verdadera": false }
+            ]
+        }
+    ]
+}

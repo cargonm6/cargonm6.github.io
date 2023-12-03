@@ -1,13 +1,26 @@
 let score = 0;
 var questions;
+randomize = true;
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("cuestionarios").value = "00_";
+    document.getElementById("cuestionarios").value = "none";
+    document.getElementById("checkrandom").checked = true;
 });
+
+function changeRandom(check) {
+    randomize = check.checked;
+}
 
 function changeJSON(sel) {
     document.getElementById("result-box").style = "display: block";
-    document.getElementById("app").innerHTML = "";
+
+    let return_link = document.createElement("a");
+    return_link.innerHTML = '<i class="fa-solid fa-house"></i>&nbsp;Volver al inicio';
+    return_link.href = "JavaScript: location.reload(true);";
+
+    let container = document.getElementById("app");
+    container.innerHTML = "";
+    container.appendChild(return_link);
 
     fetch("json/" + sel.value + ".json")
         .then((response) => response.json())
@@ -56,9 +69,11 @@ function renderQuestions(data) {
 
 // Función para barajar aleatoriamente un array
 function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+    if (randomize == true) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
     }
     return array;
 }

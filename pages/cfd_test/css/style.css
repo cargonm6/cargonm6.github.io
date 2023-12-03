@@ -13,6 +13,10 @@ body {
     overflow-y: scroll;
 }
 
+label {
+    font-size: small;
+}
+
 .little-screen {
     display: none;
 }
@@ -100,6 +104,10 @@ body {
     border: 1px solid sandybrown;
     border-radius: 10px;
     box-shadow: 2px 2px 5px saddlebrown;
+}
+
+a + .question-container {
+    margin-top: 10px;
 }
 
 .question-container p:first-child {
