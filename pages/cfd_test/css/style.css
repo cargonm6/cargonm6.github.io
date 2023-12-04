@@ -1,135 +1,165 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Montserrat&display=swap");
 
 html,
 body {
-    min-height: calc(100vh - 215px);
+  min-height: calc(100vh - 215px);
 }
 
 body {
-    font-family: "Heebo", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-y: scroll;
+  font-family: "Heebo", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+#info {
+  text-align: justify;
+}
+
+code {
+  color: green;
+  font-family: "Fira Mono", "Courier New", Courier, monospace;
+}
+
+p.alert {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: calc(80% - 10px);
+  margin-left: 10%;
+  padding: 5px;
+  color: brown;
 }
 
 label {
-    font-size: small;
+  font-size: small;
 }
 
 .little-screen {
-    display: none;
+  display: none;
 }
 
 @media screen and (min-width: 770px) {
-    .middle {
-        margin-left: 50px;
-        width: calc(100% - 100px);
-    }
+  .middle {
+    margin-left: 50px;
+    width: calc(100% - 100px);
+  }
 }
 
 @media screen and (max-width: 769px) {
-    body {
-        font-size: small;
-    }
+  body {
+    font-size: small;
+  }
 
-    .middle {
-        margin-left: 0;
-        width: 100%;
-    }
+  .middle {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .header {
-    background-color: bisque;
-    line-height: 32px;
-    padding: 10px 25px;
-    text-align: center;
-    border-bottom: 3px solid chocolate;
-    min-height: 97;
+  background-color: bisque;
+  line-height: 32px;
+  padding: 10px 25px;
+  text-align: center;
+  border-bottom: 3px solid chocolate;
+  min-height: 97;
 }
 
 .header p {
-    margin: 0;
+  margin: 0;
 }
 
 .middle {
-    padding: 25px 0;
-    min-height: calc(100vh - 215px);
+  padding: 25px 0;
+  min-height: calc(100vh - 215px);
 
-    transition: margin-left 0.25s, width 0.25s;
+  transition: margin-left 0.25s, width 0.25s;
 }
 
 .footer {
-    background-color: bisque;
-    line-height: 22px;
-    padding: 10px 25px;
-    border-top: 3px solid chocolate;
-    height: 22px;
-    text-align: center;
+  background-color: bisque;
+  line-height: 22px;
+  padding: 10px 25px;
+  border-top: 3px solid chocolate;
+  height: 22px;
+  text-align: center;
 }
 
 .smooth {
-    color: chocolate;
-    font-weight: bold;
+  color: chocolate;
+  font-weight: bold;
 }
 
 .question-container {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .correct-answer {
-    color: green;
+  color: green;
 }
 
 .wrong-answer {
-    color: red;
+  color: red;
 }
 
 .tick {
-    color: green;
-    font-weight: bold;
-    margin-left: 5px;
-    font-size: small;
+  color: green;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: small;
 }
 
 .cross {
-    color: red;
-    font-weight: bold;
-    margin-left: 5px;
-    font-size: small;
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: small;
 }
 
 .question-container {
-    padding: 10px;
-    border: 1px solid sandybrown;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px saddlebrown;
+  padding: 10px;
+  border: 1px solid sandybrown;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px saddlebrown;
 }
 
-a + .question-container {
-    margin-top: 10px;
+#div_links + .question-container {
+  margin-top: 10px;
 }
 
 .question-container p:first-child {
-    margin-top: 0;
-    font-weight: bold;
+  margin-top: 0;
+  font-weight: bold;
 }
 
 #app {
-    width: calc(100% - 50px);
-    margin-left: 25px;
+  width: calc(100% - 50px);
+  margin-left: 25px;
 }
 
 #result-box {
-    width: calc(100% - 72px);
-    margin-left: 25px;
-    border: 1px solid greenyellow;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 2px 2px 5px green;
+  width: calc(100% - 72px);
+  margin-left: 25px;
+  border: 1px solid greenyellow;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 5px green;
 }
 
 #result {
-    margin: 10px 0 0 0;
+  margin: 10px 0 0 0;
+}
+
+@media print {
+  body {
+    font-size: small;
+  }
+
+  .question-container {
+    break-inside: avoid;
+  }
 }

@@ -1,73 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Test CFD</title>
-        <link rel="icon" href="https://win98icons.alexmeub.com/icons/png/help_sheet-0.png" />
-        <link rel="stylesheet" href="css/style.css" />
-        <script src="js/app.js"></script>
-    </head>
-    <body>
-        <div class="header">
-            <p>
-                <a href="https://www.uv.es/" target="_blank">Universitat de València</a> <span class="smooth">|</span>
-                <a href="https://www.uv.es/uvweb/master-profesorado-secundaria/es/master-universitario-profesor/educacion-secundaria-1285886102735.html" target="_blank">Máster Universitario en Profesor/a de Educación Secundaria</a>
-            </p>
-            <b>Test de Complementos para la Formación Disciplinar</b><br />
-            <label>Cuestionario:</label>
-            <select id="cuestionarios" onchange="changeJSON(this)">
-                <option value="none" selected="selected" disabled="disabled">-- seleccionar --</option>
-                <option value="" disabled="disabled">Tema 1. Área de tecnología</option>
-                <option value="1.1_historia">1.1. Historia y epistemología de la tecnología</option>
-                <option value="1.2_legislacion">1.2. (i) Legislación en materia de educación</option>
-                <option value="1.3_curriculo_eso">1.2. (ii) Currículo de las asignaturas de ESO</option>
-                <option value="1.4_curriculo_bac">1.2. (iii) Currículo de las asignaturas de Bachillerato</option>
-                <option value="1.5_pau">1.2. (iv) Pruebas de Acceso a la Universidad</option>
-                <option value="1.6_competencias">1.3. Competencias</option>
-                <option value="1.7_profesorado_centro">1.4. (i) Papel del profesorado en un centro</option>
-                <option value="1.8_profesorado_acceso">1.4. (ii) Acceso al trabajo de profesorado de tecnología</option>
-                <option value="1.0_global">Examen global del Tema 1</option>
-                <option value="" disabled="disabled">Tema 2. Área de FP</option>
-                <option value="2.0_global">Examen global del Tema 2</option></select
-            >&nbsp;
-            <label>Aleatorizar preguntas y respuestas</label>
-            <input id="checkrandom" type="checkbox" onchange="changeRandom(this)" checked />
-        </div>
-        <div class="middle">
-            <div id="app">
-                <h2>Bienvenidas y bienvenidos a la prueba tipo test de CFD</h2>
-                Este proyecto fue creado como sistema dinámico de apoyo a las alumnas y alumnos de la asignatura Complementos de Formación Disciplinar. Metolodógicamente, se apoya en el
-                <a
-                    href="https://drillster.com/es/noticias/que-es-el-aprendizaje-basado-en-la-evaluacion/#:~:text=El%20aprendizaje%20basado%20en%20la%20evaluación%20consiste%20en%20aprender%20respondiendo,el%20feedback%20que%20las%20precede."
-                    target="_blank"
-                    >aprendizaje basado en la evaluación <sup><i class="fa-solid fa-arrow-up-right-from-square"></i></sup
-                ></a>
-                y el stack tecnológico cuyos elementos clave son: HTML, CSS, JavaScript y JSON.
-                <p>Agradecimientos especiales a Martí Huerta, que colaboró creando cuestionarios JSON y proponiendo ideas creativas para el desarrollo.</p>
-                <h2>Funcionamiento</h2>
-                <h3>Carga de cuestionarios</h3>
-                <p>Para realizar un cuestionario, seleccione el temario en el desplegable que hay en la sección superior de la página.</p>
-                <p>Al lanzar un cuestionario, en la pantalla se representarán preguntas de opción única (botón de opción o <i>radio button</i>) o multiopción (casilla de verificación o <i>checkbox</i>).</p>
-                <p><b>&#9888; ¡Precaución!</b> Cambiar de formulario imposibilitará recuperar las respuestas anteriormente indicadas en otro formulario.</p>
-                <h3>Resolución</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test CFD</title>
+    <link
+      rel="icon"
+      href="https://win98icons.alexmeub.com/icons/png/help_sheet-0.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <p>
+        <a href="https://www.uv.es/" target="_blank">Universitat de València</a>
+        <span class="smooth">|</span>
+        <a
+          href="https://www.uv.es/uvweb/master-profesorado-secundaria/es/master-universitario-profesor/educacion-secundaria-1285886102735.html"
+          target="_blank"
+          >Máster Universitario en Profesor/a de Educación Secundaria</a
+        >
+      </p>
+      <b>Test de Complementos para la Formación Disciplinar</b><br />
+      <label>Cuestionario:</label>
+      <select id="cuestionarios" onchange="changeJSON(this)">
+        <option value="none" selected="selected" disabled="disabled">
+          -- seleccionar --
+        </option>
+        <option value="" disabled="disabled">Tema 1. Área de tecnología</option>
+        <option value="1.1_historia">
+          1.1. Historia y epistemología de la tecnología
+        </option>
+        <option value="1.2_legislacion">
+          1.2. (i) Legislación en materia de educación
+        </option>
+        <option value="1.3_curriculo_eso">
+          1.2. (ii) Currículo de las asignaturas de ESO
+        </option>
+        <option value="1.4_curriculo_bac">
+          1.2. (iii) Currículo de las asignaturas de Bachillerato
+        </option>
+        <option value="1.5_pau">
+          1.2. (iv) Pruebas de Acceso a la Universidad
+        </option>
+        <option value="1.6_competencias">1.3. Competencias</option>
+        <option value="1.7_profesorado_centro">
+          1.4. (i) Papel del profesorado en un centro
+        </option>
+        <option value="1.8_profesorado_acceso">
+          1.4. (ii) Acceso al trabajo de profesorado de tecnología
+        </option>
+        <option value="1.0_global">Examen global del Tema 1</option>
+        <option value="" disabled="disabled">Tema 2. Área de FP</option>
+        <option value="2.0_global">Examen global del Tema 2</option></select
+      >&nbsp;
+      <label>Aleatorizar preguntas y respuestas</label>
+      <input
+        id="checkrandom"
+        type="checkbox"
+        onchange="changeRandom(this)"
+        checked
+      />
+    </div>
+    <div class="middle">
+      <div id="app">
+        <div id="info">
+          <h2>Bienvenidas y bienvenidos a la prueba tipo test de CFD</h2>
+          Este proyecto fue creado como sistema dinámico de apoyo a las alumnas
+          y alumnos de la asignatura Complementos de Formación Disciplinar.
+          Metolodógicamente, se apoya en el
+          <a
+            href="https://drillster.com/es/noticias/que-es-el-aprendizaje-basado-en-la-evaluacion/#:~:text=El%20aprendizaje%20basado%20en%20la%20evaluación%20consiste%20en%20aprender%20respondiendo,el%20feedback%20que%20las%20precede."
+            target="_blank"
+            >aprendizaje basado en la evaluación
+            <sup><i class="fa-solid fa-arrow-up-right-from-square"></i></sup
+          ></a>
+          y el stack tecnológico cuyos elementos clave son: <code>HTML</code>,
+          <code>CSS</code>, <code>JavaScript</code> y <code>JSON</code>.
+          <p>
+            Agradecimientos especiales a Martí Huerta, que colaboró creando
+            cuestionarios JSON y proponiendo ideas creativas para el desarrollo.
+          </p>
+          <h2>Funcionamiento</h2>
+          <h3>Carga de cuestionarios</h3>
+          <p>
+            Para realizar un cuestionario, seleccione el temario en el
+            desplegable que hay en la sección superior de la página.
+          </p>
+          <p>
+            Al lanzar un cuestionario, en la pantalla se representarán preguntas
+            de opción única (botón de opción o <code>radio button</code>) o
+            multiopción (casilla de verificación o <code>checkbox</code>).
+          </p>
+          <p class="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i>&nbsp;Cambiar de
+            formulario imposibilitará recuperar las respuestas anteriormente
+            indicadas en otro formulario.
+          </p>
+          <h3>Resolución</h3>
 
-                <p>Una vez finalizado el formulario, en la sección inferior de la página aparecerán los botones "Corregir" y "Reiniciar".</p>
-                <p>
-                    "Corregir" permite comprobar las respuestas dadas en cada pregunta, coloreando en verde las soluciones y marcando en rojo las respuestas erróneas indicadas, además de añadir una marca que indica si la pregunta está
-                    correcta o no, y evaluando el número de aciertos sobre el número total de cuestiones.
-                </p>
-                <p>"Reiniciar" limpia el formulario, borrando todas las opciones marcadas y las indicaciones de respuesta.</p>
-            </div>
-            <div id="result-box" style="display: none">
-                <button onclick="showResults()">Corregir</button>
-                <button onclick="restore(true)">Reiniciar</button>
-                <p id="result"></p>
-            </div>
+          <p>
+            Una vez finalizado el formulario, en la sección inferior de la
+            página aparecerán los botones "Corregir" y "Reiniciar".
+          </p>
+          <p>
+            "Corregir" permite comprobar las respuestas dadas en cada pregunta,
+            coloreando en verde las soluciones y marcando en rojo las respuestas
+            erróneas indicadas, además de añadir una marca que indica si la
+            pregunta está correcta o no, y evaluando el número de aciertos sobre
+            el número total de cuestiones.
+          </p>
+          <p>
+            "Reiniciar" limpia el formulario, borrando todas las opciones
+            marcadas y las indicaciones de respuesta.
+          </p>
         </div>
-        <div class="footer">
-            &copy;&nbsp;2023 Carlos González Marco <span class="smooth">|</span>
-            <a class="refresh" href="JavaScript: location.reload(true);" title="Refrescar página"><i class="fa fa-arrows-rotate" aria-hidden="true"></i></a>
-        </div>
-    </body>
+      </div>
+      <div id="result-box" style="display: none">
+        <button onclick="showResults()">
+          <i class="fa-solid fa-list-check"></i>&nbsp;Corregir
+        </button>
+        <button onclick="restore(true)">
+          <i class="fa-solid fa-trash-can"></i>&nbsp;Reiniciar
+        </button>
+        <button onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');">
+          <i class="fa-solid fa-turn-up"></i>&nbsp;Subir
+        </button>
+        <p id="result"></p>
+      </div>
+    </div>
+    <div class="footer">
+      &copy;&nbsp;2023 Carlos González Marco <span class="smooth">|</span>
+      <a
+        class="refresh"
+        href="JavaScript: location.reload(true);"
+        title="Refrescar página"
+        ><i class="fa fa-arrows-rotate" aria-hidden="true"></i
+      ></a>
+    </div>
+  </body>
 </html>

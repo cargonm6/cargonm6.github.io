@@ -19,7 +19,7 @@
             ]
         },
         {
-            "enunciado": "La LOGSE entró en vigor en …",
+            "enunciado": "La LOGSE entró en vigor en...",
             "multiple": false,
             "respuestas": [
                 { "opcion": "1990.", "verdadera": true },
