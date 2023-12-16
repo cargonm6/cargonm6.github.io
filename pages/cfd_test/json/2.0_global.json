@@ -73,12 +73,12 @@
             ]
         },
         {
-            "enunciado": "En una oposición para profesor de FP, ¿qué tipo de pruebas hay?",
+            "enunciado": "En una oposición para profesor de FP, ¿qué tipo de pruebas hay? [Nota: cambió en la última convocatoria]",
             "multiple": false,
             "respuestas": [
-                { "opcion": "Una prueba teórica y la defensa de una unidad didáctica.", "verdadera": false },
+                { "opcion": "Una prueba teórica y la defensa de una unidad didáctica.", "verdadera": true },
                 { "opcion": "Una prueba teórica y una práctica.", "verdadera": false },
-                { "opcion": "Una prueba teórica, una práctica y defensa de programación y unidad didáctica.", "verdadera": true }
+                { "opcion": "Una prueba teórica, una práctica y defensa de programación y unidad didáctica.", "verdadera": false }
             ]
         },
         {
@@ -540,6 +540,15 @@
                 { "opcion": "Vendrá determinado por el equipo directivo del centro.", "verdadera": true },
                 { "opcion": "Vendrá determinado por la Conselleria de Educació.", "verdadera": false },
                 { "opcion": "Vendrá determinado por el departamento al que pertenezca.", "verdadera": false }
+            ]
+        },
+        {
+            "enunciado": "El Profesorado Especialista en sectores singulares:",
+            "multiple": false,
+            "respuestas": [
+                { "opcion": "Percibe la misma remuneración básica que un profesor de Secundaria.", "verdadera": false },
+                { "opcion": "Pertenece al grupo A1 como un profesor de Secundaria.", "verdadera": false },
+                { "opcion": "Percibe una remuneración básica inferior a la de un profesor de Secundaria.", "verdadera": true }
             ]
         }
     ]
