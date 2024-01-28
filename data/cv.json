@@ -6,6 +6,13 @@
       "title": "Experiencia laboral",
       "entry": [
         {
+          "logo": "img/logos/gva.png",
+          "date": "<span class=\"current\">01/2024 - acte.",
+          "title": "<span class=\"current\">Prácticas de profesorado<\/span>",
+          "centre": "<a href=\"\" target=\"_blank\">IES Abastos</a>",
+          "description": "Prácticas curriculares del Máster Universitario en Profesor/a de Educación Secundaria (UV). Participación en el CFGS en Desarrollo de Aplicaciones Multiplataforma, y el en Curso de Especialización en Desarrollo de Videojuegos y Realidad Virtual."
+        },
+        {
           "logo": "img/logos/upv.png",
           "date": "11/2021 - 09/2023",
           "title": "Técnico superior de investigación",
@@ -39,10 +46,10 @@
       "icon": "img/icons/cap.svg",
       "title": "Formación técnica reglada",
       "entry": [
-		{
+		    {
           "logo": "img/logos/uv.png",
           "date": "<span class=\"current\">09/2023 - acte.",
-          "title": "<span class=\"current\">Máster Universitario en Profesorado de Educación Secundaria<\/span> <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+          "title": "<span class=\"current\">Máster Universitario en Profesor/a de Educación Secundaria<\/span> <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
           "description": ""
         },
@@ -78,14 +85,14 @@
           "date": "09/2021 - 06/2022<br/><p>09/2010 - 06/2013</p>",
           "title": "Enseñanzas profesionales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
           "centre": "<a href=\"http://elmicalet.cat/\" target=\"_blank\">Institut Musical Giner (S. C. El Micalet)</a>",
-          "description": "Especialidad: trompeta (<a href=\"https://actiweb.one/javiergonzalez/servicios.html\" target=\"_blank\">Francisco Javier González Arnal</a>)."
+          "description": "Especialidad: trompeta (<a href=\"https://formaciongabou.es/nuestros-profesores/francisco-javier-gonzalez-arnal/\" target=\"_blank\">Francisco Javier González Arnal</a>)."
         },
         {
           "logo": "img/logos/agrupacion.png",
           "date": "03/2008 - 07/2010",
           "title": "Enseñanzas elementales de música",
-          "centre": "<a href=\"https://sites.google.com/view/musicalsanluis/escuela-de-m%C3%BAsica\" target=\"_blank\">Escuela de Música Carrera Fuente de San Luis</a>",
-          "description": "Especialidad: trompeta (<a href=\"https://sites.google.com/site/musicapcsantaana/profesorado-1\" target=\"_blank\">José Ignacio Barreiro Sanchís</a>)."
+          "centre": "<a href=\"https://sites.google.com/view/musicalsanluis/escuela-de-musica\" target=\"_blank\">Escuela de Música Carrera Fuente de San Luis</a>",
+          "description": "Especialidad: trompeta (<a href=\"https://web.archive.org/web/20201030021541/https://sites.google.com/site/musicapcsantaana/profesorado-1\" target=\"_blank\">José Ignacio Barreiro Sanchís</a>)."
         }
       ]
     },
