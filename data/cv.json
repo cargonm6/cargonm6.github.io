@@ -24,13 +24,13 @@
                     "date": "11/2021 - 09/2023",
                     "title": "Técnico superior de investigación",
                     "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
-                    "description": "Participación en el proyecto &#171;Monitorización y gestión del mantenimiento predictivo de vías interurbanas mediante técnicas de inteligencia artificial&#187; (NEUROVÍAS), adscrito al <a href=\"https://www.upv.es/entidades/DIC/\" target=\"_blank\">Departamento de Ingeniería de la Construcción y Proyectos de Ingeniería Civil</a> de la UPV."
+                    "description": "Participación en el proyecto &#171;Monitorización y gestión del mantenimiento predictivo de vías interurbanas mediante técnicas de inteligencia artificial&#187; (NEUROVÍAS), adscrito al <a href=\"https://www.upv.es/entidades/DIC/\" target=\"_blank\">Departamento de Ingeniería de la Construcción y Proyectos de Ingeniería Civil</a> de la UPV (ver <a href=\"http://dspace.aeipro.com/xmlui/handle/123456789/3477\" target=\"_blank\">Actas del CIDIP 2023</a>)."
                 },
                 {
                     "logo": "img/logos/outsourcing.png",
                     "date": "02/2022 - 07/2022<br/><p>11/2020 - 05/2021</p>",
                     "title": "Ingeniero técnico de telecomunicación",
-                    "centre": "<a href=\"https://outsourcinggroup.es/\" target=\"_blank\">Outsourcing Group Desarrollo S. L.</a>",
+                    "centre": "<a href=\"https://web.archive.org/web/20220909120452/https://outsourcinggroup.es/\" target=\"_blank\">Outsourcing Group Desarrollo S. L.</a>",
                     "description": "Elaboración y firma de proyectos radioeléctricos de fase 1 para instalaciones de telefonía móvil."
                 },
                 {
@@ -51,33 +51,33 @@
         },
         {
             "icon": "img/icons/cap.svg",
-            "title": "Formación técnica reglada",
+            "title": "Formación universitaria",
             "entry": [
                 {
                     "logo": "img/logos/uv.png",
                     "date": " 09/2023 - 07/2024",
-                    "title": "Máster Universitario en Profesor/a de Educación Secundaria <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Máster Universitario en Profesor/a de Educación Secundaria",
                     "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
-                    "description": ""
+                    "description": "Trabajo de Fin de Máster: &#171;Procesos de pruebas y verificación de la calidad en videojuegos: propuesta didáctica para un curso de especialización en formación profesional&#187;."
                 },
                 {
                     "logo": "img/logos/upv.png",
                     "date": "09/2019 - 07/2023",
-                    "title": "Máster Universitario en Ingeniería de Telecomunicación <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Máster Universitario en Ingeniería de Telecomunicación",
                     "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
                     "description": "Trabajo de Fin de Máster: <a href=\"https://riunet.upv.es/handle/10251/195557\" target=\"_blank\">&#171;Diseño de antenas flexibles para circuitos biométricos integrables en prendas de vestir&#187;</a>."
                 },
                 {
                     "logo": "img/logos/uv.png",
                     "date": "09/2016 - 09/2019",
-                    "title": "Grado en Ingeniería Telemática <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Grado en Ingeniería Telemática",
                     "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
                     "description": "Trabajo de Fin de Grado: <a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">&#171;Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas&#187;</a>."
                 },
                 {
                     "logo": "img/logos/gva.png",
                     "date": "09/2008 - 07/2012",
-                    "title": "Bachillerato LOE (rama Ciencias y Tecnología) <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Bachillerato LOE (rama Ciencias y Tecnología)",
                     "centre": "<a href=\"https://portal.edu.gva.es/ieslluisvives/\" target=\"_blank\">IES Lluís Vives</a>",
                     "description": ""
                 }
@@ -85,12 +85,12 @@
         },
         {
             "icon": "img/icons/instrument.svg",
-            "title": "Formación artística reglada",
+            "title": "Formación artística",
             "entry": [
                 {
                     "logo": "img/logos/micalet.png",
                     "date": "09/2021 - 06/2022<br/><p>09/2010 - 06/2013</p>",
-                    "title": "Enseñanzas profesionales de música <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Enseñanzas profesionales de música",
                     "centre": "<a href=\"http://elmicalet.cat/\" target=\"_blank\">Institut Musical Giner (S. C. El Micalet)</a>",
                     "description": "Especialidad: trompeta (<a href=\"https://formaciongabou.es/nuestros-profesores/francisco-javier-gonzalez-arnal/\" target=\"_blank\">Francisco Javier González Arnal</a>)."
                 },
@@ -117,22 +117,22 @@
                 {
                     "logo": "img/logos/lang/va.png",
                     "date": "Valenciano",
-                    "title": "Certificado C1 <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Certificado C1",
                     "centre": "<a href=\"http://www.jqcv.gva.es/\" target=\"_blank\">Generalitat Valenciana - Junta Qualificadora de Coneixements de Valencià</a>",
                     "description": ""
                 },
                 {
                     "logo": "img/logos/lang/en.png",
                     "date": "Inglés",
-                    "title": "Certificado C1 <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
+                    "title": "Certificado C1",
                     "centre": "<a href=\"https://portal.edu.gva.es/eoibenicalap/\" target=\"_blank\">Generalitat Valenciana - EOI València-Benicalap</a>",
                     "description": ""
                 },
                 {
                     "logo": "img/logos/lang/de.png",
                     "date": "Alemán",
-                    "title": "Nivel A2 (en curso) <img class=\"inline\" src=\"img/icons/certified.svg\" alt=\"Formación certificada\" title=\"Formación certificada\"/>",
-                    "centre": "<a href=\"https://portal.edu.gva.es/eoiquatrecarreres/\" target=\"_blank\">Generalitat Valenciana - EOI València-Quatre Carreres</a>",
+                    "title": "Nivel A2 (en curso)",
+                    "centre": "<a href=\"https://portal.edu.gva.es/eoiquatrecarreres/es/inici-es/\" target=\"_blank\">Generalitat Valenciana - EOI València-Quatre Carreres</a>",
                     "description": ""
                 }
             ]
@@ -180,35 +180,35 @@
         },
         {
             "icon": "img/icons/people.svg",
-            "title": "Asociaciones artísticas",
+            "title": "Asociaciones",
             "entry": [
                 {
                     "logo": "img/logos/kandinska.png",
                     "date": "2022 - acte.",
-                    "title": "<a href=\"https://sites.google.com/view/kandinska/\" target=\"_blank\">Kandinska (grupo de Ska)</a>",
+                    "title": "<a href=\"https://sites.google.com/view/kandinska/\" target=\"_blank\">Kandinska (grupo de música)</a>",
                     "centre": "Alboraia (C. Valenciana, España)",
-                    "description": "Músico. Administración web, edición multimedia y gestión de RR. SS."
+                    "description": ""
                 },
                 {
                     "logo": "img/logos/ofmisv.png",
                     "date": "2013 - acte.",
                     "title": "<a href=\"https://cursosmusicammm.com/es/ofmisv/\" target=\"_blank\">Orquesta Filarmónica Martín y Soler de Valencia</a>",
                     "centre": "Valencia (C. Valenciana, España)",
-                    "description": "Músico bajo la dirección de <a href=\"https://cursosmusicammm.com/es/cv-carmen-mas-arocas/\" target=\"_blank\">Carmen Más Arocas</a>."
+                    "description": ""
                 },
                 {
                     "logo": "img/logos/gea.png",
                     "date": "2012 - acte.",
                     "title": "<a href=\"https://sites.google.com/site/musicalgea/\" target=\"_blank\">Banda de Música de Gea de Albarracín</a>",
                     "centre": "Gea de Albarracín (Aragón, España)",
-                    "description": "Músico, director y arreglista. Administración web, edición multimedia y gestión de RR. SS."
+                    "description": ""
                 },
                 {
                     "logo": "img/logos/agrupacion.png",
                     "date": "2010 - acte.",
                     "title": "<a href=\"https://sites.google.com/view/musicalsanluis/\" target=\"_blank\">Agrupación Musical Carrera Fuente de San Luis</a>",
                     "centre": "Valencia (C. Valenciana, España)",
-                    "description": "Músico bajo la dirección de <a href=\"https://didacbosch.wordpress.com/\" target=\"_blank\">Dídac Bosch Alcaina</a>. Administración web, edición multimedia y gestión de RR. SS."
+                    "description": ""
                 }
             ]
         },

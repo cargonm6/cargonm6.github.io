@@ -3,7 +3,8 @@
 Última actualización:  11/06/2024
 */
 
-gallery_status = 0;
+var gallery_status = 0;
+var view_grid = false;
 
 document.addEventListener("DOMContentLoaded", function () {
     var path = window.location.pathname;
@@ -33,6 +34,24 @@ function listenAudio() {
             });
         });
     });
+}
+
+function toggleGrid() {
+    if (view_grid) {
+        view_grid = false;
+    } else {
+        view_grid = true;
+    }
+    loadPage("./pages/main.html", "destination");
+}
+
+function updateGrid() {
+    console.log(view_grid);
+    if (view_grid) {
+        document.getElementById("grid-button").innerHTML = "list_alt";
+    } else {
+        document.getElementById("grid-button").innerHTML = "grid_view";
+    }
 }
 
 function printCV() {
@@ -115,6 +134,7 @@ function loadPage(origin, destination, e) {
 
             if (origin === "./pages/main.html") {
                 loadJSON("./data/cv.json", "container", "fillCV");
+                updateGrid();
             } else if (origin === "./pages/music.html") {
                 loadJSON("music", "container", "fillMUS");
             }
@@ -129,6 +149,8 @@ function fillCV(json, container) {
     var body = document.getElementById(container);
 
     for (var i = 0; i < json.category.length; i++) {
+        // CATEGORÍAS
+
         // Icono
         var icon = document.createElement("div");
         icon.classList.add("icon");
@@ -155,17 +177,34 @@ function fillCV(json, container) {
 
         // Contenido
         var content = document.createElement("div");
-        content.classList.add("content");
+
+        if (view_grid) {
+            content.classList.add("contentblock");
+        } else {
+            content.classList.add("content");
+        }
 
         for (var j = 0; j < json.category[i].entry.length; j++) {
+            // ENTRADAS
+
             // Fecha
             var date = document.createElement("div");
             date.classList.add("date");
-            var date_ul = document.createElement("ul");
-            var date_li = document.createElement("li");
-            date_li.innerHTML = json.category[i].entry[j].date;
-            date_ul.appendChild(date_li);
-            date.appendChild(date_ul);
+
+            if (view_grid) {
+                txt_date = json.category[i].entry[j].date;
+                txt_date = txt_date.replaceAll(" ", "");
+                txt_date = txt_date.replaceAll("<br/>", "");
+                txt_date = txt_date.replaceAll("<p>", ", ");
+                txt_date = txt_date.replaceAll("</p>", "");
+                date.innerHTML = txt_date;
+            } else {
+                var date_ul = document.createElement("ul");
+                var date_li = document.createElement("li");
+                date_li.innerHTML = json.category[i].entry[j].date;
+                date_ul.appendChild(date_li);
+                date.appendChild(date_ul);
+            }
 
             // Logotipo
             var logo = document.createElement("img");
@@ -190,18 +229,29 @@ function fillCV(json, container) {
             description.innerHTML = json.category[i].entry[j].description;
 
             // Entrada
-            var entry = document.createElement("div");
-            entry.classList.add("entry");
 
-            var rightblock = document.createElement("div");
-            rightblock.classList.add("rightblock");
+            if (view_grid) {
+                var entry = document.createElement("div");
+                entry.classList.add("entryblock");
 
-            rightblock.appendChild(content_title);
-            rightblock.appendChild(centre);
-            rightblock.appendChild(description);
+                entry.appendChild(date);
+                entry.appendChild(content_title);
+                entry.appendChild(centre);
+                entry.appendChild(description);
+            } else {
+                var entry = document.createElement("div");
+                entry.classList.add("entry");
 
-            entry.appendChild(date);
-            entry.appendChild(rightblock);
+                var rightblock = document.createElement("div");
+                rightblock.classList.add("rightblock");
+
+                rightblock.appendChild(content_title);
+                rightblock.appendChild(centre);
+                rightblock.appendChild(description);
+
+                entry.appendChild(date);
+                entry.appendChild(rightblock);
+            }
 
             // Añadir entrada
             content.appendChild(entry);
@@ -211,9 +261,9 @@ function fillCV(json, container) {
         var category = document.createElement("div");
         category.classList.add("category");
 
-        //if (i !== 0) {
+        // if (i !== 0) {
         category.classList.add("collapsed");
-        //}
+        // }
 
         category.appendChild(head);
         category.appendChild(content);
