@@ -51,7 +51,7 @@
         },
         {
             "icon": "img/icons/cap.svg",
-            "title": "Formación universitaria",
+            "title": "Formación técnica",
             "entry": [
                 {
                     "logo": "img/logos/uv.png",
@@ -142,7 +142,14 @@
             "title": "Conferencias y concursos",
             "entry": [
                 {
-                    "logo": "img/logos/gva.png",
+                    "logo": "img/logos/san-luis.png",
+                    "date": "11/2023",
+                    "title": "Charla &#171;Historia y presente de la Agrupación Musical Carrera Fuente de San Luis&#187;",
+                    "centre": "<a href=\"https://fallas.com/junta-central-fallera/comisions-falleres/falla-carrera-de-sant-lluis-doctor-waksman/\" target=\"_blank\">Falla Cra. Sant Lluís - Dr. Waksman</a>",
+                    "description": "Sesión impartida junto con el presidente José Martínez en la Semana Cultural de la falla, con motivo de la primera entrega del premio &#171;Formiga d'Or&#187; a la Agrupación Musical."
+                },
+                {
+                    "logo": "img/logos/fpa.png",
                     "date": "03/2023",
                     "title": "Clase magistral &#171;Historia de las bandas de música&#187;",
                     "centre": "<a href=\"https://portal.edu.gva.es/serranomorales/\" target=\"_blank\">Centro Público de Educación de Personas Adultas Serrano Morales</a>",
@@ -180,32 +187,39 @@
         },
         {
             "icon": "img/icons/people.svg",
-            "title": "Asociaciones",
+            "title": "Asociaciones y clubes",
             "entry": [
                 {
+                    "logo": "img/logos/belt.svg",
+                    "date": "2023",
+                    "title": "<a href=\"https://www.fkaratecv.es/location/club-de-karate-meikyo/\" target=\"_blank\">Club de Karate Meikyo</a>",
+                    "centre": "Valencia (C. Valenciana, España)",
+                    "description": "<span style=\"color: white; text-shadow: 1px 1px 3px black\" title=\"Cinturón blanco\">&#11044;</span> <span style=\"color: yellow; text-shadow: 1px 1px 3px black\" title=\"Cinturón amarillo\">&#11044;</span> <span style=\"color: orange; text-shadow: 1px 1px 3px black\" title=\"Cinturón naranja\">&#11044;</span> <span style=\"color: grey; text-shadow: 1px 1px 3px black\" title=\"Cinturón verde\">&#11044;</span> <span style=\"color: grey; text-shadow: 1px 1px 3px black\" title=\"Cinturón azul\">&#11044;</span> <span style=\"color: grey; text-shadow: 1px 1px 3px black\" title=\"Cinturón marrón\">&#11044;</span> <span style=\"color: grey; text-shadow: 1px 1px 3px black\" title=\"Cinturón negro\">&#11044;</span>"
+                },
+                {
                     "logo": "img/logos/kandinska.png",
-                    "date": "2022 - acte.",
+                    "date": "2022",
                     "title": "<a href=\"https://sites.google.com/view/kandinska/\" target=\"_blank\">Kandinska (grupo de música)</a>",
                     "centre": "Alboraia (C. Valenciana, España)",
                     "description": ""
                 },
                 {
                     "logo": "img/logos/ofmisv.png",
-                    "date": "2013 - acte.",
+                    "date": "2013",
                     "title": "<a href=\"https://cursosmusicammm.com/es/ofmisv/\" target=\"_blank\">Orquesta Filarmónica Martín y Soler de Valencia</a>",
                     "centre": "Valencia (C. Valenciana, España)",
                     "description": ""
                 },
                 {
                     "logo": "img/logos/gea.png",
-                    "date": "2012 - acte.",
+                    "date": "2012",
                     "title": "<a href=\"https://sites.google.com/site/musicalgea/\" target=\"_blank\">Banda de Música de Gea de Albarracín</a>",
                     "centre": "Gea de Albarracín (Aragón, España)",
                     "description": ""
                 },
                 {
                     "logo": "img/logos/agrupacion.png",
-                    "date": "2010 - acte.",
+                    "date": "2010",
                     "title": "<a href=\"https://sites.google.com/view/musicalsanluis/\" target=\"_blank\">Agrupación Musical Carrera Fuente de San Luis</a>",
                     "centre": "Valencia (C. Valenciana, España)",
                     "description": ""
@@ -214,8 +228,29 @@
         },
         {
             "icon": "img/icons/book.svg",
-            "title": "Obras literarias registradas",
+            "title": "Estudios y artículos",
             "entry": [
+                {
+                    "logo": "",
+                    "date": "2024 (Valencia)",
+                    "title": "Procesos de pruebas y verificación de la calidad en videojuegos: propuesta didáctica para un curso de especialización en formación profesional",
+                    "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
+                    "description": "Trabajo de Fin de Máster, coordinado por Miguel Ángel Sáez Ibáñez."
+                },
+                {
+                    "logo": "",
+                    "date": "2023 (Valencia)",
+                    "title": "<a href=\"https://riunet.upv.es/handle/10251/195557\" target=\"_blank\">Diseño de antenas flexibles para circuitos biométricos integrables en prendas de vestir</a>",
+                    "centre": "<a href=\"https://www.upv.es/\" target=\"_blank\">Universitat Politècnica de València</a>",
+                    "description": "Trabajo de Fin de Máster, coordinado por  Marta Cabedo Fabrés y  Roberto Teruel Juanes."
+                },
+                {
+                    "logo": "",
+                    "date": "2023 (Valencia)",
+                    "title": "<a href=\"https://doi.org/10.61547/3376\" target=\"_blank\">Integrated management system for the predictive maintenance of interurban roads using artificial intelligence techniques</a>",
+                    "centre": "Proyecto Neurovías (INNEST/2021/6)",
+                    "description": "Estudio redactado junto con Tatiana García Segura (UPV), José Ramón López Marco (PAVASAL), Jordi Mansanet Sandín (SOLVER) y Juan Sánchez Robles (CPS)."
+                },
                 {
                     "logo": "",
                     "date": "2021 (Valencia)",
@@ -225,10 +260,10 @@
                 },
                 {
                     "logo": "",
-                    "date": "2020 (Valencia)",
-                    "title": "Historia de las Bandas de Música en la Carrera de la Fuente de San Luis de Valencia",
-                    "centre": "Obra inédita",
-                    "description": "Recopilación de la investigación histórica desarrollada entre 2014 y 2020, con la participación de diversas personalidades y entidades del mundo de la música de bandas, con el objetivo de recuperar la memoria de la trayectoria artística de la Carrera de la Fuente de San Luis de Valencia."
+                    "date": "2019 (Valencia)",
+                    "title": "<a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas</a>",
+                    "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
+                    "description": "Trabajo de Fin de Grado coordinado por José Enrique Adsuara Fuster."
                 }
             ]
         },

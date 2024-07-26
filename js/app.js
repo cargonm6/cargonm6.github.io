@@ -4,7 +4,8 @@
 */
 
 var gallery_status = 0;
-var view_grid = false;
+var view_grid = true;
+var collapsed_list = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     var path = window.location.pathname;
@@ -42,15 +43,51 @@ function toggleGrid() {
     } else {
         view_grid = true;
     }
+
+    collapsed_list = verify_collapsed();
     loadPage("./pages/main.html", "destination");
 }
 
 function updateGrid() {
-    console.log(view_grid);
     if (view_grid) {
         document.getElementById("grid-button").innerHTML = "list_alt";
     } else {
         document.getElementById("grid-button").innerHTML = "grid_view";
+    }
+
+    collapsed_list = verify_collapsed(collapsed_list);
+}
+
+function verify_collapsed(p_list = null) {
+    var divs = document.querySelectorAll(".category");
+
+    // get all collapsed divs
+    if (p_list == null) {
+        var p_list = [];
+
+        for (i = 0; i < divs.length; i++) {
+            if (divs[i].classList.contains("collapsed")) {
+                p_list.push(0);
+            } else {
+                p_list.push(1);
+            }
+        }
+
+        return p_list;
+
+        // set all opened divs
+    } else {
+        for (i = 0; i < divs.length; i++) {
+            if ((p_list[i] == 1) & divs[i].classList.contains("collapsed")) {
+                divs[i].classList.remove("collapsed");
+            }
+
+            if ((p_list[i] == 0) & !divs[i].classList.contains("collapsed")) {
+                divs[i].classList.add("collapsed");
+            }
+        }
+
+        return null;
     }
 }
 
@@ -134,7 +171,6 @@ function loadPage(origin, destination, e) {
 
             if (origin === "./pages/main.html") {
                 loadJSON("./data/cv.json", "container", "fillCV");
-                updateGrid();
             } else if (origin === "./pages/music.html") {
                 loadJSON("music", "container", "fillMUS");
             }
@@ -192,12 +228,29 @@ function fillCV(json, container) {
             date.classList.add("date");
 
             if (view_grid) {
-                txt_date = json.category[i].entry[j].date;
-                txt_date = txt_date.replaceAll(" ", "");
-                txt_date = txt_date.replaceAll("<br/>", "");
-                txt_date = txt_date.replaceAll("<p>", ", ");
-                txt_date = txt_date.replaceAll("</p>", "");
-                date.innerHTML = txt_date;
+                let txt_date = json.category[i].entry[j].date;
+
+                let part1 = "";
+                let part2 = txt_date;
+                let part3 = "";
+
+                if (txt_date.includes("</span>")) {
+                    // Partimos la cadena en la primera y segunda parte
+                    let parts1 = txt_date.split('">');
+                    part1 = parts1[0] + '">';
+
+                    // Luego partimos la segunda parte en la segunda y tercera parte
+                    let parts2 = parts1[1].split("</span>");
+                    part2 = parts2[0];
+                    part3 = "</span>";
+                }
+
+                // part2 = part2.replaceAll(/ /g, ""); // Reemplaza espacios por nada
+                part2 = part2.replaceAll(/<br\/>/g, ""); // Reemplaza <br/> por nada
+                part2 = part2.replaceAll(/<p>/g, ", "); // Reemplaza <p> por ", "
+                part2 = part2.replaceAll(/<\/p>/g, ""); // Reemplaza </p> por nada
+
+                date.innerHTML = part1 + part2 + part3;
             } else {
                 var date_ul = document.createElement("ul");
                 var date_li = document.createElement("li");
@@ -213,7 +266,7 @@ function fillCV(json, container) {
             // Título
             var content_title = document.createElement("div");
             content_title.classList.add("title");
-            if (logo.src.slice(logo.src.length - 3) == "png") {
+            if (logo.src.slice(logo.src.length - 3) == "png" || logo.src.slice(logo.src.length - 3) == "svg") {
                 content_title.appendChild(logo);
             }
             content_title.innerHTML += json.category[i].entry[j].title;
@@ -270,11 +323,12 @@ function fillCV(json, container) {
 
         body.appendChild(category);
     }
+
+    updateGrid();
     body.appendChild(document.createElement("br"));
 }
 
 function loadImage(img) {
-    console.log(img.src);
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -466,7 +520,6 @@ function fillMUS(json, container) {
         var subdiv = document.createElement("div");
 
         if (json.instruments[i].description != "") {
-            console.log("añado al" + i);
             var hr_text = document.createElement("hr");
             var p_in = document.createElement("p");
             p_in.innerHTML = "<b>Descripción:</b>&ensp;" + json.instruments[i].description;

@@ -662,11 +662,6 @@ input {
     font-weight: bold;
 }
 
-.app-table tr td:nth-child(3) {
-    text-align: justify;
-    width: calc(2 * 100% / 7);
-}
-
 .app-table th {
     background-color: var(--color-light);
 }
@@ -849,6 +844,16 @@ button.gallery_btn:active {
     div.entry div.date ul li::before {
         margin-left: -56.5px;
         /* Also needed for space (tweak if needed) */
+    }
+
+    div.category div.contentblock div.entryblock {
+        border-radius: 15px;
+        /* width: calc(50% - 70px); */
+        vertical-align: top;
+        margin: 20px 20px 10px 20px;
+        padding: 10px;
+        box-shadow: 2px 2px 10px var(--color-dark);
+        flex-basis: 100%;
     }
 
     div#cv_buttons {
