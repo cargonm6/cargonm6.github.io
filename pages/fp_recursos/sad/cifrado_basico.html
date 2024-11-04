@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cifrado clásico</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body onload="aplicarCifrados()">
+        <div class="container">
+            <fieldset style="width: auto">
+                <legend>Cifrado clásico</legend>
+                <table style="width: 100%; margin: 5px">
+                    <tr>
+                        <td>
+                            <label for="texto">Texto plano</label>
+                        </td>
+                        <td colspan="3">
+                            <input type="text" id="texto" style="width: 80%" placeholder="Ingresa el texto aquí" />
+                        </td>
+
+                        <td>
+                            <label for="desplazamiento">Clave de sustitución:</label>
+                        </td>
+                        <td>
+                            <input type="number" id="desplazamiento" placeholder="Ingresa un número" value="0" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="res-sus">Texto cifrado por sustitución:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="res-sus" name="res-sus" disabled />
+                        </td>
+                        <td>
+                            <label for="res-tra">Texto cifrado por transposición:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="res-tra" name="res-tra" disabled />
+                        </td>
+                        <td>
+                            <label for="res-amb">Texto cifrado por sustitución y transposición:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="res-amb" name="res-amb" disabled />
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <p>Explicación del funcionamiento:</p>
+            <ul>
+                <li>Cifrado por sustitución: se considera la secuencia alfabética "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ " y se aplica una clave de sustitución (desplazamiento), que reemplaza caracter a caracter la cadena de texto plano.</li>
+                <li>
+                    Cifrado por transposición: se reordenan los caracteres del texto plano en función de un procedimiento matricial. La matriz tiene un número de filas igual al entero más pequeño mayor o igual a la raíz cuadrada de la
+                    longitud del texto. El número de columnas será el entero más pequeño mayor o igual a la longitud del texto, dividida entre el número de filas calculada antes. El texto se despliega escribiéndose de izquierda a derecha,
+                    desde la primera hasta la última fila, pero se recompone leyendo columna a columna (izquierda a derecha, arriba abajo).
+                </li>
+            </ul>
+
+            <div style="text-align: center">
+                <p>Ejemplo de transposición: "HOLA CARLOTA":</p>
+                <table style="border-collapse: collapse; margin: 0 auto; border: 2px solid black">
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center"></td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">0</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">1</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">2</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">0</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">H</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">O</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">L</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">1</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">A</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center"></td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">C</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">2</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">A</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">R</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">L</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">3</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">O</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">T</td>
+                        <td style="border: 1px solid black; padding: 5px; text-align: center">A</td>
+                    </tr>
+                </table>
+                <p>Resultado: "HAAOO RTLCLA":</p>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("texto").addEventListener("input", function () {
+                aplicarCifrados();
+            });
+
+            document.getElementById("desplazamiento").addEventListener("input", function () {
+                aplicarCifrados();
+            });
+
+            document.getElementById("texto").addEventListener("change", function () {
+                aplicarCifrados();
+            });
+
+            document.getElementById("desplazamiento").addEventListener("change", function () {
+                aplicarCifrados();
+            });
+
+            function aplicarCifrados() {
+                const texto = document.getElementById("texto").value;
+                const desplazamiento = parseInt(document.getElementById("desplazamiento").value);
+
+                document.getElementById("res-sus").value = cifrarTexto(texto, desplazamiento);
+                document.getElementById("res-tra").value = cifrarPorTransposicion(texto);
+                document.getElementById("res-amb").value = cifrarPorTransposicion(cifrarTexto(texto, desplazamiento));
+
+                const resultado = (document.getElementById("resultado").textContent = resultado);
+            }
+
+            function cifrarTexto(texto, desplazamiento) {
+                const abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ";
+                let textoCifrado = "";
+
+                for (let char of texto.toUpperCase()) {
+                    const indice = abecedario.indexOf(char);
+                    if (indice !== -1) {
+                        const nuevoIndice = (indice + desplazamiento) % abecedario.length;
+                        textoCifrado += abecedario[nuevoIndice];
+                    } else {
+                        textoCifrado += char; // Para caracteres no en el abecedario, se agrega tal cual
+                    }
+                }
+                return textoCifrado;
+            }
+
+            function transponerTexto(texto) {
+                const abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ ";
+                const caracteres = abecedario.split("");
+                const shuffled = caracteres.sort(() => Math.random() - 0.5); // Reordenar aleatoriamente
+                let textoCifrado = "";
+
+                for (let char of texto.toUpperCase()) {
+                    const indice = caracteres.indexOf(char);
+                    if (indice !== -1) {
+                        textoCifrado += shuffled[indice]; // Usar el carácter reordenado
+                    } else {
+                        textoCifrado += char; // Para caracteres no en el abecedario, se agrega tal cual
+                    }
+                }
+                return textoCifrado;
+            }
+
+            function cifrarPorTransposicion(texto) {
+                const filas = Math.ceil(Math.sqrt(texto.length)); // número de filas
+                const columnas = Math.ceil(texto.length / filas); // número de columnas
+                const matriz = Array.from({ length: filas }, () => Array(columnas).fill(""));
+
+                // Llenar la matriz
+                for (let i = 0; i < texto.length; i++) {
+                    const fila = Math.floor(i / columnas);
+                    const col = i % columnas;
+                    matriz[fila][col] = texto[i];
+                }
+
+                // Leer columnas en lugar de filas
+                let textoCifrado = "";
+                for (let col = 0; col < columnas; col++) {
+                    for (let fila = 0; fila < filas; fila++) {
+                        if (matriz[fila][col]) {
+                            textoCifrado += matriz[fila][col];
+                        }
+                    }
+                }
+                return textoCifrado;
+            }
+        </script>
+    </body>
+</html>

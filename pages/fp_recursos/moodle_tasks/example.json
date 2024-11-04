@@ -1,0 +1,41 @@
+{
+    "module": {
+        "students": "40",
+        "chapters": {
+            "1": "Tema 1",
+            "2": "Tema 2"
+        }
+    },
+    "tasks": [
+        {
+            "url": "https://www.google.es",
+            "unidad": "1",
+            "numero": "1",
+            "titulo": "Ejercicio de ejemplo 1",
+            "f_entrega": "01/09/2024",
+            "f_limite": "10/09/2024",
+            "entregas": 40,
+            "corregido": "Sí"
+        },
+        {
+            "url": "https://www.google.es",
+            "unidad": "1",
+            "numero": "2",
+            "titulo": "Ejercicio de ejemplo 2",
+            "f_entrega": "01/09/2024",
+            "f_limite": "10/09/2029",
+            "entregas": 20,
+            "corregido": ""
+        },
+        {
+            "url": "https://www.google.es",
+            "unidad": "2",
+            "numero": "1",
+            "titulo": "Ejercicio de ejemplo 3",
+            "f_entrega": "01/09/2029",
+            "f_limite": "01/09/2029",
+            "entregas": 5,
+            "corregido": ""
+        }
+    ]
+}

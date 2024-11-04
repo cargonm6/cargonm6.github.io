@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2097/2097055.png" />
+    </head>
+    <body style="width: calc(100% - 80px); margin-left: 40px">
+        <table>
+            <tr>
+                <td>
+                    <select id="modulo">
+                        <option value="example" selected>Ejemplo</option>
+                        <option value="par">Planificación y Administración de Redes</option>
+                        <option value="sad">Seguridad y Alta Disponibilidad</option>
+                    </select>
+                </td>
+                <td><button id="copiarBtn">COPIAR</button></td>
+                <td><button id="copiarBtn" onclick="colapsarDetalles()">&gt; &lt; Colapsar todo</button></td>
+                <td><button id="copiarBtn" onclick="colapsarDetalles(true)">&lt; &gt; Expandir todo</button></td>
+            </tr>
+        </table>
+
+        <div id="container"></div>
+
+        <script>
+            var alumnos = null;
+            var unidades = null;
+            var tareas = null;
+
+            async function read_json(file) {
+                try {
+                    const response = await fetch(file);
+                    if (!response.ok) throw new Error("Network response was not ok");
+                    return await response.json();
+                } catch (error) {
+                    console.error("Hubo un problema con la lectura del JSON:", error);
+                    return null;
+                }
+            }
+
+            function colapsarDetalles(expandir = false) {
+                const detalles = document.querySelectorAll("details");
+                detalles.forEach((detalle) => {
+                    if (expandir) {
+                        detalle.open = true; // Colapsar el detalle
+                    } else {
+                        detalle.open = false;
+                    }
+                });
+            }
+
+            function obtenerFechaActual() {
+                const fechaActual = new Date();
+                return `${String(fechaActual.getDate()).padStart(2, "0")}/${String(fechaActual.getMonth() + 1).padStart(2, "0")}/${fechaActual.getFullYear()}`;
+            }
+
+            function compararFechas(fecha1, fecha2) {
+                return new Date(fecha1.split("/").reverse().join("-")) - new Date(fecha2.split("/").reverse().join("-"));
+            }
+
+            function generarTabla(tareasPorUnidad) {
+                return Object.entries(tareasPorUnidad)
+                    .map(([unidad, items]) => {
+                        const filas = items
+                            .map((item) => {
+                                const estado = compararFechas(obtenerFechaActual(), item.f_entrega) <= 0 ? "En plazo" : compararFechas(obtenerFechaActual(), item.f_limite) <= 0 ? "Fuera de plazo" : "Cerrada";
+
+                                return `
+                        <tr style="border-bottom: 1px dashed #006444ff; text-align: center">
+                            <td style="text-align: left">
+                                <a href="${item.url}">${item.unidad}.${item.numero}. ${item.titulo} <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px"></a>
+                            </td>
+                            <td style="text-align: left">
+                                <progress style="cursor:help" value="${item.entregas}" max="${alumnos}" title="${((100 * item.entregas) / alumnos).toFixed(1).toString() + " %"}"></progress> ${item.entregas}/${alumnos}
+                            </td>
+                            <td style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "rgb(255, 207, 53)" : estado === "En plazo" ? "rgb(152, 202, 62)" : "inherit"}" title="Fecha entrega: ${
+                                    item.f_entrega
+                                }\nFecha límite: ${item.f_limite}">
+                                ${estado}
+                            </td>
+                            <td style="text-align: center; color: ${item.corregido === "En curso" ? "rgb(125, 159, 211)" : "inherit"}">
+                                ${estado === "Cerrada" ? item.corregido : ""}
+                            </td>
+                        </tr>`;
+                            })
+                            .join("");
+
+                        return `
+                    <details open>
+                        <summary style="font-weight: bold">UD ${unidad}. ${unidades[unidad]}</summary><br/>
+                        <table style="width: 100%; border-collapse: collapse">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #006444ff; text-align: center">
+                                    <th style="width: calc(100% * 0.3); color: #006444ff">Tarea</th>
+                                    <th style="width: calc(100% * 0.3); color: #006444ff">Entregas</th>
+                                    <th style="width: calc(100% * 0.3); color: #006444ff">Estado</th>
+                                    <th style="width: calc(100% * 0.3); color: #006444ff">Corrección</th>
+                                </tr>
+                            </thead>
+                            <tbody>${filas}</tbody>
+                        </table>
+                    </details><br/>`;
+                    })
+                    .join("");
+            }
+
+            function crearDetalles(tareas) {
+                const contenedor = document.getElementById("container");
+                contenedor.innerHTML = "";
+
+                const p_fecha = document.createElement("p");
+                p_fecha.style.textAlign = "right";
+                p_fecha.style.fontStyle = "italic";
+                p_fecha.textContent = "Última actualización: " + obtenerFechaActual();
+                contenedor.appendChild(p_fecha);
+
+                const tareasPorUnidad = tareas.reduce((acc, item) => {
+                    if (!acc[item.unidad]) acc[item.unidad] = [];
+                    acc[item.unidad].push(item);
+                    return acc;
+                }, {});
+
+                contenedor.innerHTML += generarTabla(tareasPorUnidad);
+            }
+
+            document.getElementById("copiarBtn").addEventListener("click", function () {
+                const contenido = document.getElementById("container").innerHTML;
+                const textarea = document.createElement("textarea");
+                textarea.value = contenido;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                alert("¡Contenido copiado al portapapeles!");
+            });
+
+            document.getElementById("modulo").addEventListener("change", function () {
+                reload_window();
+            });
+
+            async function reload_window() {
+                const modulo = document.getElementById("modulo").value;
+                let json_file = "./moodle_tasks/" + modulo + ".json";
+                // let json_file = "./" + modulo + ".json";
+
+                json_file = await read_json(json_file);
+
+                if (json_file) {
+                    alumnos = json_file["module"]["students"];
+                    unidades = json_file["module"]["chapters"];
+                    tareas = json_file["tasks"];
+
+                    crearDetalles(tareas);
+                }
+            }
+
+            window.onload = async function () {
+                reload_window();
+            };
+        </script>
+    </body>
+</html>

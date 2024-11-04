@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> </head>
+    <body>
+        <table>
+            <tr style="vertical-align: top">
+                <td>
+                    <fieldset style="width: 400px; min-height: 300px">
+                        <legend>Marcación por tonos DTMF</legend>
+                        <table id="dtmf_table" style="text-align: center">
+                            <tr>
+                                <td style="width: 40px; font-weight: bold">Hz</td>
+                                <td style="width: 40px; font-weight: bold">1209</td>
+                                <td style="width: 40px; font-weight: bold">1336</td>
+                                <td style="width: 40px; font-weight: bold">1477</td>
+                                <td style="width: 40px; font-weight: bold">1633</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold">697</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">1</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">2</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">3</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">A</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold">770</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">4</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">5</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">6</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">B</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold">852</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">7</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">8</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">9</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">C</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold">941</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">*</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">0</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">#</td>
+                                <td style="border: 1px solid black; border-radius: 5px; cursor: pointer" onclick="getCell(this)">D</td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset style="width: 400px; min-height: 300px">
+                        <legend>Datos</legend>
+                        <label>Volumen: </label>
+                        <input type="range" id="vol_in" min="0" max="100" value="50" oninput="show()" />
+                        <span id="vol_out"></span><br />
+                        <label>Duración: </label>
+                        <input type="range" id="dur_in" min="200" max="2000" value="1000" oninput="show()" />
+                        <span id="dur_out"></span><br />
+                        <label>Tipo de señal:</label>
+                        <select id="type">
+                            <option value="sine" selected>Senoidal</option>
+                            <option value="square">Cuadrada</option>
+                            <option value="sawtooth">Sierra</option>
+                            <option value="triangle">Triangular</option>
+                        </select>
+                        <br />
+                        <label>Tasa de muestreo (gráficos)</label>
+                        <input type="number" min="1" max="250" step="1" id="rate" value="100" />
+                        <hr />
+                        Dato marcado: <span id="resultado"></span>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset id="timeFieldset" style="width: 400px; min-height: 300px">
+                        <legend>Dominio del tiempo</legend>
+                        <canvas id="timeCanvas" width="400px" height="300"></canvas>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset id="frecFieldset" style="width: 400px; min-height: 300px">
+                        <legend>Dominio de frecuencia</legend>
+                        <canvas id="dtfCanvas" width="400px" height="300"></canvas>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            let currentOscillators = []; // Para guardar los osciladores activos
+
+            const canvasTime = document.getElementById("timeCanvas");
+            const ctxTime = canvasTime.getContext("2d");
+
+            const canvasDTF = document.getElementById("dtfCanvas");
+            const ctxDTF = canvasDTF.getContext("2d");
+
+            const timeFieldset = document.getElementById("timeFieldset");
+            const frecFieldset = document.getElementById("frecFieldset");
+
+            show();
+
+            function show() {
+                volume = document.getElementById("vol_in").value / 100;
+                document.getElementById("vol_out").innerHTML = volume;
+
+                duration = document.getElementById("dur_in").value;
+                document.getElementById("dur_out").innerHTML = duration + " ms";
+            }
+
+            function getCell(cell) {
+                const row_index = cell.parentNode.rowIndex;
+                const col_index = cell.cellIndex;
+
+                const row_value = document.getElementById("dtmf_table").rows[row_index].cells[0].innerText;
+                const col_value = document.getElementById("dtmf_table").rows[0].cells[col_index].innerText;
+
+                document.getElementById("resultado").innerHTML = row_value + " - " + col_value;
+
+                createAudio(parseInt(row_value), parseInt(col_value));
+                drawSignal(parseInt(row_value), parseInt(col_value));
+            }
+
+            function stopCurrentOscillators() {
+                currentOscillators.forEach((oscillator) => oscillator.stop());
+                currentOscillators = [];
+            }
+
+            function createAudio(f1, f2) {
+                const volume = document.getElementById("vol_in").value / 1000;
+                const duration = document.getElementById("dur_in").value;
+                const type = document.getElementById("type").value;
+
+                stopCurrentOscillators(); // Detener sonidos anteriores
+
+                const oscillator1 = audioCtx.createOscillator();
+                const oscillator2 = audioCtx.createOscillator();
+                const gainNode = audioCtx.createGain();
+
+                oscillator1.frequency.setValueAtTime(f1, audioCtx.currentTime);
+                oscillator2.frequency.setValueAtTime(f2, audioCtx.currentTime);
+                oscillator1.type = type;
+                oscillator2.type = type;
+                gainNode.gain.setValueAtTime(volume, audioCtx.currentTime);
+
+                oscillator1.connect(gainNode);
+                oscillator2.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+
+                oscillator1.start();
+                oscillator2.start();
+
+                currentOscillators.push(oscillator1);
+                currentOscillators.push(oscillator2);
+
+                setTimeout(() => {
+                    oscillator1.stop();
+                    oscillator2.stop();
+                    currentOscillators = currentOscillators.filter((o) => o !== oscillator1 && o !== oscillator2);
+                }, duration);
+            }
+
+            function drawAxesTime(ctx, width, height) {
+                // Dibujar eje X
+                ctx.beginPath();
+                ctx.moveTo(0, height / 2);
+                ctx.lineTo(width, height / 2);
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+
+                // Marcas en el eje X
+                const step = width / 10; // 10 marcas
+                for (let i = 0; i <= 10; i++) {
+                    const x = i * step;
+                    ctx.beginPath();
+                    ctx.moveTo(x, height / 2 - 5);
+                    ctx.lineTo(x, height / 2 + 5);
+                    ctx.stroke();
+                    ctx.fillText((i * (1000 / 10)).toFixed(0) + " ms", x - 10, height / 2 + 15); // Etiquetas
+                }
+
+                // Dibujar eje Y
+                ctx.beginPath();
+                ctx.moveTo(1, 0);
+                ctx.lineTo(1, height);
+                ctx.stroke();
+            }
+
+            function drawAxesFrec(ctx, width, height, f1, f2) {
+                // Dibujar eje X
+                ctx.beginPath();
+                ctx.moveTo(0, height - 1);
+                ctx.lineTo(width, height - 1);
+                ctx.strokeStyle = "black";
+                ctx.stroke();
+
+                // Marcas en el eje X
+                const step = width / 10; // 10 marcas
+                for (let i = -5; i <= 5; i++) {
+                    const x = (i + 5) * step; // Ajustar para que -5 a 5 se mapee a 0 a width
+                    ctx.beginPath();
+                    ctx.moveTo(x, height - 5);
+                    ctx.lineTo(x, height + 5);
+                    ctx.stroke();
+
+                    // Calcular la frecuencia correspondiente
+                    const frequencyLabel = (i * (Math.max(f1, f2) / 5)).toFixed(0); // Divide el rango en 10 partes
+                    ctx.fillText(frequencyLabel + " Hz", x - 15, height - 10); // Ajusta la posición del texto
+                }
+
+                // Dibujar eje Y
+                ctx.beginPath();
+                ctx.moveTo(width / 2, 0);
+                ctx.lineTo(width / 2, height);
+                ctx.stroke();
+            }
+
+            function drawSignal(f1, f2) {
+                const amplitude = 50;
+                const sampleRate = document.getElementById("rate").value;
+                const duration = 1;
+                const type = document.getElementById("type").value;
+
+                const samples = [];
+                const totalSamples = sampleRate * duration;
+
+                for (let i = 0; i < totalSamples; i++) {
+                    const t = i / sampleRate;
+                    let value;
+
+                    switch (type) {
+                        case "sine":
+                            value = amplitude * Math.sin(2 * Math.PI * f1 * t) + amplitude * Math.sin(2 * Math.PI * f2 * t);
+                            break;
+                        case "square":
+                            value = amplitude * (Math.sin(2 * Math.PI * f1 * t) >= 0 ? 1 : -1) + amplitude * (Math.sin(2 * Math.PI * f2 * t) >= 0 ? 1 : -1);
+                            break;
+                        case "sawtooth":
+                            value = amplitude * (1 - ((t * f1) % 1)) + amplitude * (1 - ((t * f2) % 1));
+                            break;
+                        case "triangle":
+                            value = amplitude * (2 * Math.abs(2 * ((t * f1) % 1) - 1) - 1) + amplitude * (2 * Math.abs(2 * ((t * f2) % 1) - 1) - 1);
+                            break;
+                        default:
+                            value = 0;
+                    }
+
+                    samples.push(value);
+
+                    drawDTF(samples, f1, f2);
+                }
+
+                // Dibujar en el canvas de tiempo
+                ctxTime.clearRect(0, 0, canvasTime.width, canvasTime.height);
+                ctxTime.beginPath();
+                ctxTime.moveTo(0, canvasTime.height / 2);
+                for (let i = 0; i < totalSamples; i++) {
+                    ctxTime.lineTo(i * (canvasTime.width / totalSamples), canvasTime.height / 2 - samples[i]);
+                }
+                ctxTime.strokeStyle = "red";
+                ctxTime.lineWidth = 2;
+                ctxTime.stroke();
+
+                // Dibujar los ejes en el canvas de tiempo
+                drawAxesTime(ctxTime, canvasTime.width, canvasTime.height);
+
+                return samples;
+            }
+
+            function drawDTF(samples, f1, f2) {
+                const N = samples.length;
+                const real = new Array(N).fill(0);
+                const imag = new Array(N).fill(0);
+
+                for (let k = 0; k < N; k++) {
+                    for (let n = 0; n < N; n++) {
+                        real[k] += samples[n] * Math.cos((2 * Math.PI * k * n) / N);
+                        imag[k] -= samples[n] * Math.sin((2 * Math.PI * k * n) / N);
+                    }
+                }
+
+                // Dibujar en el canvas de DTF
+                ctxDTF.clearRect(0, 0, canvasDTF.width, canvasDTF.height);
+                ctxDTF.beginPath();
+                for (let k = 0; k < N; k++) {
+                    const magnitude = Math.sqrt(real[k] ** 2 + imag[k] ** 2);
+                    ctxDTF.lineTo(k * (canvasDTF.width / N), canvasDTF.height - magnitude / 10);
+                }
+                ctxDTF.strokeStyle = "red";
+                ctxDTF.lineWidth = 2;
+                ctxDTF.stroke();
+
+                // Dibujar los ejes en el canvas de DTF
+                drawAxesFrec(ctxDTF, canvasDTF.width, canvasDTF.height, f1, f2);
+            }
+        </script>
+    </body>
+</html>

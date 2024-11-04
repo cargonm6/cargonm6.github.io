@@ -217,6 +217,21 @@ div.desc a {
     font-family: "Roboto Condensed", sans-serif;
 }
 
+div.desc hr {
+    border: 1px dashed var(--color-plain);
+}
+
+div.desc select {
+    font-family: "Roboto", sans-serif;
+    width: 95%;
+    padding: 3px;
+    border: 1px solid var(--color-plain);
+    border-radius: 10px;
+    background-color: var(--color-medium);
+    color: var(--color-plain);
+    font-weight: bold;
+}
+
 div.left div.desc a {
     border-radius: 0;
 }

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Conversor de Bases Numéricas</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><label for="dec">Decimal:</label></td>
+                <td><input type="text" id="dec" name="dec" onchange="update('dec')" /></td>
+            </tr>
+            <tr>
+                <td><label for="bin">Binario:</label></td>
+                <td><input type="text" id="bin" name="bin" onchange="update('bin')" /></td>
+            </tr>
+            <tr>
+                <td><label for="oct">Octal:</label></td>
+                <td><input type="text" id="oct" name="oct" onchange="update('oct')" /></td>
+            </tr>
+            <tr>
+                <td><label for="hex">Hexadecimal:</label></td>
+                <td><input type="text" id="hex" name="hex" onchange="update('hex')" /></td>
+            </tr>
+        </table>
+
+        <script>
+            function update(type) {
+                let dec = 0;
+                let bin = "";
+                let oct = "";
+                let hex = "";
+
+                const convertDecimalToOthers = (decimal) => {
+                    const intPart = Math.floor(decimal);
+                    const fracPart = decimal - intPart;
+
+                    bin = intPart.toString(2);
+                    oct = intPart.toString(8);
+                    hex = intPart.toString(16).toUpperCase();
+
+                    // Convertir parte fraccionaria
+                    let fracBin = "";
+                    let fracOct = "";
+                    let fracHex = "";
+
+                    // Binario
+                    let tempFrac = fracPart;
+                    while (tempFrac > 0 && fracBin.length < 8) {
+                        // Limitar a 8 dígitos
+                        tempFrac *= 2;
+                        if (tempFrac >= 1) {
+                            fracBin += "1";
+                            tempFrac -= 1;
+                        } else {
+                            fracBin += "0";
+                        }
+                    }
+
+                    // Octal y hexadecimal son más complejos, se redondea
+                    tempFrac = fracPart;
+                    let count = 0;
+                    while (tempFrac > 0 && count < 5) {
+                        // Limitar a 5 dígitos
+                        tempFrac *= 8;
+                        let intTemp = Math.floor(tempFrac);
+                        fracOct += intTemp;
+                        tempFrac -= intTemp;
+                        count++;
+                    }
+
+                    tempFrac = fracPart;
+                    count = 0;
+                    while (tempFrac > 0 && count < 5) {
+                        // Limitar a 5 dígitos
+                        tempFrac *= 16;
+                        let intTemp = Math.floor(tempFrac);
+                        fracHex += intTemp.toString(16).toUpperCase();
+                        tempFrac -= intTemp;
+                        count++;
+                    }
+
+                    bin += fracBin.length > 0 ? "." + fracBin : "";
+                    oct += fracOct.length > 0 ? "." + fracOct : "";
+                    hex += fracHex.length > 0 ? "." + fracHex : "";
+                };
+
+                if (type === "dec") {
+                    dec = parseFloat(document.getElementById("dec").value);
+                    convertDecimalToOthers(dec);
+                } else if (type === "bin") {
+                    bin = document.getElementById("bin").value;
+                    dec = parseFloat(parseInt(bin.split(".")[0], 2));
+                    if (bin.includes(".")) {
+                        const fracBin = bin.split(".")[1];
+                        let fracDec = 0;
+                        for (let i = 0; i < fracBin.length; i++) {
+                            fracDec += (fracBin[i] === "1" ? 1 : 0) / Math.pow(2, i + 1);
+                        }
+                        dec += fracDec;
+                    }
+                    convertDecimalToOthers(dec);
+                } else if (type === "oct") {
+                    oct = document.getElementById("oct").value;
+                    dec = parseFloat(parseInt(oct.split(".")[0], 8));
+                    if (oct.includes(".")) {
+                        const fracOct = oct.split(".")[1];
+                        let fracDec = 0;
+                        for (let i = 0; i < fracOct.length; i++) {
+                            fracDec += parseInt(fracOct[i]) / Math.pow(8, i + 1);
+                        }
+                        dec += fracDec;
+                    }
+                    convertDecimalToOthers(dec);
+                } else if (type === "hex") {
+                    hex = document.getElementById("hex").value;
+                    dec = parseFloat(parseInt(hex.split(".")[0], 16));
+                    if (hex.includes(".")) {
+                        const fracHex = hex.split(".")[1];
+                        let fracDec = 0;
+                        for (let i = 0; i < fracHex.length; i++) {
+                            fracDec += parseInt(fracHex[i], 16) / Math.pow(16, i + 1);
+                        }
+                        dec += fracDec;
+                    }
+                    convertDecimalToOthers(dec);
+                }
+
+                // Asignar los valores calculados a los campos correspondientes
+                document.getElementById("dec").value = dec || "";
+                document.getElementById("bin").value = bin || "";
+                document.getElementById("oct").value = oct || "";
+                document.getElementById("hex").value = hex || "";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head></head>
+    <body>
+        <h2>Cálculo del algoritmo</h2>
+        <fieldset style="width: auto; border: 1px solid #006444; border-radius: 16px; padding: 10px">
+            <legend style="width: auto; margin: 0 10px; padding: 0 5px">Diffie-Hellman</legend>
+
+            <table style="width: 100%">
+                <tr>
+                    <th>Ambos</th>
+                    <th>Alice</th>
+                    <th>Bob</th>
+                </tr>
+                <tr>
+                    <td><label>Valor máx. del primo p:</label></td>
+                    <td><label>Número entero aleatorio a (0 &lt; a &lt; p)</label></td>
+                    <td><label>Número entero aleatorio b (0 &lt; b &lt; p)</label></td>
+                </tr>
+                <tr>
+                    <td><input style="width: calc(100% - 20px)" type="number" id="p_max" min="1" step="1" max="999999" value="100" /></td>
+                    <td><input style="width: calc(100% - 20px)" type="text" id="a_num" disabled /></td>
+                    <td><input style="width: calc(100% - 20px)" type="text" id="b_num" disabled /></td>
+                </tr>
+                <tr>
+                    <td><label>Número primo p:</label></td>
+                    <td><label>Clave pública A (A = g^a mod p)</label></td>
+                    <td><label>Clave pública B (B = g^b mod p)</label></td>
+                </tr>
+                <tr>
+                    <td><input style="width: calc(100% - 20px)" type="text" id="p_num" disabled /></td>
+                    <td><input style="width: calc(100% - 20px)" type="text" id="ap_num" disabled /></td>
+                    <td><input style="width: calc(100% - 20px)" type="text" id="bp_num" disabled /></td>
+                </tr>
+                <tr>
+                    <td><label>Número g (coprimo de p):</label></td>
+                    <td colspan="2" rowspan="2" valign="bottom">
+                        <button style="width: 100%; height: 100%; padding: 5px; cursor: pointer" onclick="update()">Actualizar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input style="width: calc(100% - 20px)" type="number" id="g_num" disabled /></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br />
+        <p>En cada extremo, se obtiene el secreto compartido <i>s</i> a partir de la clave pública del destinatario y del número aleatorio (privado) del emisor:</p>
+        <ul>
+            <li>
+                Alice calcula el secreto con su número aleatorio <i>a</i>: <i>s = B^a mod p = <span id="s_a"></span></i>
+            </li>
+            <li>
+                Bob calcula el secreto con su número aleatorio <i>b</i>: <i>s = A^b mod p = <span id="s_b"></span></i>
+            </li>
+        </ul>
+        <p>Comprobamos que, en ambos casos, el número secreto generado es el mismo.</p>
+        <h2>Caso de uso</h2>
+        <p>
+            Alice y Bob quieren cifrar sus comunicaciones utilizando una clave privada <i>s</i> (secreta). Sin embargo, no pueden compartir sin más esta clave, ya que el canal es inseguro y Mallory (un atacante) podría interceptarla y
+            descifrar posteriormente sus mensajes.
+        </p>
+        <p style="text-align: center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Alice-bob-mallory.jpg" width="300px" />
+        </p>
+        <p>
+            Así, deciden utilizar el algoritmo Diffie-Hellman. Primero, se coordinan para trabajar en una misma base numérica <i>p</i> (número primo), a partir de la cual obtienen un primo relativo, aleatorio y compartido, <i>g</i>. Además,
+            cada uno generará un número entero aleatorio y secreto a partir de <i>p</i>, que no compartirán con nadie (<i>a</i> y <i>b</i>)
+        </p>
+        <p>
+            Después, Alice y Bob generan claves públicas <i>A</i> y <i>B</i>, respectivamente, aplicando el algoritmo Diffie-Hellman: cada clave es igual al valor de un número primo conocido por ambos, elevado a su número aleatorio
+            particular, y aplicando el módulo con la base <i>p</i> compartiéndolas el uno con el otro.
+        </p>
+        <p>
+            A pesar de que la base <i>p</i> y el número primo generatriz <i>g</i> también son públicos, ya que los han sincronizado antes de aplica el algoritmo, los números aleatorios <i>a</i> y <i>b</i> son secretos, por lo que si Mallory
+            intercepta la comunicación no podrá obtener el secreto compartido <i>s</i> al no disponer de esos números aleatorios.
+        </p>
+
+        <script>
+            function update() {
+                fix_value("p_max");
+                get_prime();
+                get_coprime();
+                random_numbers();
+                public_keys();
+                private_keys();
+            }
+
+            function fix_value(input_id) {
+                let inp = document.getElementById(input_id);
+                let val = inp.value;
+                let min = inp.getAttribute("min");
+                let max = inp.getAttribute("max");
+
+                val = Math.floor(val);
+
+                if (val < min) {
+                    console.log("Por debajo del mínimo");
+                    val = min;
+                } else if (val > max) {
+                    console.log("Supera el máximo");
+                    val = max;
+                }
+
+                inp.value = val;
+            }
+
+            function random_numbers() {
+                let p = document.getElementById("p_num").value;
+                let a = Math.floor(Math.random() * (p - 1) + 1);
+                let b = Math.floor(Math.random() * (p - 1) + 1);
+
+                document.getElementById("a_num").value = a;
+                document.getElementById("b_num").value = b;
+            }
+
+            function get_prime() {
+                let p_max = document.getElementById("p_max").value;
+                let primes = primeFactorsTo(p_max);
+                let prime = primes[Math.floor(Math.random() * primes.length)];
+
+                document.getElementById("p_num").value = prime;
+            }
+
+            function get_coprime() {
+                let p_num = parseInt(document.getElementById("p_num").value, 10);
+                let base = p_num;
+                let min = 1; // Cambiado a 1 para evitar el cero
+                let max = base - 1; // Cambiado para evitar que el coprimo sea igual a base
+
+                const gcd = (a, b) => {
+                    while (b !== 0) {
+                        [a, b] = [b, a % b];
+                    }
+                    return a;
+                };
+
+                let coprime;
+                do {
+                    coprime = Math.floor(Math.random() * (max - min + 1)) + min;
+                } while (gcd(base, coprime) !== 1);
+
+                console.log(coprime);
+                document.getElementById("g_num").value = coprime;
+            }
+
+            function public_keys() {
+                let p = BigInt(document.getElementById("p_num").value);
+                let a = BigInt(document.getElementById("a_num").value);
+                let b = BigInt(document.getElementById("b_num").value);
+                let g = BigInt(document.getElementById("g_num").value);
+
+                let ap = g ** a % p;
+                let bp = g ** b % p;
+
+                document.getElementById("ap_num").value = ap.toString();
+                document.getElementById("bp_num").value = bp.toString();
+            }
+
+            function private_keys() {
+                let p = BigInt(document.getElementById("p_num").value);
+                let a = BigInt(document.getElementById("a_num").value);
+                let b = BigInt(document.getElementById("b_num").value);
+                let ap = BigInt(document.getElementById("ap_num").value);
+                let bp = BigInt(document.getElementById("bp_num").value);
+
+                let s_a = bp ** a % p;
+                let s_b = ap ** b % p;
+
+                document.getElementById("s_a").innerHTML = s_a.toString();
+                document.getElementById("s_b").innerHTML = s_b.toString();
+            }
+
+            function primeFactorsTo(max) {
+                // Initialize an array to store whether each number is prime.
+                var store = [],
+                    i,
+                    j,
+                    primes = [];
+
+                // Iterate through numbers from 2 to the maximum value.
+                for (i = 2; i <= max; ++i) {
+                    // If the current number is not marked as composite (not prime), add it to the primes array.
+                    if (!store[i]) {
+                        primes.push(i);
+                        // Mark all multiples of the current prime as composite.
+                        for (j = i << 1; j <= max; j += i) {
+                            store[j] = true;
+                        }
+                    }
+                }
+                // Return the array of prime numbers.
+                return primes;
+            }
+        </script>
+    </body>
+</html>

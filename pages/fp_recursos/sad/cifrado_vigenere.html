@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head></head>
+    <body onload="vigenere()">
+        <div>
+            <fieldset style="width: auto; border: 1px solid #006444; border-radius: 16px; padding: 10px">
+                <legend style="width: auto; margin: 0 10px; padding: 0 5px">Cifrado Vigenère</legend>
+
+                <p>
+                    El cifrado Vigenère aplica, por cada caracter de la cadena, la siguiente fórmula: Ri = (Ti + Ci) % longAlfabeto, donde Ri es el caracter resultante, Ti el caracter de texto plano, Ci el de la clave y longAlfabeto es la
+                    longitud (número de caracteres) que componen el alfabeto. La clave se ajusta para que tenga la misma longitud que el texto, acortándose o repitiéndose si es necesario. La operación aplica un módulo para evitar rebasar la
+                    longitud del alfabeto.
+                </p>
+
+                <p>Escribe para conformar el cifrado:</p>
+
+                <table style="margin: 5px">
+                    <tr>
+                        <td style="width: 20%"><label>Texto:</label></td>
+                        <td style="width: 80%"><input style="width: 90%" type="text" id="txt" oninput="vigenere()" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Clave:</label></td>
+                        <td><input style="width: 90%" type="text" id="key" oninput="vigenere()" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Alfabeto:</label></td>
+                        <td><input style="width: 90%" type="text" id="alf" oninput="vigenere()" placeholder="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ " value="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ " /></td>
+                    </tr>
+                </table>
+
+                <hr />
+
+                <table style="margin: 5px">
+                    <tr>
+                        <th style="width: 20%"></th>
+                        <th style="width: 40%">Texto</th>
+                        <th style="width: 40%">Numérico</th>
+                    </tr>
+                    <tr>
+                        <td><label>Texto:</label></td>
+                        <td><input style="width: 90%" type="text" id="txt_op" disabled /></td>
+                        <td><input style="width: 90%" type="text" id="txt_no" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Clave:</label></td>
+                        <td><input style="width: 90%" type="text" id="key_op" disabled /></td>
+                        <td><input style="width: 90%" type="text" id="key_no" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Resultado:</label></td>
+                        <td><input style="width: 90%" type="text" id="res_op" disabled /></td>
+                        <td><input style="width: 90%" type="text" id="res_no" disabled /></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+        <script>
+            function vigenere() {
+                let txt = document.getElementById("txt").value.toUpperCase();
+                let key = document.getElementById("key").value.toUpperCase();
+                let alf = document.getElementById("alf").value.toUpperCase();
+
+                if (key.length > 0) {
+                    key = adaptar_key(txt, key);
+                }
+
+                let txt_op = "";
+                let key_op = "";
+                let res_op = "";
+
+                let txt_no = "";
+                let key_no = "";
+                let res_no = "";
+
+                for (i = 0; i < txt.length; i++) {
+                    posicion = alf.indexOf(txt[i]);
+
+                    if (posicion == -1) {
+                        caracter = txt[i];
+                    } else {
+                        posicion = (alf.indexOf(txt[i]) + alf.indexOf(key[i])) % alf.length;
+                        caracter = alf[posicion];
+                    }
+
+                    txt_op = txt_op + txt[i];
+                    txt_no = txt_no + alf.indexOf(txt[i]).toString() + " ";
+
+                    key_op = key_op + key[i];
+                    key_no = key_no + alf.indexOf(key[i]).toString() + " ";
+
+                    res_op = res_op + caracter;
+                    res_no = res_no + posicion + " ";
+                }
+
+                document.getElementById("txt_op").value = txt_op;
+                document.getElementById("key_op").value = key_op;
+                document.getElementById("res_op").value = res_op;
+
+                document.getElementById("txt_no").value = txt_no;
+                document.getElementById("key_no").value = key_no;
+                document.getElementById("res_no").value = res_no;
+            }
+
+            function adaptar_key(txt, key) {
+                if (key.length > txt.length) {
+                    key = key.substring(0, txt.length);
+                } else if (key.length < txt.length) {
+                    while (key.length < txt.length) {
+                        key += key;
+                    }
+                    key = key.substring(0, txt.length);
+                }
+                return key;
+            }
+        </script>
+    </body>
+</html>
