@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>Calculadora NRF</title>
+        <style>
+            input.nrp,
+            select.nrp {
+                margin-left: 10px;
+                width: calc(100% - 20px);
+            }
+
+            input[type="number"].nrp {
+                width: calc(100% - 28px);
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Calculadora de Número de Registro Personal (NRP)</legend>
+
+            <table>
+                <tr>
+                    <td><label>DNI:</label></td>
+                    <td><input class="nrp" type="number" id="dni" oninput="update()" value="44405247" /></td>
+                    <td><input class="nrp" type="text" id="dni_val" disabled /></td>
+                </tr>
+                <tr>
+                    <td><label>Situación administrativa:</label></td>
+                    <td>
+                        <select class="nrp" id="sit" oninput="update()">
+                            <option value="A" selected>Funcionario de carrera</option>
+                            <option value="S">Funcionario en prácticas</option>
+                            <option value="I">Funcionario interino con vacante</option>
+                            <option value="Y">Funcionario interino en sustituciones</option>
+                        </select>
+                    </td>
+                    <td><input class="nrp" type="text" id="sit_val" disabled /></td>
+                </tr>
+                <tr>
+                    <td><label>Cuerpo de enseñanza:</label></td>
+                    <td>
+                        <select class="nrp" id="cue" oninput="update()">
+                            <option value="0590" selected>Profesores de secundaria</option>
+                            <option value="0591">Profesores técnicos de formación profesional</option>
+                            <option value="0593">Profesores de escuelas oficiales de idiomas</option>
+                            <option value="0594">Catedráticos de música y artes escénicas</option>
+                            <option value="0595">Profesores de música y artes escénicas</option>
+                            <option value="0596">Maestros de taller de artes plásticas y diseño</option>
+                            <option value="0597">Maestros</option>
+                        </select>
+                    </td>
+                    <td><input class="nrp" type="text" id="cue_val" disabled /></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><hr /></td>
+                </tr>
+                <tr>
+                    <td><label>NRF:</label></td>
+                    <td colspan="2"><input class="nrp" type="text" id="res" disabled /></td>
+                </tr>
+            </table>
+            <br />
+            <p>Fuente: <a href="https://www.sindicatopide.org/Documentos/NRPcalcular.pdf" target="_blank">https://www.sindicatopide.org/Documentos/NRPcalcular.pdf</a></p>
+        </fieldset>
+        <script>
+            function update() {
+                const dni = document.getElementById("dni").value;
+                const sit = document.getElementById("sit").value;
+                const cue = document.getElementById("cue").value;
+
+                document.getElementById("dni_val").value = (dni % 7).toString() + ((dni % 7) + 2).toString();
+                document.getElementById("sit_val").value = sit;
+                document.getElementById("cue_val").value = cue;
+
+                document.getElementById("res").value = document.getElementById("dni").value + document.getElementById("dni_val").value + document.getElementById("sit_val").value + document.getElementById("cue_val").value;
+            }
+
+            window.onload = update();
+        </script>
+    </body>
+</html>

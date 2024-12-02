@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aliasing con Senoidal</title>
+    </head>
+    <body>
+        <fieldset style="border: 1px solid #006444; border-radius: 16px; padding: 10px">
+            <legend style="width: auto; margin: 0 10px; padding: 0 5px">Fenómeno de aliasing</legend>
+            <div class="control-container">
+                <div class="controls">
+                    <div>
+                        <label for="sampleRate">Frecuencia de muestreo (Hz): </label>
+                        <div class="button-container">
+                            <button id="decreaseSampleRate">-</button>
+                            <input type="range" id="sampleRate" min="0" max="50" value="5" step="0.2" />
+                            <button id="increaseSampleRate">+</button>
+                        </div>
+                        <span id="sampleRateValue">5</span> Hz
+                    </div>
+                    <div>
+                        <label for="signalFrequency">Frecuencia de la señal (Hz): </label>
+                        <div class="button-container">
+                            <button id="decreaseSignalFrequency">-</button>
+                            <input type="range" id="signalFrequency" min="0" max="5" value="2" step="0.2" />
+                            <button id="increaseSignalFrequency">+</button>
+                        </div>
+                        <span id="signalFrequencyValue">2</span> Hz
+                    </div>
+                </div>
+            </div>
+            <canvas id="canvas" width="600" height="300"></canvas>
+
+            <!-- Leyenda de las líneas -->
+            <div>
+                <p><strong>Leyenda:</strong></p>
+                <ul>
+                    <li><span style="color: blue; font-weight: bold">■</span> Señal original (Senoidal)</li>
+                    <li><span style="color: red; font-weight: bold">■</span> Señal muestreada</li>
+                    <li><span style="color: green; font-weight: bold">■</span> Señal reconstruida (Aliased)</li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <h3>Definición de <i>aliasing</i></h3>
+        <p>
+            El aliasing es un fenómeno que ocurre cuando una señal continua (por ejemplo, una onda senoidal) se digitaliza (o se muestrea) a una frecuencia insuficiente, lo que provoca que la señal digitalizada sea incorrecta o
+            distorsionada.
+        </p>
+        <p>
+            Básicamente, cuando la frecuencia de muestreo es demasiado baja para capturar adecuadamente las variaciones de la señal, la señal muestreada se convierte en una representación incorrecta de la original, generando una distorsión.
+        </p>
+        <p>
+            Este fenómeno es el responsable de que, por ejemplo, al digitalizar una señal de audio de alta frecuencia, se pueda percibir como una señal con una frecuencia mucho más baja (un "eco" o "ruido" que no estaba presente en la señal
+            original).
+        </p>
+        <h3>Teorema de Nyquist</h3>
+        <p>
+            El Teorema de Nyquist establece que para poder reconstruir una señal continua de manera precisa a partir de sus muestras, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima presente en la señal. Es
+            decir, para evitar el aliasing, la frecuencia de muestreo debe ser mayor o igual al doble de la frecuencia más alta de la señal (frecuencia de Nyquist).
+        </p>
+
+        <p>Matemáticamente, si la señal tiene una frecuencia máxima f<sub>max</sub>, entonces la frecuencia de muestreo f<sub>s</sub> debe cumplir la condición: f<sub>s</sub> ≥ 2f<sub>max</sub></p>
+
+        <p>
+            El Teorema de Nyquist es esencial para asegurar que la digitalización de la señal sea lo más precisa posible, evitando distorsiones que surgen cuando las muestras tomadas no son suficientes para representar correctamente la
+            señal original.
+        </p>
+
+        <script>
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            const sampleRateSlider = document.getElementById("sampleRate");
+            const sampleRateValue = document.getElementById("sampleRateValue");
+            const signalFrequencySlider = document.getElementById("signalFrequency");
+            const signalFrequencyValue = document.getElementById("signalFrequencyValue");
+
+            // Parámetros de la señal
+            let signalFrequency = parseFloat(signalFrequencySlider.value); // Frecuencia de la señal senoidal (Hz)
+            const amplitude = 100; // Amplitud de la señal senoidal
+            const sampleDuration = 2; // Duración de la señal en segundos
+
+            // Función para calcular la frecuencia aliased
+            function calculateAliasedFrequency(signalFreq, sampleRate) {
+                const nyquist = sampleRate / 2;
+                let aliasedFreq = Math.abs(signalFreq % sampleRate);
+
+                // Ajustar si la frecuencia aliased está fuera del rango de Nyquist
+                if (aliasedFreq > nyquist) {
+                    aliasedFreq = sampleRate - aliasedFreq;
+                }
+                return aliasedFreq;
+            }
+
+            // Función para dibujar la señal continua (senoidal)
+            function drawContinuousSignal() {
+                const sampleInterval = 1 / 60; // 60 FPS para renderizar la señal continua
+
+                // Borrar el canvas
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                // Dibujar la señal senoidal continua
+                ctx.beginPath();
+                ctx.moveTo(0, canvas.height / 2);
+                for (let t = 0; t <= sampleDuration; t += sampleInterval) {
+                    const x = (t / sampleDuration) * canvas.width;
+                    const y = canvas.height / 2 - amplitude * Math.sin(2 * Math.PI * signalFrequency * t);
+                    ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = "blue";
+                ctx.lineWidth = 2;
+                ctx.stroke();
+            }
+
+            // Función para dibujar la señal digitalizada
+            function drawSampledSignal(sampleRate) {
+                // Dibujar la señal muestreada
+                ctx.beginPath();
+                for (let t = 0; t <= sampleDuration; t += 1 / sampleRate) {
+                    const x = (t / sampleDuration) * canvas.width;
+                    const y = canvas.height / 2 - amplitude * Math.sin(2 * Math.PI * signalFrequency * t);
+                    ctx.arc(x, y, 3, 0, Math.PI * 2);
+                }
+                ctx.fillStyle = "rgba(255,0,0,0.5)";
+                ctx.fill();
+            }
+
+            // Función para dibujar la curva senoidal verde (con frecuencia aliased y suavizada)
+            function drawAliasedSineCurve(sampleRate) {
+                const aliasedFrequency = calculateAliasedFrequency(signalFrequency, sampleRate);
+                const sampleInterval = 1 / 60; // Suavizar la curva dibujando con más frecuencia (60 FPS)
+
+                ctx.beginPath();
+                for (let t = 0; t <= sampleDuration; t += sampleInterval) {
+                    const x = (t / sampleDuration) * canvas.width;
+                    const y = canvas.height / 2 - amplitude * Math.sin(2 * Math.PI * aliasedFrequency * t);
+                    ctx.lineTo(x, y);
+                }
+                ctx.strokeStyle = "green";
+                ctx.lineWidth = 2;
+                ctx.setLineDash([]); // Asegurarse de que no haya guiones en la línea
+                ctx.stroke();
+            }
+
+            // Función para actualizar la visualización
+            function updateVisualization() {
+                const sampleRate = parseFloat(sampleRateSlider.value);
+                sampleRateValue.textContent = sampleRate.toFixed(1);
+                signalFrequency = parseFloat(signalFrequencySlider.value);
+                signalFrequencyValue.textContent = signalFrequency.toFixed(1);
+
+                // Redibujar la señal continua, la señal muestreada y la curva verde (frecuencia aliased)
+                drawContinuousSignal();
+                drawSampledSignal(sampleRate);
+                drawAliasedSineCurve(sampleRate);
+            }
+
+            // Evento para el cambio en la barra deslizadora de frecuencia de muestreo
+            sampleRateSlider.addEventListener("input", updateVisualization);
+
+            // Evento para el cambio en la barra deslizadora de frecuencia de la señal
+            signalFrequencySlider.addEventListener("input", updateVisualization);
+
+            // Botones de incremento y decremento para la frecuencia de muestreo
+            document.getElementById("decreaseSampleRate").addEventListener("click", () => {
+                let value = parseFloat(sampleRateSlider.value);
+                value = Math.max(value - 0.2, 0); // Asegurar que no se baje de 0
+                sampleRateSlider.value = value;
+                updateVisualization();
+            });
+            document.getElementById("increaseSampleRate").addEventListener("click", () => {
+                let value = parseFloat(sampleRateSlider.value);
+                value = Math.min(value + 0.2, 50); // Asegurar que no suba de 50
+                sampleRateSlider.value = value;
+                updateVisualization();
+            });
+
+            // Botones de incremento y decremento para la frecuencia de la señal
+            document.getElementById("decreaseSignalFrequency").addEventListener("click", () => {
+                let value = parseFloat(signalFrequencySlider.value);
+                value = Math.max(value - 0.2, 0); // Asegurar que no se baje de 0
+                signalFrequencySlider.value = value;
+                updateVisualization();
+            });
+            document.getElementById("increaseSignalFrequency").addEventListener("click", () => {
+                let value = parseFloat(signalFrequencySlider.value);
+                value = Math.min(value + 0.2, 5); // Asegurar que no suba de 5
+                signalFrequencySlider.value = value;
+                updateVisualization();
+            });
+
+            // Inicializar la visualización
+            updateVisualization();
+        </script>
+    </body>
+</html>

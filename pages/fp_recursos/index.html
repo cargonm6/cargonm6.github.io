@@ -9,9 +9,18 @@
     <head>
         <meta charset="utf-8" />
         <link rel="icon" href="../../img/favicon.ico" />
-        <link rel="stylesheet" href="../../css/slideshow.css" />
         <link rel="stylesheet" href="../../css/style.css" />
         <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let recurso = get_localstorage("recurso");
+
+                if (!recurso) {
+                    recurso = "./moodle_tasks/index.html";
+                }
+                document.getElementById("recurso").value = recurso;
+                loadPage(recurso, "destination");
+            });
+
             function loadPage(origin, destination, e) {
                 (e || window.event).preventDefault();
 
@@ -51,11 +60,34 @@
                         console.warn(error);
                     });
             }
+
+            function get_localstorage(p_type) {
+                const p_item = localStorage.getItem(p_type);
+
+                if (p_item) {
+                    return p_item;
+                } else {
+                    return null;
+                }
+            }
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://unpkg.com/spritespin@x.x.x/release/spritespin.js"></script>
         <title>Carlos González Marco</title>
         <meta id="viewport" name="viewport" content="width=device-width" />
+        <style>
+            fieldset {
+                border-radius: 10px;
+                margin: 20px;
+                padding: 5px;
+                font-size: small;
+                display: inline-block;
+                height: auto;
+                width: auto;
+                vertical-align: top;
+                text-align: left;
+            }
+        </style>
     </head>
 
     <body>
@@ -74,11 +106,13 @@
 
                         <a class="unique" href="../../index.html" title="Volver a la página principal">PÁGINA PRINCIPAL</a>
                         <hr />
-                        <select onchange="loadPage(this.value, 'destination')">
-                            <option value="#" selected disabled>Seleccione</option>
-                            <option value="./moodle_tasks/index.html">Moodle Tasks</option>
+                        <label style="margin-bottom: 5px">Seleccionar recurso:</label>
+                        <select id="recurso" onchange="loadPage(this.value, 'destination'); localStorage.setItem('recurso', this.value);">
+                            <option value="./nrp/index.html" selected>Calculadora NRP</option>
+                            <option value="./moodle_tasks/index.html" selected>Moodle Tasks</option>
                             <option value="./par/conversor_bases.html">PAR - Conversor de bases numéricas</option>
                             <option value="./par/mux_dtmf.html">PAR - Multiplexión DTMF</option>
+                            <option value="./par/aliasing.html">PAR - Aliasing</option>
                             <option value="./sad/cifrado_basico.html">SAD - Cifrado básico</option>
                             <option value="./sad/cifrado_vigenere.html">SAD - Cifrado Vigenère</option>
                             <option value="./sad/diffie-hellman.html">SAD - Algoritmo Diffie-Hellman</option>
