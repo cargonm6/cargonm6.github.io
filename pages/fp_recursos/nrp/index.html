@@ -4,6 +4,15 @@
         <meta charset="utf-8" />
         <title>Calculadora NRF</title>
         <style>
+            table.nrp {
+                width: 100%;
+            }
+
+            fieldset {
+                width: calc(100% - 64px);
+                padding: 10px;
+            }
+
             input.nrp,
             select.nrp {
                 margin-left: 10px;
@@ -19,14 +28,14 @@
         <fieldset>
             <legend>Calculadora de Número de Registro Personal (NRP)</legend>
 
-            <table>
+            <table class="nrp">
                 <tr>
-                    <td><label>DNI:</label></td>
-                    <td><input class="nrp" type="number" id="dni" oninput="update()" value="44405247" /></td>
+                    <td><label for="dni">DNI:</label></td>
+                    <td><input class="nrp" type="number" id="dni" oninput="update()" max="99999999" min="0" value="44405247" /></td>
                     <td><input class="nrp" type="text" id="dni_val" disabled /></td>
                 </tr>
                 <tr>
-                    <td><label>Situación administrativa:</label></td>
+                    <td><label for="sit">Situación administrativa:</label></td>
                     <td>
                         <select class="nrp" id="sit" oninput="update()">
                             <option value="A" selected>Funcionario de carrera</option>
@@ -38,7 +47,7 @@
                     <td><input class="nrp" type="text" id="sit_val" disabled /></td>
                 </tr>
                 <tr>
-                    <td><label>Cuerpo de enseñanza:</label></td>
+                    <td><label for="cue">Cuerpo de enseñanza:</label></td>
                     <td>
                         <select class="nrp" id="cue" oninput="update()">
                             <option value="0590" selected>Profesores de secundaria</option>
@@ -56,27 +65,92 @@
                     <td colspan="3"><hr /></td>
                 </tr>
                 <tr>
-                    <td><label>NRF:</label></td>
+                    <td><label for="res">NRF:</label></td>
                     <td colspan="2"><input class="nrp" type="text" id="res" disabled /></td>
                 </tr>
             </table>
             <br />
             <p>Fuente: <a href="https://www.sindicatopide.org/Documentos/NRPcalcular.pdf" target="_blank">https://www.sindicatopide.org/Documentos/NRPcalcular.pdf</a></p>
         </fieldset>
+        <br />
+        <fieldset>
+            <legend>Extraer datos de Número de Registro Personal (NRP)</legend>
+
+            <table class="nrp">
+                <tr>
+                    <td><label for="nrp">NRP:</label></td>
+                    <td><input class="nrp" type="text" id="nrp" oninput="update_nrp()" maxlength="15" value="4440524757A0590" /></td>
+                </tr>
+                <tr>
+                    <td><label>DNI:</label></td>
+                    <td><input class="nrp" type="text" id="nrp_dni" disabled /></td>
+                    <td><input class="nrp" type="text" id="nrp_num" disabled /></td>
+                </tr>
+                <tr>
+                    <td><label>Situación administrativa:</label></td>
+                    <td><input class="nrp" type="text" id="nrp_sit" disabled /></td>
+                    <td><input class="nrp" type="text" id="sit_des" disabled /></td>
+                </tr>
+                <tr>
+                    <td><label>Cuerpo de enseñanza:</label></td>
+                    <td><input class="nrp" type="text" id="nrp_cue" disabled /></td>
+                    <td><input class="nrp" type="text" id="cue_des" disabled /></td>
+                </tr>
+            </table>
+        </fieldset>
         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                update();
+                update_nrp();
+            });
+
             function update() {
-                const dni = document.getElementById("dni").value;
+                const dni = Math.max(0, Math.min(99999999, parseInt(document.getElementById("dni").value) || 0));
                 const sit = document.getElementById("sit").value;
                 const cue = document.getElementById("cue").value;
 
-                document.getElementById("dni_val").value = (dni % 7).toString() + ((dni % 7) + 2).toString();
+                document.getElementById("dni").value = dni;
+                const dniCode = `${dni % 7}${(dni % 7) + 2}`;
+
+                document.getElementById("dni_val").value = dniCode;
                 document.getElementById("sit_val").value = sit;
                 document.getElementById("cue_val").value = cue;
-
-                document.getElementById("res").value = document.getElementById("dni").value + document.getElementById("dni_val").value + document.getElementById("sit_val").value + document.getElementById("cue_val").value;
+                document.getElementById("res").value = `${dni}${dniCode}${sit}${cue}`;
             }
 
-            window.onload = update();
+            function update_nrp() {
+                const nrp = document.getElementById("nrp").value;
+
+                const dni = parseInt(nrp.substring(0, 8)) || 0;
+                const num = nrp.substring(8, 10);
+                const sit = nrp.substring(10, 11);
+                const cue = nrp.substring(11);
+
+                document.getElementById("nrp_dni").value = dni;
+                const validNum = `${dni % 7}${(dni % 7) + 2}`;
+                document.getElementById("nrp_num").value = validNum === num ? "OK" : `ERR: ${validNum} ≠ ${num}`;
+
+                updateSelectField("sit", sit, "nrp_sit", "sit_des");
+                updateSelectField("cue", cue, "nrp_cue", "cue_des");
+            }
+
+            function updateSelectField(selectId, value, inputId, descId) {
+                const select = document.getElementById(selectId);
+                const option = Array.from(select.options).find((opt) => opt.value === value);
+
+                if (option) {
+                    document.getElementById(inputId).value = value;
+                    document.getElementById(descId).value = option.text;
+                } else {
+                    document.getElementById(inputId).value = `ERR: ${value} no existe`;
+                    document.getElementById(descId).value = "";
+                }
+            }
+
+            window.onload = function () {
+                update();
+                update_nrp();
+            };
         </script>
     </body>
 </html>
