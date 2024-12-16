@@ -65,7 +65,7 @@
                                 const estado = compararFechas(obtenerFechaActual(), item.f_entrega) <= 0 ? "En plazo" : compararFechas(obtenerFechaActual(), item.f_limite) <= 0 ? "Fuera de plazo" : "Cerrada";
 
                                 return `
-                        <tr style="border-bottom: 1px dashed #006444ff; text-align: center">
+                        <tr style="border-bottom: 1px dashed #006444ff; text-align: center; background-color: ${item.corregido !== "Sí" ? "#bbded6" : "initial"}">
                             <td style="text-align: left">
                                 <a href="${item.url}">${item.unidad}.${item.numero}. ${item.titulo} <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px"></a>
                             </td>
