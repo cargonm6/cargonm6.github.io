@@ -21,6 +21,16 @@
             "url": "https://www.google.es",
             "unidad": "1",
             "numero": "2",
+            "titulo": "Ejercicio de ejemplo 1",
+            "f_entrega": "01/09/2024",
+            "f_limite": "10/09/2024",
+            "entregas": 40,
+            "corregido": "En curso"
+        },
+        {
+            "url": "https://www.google.es",
+            "unidad": "1",
+            "numero": "3",
             "titulo": "Ejercicio de ejemplo 2",
             "f_entrega": "01/09/2024",
             "f_limite": "10/09/2029",

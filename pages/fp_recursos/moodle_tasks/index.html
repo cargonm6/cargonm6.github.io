@@ -60,6 +60,8 @@
             function generarTabla(tareasPorUnidad) {
                 return Object.entries(tareasPorUnidad)
                     .map(([unidad, items]) => {
+                        const corregidos = items.every((item) => item.corregido === "Sí");
+
                         const filas = items
                             .map((item) => {
                                 const estado = compararFechas(obtenerFechaActual(), item.f_entrega) <= 0 ? "En plazo" : compararFechas(obtenerFechaActual(), item.f_limite) <= 0 ? "Fuera de plazo" : "Cerrada";
@@ -72,12 +74,12 @@
                             <td style="text-align: left">
                                 <progress style="cursor:help" value="${item.entregas}" max="${alumnos}" title="${((100 * item.entregas) / alumnos).toFixed(1).toString() + " %"}"></progress> ${item.entregas}/${alumnos}
                             </td>
-                            <td style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "rgb(255, 207, 53)" : estado === "En plazo" ? "rgb(152, 202, 62)" : "inherit"}" title="Fecha entrega: ${
-                                    item.f_entrega
-                                }\nFecha límite: ${item.f_limite}">
+                            <td style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" title="Fecha entrega: ${item.f_entrega}\nFecha límite: ${
+                                    item.f_limite
+                                }">
                                 ${estado}
                             </td>
-                            <td style="text-align: center; color: ${item.corregido === "En curso" ? "rgb(125, 159, 211)" : "inherit"}">
+                            <td style="text-align: center; color: ${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
                                 ${estado === "Cerrada" ? item.corregido : ""}
                             </td>
                         </tr>`;
@@ -85,8 +87,8 @@
                             .join("");
 
                         return `
-                    <details open>
-                        <summary style="font-weight: bold">UD ${unidad}. ${unidades[unidad]}</summary><br/>
+                    <details ${corregidos ? "" : "open"}>
+                        <summary><b>UD ${unidad}. ${unidades[unidad]}</b><span style="color:#006444ff">${corregidos ? " (finalizado)" : ""}</span></summary><br/>
                         <table style="width: 100%; border-collapse: collapse">
                             <thead>
                                 <tr style="border-bottom: 2px solid #006444ff; text-align: center">
@@ -106,6 +108,7 @@
             function crearDetalles(tareas) {
                 const contenedor = document.getElementById("container");
                 contenedor.innerHTML = "";
+                contenedor.style = "margin: 20px";
 
                 const p_fecha = document.createElement("p");
                 p_fecha.style.textAlign = "right";
