@@ -8,8 +8,8 @@
             <tr>
                 <td>
                     <select id="modulo">
-                        <option value="example" selected>Ejemplo</option>
-                        <option value="par">Planificación y Administración de Redes</option>
+                        <option value="example">Ejemplo</option>
+                        <option value="par" selected>Planificación y Administración de Redes</option>
                         <option value="sad">Seguridad y Alta Disponibilidad</option>
                     </select>
                 </td>
@@ -69,13 +69,15 @@
                                 return `
                         <tr style="border-bottom: 1px dashed #006444ff; text-align: center; background-color: ${item.corregido !== "Sí" ? "#bbded6" : "initial"}">
                             <td style="text-align: left">
-                                <a href="${item.url}">${item.unidad}.${item.numero}. ${item.titulo} <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px"></a>
+                                <a href="${item.url}">${unidad != "x" ? item.unidad + "." : ""}${item.numero}. ${item.titulo} <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px"></a>
                             </td>
                             <td style="text-align: left">
-                                <progress style="cursor:help" value="${item.entregas}" max="${alumnos}" title="${((100 * item.entregas) / alumnos).toFixed(1).toString() + " %"}"></progress> ${item.entregas}/${alumnos}
+                                <progress style="cursor:help" value="${item.entregas}" max="${item.usuarios == "" ? alumnos : item.usuarios}" title="${((100 * item.entregas) / (item.usuarios == "" ? alumnos : item.usuarios)).toFixed(1).toString() + " %"}"></progress> ${item.entregas}/${item.usuarios == "" ? alumnos : item.usuarios}
                             </td>
-                            <td style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" title="Fecha entrega: ${item.f_entrega}\nFecha límite: ${
-                                    item.f_limite
+                            <td
+                            
+                            style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" title="${
+                                    item.f_entrega === item.f_limite ? "Fecha límite: " + item.f_limite : "Fecha de entrega: " + item.f_entrega + "\nFecha límite: " + item.f_limite
                                 }">
                                 ${estado}
                             </td>
@@ -88,7 +90,7 @@
 
                         return `
                     <details ${corregidos ? "" : "open"}>
-                        <summary><b>UD ${unidad}. ${unidades[unidad]}</b><span style="color:#006444ff">${corregidos ? " (finalizado)" : ""}</span></summary><br/>
+                        <summary style="cursor: pointer"><b>${unidad != "x" ? "UD " + unidad + ". " : ""}${unidades[unidad]}</b><span style="color:#006444ff">${corregidos ? " (finalizado)" : ""}</span></summary><br/>
                         <table style="width: 100%; border-collapse: collapse">
                             <thead>
                                 <tr style="border-bottom: 2px solid #006444ff; text-align: center">

@@ -139,7 +139,7 @@
             "tunning": "Fa (estándar)",
             "system": "3 cilindros (SARV)",
             "hlink": "",
-            "description": "Trompa de configuración simple. Construída, probablemente, durante la dirección de Aloise Rottová y J. Pokorný), debido a la inscripción de origen del actual distrito municipal de la Gran Praga (Praga XII entre 1923-1949, anteriormente Královská Vinohrady). Tonillo original desaparecido, repuesto fabricado artesanalmente por Francisco Buendía Mudarra (Gea de Albarracín). Firma mecanizada en la campana, indicando: <i class=\"script\">A E Rott hijo / Praha XII Bohemia</i>"
+            "description": "Trompa de configuración simple. Probablemente construída durante la dirección de Aloise Rottová y J. Pokorný, debido a la inscripción que señala su origen en el actual distrito municipal de la Gran Praga (Praga XII entre 1923-1949, anteriormente Královská Vinohrady). Tonillo original desaparecido, repuesto fabricado artesanalmente por Francisco Buendía Mudarra (Gea de Albarracín). Firma mecanizada en la campana, indicando: <i class=\"script\">A E Rott hijo / Praha XII Bohemia</i>"
         },
         {
             "name": "Saxofón tenor Nilliet",
@@ -166,8 +166,8 @@
             "image": "../../img/music/instruments/rott_flugelhorn.png",
             "trademark": [
                 {
-                    "name": "Rott (Amati)",
-                    "image": "../../img/music/trademarks/amati-rott.svg"
+                    "name": "Amati",
+                    "image": "../../img/music/trademarks/amati.svg"
                 }
             ],
             "type": "Fliscorno",
@@ -180,6 +180,46 @@
             "system": "3 cilindros (SARV)",
             "hlink": "",
             "description": "Modelo similar al de Bohland & Fuchs, fabricado por la cooperativa Amati. El instrumento fue utilizado en el World Music Contest de Kerkrade (1970) por la banda de música de la cooperativa, donde fue premiada en la sección de armonía. En la campana, dentro de un grabado en forma de hoja trilobulada: <i class=\"script\">Rott / Czechoslovakia</i>"
+        },
+        {
+            "name": "Órgano Hammond",
+            "image": "../../img/music/instruments/hammond_organ.png",
+            "trademark": [
+                {
+                    "name": "Hammond",
+                    "image": "../../img/music/trademarks/hammond.png"
+                }
+            ],
+            "type": "Órgano de transistores",
+            "company": "Hammond Organ Company",
+            "const_year": "1973",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Evanston_(Illinois)\" target=\"_blank\">Evanston (Illinois, EE.UU.)</a>",
+            "model": "The Sounder",
+            "serialno": "",
+            "tunning": "",
+            "system": "",
+            "hlink": "<a href=\"https://hammondclub.nl/nl/menu/Hammond/De-Hammond-Encyclopedie/L-X-series/S-series/Sounder-series#\" target=\"_blank\">De Hammond Encyclopedie</a>",
+            "description": "Órgano de 37 teclas (3 octavas) y 24 botones de acordes, con generador de tonos de circuitos integrados y efectos como vibrato, repetición variable, transposición y caja de ritmos automática con Autochord."
+        },
+        {
+            "name": "Cuatro Montalvo",
+            "image": "../../img/music/instruments/montalvo_cuatro.png",
+            "trademark": [
+                {
+                    "name": "Bessons & Co.",
+                    "image": "../../img/music/trademarks/montalvo.svg"
+                }
+            ],
+            "type": "Cuatro puertorriqueño",
+            "company": "Expósito Montalvo",
+            "const_year": "~ 1980",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Valencia\" target=\"_blank\">Valencia (España)</a>",
+            "model": "",
+            "serialno": "",
+            "tunning": "Sol 4, Re 4, La 3, Mi 3, Si 2",
+            "system": "Clavijero mecánico de rodillos",
+            "hlink": "",
+            "description": "Prototipo de cuatro puertorriqueño, fabricado al estilo de los laúdes españoles tradicionales pero con cinco cuerdas dobles (las dos últimas, afinadas de forma octavada como los cuatros). Las dimensiones del instrumento, incluida la escotadura del cuerpo, son más grandes que en un cuatro tradicional. Expos[ito] Montalvo fue un fabricante valenciano cuya producción se data en torno a 1980, pero en la actualidad se dispone de poca información sobre él. Se especula que pudo ser familiar del también luthier Christian Montalvo, activo entre 1980 y 2020."
         },
         {
             "name": "Corneta Orfeo",
@@ -359,7 +399,7 @@
             "tunning": "",
             "system": "",
             "hlink": "",
-            "description": ""
+            "description": "Bombo diseñado específicamente para desfilar, con un cuerpo ligero (3,7 kg) y un sonido potente. Casco de madera de arce forrada con PVC, y aros de madera contrachapada de arce. 8 varillas tensoras cromadas con palomillas."
         },
         {
             "name": "Platos Alchemy",
@@ -371,14 +411,14 @@
                 }
             ],
             "type": "Platos de hi-hat",
-            "company": "Alchemy (Istanbul)",
-            "const_year": "",
+            "company": "Istanbul Agop Cymbals",
+            "const_year": "2006",
             "const_place": "<a href=\"https://es.wikipedia.org/wiki/Estambul\" target=\"_blank\">Estanbul (Turquía)</a>",
-            "model": "MS-X 14\" HI-HAT",
+            "model": "Alchemy MS-X 14\" HI-HAT",
             "serialno": "",
             "tunning": "",
             "system": "",
-            "hlink": "",
+            "hlink": "<a href=\"https://web.archive.org/web/20060521180646/http://www.alchemycymbals.com/msx_cymbals_products.php\" target=\"_blank\">Alchemy (archivado)</a>",
             "description": "Platos de hi-hat para batería, acondicionados como <i>clash cymbals</i>."
         }
     ]

@@ -15,6 +15,7 @@
             "f_entrega": "01/09/2024",
             "f_limite": "10/09/2024",
             "entregas": 40,
+            "usuarios": "",
             "corregido": "Sí"
         },
         {
@@ -25,6 +26,7 @@
             "f_entrega": "01/09/2024",
             "f_limite": "10/09/2024",
             "entregas": 40,
+            "usuarios": "",
             "corregido": "En curso"
         },
         {
@@ -35,6 +37,7 @@
             "f_entrega": "01/09/2024",
             "f_limite": "10/09/2029",
             "entregas": 20,
+            "usuarios": "",
             "corregido": ""
         },
         {
@@ -45,6 +48,7 @@
             "f_entrega": "01/09/2029",
             "f_limite": "01/09/2029",
             "entregas": 5,
+            "usuarios": "",
             "corregido": ""
         }
     ]

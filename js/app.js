@@ -96,6 +96,18 @@ function printCV() {
     window.print();
 }
 
+function printMUS() {
+    gallery_status = 1;
+    showGallery();
+
+    var slides = document.getElementsByClassName("mySlides");
+    for (var i = 0; i < slides.length; i++){
+        slides[i].classList.remove("fade");
+    }
+    window.print();
+    window.location.reload();
+}
+
 function openAllTabs() {
     var categories = document.getElementsByClassName("category");
 
@@ -433,7 +445,10 @@ function fillMUS(json, container) {
         numbers.innerText = (i + 1).toString() + " / " + json.instruments.length.toString();
         content.appendChild(numbers);
 
-        // Imagen del instrumento
+        // Imagen del instrumento y logotipo(s) de marca
+        var images = document.createElement("div");
+        images.classList.add("images");
+
         var ins_img = document.createElement("img");
         ins_img.classList.add("instrument");
         ins_img.setAttribute("src", json.instruments[i].image);
@@ -442,9 +457,8 @@ function fillMUS(json, container) {
         ins_img.onclick = function () {
             loadImage(this);
         };
-        content.appendChild(ins_img);
+        images.appendChild(ins_img);
 
-        // Logotipo(s) de marca
         var div_trademark = document.createElement("div");
         div_trademark.classList.add("trademark");
         for (var j = 0; j < json.instruments[i].trademark.length; j++) {
@@ -454,7 +468,9 @@ function fillMUS(json, container) {
             tra_img.setAttribute("title", json.instruments[i].trademark[j].name);
             div_trademark.appendChild(tra_img);
         }
-        content.appendChild(div_trademark);
+        images.appendChild(div_trademark);
+
+        content.appendChild(images);
 
         // Texto de contenido
 
