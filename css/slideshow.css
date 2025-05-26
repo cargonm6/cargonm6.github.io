@@ -144,6 +144,12 @@ div.right a.next:hover {
 }
 
 @media print {
+
+    @page {
+        margin: 0.1cm;
+        size: A4 portrait;
+        orientation: portrait;
+    }
     
     .slideshow-container {
         border: none;

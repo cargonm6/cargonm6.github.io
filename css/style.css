@@ -221,6 +221,16 @@ div.desc hr {
     border: 1px dashed var(--color-plain);
 }
 
+img.download-button {
+    width: 16px;
+    margin-left: 5px;
+    transition: filter 0.2s;
+}
+
+img.download-button:hover {
+    filter: brightness(0);
+}
+
 div.desc select {
     font-family: "Roboto", sans-serif;
     width: 95%;

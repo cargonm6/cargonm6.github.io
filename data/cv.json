@@ -263,7 +263,7 @@
                     "date": "2019 (Valencia)",
                     "title": "<a href=\"https://youtu.be/lCEk1xW_52Y\" target=\"_blank\">Técnicas de aprendizaje automático en astrofísica. Detección de exoplanetas</a>",
                     "centre": "<a href=\"https://www.uv.es/\" target=\"_blank\">Universitat de València - Estudi General</a>",
-                    "description": "Trabajo de Fin de Grado coordinado por José Enrique Adsuara Fuster."
+                    "description": "Trabajo de Fin de Grado, coordinado por José Enrique Adsuara Fuster."
                 }
             ]
         },
@@ -276,42 +276,42 @@
                     "date": "2022 (Caudete)",
                     "title": "Reina y Dama (pasodoble)",
                     "centre": "Estrenado por: Sociedad Unión Musical Santa Cecilia de Caudete",
-                    "description": "Compuesto para Nazaret Díaz Blanes, Dama de la Comparsa La Antigua y Reina de Fiestas de Caudete 2020-2022.<audio controls><source src=\"audio/reina_y_dama.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Sociedad Unión Musical Santa Cecilia de Caudete.</small><a href=\"audio/reina_y_dama.mp3\" download=\"Reina y Dama - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+                    "description": "Compuesto para Nazaret Díaz Blanes, Dama de la Comparsa La Antigua y Reina de Fiestas de Caudete 2020-2022.<audio controls><source src=\"audio/reina_y_dama.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Sociedad Unión Musical Santa Cecilia de Caudete.</small><a href=\"audio/reina_y_dama.mp3\" download=\"Reina y Dama - Carlos González.mp3\"><img class=\"download-button\" src=\"img/icons/download.svg\" alt=\"Descargar\" title=\"Descargar\"/></a>"
                 },
                 {
                     "logo": "",
                     "date": "2019 (Valencia)",
                     "title": "Falla Sur (pasodoble)",
                     "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
-                    "description": "Pasodoble dedicado a la Falla Sur c. Rubén Vela - av. Dr. Waksman de Valencia, en su 50 aniversario.<audio controls><source src=\"audio/falla_sur.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/falla_sur.mp3\" download=\"Falla Sur - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+                    "description": "Pasodoble dedicado a la Falla Sur c. Rubén Vela - av. Dr. Waksman de Valencia, en su 50 aniversario.<audio controls><source src=\"audio/falla_sur.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/falla_sur.mp3\" download=\"Falla Sur - Carlos González.mp3\"><img class=\"download-button\" src=\"img/icons/download.svg\" alt=\"Descargar\" title=\"Descargar\"/></a>"
                 },
                 {
                     "logo": "",
                     "date": "2016 (Valencia)",
                     "title": "Guillermo Molina (pasodoble)",
                     "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
-                    "description": "Homenaje al músico fundador, expresidente y archivero de la Agrupación Musical Carrera Fuente de San Luis.<audio controls><source src=\"audio/guillermo_molina.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/guillermo_molina.mp3\" download=\"Guillermo Molina - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+                    "description": "Homenaje al músico fundador, expresidente y archivero de la Agrupación Musical Carrera Fuente de San Luis.<audio controls><source src=\"audio/guillermo_molina.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/guillermo_molina.mp3\" download=\"Guillermo Molina - Carlos González.mp3\"><img class=\"download-button\" src=\"img/icons/download.svg\" alt=\"Descargar\" title=\"Descargar\"/></a>"
                 },
                 {
                     "logo": "",
                     "date": "2012 (Valencia)",
                     "title": "Antonio Soler (pasodoble)",
                     "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
-                    "description": "Homenaje al músico fundador de la Agrupación Musical Carrera Fuente de San Luis, D. Antonio Soler Pons.<audio controls><source src=\"audio/antonio_soler.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Cercle Musical Primitiva d'Albaida.</small><a href=\"audio/antonio_soler.mp3\" download=\"Antonio Soler - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" alt=\"Descargar\" title=\"Descargar\"/></a>"
+                    "description": "Homenaje al músico fundador de la Agrupación Musical Carrera Fuente de San Luis, D. Antonio Soler Pons.<audio controls><source src=\"audio/antonio_soler.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Cercle Musical Primitiva d'Albaida.</small><a href=\"audio/antonio_soler.mp3\" download=\"Antonio Soler - Carlos González.mp3\"><img class=\"download-button\" src=\"img/icons/download.svg\" alt=\"Descargar\" title=\"Descargar\"/></a>"
                 },
                 {
                     "logo": "",
                     "date": "2011 (Valencia)",
                     "title": "José Enrique Verdeguer (pasodoble)",
                     "centre": "Estrenado por: Sociedad Musical Poblados Marítimos",
-                    "description": "Homenaje póstumo a D. José Enrique Verdeguer Félix, músico de la Sociedad Musical Poblados Marítimos.<audio controls><source src=\"audio/jose_enrique_verdeguer.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Sociedad Musical Poblados Marítimos.</small><a href=\"audio/jose_enrique_verdeguer.mp3\" download=\"José Enrique Verdeguer - Carlos González.mp3\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+                    "description": "Homenaje póstumo a D. José Enrique Verdeguer Félix, músico de la Sociedad Musical Poblados Marítimos.<audio controls><source src=\"audio/jose_enrique_verdeguer.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Sociedad Musical Poblados Marítimos.</small><a href=\"audio/jose_enrique_verdeguer.mp3\" download=\"José Enrique Verdeguer - Carlos González.mp3\"><img class=\"download-button\" src=\"img/icons/download.svg\" alt=\"Descargar\" title=\"Descargar\"/></a>"
                 },
                 {
                     "logo": "",
                     "date": "2011 (Valencia)",
                     "title": "Tierra de Albarracín (pasodoble)",
                     "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
-                    "description": "Pasodoble dedicado a todos los músicos de Gea de Albarracín (Teruel).<audio controls><source src=\"audio/tierra_de_albarracin.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/tierra_de_albarracin.mp3\" download=\"Tierra de Albarracín - Carlos González\"><img src=\"https://freeiconshop.com/wp-content/uploads/edd/download-flat.png\" width=\"16px\" width=\"Descargar\" alt=\"16px\" title=\"Descargar\"/></a>"
+                    "description": "Pasodoble dedicado a todos los músicos de Gea de Albarracín (Teruel).<audio controls><source src=\"audio/tierra_de_albarracin.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/tierra_de_albarracin.mp3\" download=\"Tierra de Albarracín - Carlos González\"><img class=\"download-button\" src=\"img/icons/download.svg\" width=\"Descargar\" alt=\"Descargar\" title=\"Descargar\"/></a>"
                 }
             ]
         }
