@@ -231,6 +231,20 @@ img.download-button:hover {
     filter: brightness(0);
 }
 
+a.subbutton {
+    display: inline-block;
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    padding: 2px 4px;
+    font-size: small;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+a.subbutton:hover {
+    background-color: var(--color-light);
+}
+
 div.desc select {
     font-family: "Roboto", sans-serif;
     width: 95%;

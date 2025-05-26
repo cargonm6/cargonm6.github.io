@@ -6,6 +6,7 @@
 var gallery_status = 0;
 var view_grid = true;
 var collapsed_list = null;
+var jsonfilepublic = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     var path = window.location.pathname;
@@ -101,7 +102,7 @@ function printMUS() {
     showGallery();
 
     var slides = document.getElementsByClassName("mySlides");
-    for (var i = 0; i < slides.length; i++){
+    for (var i = 0; i < slides.length; i++) {
         slides[i].classList.remove("fade");
     }
     window.print();
@@ -157,6 +158,7 @@ function loadJSON(name, container, func) {
     request.responseType = "json";
     request.send();
     request.onload = function () {
+        jsonfilepublic = request.response;
         window[func](request.response, container);
         listenAudio();
         // fillCV(request.response, container);
@@ -293,6 +295,20 @@ function fillCV(json, container) {
             description.classList.add("description");
             description.innerHTML = json.category[i].entry[j].description;
 
+            // Subentradas
+            var subentries = document.createElement("div");
+
+            if (json.category[i].entry[j].subentries) {
+                for (let k = 0; k < json.category[i].entry[j].subentries.length; k++) {
+                    var subbutton = document.createElement("a");
+                    subbutton.innerText = json.category[i].entry[j].subentries[k].title;
+                    subbutton.href = json.category[i].entry[j].subentries[k].link;
+                    subbutton.target = "_blank";
+                    subbutton.classList.add("subbutton");
+                    subentries.appendChild(subbutton);
+                }
+            }
+
             // Entrada
 
             if (view_grid) {
@@ -303,6 +319,7 @@ function fillCV(json, container) {
                 entry.appendChild(content_title);
                 entry.appendChild(centre);
                 entry.appendChild(description);
+                subentries.innerHTML != "" ? entry.appendChild(subentries) : null;
             } else {
                 var entry = document.createElement("div");
                 entry.classList.add("entry");
@@ -313,6 +330,7 @@ function fillCV(json, container) {
                 rightblock.appendChild(content_title);
                 rightblock.appendChild(centre);
                 rightblock.appendChild(description);
+                subentries.innerHTML != "" ? rightblock.appendChild(subentries) : null;
 
                 entry.appendChild(date);
                 entry.appendChild(rightblock);
@@ -326,9 +344,9 @@ function fillCV(json, container) {
         var category = document.createElement("div");
         category.classList.add("category");
 
-        // if (i !== 0) {
-        category.classList.add("collapsed");
-        // }
+        if (i !== 0) {
+            category.classList.add("collapsed");
+        }
 
         category.appendChild(head);
         category.appendChild(content);
