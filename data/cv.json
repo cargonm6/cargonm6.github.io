@@ -197,15 +197,8 @@
         },
         {
             "icon": "img/icons/people.svg",
-            "title": "Asociaciones y clubes",
+            "title": "Asociaciones y grupos",
             "entry": [
-                {
-                    "logo": "img/logos/belt.svg",
-                    "date": "2023",
-                    "title": "<a href=\"https://www.fkaratecv.es/location/club-de-karate-meikyo/\" target=\"_blank\">Club de Karate Meikyo</a>",
-                    "centre": "Valencia (C. Valenciana, España)",
-                    "description": ""
-                },
                 {
                     "logo": "img/logos/kandinska.png",
                     "date": "2022",
