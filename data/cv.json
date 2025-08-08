@@ -1,5 +1,5 @@
 {
-    "_comment": "© 2020-2025 Carlos González Marco - Última actualización: 11/06/2024",
+    "_comment": "© 2020-2025 Carlos González Marco - Última actualización: 08/08/2025",
     "category": [
         {
             "icon": "img/icons/briefcase.svg",
@@ -13,12 +13,16 @@
                     "description": "Profesor de informática en ESO, Bachillerato y Ciclos de Formación Profesional.",
                     "subentries": [
                         {
-                            "title":"IES Abastos",
+                            "title":"<code title=\"Funcionario interino\">FI</code>&nbsp;Curso 23-24: IES Abastos",
                             "link":"https://ceice.gva.es/es/web/centros-docentes/ficha-centro?codi=46025040"
                         },
                         {
-                            "title":"IES José Rodrigo Botet",
+                            "title":"<code title=\"Funcionario interino\">FI</code>&nbsp;Curso 24-25: IES José Rodrigo Botet",
                             "link":"https://ceice.gva.es/es/web/centros-docentes/ficha-centro?codi=46005132"
+                        },
+                        {
+                            "title":"<code title=\"Funcionario en prácticas\">FP</code>&nbsp;Curso 25-26: IES Font de Sant Lluís",
+                            "link":"https://ceice.gva.es/es/web/centros-docentes/ficha-centro?codi=46014224"
                         }
                     ]
                 },
@@ -41,7 +45,7 @@
                     "date": "02/2022 - 07/2022<br/><p>11/2020 - 05/2021</p>",
                     "title": "Ingeniero técnico de telecomunicación",
                     "centre": "<a href=\"https://web.archive.org/web/20220909120452/https://outsourcinggroup.es/\" target=\"_blank\">Outsourcing Group Desarrollo S. L.</a>",
-                    "description": "Elaboración y firma de proyectos radioeléctricos de fase 1 para instalaciones de telefonía móvil."
+                    "description": "Elaboración y firma de proyectos radioeléctricos de fase 1 para instalaciones de telefonía móvil, en cumplimiento de la normativa vigente."
                 },
                 {
                     "logo": "img/logos/servipoli.png",
@@ -252,7 +256,7 @@
                     "date": "2023 (Valencia)",
                     "title": "<a href=\"https://doi.org/10.61547/3376\" target=\"_blank\">Integrated management system for the predictive maintenance of interurban roads using artificial intelligence techniques</a>",
                     "centre": "Proyecto Neurovías (INNEST/2021/6)",
-                    "description": "Estudio redactado junto con Tatiana García Segura (UPV), José Ramón López Marco (PAVASAL), Jordi Mansanet Sandín (SOLVER) y Juan Sánchez Robles (CPS)."
+                    "description": "Estudio redactado junto con Tatiana García Segura (UPV), José Ramón López Marco (PAVASAL), Jordi Mansanet Sandín (SOLVER) y Juan Sánchez Robles (CPS). ISBN 978-84-09-55466-9"
                 },
                 {
                     "logo": "",

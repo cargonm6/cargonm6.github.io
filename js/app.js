@@ -299,14 +299,19 @@ function fillCV(json, container) {
             var subentries = document.createElement("div");
 
             if (json.category[i].entry[j].subentries) {
+				var subdetails = document.createElement("details");
+				var subsummary = document.createElement("summary");
+				subsummary.innerText = "Centros";
+				subdetails.appendChild(subsummary);
                 for (let k = 0; k < json.category[i].entry[j].subentries.length; k++) {
                     var subbutton = document.createElement("a");
-                    subbutton.innerText = json.category[i].entry[j].subentries[k].title;
+                    subbutton.innerHTML = json.category[i].entry[j].subentries[k].title;
                     subbutton.href = json.category[i].entry[j].subentries[k].link;
                     subbutton.target = "_blank";
                     subbutton.classList.add("subbutton");
-                    subentries.appendChild(subbutton);
+                    subdetails.appendChild(subbutton);
                 }
+				subentries.appendChild(subdetails);
             }
 
             // Entrada
