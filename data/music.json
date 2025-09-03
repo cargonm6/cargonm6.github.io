@@ -181,6 +181,26 @@
             "hlink": "",
             "description": "Modelo similar al de Bohland & Fuchs, fabricado por la cooperativa Amati. El instrumento fue utilizado en el World Music Contest de Kerkrade (1970) por la banda de música de la cooperativa, donde fue premiada en la sección de armonía. En la campana, dentro de un grabado en forma de hoja trilobulada: <i class=\"script\">Rott / Czechoslovakia</i>"
         },
+		{
+            "name": "Corneta Corton",
+            "image": "../../img/music/instruments/corton_cornet.png",
+            "trademark": [
+                {
+                    "name": "Amati",
+                    "image": "../../img/music/trademarks/amati.svg"
+                }
+            ],
+            "type": "Fliscorno",
+            "company": "Corton (Amati)",
+            "const_year": "~ 1970",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Kraslice\" target=\"_blank\">Kraslice (Bohemia Occidental, Checoslovaquia)</a>",
+            "model": "",
+            "serialno": "770081",
+            "tunning": "Si♭ (estándar)",
+            "system": "3 pistones Périnet (top-sprung)",
+            "hlink": "",
+            "description": "Corneta plateada de la marca Corton, stencil de Amati para Reino Unido. La marca Corton se sitúa principalmente en los años 70, aunque existen instrumentos con este indicativo hasta los años 90. En la campana, un grabado indica: <i class=\"script\">Corton by Amati</i>"
+        },
         {
             "name": "Órgano Hammond",
             "image": "../../img/music/instruments/hammond_organ.png",
