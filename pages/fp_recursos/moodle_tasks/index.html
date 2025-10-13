@@ -9,8 +9,8 @@
                 <td>
                     <select id="modulo">
                         <option value="example">Ejemplo</option>
-                        <option value="par" selected>Planificación y Administración de Redes</option>
-                        <option value="sad">Seguridad y Alta Disponibilidad</option>
+                        <option value="par_25" selected>Planificación y Administración de Redes</option>
+                        <option value="inp_25">Introducción a la Nube Pública</option>
                     </select>
                 </td>
                 <td><button id="copiarBtn">COPIAR</button></td>
@@ -71,12 +71,13 @@
                             <td style="text-align: left">
                                 <a href="${item.url}">${unidad != "x" ? item.unidad + "." : ""}${item.numero}. ${item.titulo} <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px"></a>
                             </td>
+                            <td style="text-align: center; color: ${item.categoria === "Complementos" ? "green" : "inherit"}">
+                                ${item.categoria}
+                            </td>
                             <td style="text-align: left">
                                 <progress style="cursor:help" value="${item.entregas}" max="${item.usuarios == "" ? alumnos : item.usuarios}" title="${((100 * item.entregas) / (item.usuarios == "" ? alumnos : item.usuarios)).toFixed(1).toString() + " %"}"></progress> ${item.entregas}/${item.usuarios == "" ? alumnos : item.usuarios}
                             </td>
-                            <td
-                            
-                            style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" title="${
+                            <td style="cursor:help; text-align: center; color: ${estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" title="${
                                     item.f_entrega === item.f_limite ? "Fecha límite: " + item.f_limite : "Fecha de entrega: " + item.f_entrega + "\nFecha límite: " + item.f_limite
                                 }">
                                 ${estado}
@@ -95,9 +96,10 @@
                             <thead>
                                 <tr style="border-bottom: 2px solid #006444ff; text-align: center">
                                     <th style="width: calc(100% * 0.3); color: #006444ff">Tarea</th>
-                                    <th style="width: calc(100% * 0.3); color: #006444ff">Entregas</th>
-                                    <th style="width: calc(100% * 0.3); color: #006444ff">Estado</th>
-                                    <th style="width: calc(100% * 0.3); color: #006444ff">Corrección</th>
+                                    <th style="width: calc(100% * 0.2); color: #006444ff">Categoría</th>
+                                    <th style="width: calc(100% * 0.2); color: #006444ff">Entregas</th>
+                                    <th style="width: calc(100% * 0.15); color: #006444ff">Estado</th>
+                                    <th style="width: calc(100% * 0.15); color: #006444ff">Corrección</th>
                                 </tr>
                             </thead>
                             <tbody>${filas}</tbody>
