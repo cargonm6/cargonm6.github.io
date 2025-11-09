@@ -1,17 +1,15 @@
 let slideIndex = 1;
 
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowLeft' && gallery_status === 0) {
+document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft" && gallery_status === 0) {
         plusSlides(-1);
-        updateModal()
-    }
-    else if (event.key === 'ArrowRight' && gallery_status === 0) {
+        updateModal();
+    } else if (event.key === "ArrowRight" && gallery_status === 0) {
         plusSlides(+1);
-        updateModal()
-    }
-	else if (event.key === 'Escape') {
+        updateModal();
+    } else if (event.key === "Escape") {
         var modal = document.getElementById("myModal");
-		modal.style.display = "none";
+        modal.style.display = "none";
     }
 });
 
@@ -31,12 +29,12 @@ function updateModal() {
 
 // Next/previous controls
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+    showSlides((slideIndex += n));
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+    showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
@@ -44,8 +42,12 @@ function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
@@ -54,8 +56,16 @@ function showSlides(n) {
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
+
+        // Mostrar solo la timeline correspondiente
+        const timelines = document.querySelectorAll(".timeline");
+        timelines.forEach((t) => (t.style.display = "none"));
+
+        const activeTimeline = document.getElementById("timeline_" + slideIndex);
+        if (activeTimeline) {
+            activeTimeline.style.display = "block";
+        }
+    } catch (e) {
+        console.log(e);
     }
-    catch (e) {
-        console.log(e)
-    }
-} 
+}

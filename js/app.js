@@ -299,10 +299,10 @@ function fillCV(json, container) {
             var subentries = document.createElement("div");
 
             if (json.category[i].entry[j].subentries) {
-				var subdetails = document.createElement("details");
-				var subsummary = document.createElement("summary");
-				subsummary.innerText = "Centros";
-				subdetails.appendChild(subsummary);
+                var subdetails = document.createElement("details");
+                var subsummary = document.createElement("summary");
+                subsummary.innerText = "Centros";
+                subdetails.appendChild(subsummary);
                 for (let k = 0; k < json.category[i].entry[j].subentries.length; k++) {
                     var subbutton = document.createElement("a");
                     subbutton.innerHTML = json.category[i].entry[j].subentries[k].title;
@@ -311,7 +311,7 @@ function fillCV(json, container) {
                     subbutton.classList.add("subbutton");
                     subdetails.appendChild(subbutton);
                 }
-				subentries.appendChild(subdetails);
+                subentries.appendChild(subdetails);
             }
 
             // Entrada
@@ -397,11 +397,40 @@ function showGallery() {
     }
 }
 
+function parseYearRange(value) {
+    if (!value || typeof value !== "string") return null;
+    value = value.trim();
+
+    // Ejemplo: "1860-1900"
+    const range = value.match(/^(\d{3,4})\s*-\s*(\d{3,4})$/);
+    if (range) {
+        return { min: parseInt(range[1]), max: parseInt(range[2]) };
+    }
+
+    // Ejemplo: "~ 1950" o "< 1961"
+    const approx = value.match(/^[~<>\s]*([0-9]{3,4})$/);
+    if (approx) {
+        const year = parseInt(approx[1]);
+        return { min: year, max: year };
+    }
+
+    // Ejemplo: "1880"
+    const single = value.match(/^(\d{3,4})$/);
+    if (single) {
+        const year = parseInt(single[1]);
+        return { min: year, max: year };
+    }
+
+    return null; // no válido
+}
+
 function fillMUS(json, container) {
     // Destino
     var body = document.getElementById(container);
 
     gallery_status = 0;
+    let minYearGlobal = Infinity;
+    let maxYearGlobal = -Infinity;
 
     var hide_button = document.createElement("button");
     hide_button.textContent = "Mostrar/ocultar galería";
@@ -434,6 +463,19 @@ function fillMUS(json, container) {
 
         content.appendChild(div_img);
         gallery.appendChild(content);
+
+        // === CALCULAR RANGO GLOBAL DE AÑOS ===
+        const parsed = parseYearRange(json.instruments[i].const_year);
+        if (parsed) {
+            if (parsed.min < minYearGlobal) minYearGlobal = parsed.min;
+            if (parsed.max > maxYearGlobal) maxYearGlobal = parsed.max;
+        }
+    }
+
+    // márgenes
+    if (minYearGlobal !== Infinity) {
+        minYearGlobal -= 10;
+        maxYearGlobal += 10;
     }
 
     body.appendChild(gallery);
@@ -466,7 +508,6 @@ function fillMUS(json, container) {
         var numbers = document.createElement("div");
         numbers.classList.add("numbertext");
         numbers.innerText = (i + 1).toString() + " / " + json.instruments.length.toString();
-        content.appendChild(numbers);
 
         // Imagen del instrumento y logotipo(s) de marca
         var images = document.createElement("div");
@@ -492,8 +533,6 @@ function fillMUS(json, container) {
             div_trademark.appendChild(tra_img);
         }
         images.appendChild(div_trademark);
-
-        content.appendChild(images);
 
         // Texto de contenido
 
@@ -569,7 +608,98 @@ function fillMUS(json, container) {
         div_text.appendChild(ul_text);
         div_text.appendChild(subdiv);
 
+        // === TIMELINE ===
+        const parsed = parseYearRange(json.instruments[i].const_year);
+        if (parsed && minYearGlobal !== Infinity) {
+            const range = maxYearGlobal - minYearGlobal;
+
+            const timeline = document.createElement("div");
+            timeline.classList.add("timeline");
+            timeline.id = "timeline_" + (i + 1);
+            timeline.style.position = "relative";
+            timeline.style.margin = "20px 50px";
+            timeline.style.height = "60px";
+
+            const isSingleYear = parsed.min === parsed.max;
+
+            if (!isSingleYear) {
+                // Barra azul para rangos
+                const bar = document.createElement("div");
+                const left = ((parsed.min - minYearGlobal) / range) * 100 -0.5;
+                const width = ((parsed.max - parsed.min) / range) * 100;
+                bar.style.position = "absolute";
+                bar.style.left = left + "%";
+                bar.style.width = width + "%";
+                bar.style.top = "20px";
+                bar.style.height = "14px";
+                bar.style.background = "#4b8bff";
+                bar.style.borderRadius = "3px";
+                timeline.appendChild(bar);
+            }
+
+            // Línea roja
+            const centerPercent = (((parsed.min + parsed.max) / 2 - minYearGlobal) / range) * 100;
+            const centerLine = document.createElement("div");
+            centerLine.style.position = "absolute";
+            centerLine.style.left = centerPercent -0.5 + "%";
+            centerLine.style.top = "13px";
+            centerLine.style.height = "30px"; // todo el timeline
+            centerLine.style.width = "2px";
+            centerLine.style.background = "red";
+            timeline.appendChild(centerLine);
+
+            const tickLabel = document.createElement("span");
+            if (!isSingleYear) {
+                tickLabel.textContent = "ca. " + parseInt((parsed.min + parsed.max) / 2);
+            } else {
+                tickLabel.textContent = parseInt((parsed.min + parsed.max) / 2);
+            }
+            tickLabel.style.position = "absolute";
+            tickLabel.style.left = "calc(" + centerPercent + "% + 5px)";
+            tickLabel.style.top = "4px";
+            tickLabel.style.bottom = "-18px";
+            tickLabel.style.fontSize = "11px";
+            tickLabel.style.color = "red";
+            timeline.appendChild(tickLabel);
+
+            // Eje de años global
+            const axis = document.createElement("div");
+            axis.style.position = "absolute";
+            axis.style.bottom = "0";
+            axis.style.left = "0";
+            axis.style.width = "100%";
+            axis.style.borderTop = "2px solid #333";
+
+            const step = Math.ceil(range / 6);
+            for (let y = minYearGlobal; y <= maxYearGlobal; y += step) {
+                const tick = document.createElement("div");
+                tick.style.position = "absolute";
+                tick.style.left = ((y - minYearGlobal) / range) * 100 - 0.5 + "%";
+                tick.style.height = "6px";
+                tick.style.width = "1px";
+                tick.style.background = "#333";
+                tick.style.bottom = "0";
+                axis.appendChild(tick);
+
+                const tickLabel = document.createElement("span");
+                tickLabel.textContent = y;
+                tickLabel.style.position = "absolute";
+                tickLabel.style.left = ((y - minYearGlobal) / range) * 100 + "%";
+                tickLabel.style.bottom = "-18px";
+                tickLabel.style.fontSize = "11px";
+                tickLabel.style.transform = "translateX(-50%)";
+                axis.appendChild(tickLabel);
+            }
+
+            timeline.appendChild(axis);
+            content.appendChild(timeline);
+        }
+
+        content.appendChild(numbers);
+        content.appendChild(images);
         content.appendChild(div_text);
+
+        //
 
         slideshow.appendChild(content);
     }
@@ -590,5 +720,6 @@ function fillMUS(json, container) {
 
     img_show.appendChild(buttons);
     img_show.appendChild(slideshow);
+
     body.appendChild(img_show);
 }

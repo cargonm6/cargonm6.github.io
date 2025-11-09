@@ -1011,7 +1011,7 @@ button.gallery_btn:active {
     margin: auto;
     display: block;
     width: 60%;
-    max-width: 700px;
+    max-width: 550px;
 }
 
 /* Caption of Modal Image */
@@ -1023,7 +1023,8 @@ button.gallery_btn:active {
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    height: 100px;
+    font-weight: bold;
 }
 
 /* Add Animation */

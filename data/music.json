@@ -62,26 +62,6 @@
             "description": "Fliscorno en Do fabricado por Josef Lídl (1864-1946) en Brno. Tras formarse en otros talleres Lídl se independizaría en 1892 como reparador de instrumentos, y en 1895 fundaría la primera fábrica de instrumentos musicales de Moravia (construyendo primero instrumentos de cuerda y viento madera, y desde 1899 también instrumentos de viento metal, formándose con su empleado Franz Kropáček). En la campana del fliscorno, aparece grabado en caligrafía sobre la guirnalda: <i class=\"script\">C. ak. dvorní [dodavatel] továrna hudebních nastroju Josef Lidl, Brno</i><i class=\"descript\">(checo) Fábrica de instrumentos musicales Josef Lidl, Brno, proveedor de la corte imperial y real</i>"
         },
         {
-            "name": "Onnoven Stowasser",
-            "image": "../../img/music/instruments/stowasser_althorn.png",
-            "trademark": [
-                {
-                    "name": "Walter Stowasser",
-                    "image": "../../img/music/trademarks/stowasser.svg"
-                }
-            ],
-            "type": "Onnoven (trompa alto)",
-            "company": "Walter Stowasser",
-            "const_year": "1889-1930",
-            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Verona\" target=\"_blank\">Verona (Reino de Italia)</a>",
-            "model": "",
-            "serialno": "24",
-            "tunning": "Mi♭ (estándar)",
-            "system": "3 cilindros (SARV)",
-            "hlink": "",
-            "description": "Onnoven fabricado por la familia de origen checo Stowasser en su sede italiana. Debido a que la empresa situó su sede en Verona a finales del S. XIX, y que ésta se trasladó en 1930, es posible determinar en ese rango la posible fecha de construcción. En la campana, acuñado con prensa, presenta el <a href=\"https://www.cambiaste.com/it/asta-0607/sigillo-con-stemma-della-famiglia-stowasser-235719\" target=\"_blank\">escudo nobiliario de la familia Stowasser</a> y el texto: <i class=\"script\">Walter Stowasser / Fabbricazione artistica di strumenti musicale / Piazzetta Chiavica / Verona</i><i class=\"descript\">(italiano) Walter Stowasser / Fabricación artística de instrumentos musicales / Plazoleta Chiavica / Verona</i>"
-        },
-        {
             "name": "Trompeta Riedl",
             "image": "../../img/music/instruments/riedl_trumpet.png",
             "trademark": [
@@ -100,6 +80,26 @@
             "system": "3 cilindros (SARV)",
             "hlink": "",
             "description": "Trompeta  de tres válvulas rotativas con muelles de reloj y mecanismo de ajuste manual (rueda dentada). Probablemente fabricada por Konstantin Josef Riedl (1867-1950) en su establecimiento de Nürnberg (ca. 1912). Acompañada de dos bombas Si♭-La, y boquillas marcadas por Riedl con tudel de ancho especial."
+        },
+        {
+            "name": "Onnoven Stowasser",
+            "image": "../../img/music/instruments/stowasser_althorn.png",
+            "trademark": [
+                {
+                    "name": "Walter Stowasser",
+                    "image": "../../img/music/trademarks/stowasser.svg"
+                }
+            ],
+            "type": "Onnoven (trompa alto)",
+            "company": "Walter Stowasser",
+            "const_year": "1889-1930",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Verona\" target=\"_blank\">Verona (Reino de Italia)</a>",
+            "model": "",
+            "serialno": "24",
+            "tunning": "Mi♭ (estándar)",
+            "system": "3 cilindros (SARV)",
+            "hlink": "",
+            "description": "Onnoven fabricado por la familia de origen checo Stowasser en su sede italiana. Debido a que la empresa situó su sede en Verona a finales del S. XIX, y que ésta se trasladó en 1930, es posible determinar en ese rango la posible fecha de construcción. En la campana, acuñado con prensa, presenta el <a href=\"https://www.cambiaste.com/it/asta-0607/sigillo-con-stemma-della-famiglia-stowasser-235719\" target=\"_blank\">escudo nobiliario de la familia Stowasser</a> y el texto: <i class=\"script\">Walter Stowasser / Fabbricazione artistica di strumenti musicale / Piazzetta Chiavica / Verona</i><i class=\"descript\">(italiano) Walter Stowasser / Fabricación artística de instrumentos musicales / Plazoleta Chiavica / Verona</i>"
         },
         {
             "name": "Trompeta Rampone & Cazzani",
@@ -140,6 +140,46 @@
             "system": "3 cilindros (SARV)",
             "hlink": "",
             "description": "Trompa de configuración simple. Probablemente construída durante la dirección de Aloise Rottová y J. Pokorný, debido a la inscripción que señala su origen en el actual distrito municipal de la Gran Praga (Praga XII entre 1923-1949, anteriormente Královská Vinohrady). Tonillo original desaparecido, repuesto fabricado artesanalmente por Francisco Buendía Mudarra (Gea de Albarracín). Firma mecanizada en la campana, indicando: <i class=\"script\">A E Rott hijo / Praha XII Bohemia</i>"
+        },
+        {
+            "name": "Cornetín Bessons & Co.",
+            "image": "../../img/music/instruments/bessons-and-co_pkt_cornet.png",
+            "trademark": [
+                {
+                    "name": "Bessons & Co.",
+                    "image": "../../img/music/trademarks/bessons-and-co.svg"
+                }
+            ],
+            "type": "Corneta de bolsillo",
+            "company": "Bessons & Co.",
+            "const_year": "~ 1950",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Nueva_Delhi\" target=\"_blank\">Nueva Delhi (India)</a>",
+            "model": "",
+            "serialno": "75983 (falsificado)",
+            "tunning": "Si♭ (estándar)",
+            "system": "3 pistones Périnet (bottom-sprung)",
+            "hlink": "",
+            "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Firma mecanizada en la campana, indicando: <i class=\"script\">Trademark Boosey / Bessons & Co. / London.W.C.2 / H.75983</i>"
+        },
+        {
+            "name": "Corneta Bessons & Co.",
+            "image": "../../img/music/instruments/bessons-and-co_cornet.png",
+            "trademark": [
+                {
+                    "name": "Bessons & Co.",
+                    "image": "../../img/music/trademarks/bessons-and-co.svg"
+                }
+            ],
+            "type": "Corneta",
+            "company": "Bessons & Co.",
+            "const_year": "~ 1950",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Nueva_Delhi\" target=\"_blank\">Nueva Delhi (India)</a>",
+            "model": "",
+            "serialno": "",
+            "tunning": "Si♭ (estándar)",
+            "system": "3 pistones Périnet (top-sprung)",
+            "hlink": "",
+            "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Sin ninguna marca ni señal en el cuerpo del instrumento (identificable por la factura de la mecanización y el tipo de piezas empleado)."
         },
         {
             "name": "Saxofón tenor Nilliet",
@@ -262,46 +302,6 @@
             "description": "Instrumento de curioso diseño, con válvulas rotativas accionadas verticalmente, producido en Kiev en 1984 por la empresa Орфей (Orfeo) bajo el auspicio del <a href=\"https://uk.wikipedia.org/wiki/%D0%9C%D1%96%D0%BD%D1%96%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%BE_%D0%BC%D1%96%D1%81%D1%86%D0%B5%D0%B2%D0%BE%D1%97_%D0%BF%D1%80%D0%BE%D0%BC%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D1%96_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D1%97_%D0%A0%D0%A1%D0%A0\">Ministerio de Industria Local de la RSS de Ucrania</a>. Tras el desastre de Chernóbil de 1986, la fábrica se trasladaría a la nueva ciudad de Slavútich, dando trabajo a muchos de los desplazados. En la campana, una firma mecanizada indica: <i class=\"script\">N 3049 1984г / Ц 80р</i>"
         },
         {
-            "name": "Cornetín Bessons & Co.",
-            "image": "../../img/music/instruments/bessons-and-co_pkt_cornet.png",
-            "trademark": [
-                {
-                    "name": "Bessons & Co.",
-                    "image": "../../img/music/trademarks/bessons-and-co.svg"
-                }
-            ],
-            "type": "Corneta de bolsillo",
-            "company": "Bessons & Co.",
-            "const_year": "~ 1950",
-            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Nueva_Delhi\" target=\"_blank\">Nueva Delhi (India)</a>",
-            "model": "",
-            "serialno": "75983 (falsificado)",
-            "tunning": "Si♭ (estándar)",
-            "system": "3 pistones Périnet (bottom-sprung)",
-            "hlink": "",
-            "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Firma mecanizada en la campana, indicando: <i class=\"script\">Trademark Boosey / Bessons & Co. / London.W.C.2 / H.75983</i>"
-        },
-        {
-            "name": "Corneta Bessons & Co.",
-            "image": "../../img/music/instruments/bessons-and-co_cornet.png",
-            "trademark": [
-                {
-                    "name": "Bessons & Co.",
-                    "image": "../../img/music/trademarks/bessons-and-co.svg"
-                }
-            ],
-            "type": "Corneta",
-            "company": "Bessons & Co.",
-            "const_year": "~ 1950",
-            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Nueva_Delhi\" target=\"_blank\">Nueva Delhi (India)</a>",
-            "model": "",
-            "serialno": "",
-            "tunning": "Si♭ (estándar)",
-            "system": "3 pistones Périnet (top-sprung)",
-            "hlink": "",
-            "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Sin ninguna marca ni señal en el cuerpo del instrumento (identificable por la factura de la mecanización y el tipo de piezas empleado)."
-        },
-        {
             "name": "Trombón Amati",
             "image": "../../img/music/instruments/amati_trombone.png",
             "trademark": [
@@ -342,6 +342,26 @@
             "description": "Trompeta en Si♭ construída en la factoría de Elkhart. Grabado sobre la campana: <i class=\"script\">Bach / ® / USA</i>"
         },
         {
+            "name": "Caja Jinbao",
+            "image": "../../img/music/instruments/sdrum_jinbao.png",
+            "trademark": [
+                {
+                    "name": "Tianjin Jinbao Musical Instruments Co.",
+                    "image": "../../img/music/trademarks/jinbao.svg"
+                }
+            ],
+            "type": "Caja piccolo",
+            "company": "Tianjin Jinbao Musical Instruments Co.",
+            "const_year": "~ 2000",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Tianjin\" target=\"_blank\">Tianjin (R. P. China)</a>",
+            "model": "JBS 1055",
+            "serialno": "",
+            "tunning": "",
+            "system": "",
+            "hlink": "",
+            "description": "Caja piccolo de acero fabricada por Jinbao en la década de los 2000. Inicialmente constituída como fábrica de herramientas agrícolas de Chengguan, en 1983 Jinbao comienza a cooperar con diversos fabricantes de instrumentos musicales, hasta saltar al mercado internacional en 1997 bajo su denominación actual."
+        },
+        {
             "name": "Fliscorno Yamaha",
             "image": "../../img/music/instruments/yamaha_flugelhorn.png",
             "trademark": [
@@ -360,6 +380,26 @@
             "system": "3 pistones Périnet (bottom-sprung), gatillo en 3.ª bomba",
             "hlink": "<a href=\"https://web.archive.org/web/19990913005034/http://www.yamaha.com/cgi-win/webcgi.exe/DsplyModel/?gTCF00009YFH-631\" target=\"_blank\">Yamaha (1999) YHF-631 (Archivado)</a>",
             "description": "Fliscorno profesional en Si♭, con campana dorada y <i>trigger</i> en la tercera bomba (YAC YFTR). Grabado sobre la campana: <i class=\"script\">Yamaha</i>"
+        },
+        {
+            "name": "Platos Alchemy",
+            "image": "../../img/music/instruments/alchemy_cymbals.png",
+            "trademark": [
+                {
+                    "name": "Alchemy",
+                    "image": "../../img/music/trademarks/alchemy.svg"
+                }
+            ],
+            "type": "Platos de hi-hat",
+            "company": "Istanbul Agop Cymbals",
+            "const_year": "2006",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Estambul\" target=\"_blank\">Estanbul (Turquía)</a>",
+            "model": "Alchemy MS-X 14\" HI-HAT",
+            "serialno": "",
+            "tunning": "",
+            "system": "",
+            "hlink": "<a href=\"https://web.archive.org/web/20060521180646/http://www.alchemycymbals.com/msx_cymbals_products.php\" target=\"_blank\">Alchemy (archivado)</a>",
+            "description": "Platos de hi-hat para batería, acondicionados como <i>clash cymbals</i>."
         },
         {
             "name": "Trompeta Fides",
@@ -382,26 +422,6 @@
             "description": "Trompeta en Do fabricada en la sede de Dettingen de Fides. La empresa está codirigida por Francisco Javier Montesinos Fides y Matthias Beck, teniendo sedes en España y Alemania. Inscrito sobre la campana: <i class=\"script\">Fides</i>"
         },
         {
-            "name": "Caja Jinbao",
-            "image": "../../img/music/instruments/sdrum_jinbao.png",
-            "trademark": [
-                {
-                    "name": "Tianjin Jinbao Musical Instruments Co.",
-                    "image": "../../img/music/trademarks/jinbao.svg"
-                }
-            ],
-            "type": "Caja piccolo",
-            "company": "Tianjin Jinbao Musical Instruments Co.",
-            "const_year": "~ 2000",
-            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Tianjin\" target=\"_blank\">Tianjin (R. P. China)</a>",
-            "model": "JBS 1055",
-            "serialno": "",
-            "tunning": "",
-            "system": "",
-            "hlink": "",
-            "description": "Caja piccolo de acero fabricada por Jinbao en la década de los 2000. Inicialmente constituída como fábrica de herramientas agrícolas de Chengguan, en 1983 Jinbao comienza a cooperar con diversos fabricantes de instrumentos musicales, hasta saltar al mercado internacional en 1997 bajo su denominación actual."
-        },
-        {
             "name": "Bombo NP",
             "image": "../../img/music/instruments/bdrum_np.png",
             "trademark": [
@@ -420,26 +440,6 @@
             "system": "",
             "hlink": "",
             "description": "Bombo diseñado específicamente para desfilar, con un cuerpo ligero (3,7 kg) y un sonido potente. Casco de madera de arce forrada con PVC, y aros de madera contrachapada de arce. 8 varillas tensoras cromadas con palomillas."
-        },
-        {
-            "name": "Platos Alchemy",
-            "image": "../../img/music/instruments/alchemy_cymbals.png",
-            "trademark": [
-                {
-                    "name": "Alchemy",
-                    "image": "../../img/music/trademarks/alchemy.svg"
-                }
-            ],
-            "type": "Platos de hi-hat",
-            "company": "Istanbul Agop Cymbals",
-            "const_year": "2006",
-            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Estambul\" target=\"_blank\">Estanbul (Turquía)</a>",
-            "model": "Alchemy MS-X 14\" HI-HAT",
-            "serialno": "",
-            "tunning": "",
-            "system": "",
-            "hlink": "<a href=\"https://web.archive.org/web/20060521180646/http://www.alchemycymbals.com/msx_cymbals_products.php\" target=\"_blank\">Alchemy (archivado)</a>",
-            "description": "Platos de hi-hat para batería, acondicionados como <i>clash cymbals</i>."
         }
     ]
 }
