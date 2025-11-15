@@ -204,13 +204,6 @@
             "title": "Asociaciones y grupos",
             "entry": [
                 {
-                    "logo": "img/logos/kandinska.png",
-                    "date": "2022",
-                    "title": "<a href=\"https://sites.google.com/view/kandinska/\" target=\"_blank\">Kandinska (grupo de música)</a>",
-                    "centre": "Alboraia (C. Valenciana, España)",
-                    "description": ""
-                },
-                {
                     "logo": "img/logos/ofmisv.png",
                     "date": "2013",
                     "title": "<a href=\"https://cursosmusicammm.com/es/ofmisv/\" target=\"_blank\">Orquesta Filarmónica Martín y Soler de Valencia</a>",
@@ -218,15 +211,15 @@
                     "description": ""
                 },
                 {
-                    "logo": "img/logos/gea.png",
-                    "date": "2012",
-                    "title": "<a href=\"https://bandageaalbarracin.wordpress.com/\" target=\"_blank\">Banda de Música de Gea de Albarracín</a>",
-                    "centre": "Gea de Albarracín (Aragón, España)",
+                    "logo": "img/logos/micalet.png",
+                    "date": "2010",
+                    "title": "<a href=\"http://elmicalet.cat/\" target=\"_blank\">Jove Orquestra Salvador Giner</a>",
+                    "centre": "Valencia (C. Valenciana, España)",
                     "description": ""
                 },
                 {
                     "logo": "img/logos/agrupacion.png",
-                    "date": "2010",
+                    "date": "2008",
                     "title": "<a href=\"https://sites.google.com/view/musicalsanluis/\" target=\"_blank\">Agrupación Musical Carrera Fuente de San Luis</a>",
                     "centre": "Valencia (C. Valenciana, España)",
                     "description": ""

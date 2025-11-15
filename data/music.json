@@ -110,7 +110,7 @@
                     "image": "../../img/music/trademarks/rampone.svg"
                 }
             ],
-            "type": "Trompeta contralto",
+            "type": "Fliscorno contralto",
             "company": "Rampone & Cazzani",
             "const_year": "1910-1957",
             "const_place": "<a href=\"https://es.wikipedia.org/wiki/Milán\" target=\"_blank\">Milán (Reino de Italia)</a>",
@@ -119,7 +119,7 @@
             "tunning": "Mi-Mi♭ (estándar)",
             "system": "3 cilindros (SARV)",
             "hlink": "",
-            "description": "Trompeta contralto construida por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una pieza intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i><i class=\"descript\">(italiano) Sociedades Reunidas / A. Rampone & B. Cazzani & C.º / Establecimiento premiado / B. Cazzani e C.º / Milán / Exportación Mundial</i>"
+            "description": "Fliscorno contralto (en italia, llamado popularmente <i>Genis</i>) construido por la sociedad reunida de Agostino Rampone y Giovan Battista Cazzani. La bomba general presenta una sección intercambiable, que permite variar la afinación de Mi a Mi♭. En la campana presenta diferentes marcas y sellos, que indican: <i class=\"script\">Ditte Riunite / A. Rampone & B. Cazzani & C.º / Premiato stabile / B. Cazzani e C.º / Milano / Esportazione Mondiale</i><i class=\"descript\">(italiano) Sociedades Reunidas / A. Rampone & B. Cazzani & C.º / Establecimiento premiado / B. Cazzani e C.º / Milán / Exportación Mundial</i>"
         },
         {
             "name": "Trompa Rott",
@@ -143,15 +143,15 @@
         },
         {
             "name": "Cornetín Bessons & Co.",
-            "image": "../../img/music/instruments/bessons-and-co_pkt_cornet.png",
+            "image": "../../img/music/instruments/nadir_pkt_cornet.png",
             "trademark": [
                 {
                     "name": "Bessons & Co.",
-                    "image": "../../img/music/trademarks/bessons-and-co.svg"
+                    "image": "../../img/music/trademarks/nadir.png"
                 }
             ],
             "type": "Corneta de bolsillo",
-            "company": "Bessons & Co.",
+            "company": "Bessons & Co. (Nadir Ali & Co.)",
             "const_year": "~ 1950",
             "const_place": "<a href=\"https://es.wikipedia.org/wiki/Nueva_Delhi\" target=\"_blank\">Nueva Delhi (India)</a>",
             "model": "",
@@ -159,19 +159,19 @@
             "tunning": "Si♭ (estándar)",
             "system": "3 pistones Périnet (bottom-sprung)",
             "hlink": "",
-            "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Firma mecanizada en la campana, indicando: <i class=\"script\">Trademark Boosey / Bessons & Co. / London.W.C.2 / H.75983</i>"
+            "description": "Instrumento probablemente fabricado por la empresa india Nadir Ali & Co., y distribuido por Bessons & Co. (extinta) como falsificación de las marcas históricas F. Besson (París) y Boosey & Co. (Londres). Presenta una firma mecanizada en la campana, indicando: <i class=\"script\">Trademark Boosey / Bessons & Co. / London.W.C.2 / H.75983</i>"
         },
         {
             "name": "Corneta Bessons & Co.",
-            "image": "../../img/music/instruments/bessons-and-co_cornet.png",
+            "image": "../../img/music/instruments/nadir_cornet.png",
             "trademark": [
                 {
                     "name": "Bessons & Co.",
-                    "image": "../../img/music/trademarks/bessons-and-co.svg"
+                    "image": "../../img/music/trademarks/nadir.png"
                 }
             ],
             "type": "Corneta",
-            "company": "Bessons & Co.",
+            "company": "Nadir Ali & Co.",
             "const_year": "~ 1950",
             "const_place": "<a href=\"https://es.wikipedia.org/wiki/Nueva_Delhi\" target=\"_blank\">Nueva Delhi (India)</a>",
             "model": "",
@@ -179,7 +179,7 @@
             "tunning": "Si♭ (estándar)",
             "system": "3 pistones Périnet (top-sprung)",
             "hlink": "",
-            "description": "Falsificación de las marcas F. Besson (París) y Boosey & Co. (Londres). Sin ninguna marca ni señal en el cuerpo del instrumento (identificable por la factura de la mecanización y el tipo de piezas empleado)."
+            "description": "Instrumento probablemente fabricado por la empresa india Nadir Ali & Co. Sin ninguna marca ni señal en el cuerpo, pero identificable por la factura de la mecanización y el material empleado."
         },
         {
             "name": "Saxofón tenor Nilliet",
