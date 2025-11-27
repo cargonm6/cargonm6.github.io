@@ -489,6 +489,38 @@ function fillMUS(json, container) {
     var slideshow = document.createElement("div");
     slideshow.classList.add("slideshow-container");
 
+    var contents = [];
+
+    // === TIMELINE GLOBAL ===
+    const timelineGlobal = document.createElement("div");
+    timelineGlobal.classList.add("timeline-global");
+    timelineGlobal.style.position = "relative";
+    timelineGlobal.style.margin = "20px 50px";
+    timelineGlobal.style.height = "80px";
+    timelineGlobal.style.borderTop = "2px solid #333";
+
+    // Escala de años
+    const step = Math.ceil((maxYearGlobal - minYearGlobal) / 10);
+    for (let y = minYearGlobal; y <= maxYearGlobal; y += step) {
+        const tick = document.createElement("div");
+        tick.style.position = "absolute";
+        tick.style.left = ((y - minYearGlobal) / (maxYearGlobal - minYearGlobal)) * 100 + "%";
+        tick.style.height = "8px";
+        tick.style.width = "2px";
+        tick.style.background = "#333";
+        tick.style.top = "-8px";
+        timelineGlobal.appendChild(tick);
+
+        const label = document.createElement("span");
+        label.textContent = y;
+        label.style.position = "absolute";
+        label.style.left = ((y - minYearGlobal) / (maxYearGlobal - minYearGlobal)) * 100 + "%";
+        label.style.top = "10px";
+        label.style.transform = "translateX(-50%)";
+        label.style.fontSize = "12px";
+        timelineGlobal.appendChild(label);
+    }
+
     for (var i = 0; i < json.instruments.length; i++) {
         // Botones de desplazamiento
         var button = document.createElement("span");
@@ -608,91 +640,62 @@ function fillMUS(json, container) {
         div_text.appendChild(ul_text);
         div_text.appendChild(subdiv);
 
-        // === TIMELINE ===
+        // === TIMELINE INDIVIDUAL ===
         const parsed = parseYearRange(json.instruments[i].const_year);
+
         if (parsed && minYearGlobal !== Infinity) {
-            const range = maxYearGlobal - minYearGlobal;
+            const totalRange = maxYearGlobal - minYearGlobal;
 
-            const timeline = document.createElement("div");
-            timeline.classList.add("timeline");
-            timeline.id = "timeline_" + (i + 1);
-            timeline.style.position = "relative";
-            timeline.style.margin = "20px 50px";
-            timeline.style.height = "60px";
+            // Contenedor de cada marca
+            const mark = document.createElement("div");
+            mark.classList.add("timeline-mark");
+            mark.id = "timeline_mark_" + i;
+            mark.style.position = "absolute";
+            mark.style.top = "-25px";
+            mark.style.height = "40px";
+            mark.style.display = "none";
+            mark.style.width = "100%";
+            if (i == 0) {
+                mark.style.display = "block";
+            }
 
-            const isSingleYear = parsed.min === parsed.max;
-
-            if (!isSingleYear) {
-                // Barra azul para rangos
+            // Si es un rango, barra azul
+            if (parsed.min !== parsed.max) {
                 const bar = document.createElement("div");
-                const left = ((parsed.min - minYearGlobal) / range) * 100 -0.5;
-                const width = ((parsed.max - parsed.min) / range) * 100;
                 bar.style.position = "absolute";
-                bar.style.left = left + "%";
-                bar.style.width = width + "%";
-                bar.style.top = "20px";
-                bar.style.height = "14px";
-                bar.style.background = "#4b8bff";
-                bar.style.borderRadius = "3px";
-                timeline.appendChild(bar);
+                bar.style.left = ((parsed.min - minYearGlobal) / totalRange) * 100 + "%";
+                bar.style.width = ((parsed.max - parsed.min) / totalRange) * 100 + "%";
+                bar.style.height = "11px";
+                bar.style.top = "15px";
+                bar.style.background = "#4b8bff88";
+                bar.style.borderRadius = "2px";
+                mark.appendChild(bar);
             }
 
-            // Línea roja
-            const centerPercent = (((parsed.min + parsed.max) / 2 - minYearGlobal) / range) * 100;
-            const centerLine = document.createElement("div");
-            centerLine.style.position = "absolute";
-            centerLine.style.left = centerPercent -0.5 + "%";
-            centerLine.style.top = "13px";
-            centerLine.style.height = "30px"; // todo el timeline
-            centerLine.style.width = "2px";
-            centerLine.style.background = "red";
-            timeline.appendChild(centerLine);
+            // Línea roja del centro
+            const midYear = (parsed.min + parsed.max) / 2;
+            const mid = ((midYear - minYearGlobal) / totalRange) * 100;
 
-            const tickLabel = document.createElement("span");
-            if (!isSingleYear) {
-                tickLabel.textContent = "ca. " + parseInt((parsed.min + parsed.max) / 2);
-            } else {
-                tickLabel.textContent = parseInt((parsed.min + parsed.max) / 2);
-            }
-            tickLabel.style.position = "absolute";
-            tickLabel.style.left = "calc(" + centerPercent + "% + 5px)";
-            tickLabel.style.top = "4px";
-            tickLabel.style.bottom = "-18px";
-            tickLabel.style.fontSize = "11px";
-            tickLabel.style.color = "red";
-            timeline.appendChild(tickLabel);
+            const redLine = document.createElement("div");
+            redLine.style.position = "absolute";
+            redLine.style.left = mid + "%";
+            redLine.style.width = "2px";
+            redLine.style.height = "40px";
+            redLine.style.background = "red";
+            mark.appendChild(redLine);
 
-            // Eje de años global
-            const axis = document.createElement("div");
-            axis.style.position = "absolute";
-            axis.style.bottom = "0";
-            axis.style.left = "0";
-            axis.style.width = "100%";
-            axis.style.borderTop = "2px solid #333";
+            // Etiqueta
+            const label = document.createElement("div");
+            label.textContent = parsed.min === parsed.max ? parsed.min : "ca. " + Math.round(midYear);
+            label.style.position = "absolute";
+            label.style.left = `calc(${mid}% + 10px)`;
+            label.style.top = "-5px";
+            label.style.fontSize = "11px";
+            label.style.color = "red";
+            mark.appendChild(label);
 
-            const step = Math.ceil(range / 6);
-            for (let y = minYearGlobal; y <= maxYearGlobal; y += step) {
-                const tick = document.createElement("div");
-                tick.style.position = "absolute";
-                tick.style.left = ((y - minYearGlobal) / range) * 100 - 0.5 + "%";
-                tick.style.height = "6px";
-                tick.style.width = "1px";
-                tick.style.background = "#333";
-                tick.style.bottom = "0";
-                axis.appendChild(tick);
-
-                const tickLabel = document.createElement("span");
-                tickLabel.textContent = y;
-                tickLabel.style.position = "absolute";
-                tickLabel.style.left = ((y - minYearGlobal) / range) * 100 + "%";
-                tickLabel.style.bottom = "-18px";
-                tickLabel.style.fontSize = "11px";
-                tickLabel.style.transform = "translateX(-50%)";
-                axis.appendChild(tickLabel);
-            }
-
-            timeline.appendChild(axis);
-            content.appendChild(timeline);
+            // Añadir al timeline global
+            timelineGlobal.appendChild(mark);
         }
 
         content.appendChild(numbers);
@@ -701,8 +704,12 @@ function fillMUS(json, container) {
 
         //
 
-        slideshow.appendChild(content);
+        contents.push(content);
     }
+
+    slideshow.appendChild(timelineGlobal);
+
+    contents.forEach((content) => slideshow.appendChild(content));
 
     // Flechas de desplazamiento
 
@@ -722,4 +729,7 @@ function fillMUS(json, container) {
     img_show.appendChild(slideshow);
 
     body.appendChild(img_show);
+
+    slideIndex = 1;
+    showSlides(slideIndex);
 }

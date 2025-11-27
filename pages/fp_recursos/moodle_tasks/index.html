@@ -11,6 +11,7 @@
                         <option value="example">Ejemplo</option>
                         <option value="par_25">Planificación y Administración de Redes</option>
                         <option value="inp_25" selected>Introducción a la Nube Pública</option>
+                        <option value="eso4_25">4.º ESO</option>
                     </select>
                 </td>
                 <td><button id="copiarBtn">COPIAR</button></td>
@@ -34,6 +35,10 @@
             var alumnos = null;
             var unidades = null;
             var tareas = null;
+
+            var categoria_ex = ["Exámenes", "Pruebas"];
+            var categoria_tr = ["Trabajos", ""];
+            var categoria_co = ["Complementos", "Participación"];
 
             async function read_json(file) {
                 try {
@@ -73,7 +78,12 @@
 
                         const filas = items
                             .map((item) => {
-                                const estado = compararFechas(obtenerFechaActual(), item.f_entrega) <= 0 ? "En plazo" : compararFechas(obtenerFechaActual(), item.f_limite) <= 0 ? "Fuera de plazo" : "Cerrada";
+                                let estado = null;
+                                if (item.corregido === "Corregido") {
+                                    estado = "Cerrada";
+                                } else {
+                                    estado = compararFechas(obtenerFechaActual(), item.f_entrega) <= 0 ? "En plazo" : compararFechas(obtenerFechaActual(), item.f_limite) <= 0 ? "Fuera de plazo" : "Cerrada";
+                                }
 
                                 return `
                         <tr style="border-bottom: 1px dashed #006444ff; text-align: center; background-color: ${item.corregido !== "Corregido" ? "#bbded6" : "initial"}">
@@ -84,7 +94,7 @@
                                     }&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px">
                                 </a>
                             </td>
-                            <td style="text-align: center; color: ${item.categoria === "Complementos" ? "green" : item.categoria === "Exámenes" ? "firebrick" : "dodgerblue"}">
+                            <td style="text-align: center; color: ${categoria_co.includes(item.categoria) ? "green" : categoria_ex.includes(item.categoria) ? "firebrick" : "dodgerblue"}">
                                 ${item.categoria}
                             </td>
                             <td style="text-align: left">
@@ -92,17 +102,17 @@
                                     ((100 * item.entregas) / (item.usuarios == "" ? alumnos : item.usuarios)).toFixed(1).toString() + " %"
                                 }"></progress> ${item.entregas}/${item.usuarios == "" ? alumnos : item.usuarios}
                             </td>
-                            <td style="cursor:help; text-align: center; color: ${item.categoria === "Exámenes" ? "inherit" : estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" 
+                            <td style="cursor:help; text-align: center; color: ${categoria_ex.includes(item.categoria) ? "inherit" : estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" 
                                 title="${
-                                    item.categoria === "Complementos" && item.titulo.startsWith("Visita")
+                                    categoria_co.includes(item.categoria) && item.titulo.startsWith("Visita")
                                         ? "La visita se celebrará el día indicado"
-                                        : item.categoria === "Exámenes"
+                                        : categoria_ex.includes(item.categoria)
                                         ? "El examen se celebrará el día indicado"
                                         : item.f_entrega === item.f_limite
                                         ? "Fecha límite: " + item.f_limite
                                         : "Fecha de entrega: " + item.f_entrega + "\nFecha límite: " + item.f_limite
                                 }">
-                                ${item.categoria === "Complementos" && item.titulo.startsWith("Visita") ? item.f_limite : item.categoria === "Exámenes" ? item.f_limite : estado}
+                                ${categoria_co.includes(item.categoria) && item.titulo.startsWith("Visita") ? item.f_limite : categoria_ex.includes(item.categoria) ? item.f_limite : estado}
                             </td>
                             <td style="text-align: center; color: ${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
                                 ${estado === "Cerrada" ? item.corregido : ""}
@@ -222,6 +232,10 @@
         </script>
 
         <script id="script_calendario">
+            var categoria_ex = ["Exámenes", "Pruebas"];
+            var categoria_tr = ["Trabajos", ""];
+            var categoria_co = ["Complementos", "Participación"];
+            
             function generarCalendario(events = [], month, year) {
                 let fechaMarcada = new Date();
                 fechaMarcada = `${String(fechaMarcada.getDate()).padStart(2, "0")}/${String(fechaMarcada.getMonth() + 1).padStart(2, "0")}/${fechaMarcada.getFullYear()}`;
@@ -251,7 +265,7 @@
                             if (dayEvents.length > 0) {
                                 cellContent += `<ul style="padding-left:2px; margin:2px 0 0 0; list-style:none; font-size:0.8em;">`;
                                 dayEvents.forEach((ev) => {
-                                    let background = `${ev.categoria === "Complementos" ? "green" : ev.categoria === "Exámenes" ? "firebrick" : "dodgerblue"}`;
+                                    let background = `${categoria_co.includes(ev.categoria) ? "green" : categoria_ex.includes(ev.categoria) ? "firebrick" : "dodgerblue"}`;
                                     cellContent += `<li style="background:${background}; color:white; margin-bottom:2px; border-radius:3px; padding:2px;">
                                 ${ev.numero ? ev.unidad + "." + ev.numero : ""} ${ev.titulo}</li>`;
                                 });

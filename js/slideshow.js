@@ -30,11 +30,27 @@ function updateModal() {
 // Next/previous controls
 function plusSlides(n) {
     showSlides((slideIndex += n));
+
+    // Ocultar todas las marcas
+    const marks = document.querySelectorAll(".timeline-mark");
+    marks.forEach(m => m.style.display = "none");
+
+    // Mostrar solo la del instrumento actual
+    const activeMark = document.getElementById("timeline_mark_" + (slideIndex - 1));
+    if (activeMark) activeMark.style.display = "block";
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
     showSlides((slideIndex = n));
+
+    // Ocultar todas las marcas
+    const marks = document.querySelectorAll(".timeline-mark");
+    marks.forEach(m => m.style.display = "none");
+
+    // Mostrar solo la del instrumento actual
+    const activeMark = document.getElementById("timeline_mark_" + (slideIndex - 1));
+    if (activeMark) activeMark.style.display = "block";
 }
 
 function showSlides(n) {
