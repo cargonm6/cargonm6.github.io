@@ -2,8 +2,15 @@
 <html lang="es">
     <head>
         <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/2097/2097055.png" />
+        <style>
+            body {
+                width: calc(100% - 80px);
+                margin-left: 40px;
+            }
+        </style>
     </head>
-    <body style="width: calc(100% - 80px); margin-left: 40px">
+    <body>
+        <!-- Controles superiores -->
         <table>
             <tr>
                 <td>
@@ -15,272 +22,311 @@
                     </select>
                 </td>
                 <td><button id="copiarBtn">COPIAR</button></td>
-                <td><button onclick="colapsarDetalles()">&gt; &lt; Colapsar todo</button></td>
-                <td><button onclick="colapsarDetalles(true)">&lt; &gt; Expandir todo</button></td>
+                <td><button onclick="toggleDetalles(false)">&gt; &lt; Colapsar todo</button></td>
+                <td><button onclick="toggleDetalles(true)">&lt; &gt; Expandir todo</button></td>
             </tr>
         </table>
+
+        <!-- Contenedor de tareas + calendario -->
         <div id="supercontainer">
             <table style="font-size: small; width: 100%">
                 <tr>
-                    <td style="vertical-align: top"><div id="container"></div></td>
-                    <td style="vertical-align: top"><div id="calendar-container" style="margin-top: 10px; margin-left: 10px; text-align: center"></div></td>
+                    <td style="vertical-align: top">
+                        <div id="container"></div>
+                    </td>
+                    <td style="vertical-align: top">
+                        <div id="calendar-container" style="margin-top: 10px; margin-left: 10px; text-align: center"></div>
+                    </td>
                 </tr>
             </table>
         </div>
 
-        <textarea id="codigo" style="font-family: 'Courier New', Courier, monospace; font-size: small; width: calc(100% - 40px); height: 120px"></textarea>
+        <textarea id="codigo"></textarea>
 
         <script>
-            tareas_calendario = [];
-            var alumnos = null;
-            var unidades = null;
-            var tareas = null;
+            /* ──────────────────────────────── VARIABLES GLOBALES ──────────────────────────────── */
 
-            var categoria_ex = ["Exámenes", "Pruebas"];
-            var categoria_tr = ["Trabajos", ""];
-            var categoria_co = ["Complementos", "Participación"];
+            let tareas_calendario = [];
+            let alumnos = null;
+            let unidades = null;
+            let tareas = null;
 
-            async function read_json(file) {
+            const categoria_ex = ["Exámenes", "Pruebas"];
+            const categoria_tr = ["Trabajos", ""];
+            const categoria_co = ["Complementos", "Participación"];
+
+            /* ──────────────────────────────── UTILIDADES ──────────────────────────────── */
+
+            const hoy = () => {
+                const f = new Date();
+                return `${String(f.getDate()).padStart(2, "0")}/${String(f.getMonth() + 1).padStart(2, "0")}/${f.getFullYear()}`;
+            };
+
+            const parseFecha = (f) => new Date(f.split("/").reverse().join("-"));
+            const cmpFecha = (a, b) => parseFecha(a) - parseFecha(b);
+
+            const fetchJSON = async (file) => {
                 try {
-                    const response = await fetch(file);
-                    if (!response.ok) throw new Error("Network response was not ok");
-                    return await response.json();
-                } catch (error) {
-                    console.error("Hubo un problema con la lectura del JSON:", error);
+                    const r = await fetch(file);
+                    if (!r.ok) throw new Error("Error en fetch");
+                    return await r.json();
+                } catch (e) {
+                    console.error("Error leyendo JSON:", e);
                     return null;
                 }
-            }
+            };
 
-            function colapsarDetalles(expandir = false) {
-                const detalles = document.querySelectorAll("details");
-                detalles.forEach((detalle) => {
-                    if (expandir) {
-                        detalle.open = true; // Colapsar el detalle
-                    } else {
-                        detalle.open = false;
-                    }
-                });
-            }
+            const toggleDetalles = (expandir) => document.querySelectorAll("details").forEach((d) => (d.open = expandir));
 
-            function obtenerFechaActual() {
-                const fechaActual = new Date();
-                return `${String(fechaActual.getDate()).padStart(2, "0")}/${String(fechaActual.getMonth() + 1).padStart(2, "0")}/${fechaActual.getFullYear()}`;
-            }
+            /* ──────────────────────────────── TABLA DE TAREAS ──────────────────────────────── */
 
-            function compararFechas(fecha1, fecha2) {
-                return new Date(fecha1.split("/").reverse().join("-")) - new Date(fecha2.split("/").reverse().join("-"));
+            function generarFila(item, unidad) {
+                const totalUsuarios = item.usuarios || alumnos;
+                const porcentaje = ((100 * item.entregas) / totalUsuarios).toFixed(1);
+
+                let estado;
+
+                if (item.titulo.startsWith("Visita") || categoria_ex.includes(item.categoria)) {
+                    estado = item.f_limite;
+                } else if (item.corregido === "Corregido") {
+                    estado = "Cerrada";
+                } else if (cmpFecha(hoy(), item.f_entrega) <= 0) {
+                    estado = "En plazo";
+                } else if (cmpFecha(hoy(), item.f_limite) <= 0) {
+                    estado = "Fuera de plazo";
+                } else {
+                    estado = "Cerrada";
+                }
+
+                const colorCategoria = categoria_co.includes(item.categoria) ? "green" : categoria_ex.includes(item.categoria) ? "firebrick" : "dodgerblue";
+
+                const colorEstado = categoria_ex.includes(item.categoria) ? "inherit" : estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit";
+
+                const tituloTarea = item.numero === "" ? item.titulo : `${unidad !== "x" ? item.unidad + "." : ""}${item.numero}. ${item.titulo}`;
+
+                const tooltip =
+                    categoria_co.includes(item.categoria) && item.titulo.startsWith("Visita")
+                        ? "La visita se celebrará el día indicado"
+                        : categoria_ex.includes(item.categoria)
+                        ? "El examen se celebrará el día indicado"
+                        : item.f_entrega === item.f_limite
+                        ? "Fecha límite: " + item.f_limite
+                        : `Fecha de entrega: ${item.f_entrega}\nFecha límite: ${item.f_limite}`;
+
+                return `
+                <tr style="border-bottom:1px dashed #006444; background:${item.corregido !== "Corregido" ? "#bbded6" : "initial"}; text-align:center;">
+                    <td style="text-align:left;">
+                        <a href="${item.url}">
+                            ${tituloTarea}
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px;">
+                        </a>
+                    </td>
+                    <td style="color:${colorCategoria};">${item.categoria}</td>
+                    <td style="text-align:left;">
+                        <progress value="${item.entregas}" max="${totalUsuarios}" title="${porcentaje}%"></progress>
+                        ${item.entregas}/${totalUsuarios}
+                    </td>
+                    <td style="color:${colorEstado}; cursor:help;" title="${tooltip}">${estado}</td>
+                    <td style="color:${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
+                        ${estado === "Cerrada" || item.corregido === "Corregido" ? item.corregido : ""}
+                    </td>
+                </tr>`;
             }
 
             function generarTabla(tareasPorUnidad) {
                 return Object.entries(tareasPorUnidad)
                     .map(([unidad, items]) => {
-                        const corregidos = items.every((item) => item.corregido === "Corregido");
+                        const corregidos = items.every((i) => i.corregido === "Corregido");
 
-                        const filas = items
-                            .map((item) => {
-                                let estado = null;
-                                if (item.corregido === "Corregido") {
-                                    estado = "Cerrada";
-                                } else {
-                                    estado = compararFechas(obtenerFechaActual(), item.f_entrega) <= 0 ? "En plazo" : compararFechas(obtenerFechaActual(), item.f_limite) <= 0 ? "Fuera de plazo" : "Cerrada";
-                                }
-
-                                return `
-                        <tr style="border-bottom: 1px dashed #006444ff; text-align: center; background-color: ${item.corregido !== "Corregido" ? "#bbded6" : "initial"}">
-                            <td style="text-align: left">
-                                <a href="${item.url}">
-                                    ${
-                                        item.numero === "" ? item.titulo : `${unidad != "x" ? item.unidad + "." : ""}${item.numero}.&nbsp;${item.titulo}`
-                                    }&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px">
-                                </a>
-                            </td>
-                            <td style="text-align: center; color: ${categoria_co.includes(item.categoria) ? "green" : categoria_ex.includes(item.categoria) ? "firebrick" : "dodgerblue"}">
-                                ${item.categoria}
-                            </td>
-                            <td style="text-align: left">
-                                <progress style="cursor:help" value="${item.entregas}" max="${item.usuarios == "" ? alumnos : item.usuarios}" title="${
-                                    ((100 * item.entregas) / (item.usuarios == "" ? alumnos : item.usuarios)).toFixed(1).toString() + " %"
-                                }"></progress> ${item.entregas}/${item.usuarios == "" ? alumnos : item.usuarios}
-                            </td>
-                            <td style="cursor:help; text-align: center; color: ${categoria_ex.includes(item.categoria) ? "inherit" : estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit"}" 
-                                title="${
-                                    categoria_co.includes(item.categoria) && item.titulo.startsWith("Visita")
-                                        ? "La visita se celebrará el día indicado"
-                                        : categoria_ex.includes(item.categoria)
-                                        ? "El examen se celebrará el día indicado"
-                                        : item.f_entrega === item.f_limite
-                                        ? "Fecha límite: " + item.f_limite
-                                        : "Fecha de entrega: " + item.f_entrega + "\nFecha límite: " + item.f_limite
-                                }">
-                                ${categoria_co.includes(item.categoria) && item.titulo.startsWith("Visita") ? item.f_limite : categoria_ex.includes(item.categoria) ? item.f_limite : estado}
-                            </td>
-                            <td style="text-align: center; color: ${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
-                                ${estado === "Cerrada" ? item.corregido : ""}
-                            </td>
-                        </tr>`;
-                            })
-                            .join("");
+                        const filas = items.map((item) => generarFila(item, unidad)).join("");
 
                         return `
                     <details ${corregidos ? "" : "open"}>
-                        <summary style="cursor: pointer"><b>${unidad != "x" ? "UP " + unidad + ". " : ""}${unidades[unidad]}</b><span style="color:#006444ff">${corregidos ? " (finalizado)" : ""}</span></summary><br/>
-                        <table style="width: 100%; border-collapse: collapse">
+                        <summary style="cursor:pointer;">
+                            <b>${unidad !== "x" ? "UP " + unidad + ". " : ""}${unidades[unidad]}</b>
+                            <span style="color:#006444;">${corregidos ? " (finalizado)" : ""}</span>
+                        </summary><br>
+
+                        <table style="width:100%; border-collapse:collapse">
                             <thead>
-                                <tr style="border-bottom: 2px solid #006444ff; text-align: center">
-                                    <th style="width: calc(100% * 0.3); color: #006444ff">Tarea</th>
-                                    <th style="width: calc(100% * 0.2); color: #006444ff">Categoría</th>
-                                    <th style="width: calc(100% * 0.2); color: #006444ff">Entregas</th>
-                                    <th style="width: calc(100% * 0.15); color: #006444ff">Estado</th>
-                                    <th style="width: calc(100% * 0.15); color: #006444ff">Valoración</th>
+                                <tr style="border-bottom:2px solid #006444; text-align:center;">
+                                    <th style="width:30%; color:#006444;">Tarea</th>
+                                    <th style="width:20%; color:#006444;">Categoría</th>
+                                    <th style="width:20%; color:#006444;">Entregas</th>
+                                    <th style="width:15%; color:#006444;">Estado</th>
+                                    <th style="width:15%; color:#006444;">Valoración</th>
                                 </tr>
                             </thead>
                             <tbody>${filas}</tbody>
                         </table>
-                    </details><br/>`;
+                    </details><br>`;
                     })
                     .join("");
             }
 
             function crearDetalles(tareas) {
-                const contenedor = document.getElementById("container");
-                contenedor.innerHTML = "";
+                const cont = document.getElementById("container");
+                cont.innerHTML = `
+                <p style="text-align:right; font-style:italic;">
+                    Última actualización: ${hoy()}
+                </p>`;
 
-                const p_fecha = document.createElement("p");
-                p_fecha.style.textAlign = "right";
-                p_fecha.style.fontStyle = "italic";
-                p_fecha.textContent = "Última actualización: " + obtenerFechaActual();
-                contenedor.appendChild(p_fecha);
-
-                const tareasPorUnidad = tareas.reduce((acc, item) => {
-                    if (!acc[item.unidad]) acc[item.unidad] = [];
-                    acc[item.unidad].push(item);
+                const tareasPorUnidad = tareas.reduce((acc, t) => {
+                    (acc[t.unidad] ||= []).push(t);
                     return acc;
                 }, {});
 
-                contenedor.innerHTML += generarTabla(tareasPorUnidad);
+                cont.innerHTML += generarTabla(tareasPorUnidad);
             }
 
-            document.getElementById("copiarBtn").addEventListener("click", function () {
-                // Obtener el contenido HTML que queremos copiar
+            /* ──────────────────────────────── COPIAR HTML ──────────────────────────────── */
+
+            document.getElementById("copiarBtn").addEventListener("click", () => {
                 const contenido = document.getElementById("supercontainer").innerHTML;
+                const scriptCalendario = document.getElementById("script_calendario")?.innerHTML || "";
+                const codigo = document.getElementById("codigo").value;
 
-                // Obtener el script calendario
-                const scriptElemento = document.getElementById("script_calendario");
-                const codigo = document.getElementById("codigo").innerHTML;
-                let scriptContenido = scriptElemento ? scriptElemento.innerHTML : "";
+                const texto = `${contenido}\n\n<script>\n${codigo}\n${scriptCalendario}\n<\/script>`;
 
-                // Combinar contenido + script
-                const todoContenido = contenido + "\n\n<script>\n" + codigo + "\n" + scriptContenido + "\n<\/script>";
-                console.log(todoContenido);
-
-                // Crear textarea temporal para copiar
-                const textarea = document.createElement("textarea");
-                textarea.value = todoContenido;
-                document.body.appendChild(textarea);
-                textarea.select();
+                const tmp = document.createElement("textarea");
+                tmp.value = texto;
+                document.body.appendChild(tmp);
+                tmp.select();
                 document.execCommand("copy");
-                document.body.removeChild(textarea);
+                tmp.remove();
 
                 alert("¡Contenido copiado al portapapeles!");
             });
 
-            document.getElementById("modulo").addEventListener("change", function () {
-                reload_window();
-            });
+            /* ──────────────────────────────── RECARGAR MÓDULO ──────────────────────────────── */
+
+            document.getElementById("modulo").addEventListener("change", reload_window);
 
             async function reload_window() {
                 const modulo = document.getElementById("modulo").value;
-                let json_file = "./moodle_tasks/" + modulo + ".json";
-                // let json_file = "./" + modulo + ".json";
+                const data = await fetchJSON(`./moodle_tasks/${modulo}.json`);
 
-                json_file = await read_json(json_file);
+                if (!data) return;
 
-                if (json_file) {
-                    alumnos = json_file["module"]["students"];
-                    unidades = json_file["module"]["chapters"];
-                    tareas = json_file["tasks"];
+                alumnos = data.module.students;
+                unidades = data.module.chapters;
+                tareas = data.tasks;
 
-                    crearDetalles(tareas);
+                crearDetalles(tareas);
 
-                    // ---
+                tareas_calendario = tareas.map((t) => ({
+                    unidad: t.unidad,
+                    numero: t.numero,
+                    titulo: t.titulo,
+                    categoria: t.categoria,
+                    f_entrega: t.f_entrega,
+                }));
 
-                    const tareasResumidas = tareas.map((item) => ({
-                        unidad: item.unidad,
-                        numero: item.numero,
-                        titulo: item.titulo,
-                        categoria: item.categoria,
-                        f_entrega: item.f_entrega,
-                    }));
+                document.getElementById("codigo").value =
+                    "tareas_calendario = " +
+                    JSON.stringify(tareas_calendario, null, 4)
+                        .replace(/\"([^(\")"]+)\":/g, "$1:")
+                        .replace(/\"/g, "'") +
+                    ";";
 
-                    tareas_calendario = tareasResumidas;
-
-                    document.getElementById("codigo").innerHTML =
-                        "tareas_calendario = " +
-                        JSON.stringify(tareasResumidas, null, 4)
-                            .replace(/\"([^(\")"]+)\":/g, "$1:") // quita comillas de las claves
-                            .replace(/\"/g, "'") +
-                        ";";
-                    generarCalendarioHTML(tareas_calendario);
-
-                    // ---
-                }
+                generarCalendarioHTML(tareas_calendario);
             }
 
-            window.onload = async function () {
-                reload_window();
-            };
+            window.onload = reload_window;
         </script>
 
+        <!-- ──────────────────────────────── CALENDARIO ──────────────────────────────── -->
+
         <script id="script_calendario">
-            var categoria_ex = ["Exámenes", "Pruebas"];
-            var categoria_tr = ["Trabajos", ""];
-            var categoria_co = ["Complementos", "Participación"];
-            
-            function generarCalendario(events = [], month, year) {
-                let fechaMarcada = new Date();
-                fechaMarcada = `${String(fechaMarcada.getDate()).padStart(2, "0")}/${String(fechaMarcada.getMonth() + 1).padStart(2, "0")}/${fechaMarcada.getFullYear()}`;
+            window.categoria_ex = window.categoria_ex || ["Exámenes", "Pruebas"];
+            window.categoria_tr = window.categoria_tr || ["Trabajos", ""];
+            window.categoria_co = window.categoria_co || ["Complementos", "Participación"];
+            window.festivos = [
+                "09/10/2025",
+                "10/10/2025",
+                "08/12/2025",
+                "23/12/2025",
+                "24/12/2025",
+                "25/12/2025",
+                "26/12/2025",
+                "27/12/2025",
+                "28/12/2025",
+                "29/12/2025",
+                "30/12/2025",
+                "31/12/2025",
+                "01/01/2026",
+                "02/01/2026",
+                "03/01/2026",
+                "04/01/2026",
+                "05/01/2026",
+                "06/01/2026",
+                "17/03/2026",
+                "18/03/2026",
+                "19/03/2026",
+                "02/04/2026",
+                "03/04/2026",
+                "04/04/2026",
+                "05/04/2026",
+                "06/04/2026",
+                "07/04/2026",
+                "08/04/2026",
+                "09/04/2026",
+                "10/04/2026",
+                "11/04/2026",
+                "12/04/2026",
+                "13/04/2026",
+                "01/05/2026",
+            ];
 
-                const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-                const daysOfWeek = ["L", "M", "X", "J", "V", "S", "D"];
+            function generarCalendario(events, month, year) {
+                const hoyStr = (() => {
+                    const d = new Date();
+                    return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+                })();
 
-                let html = `<b style="text-align:center">${monthNames[month]} ${year}</b>`;
-                html += `<table style="border-collapse:collapse; width:500px; margin:0 auto; text-align:center;">
-<tr>${daysOfWeek.map((d) => `<th style="padding:2px; border:1px solid #ccc; width:14.28%;">${d}</th>`).join("")}</tr>`;
+                const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                const dias = ["L", "M", "X", "J", "V", "S", "D"];
 
-                const firstDayJS = new Date(year, month, 1).getDay(); // domingo=0
-                const firstDay = (firstDayJS + 6) % 7; // lunes=0
-                const daysInMonth = new Date(year, month + 1, 0).getDate();
-                let day = 1;
+                let html = `<b>${meses[month]} ${year}</b>`;
+                html += `<table style="width:500px; margin:10px auto; text-align:center; border-collapse:collapse">`;
+                html += `<tr>${dias.map((d) => `<th style="border:1px solid #ccc;">${d}</th>`).join("")}</tr>`;
 
-                for (let row = 0; row < 6; row++) {
-                    let rowHtml = "<tr>";
-                    for (let col = 0; col < 7; col++) {
-                        if ((row === 0 && col < firstDay) || day > daysInMonth) {
-                            rowHtml += `<td style="padding:2px; border:1px solid #ccc; height:80px; vertical-align:top;"></td>`;
+                const primerDia = (new Date(year, month, 1).getDay() + 6) % 7;
+                const diasMes = new Date(year, month + 1, 0).getDate();
+
+                let dia = 1;
+                for (let r = 0; r < 6; r++) {
+                    html += "<tr>";
+                    for (let c = 0; c < 7; c++) {
+                        if ((r === 0 && c < primerDia) || dia > diasMes) {
+                            html += `<td style="border:1px solid #ccc; height:80px; width: calc(100% / 7)"></td>`;
                         } else {
-                            const dateStr = `${String(day).padStart(2, "0")}/${String(month + 1).padStart(2, "0")}/${year}`;
-                            let cellContent = `<div>${day}</div>`;
+                            const f = `${String(dia).padStart(2, "0")}/${String(month + 1).padStart(2, "0")}/${year}`;
+                            const eventos = events.filter((e) => e.f_entrega === f);
 
-                            const dayEvents = (events || []).filter((e) => e.f_entrega === dateStr);
-                            if (dayEvents.length > 0) {
-                                cellContent += `<ul style="padding-left:2px; margin:2px 0 0 0; list-style:none; font-size:0.8em;">`;
-                                dayEvents.forEach((ev) => {
-                                    let background = `${categoria_co.includes(ev.categoria) ? "green" : categoria_ex.includes(ev.categoria) ? "firebrick" : "dodgerblue"}`;
-                                    cellContent += `<li style="background:${background}; color:white; margin-bottom:2px; border-radius:3px; padding:2px;">
-                                ${ev.numero ? ev.unidad + "." + ev.numero : ""} ${ev.titulo}</li>`;
+                            let inner = `<div>${dia}</div>`;
+                            if (eventos.length) {
+                                inner += `<ul style="list-style:none; padding:0; margin:2px;">`;
+                                eventos.forEach((ev) => {
+                                    const col = categoria_co.includes(ev.categoria) ? "green" : categoria_ex.includes(ev.categoria) ? "firebrick" : "dodgerblue";
+
+                                    inner += `<li style="background:${col}; color:white; padding:2px; border-radius:3px; margin-bottom:2px;">
+                                    ${ev.numero ? ev.unidad + "." + ev.numero : ""} ${ev.titulo}
+                                </li>`;
                                 });
-                                cellContent += `</ul>`;
+                                inner += `</ul>`;
                             }
 
-                            // Marcamos la celda según la fecha interna
-                            let borderStyle = dateStr === fechaMarcada ? "3px solid orange" : "1px solid #ccc";
-                            rowHtml += `<td style="padding:5px; border:${borderStyle}; vertical-align:top; text-align:left; width:14.28%; height:80px;">${cellContent}</td>`;
-                            day++;
+                            const borde = f === hoyStr ? "3px solid orange" : "1px solid #ccc";
+                            const esFestivo = window.festivos.includes(f);
+                            const fondoFestivo = esFestivo ? "grey" : "white"; // color suave
+
+                            html += `<td style="border:${borde}; background:${fondoFestivo}; height:80px; width: calc(100% / 7); vertical-align:top;">${inner}</td>`;
+                            dia++;
                         }
                     }
-                    rowHtml += "</tr>";
-                    html += rowHtml;
-                    if (day > daysInMonth) break;
+                    html += "</tr>";
+                    if (dia > diasMes) break;
                 }
 
                 html += "</table>";
@@ -288,39 +334,35 @@
             }
 
             function generarCalendarioHTML(tareas) {
-                const container = document.getElementById("calendar-container");
-                let today = new Date();
-                let currentMonth = today.getMonth();
-                let currentYear = today.getFullYear();
+                const cont = document.getElementById("calendar-container");
+                let hoy = new Date();
+                let mes = hoy.getMonth();
+                let año = hoy.getFullYear();
 
-                let html = `<button id="prevMonth" style="margin-right:10px;">&lt; Mes anterior</button>
+                cont.innerHTML = `
+                <button id="prevMonth">&lt; Mes anterior</button>
                 <button id="nextMonth">Mes siguiente &gt;</button>
-                <div id="calendarContent" style="margin-top:10px;"></div>`;
+                <div id="calendarContent" style="text-align:center; padding-top:20px"></div>`;
 
-                container.innerHTML = html;
-                const calendarContent = container.querySelector("#calendarContent");
+                const render = () => (document.getElementById("calendarContent").innerHTML = generarCalendario(tareas, mes, año));
 
-                function render() {
-                    calendarContent.innerHTML = generarCalendario(tareas || [], currentMonth, currentYear);
-                }
-
-                container.querySelector("#prevMonth").addEventListener("click", () => {
-                    currentMonth--;
-                    if (currentMonth < 0) {
-                        currentMonth = 11;
-                        currentYear--;
+                document.getElementById("prevMonth").onclick = () => {
+                    mes--;
+                    if (mes < 0) {
+                        mes = 11;
+                        año--;
                     }
                     render();
-                });
+                };
 
-                container.querySelector("#nextMonth").addEventListener("click", () => {
-                    currentMonth++;
-                    if (currentMonth > 11) {
-                        currentMonth = 0;
-                        currentYear++;
+                document.getElementById("nextMonth").onclick = () => {
+                    mes++;
+                    if (mes > 11) {
+                        mes = 0;
+                        año++;
                     }
                     render();
-                });
+                };
 
                 render();
             }
