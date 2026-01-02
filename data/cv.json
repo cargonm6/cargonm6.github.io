@@ -271,6 +271,13 @@
             "icon": "img/icons/score.svg",
             "title": "Obras musicales registradas",
             "entry": [
+				{
+                    "logo": "",
+                    "date": "2025 (Valencia)",
+                    "title": "Soles Andaluces (pasodoble)",
+                    "centre": "Estrenado por: Agrupación Musical Carrera Fuente de San Luis",
+                    "description": "Dedicado a los bollulleros Mercedes Acosta y Antonio Díaz en sus bodas de platino.<audio controls><source src=\"audio/soles_andaluces.mp3\" type=\"audio/mpeg\"><i>Tu navegador no soporta la etiqueta \"audio\".</i></audio><small>Intérprete: Agrupación Musical Carrera Fuente de San Luis.</small><a href=\"audio/soles_andaluces.mp3\" download=\"Soles Andaluces - Carlos González.mp3\"><img class=\"download-button\" src=\"img/icons/download.svg\" alt=\"Descargar\" title=\"Descargar\"/></a>"
+                },
                 {
                     "logo": "",
                     "date": "2022 (Caudete)",
