@@ -15,9 +15,9 @@
             <tr>
                 <td>
                     <select id="modulo">
-                        <option value="example">Ejemplo</option>
+                        <option value="example" selected>Ejemplo</option>
                         <option value="par_25">Planificación y Administración de Redes</option>
-                        <option value="inp_25" selected>Introducción a la Nube Pública</option>
+                        <option value="inp_25">Introducción a la Nube Pública</option>
                         <option value="eso4_25">4.º ESO</option>
                     </select>
                 </td>
@@ -80,57 +80,115 @@
 
             /* ──────────────────────────────── TABLA DE TAREAS ──────────────────────────────── */
 
+            function obtenerEstado(item, esVisita, esExamen) {
+                if (esVisita || esExamen) return item.f_limite;
+                if (item.corregido === "Corregido") return "Cerrada";
+                if (cmpFecha(hoy(), item.f_entrega) <= 0) return "En plazo";
+                if (cmpFecha(hoy(), item.f_limite) <= 0) return "Fuera de plazo";
+                return "Cerrada";
+            }
+
+            function obtenerColorCategoria(categoria) {
+                if (categoria_co.includes(categoria)) return "green";
+                if (categoria_ex.includes(categoria)) return "firebrick";
+                return "dodgerblue";
+            }
+
+            function obtenerColorEstado(estado, esExamen) {
+                if (esExamen) return "inherit";
+                if (estado === "Fuera de plazo") return "firebrick";
+                if (estado === "En plazo") return "green";
+                return "inherit";
+            }
+
+            function construirTitulo(item, unidad) {
+                if (!item.numero) return item.titulo;
+                return `${unidad !== "x" ? item.unidad + "." : ""}${item.numero}. ${item.titulo}`;
+            }
+
+            function construirTooltip(item, esVisita, esExamen) {
+                if (categoria_co.includes(item.categoria) && esVisita) {
+                    return "La visita se celebrará el día indicado";
+                }
+                if (esExamen) {
+                    return "El examen se celebrará el día indicado";
+                }
+                if (item.f_entrega === item.f_limite) {
+                    return `Fecha límite: ${item.f_limite}`;
+                }
+                return `Fecha de entrega: ${item.f_entrega}\nFecha límite: ${item.f_limite}`;
+            }
+
+            function textoCorreccion(item, estado, esVisita, esExamen) {
+                const fechaPasada = cmpFecha(hoy(), item.f_limite) > 0;
+                const noCorregido = item.corregido !== "Corregido";
+
+                if (esExamen && fechaPasada && noCorregido) {
+                    return "En curso";
+                }
+
+                if (estado !== "Cerrada" && noCorregido) {
+                    return "";
+                }
+
+                return esVisita ? "Realizado" : item.corregido;
+            }
             function generarFila(item, unidad) {
                 const totalUsuarios = item.usuarios || alumnos;
                 const porcentaje = ((100 * item.entregas) / totalUsuarios).toFixed(1);
 
-                let estado;
+                const esVisita = item.titulo.startsWith("Visita");
+                const esExamen = categoria_ex.includes(item.categoria);
+                const esCorreccion = item.corregido === "Corregido";
 
-                if (item.titulo.startsWith("Visita") || categoria_ex.includes(item.categoria)) {
-                    estado = item.f_limite;
-                } else if (item.corregido === "Corregido") {
-                    estado = "Cerrada";
-                } else if (cmpFecha(hoy(), item.f_entrega) <= 0) {
-                    estado = "En plazo";
-                } else if (cmpFecha(hoy(), item.f_limite) <= 0) {
-                    estado = "Fuera de plazo";
+                const estado = obtenerEstado(item, esVisita, esExamen);
+                const colorCategoria = obtenerColorCategoria(item.categoria);
+                const colorEstado = obtenerColorEstado(estado, esExamen);
+                const tituloTarea = construirTitulo(item, unidad);
+                const tooltip = construirTooltip(item, esVisita, esExamen);
+
+                if (item.url == "") {
+                    return `
+                        <tr style="border-bottom:1px dashed #006444; background:${!esCorreccion ? "#bbded6" : "initial"}; text-align:center;">
+                            <td style="text-align:left;">
+                                ${tituloTarea}
+                            </td>
+                            <td style="color:${colorCategoria};">${item.categoria}</td>
+                            <td style="text-align:left;">
+                                <progress value="${item.entregas}" max="${totalUsuarios}" title="${porcentaje}%"></progress>
+                                ${item.entregas}/${totalUsuarios}
+                            </td>
+                            <td style="color:${colorEstado}; cursor:help;" title="${tooltip}">
+                                ${estado}
+                            </td>
+                            <td style="color:${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
+                                ${textoCorreccion(item, estado, esVisita, esExamen)}
+                            </td>
+                        </tr>
+                    `;
                 } else {
-                    estado = "Cerrada";
+                    return `
+                        <tr style="border-bottom:1px dashed #006444; background:${!esCorreccion ? "#bbded6" : "initial"}; text-align:center;">
+                            <td style="text-align:left;">
+                                <a href="${item.url}">
+                                    ${tituloTarea}
+                                    <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px;">
+                                </a>
+                            </td>
+                            <td style="color:${colorCategoria};">${item.categoria}</td>
+                            <td style="text-align:left;">
+                                <progress value="${item.entregas}" max="${totalUsuarios}" title="${porcentaje}%"></progress>
+                                ${item.entregas}/${totalUsuarios}
+                            </td>
+                            <td style="color:${colorEstado}; cursor:help;" title="${tooltip}">
+                                ${estado}
+                            </td>
+                            <td style="color:${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
+                                ${textoCorreccion(item, estado, esVisita, esExamen)}
+                            </td>
+                        </tr>
+                    `;
                 }
-
-                const colorCategoria = categoria_co.includes(item.categoria) ? "green" : categoria_ex.includes(item.categoria) ? "firebrick" : "dodgerblue";
-
-                const colorEstado = categoria_ex.includes(item.categoria) ? "inherit" : estado === "Fuera de plazo" ? "firebrick" : estado === "En plazo" ? "green" : "inherit";
-
-                const tituloTarea = item.numero === "" ? item.titulo : `${unidad !== "x" ? item.unidad + "." : ""}${item.numero}. ${item.titulo}`;
-
-                const tooltip =
-                    categoria_co.includes(item.categoria) && item.titulo.startsWith("Visita")
-                        ? "La visita se celebrará el día indicado"
-                        : categoria_ex.includes(item.categoria)
-                        ? "El examen se celebrará el día indicado"
-                        : item.f_entrega === item.f_limite
-                        ? "Fecha límite: " + item.f_limite
-                        : `Fecha de entrega: ${item.f_entrega}\nFecha límite: ${item.f_limite}`;
-
-                return `
-                <tr style="border-bottom:1px dashed #006444; background:${item.corregido !== "Corregido" ? "#bbded6" : "initial"}; text-align:center;">
-                    <td style="text-align:left;">
-                        <a href="${item.url}">
-                            ${tituloTarea}
-                            <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" style="height:12px;">
-                        </a>
-                    </td>
-                    <td style="color:${colorCategoria};">${item.categoria}</td>
-                    <td style="text-align:left;">
-                        <progress value="${item.entregas}" max="${totalUsuarios}" title="${porcentaje}%"></progress>
-                        ${item.entregas}/${totalUsuarios}
-                    </td>
-                    <td style="color:${colorEstado}; cursor:help;" title="${tooltip}">${estado}</td>
-                    <td style="color:${item.corregido === "En curso" ? "dodgerblue" : "inherit"}">
-                        ${estado === "Cerrada" || item.corregido === "Corregido" ? item.corregido : ""}
-                    </td>
-                </tr>`;
             }
 
             function generarTabla(tareasPorUnidad) {
@@ -260,6 +318,8 @@
                 "04/01/2026",
                 "05/01/2026",
                 "06/01/2026",
+                "22/01/2026",
+                "16/03/2026",
                 "17/03/2026",
                 "18/03/2026",
                 "19/03/2026",
