@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/png"
+        href="https://cdn-icons-png.flaticon.com/128/2097/2097055.png" />
+    <style>
+        body {
+            width: calc(100% - 80px);
+            margin-left: 40px;
+        }
+    </style>
+    <!-- Carga Chart.js -->
+    <script src="./moodle_chart/chart.js"></script>
+</head>
+
+<body>
+    <canvas id="myChart" width="600" height="400"></canvas>
+    <script>
+        // Esperar a que el DOM y Chart.js estén cargados
+        window.onload = function () {
+
+            // ===============================
+            // DATOS
+            // ===============================
+            const data = [5, 10, 8, 12, 7, 15, 10];
+            const labels = data.map((_, i) => i + 1);
+
+            // ===============================
+            // FUNCIÓN DE TENDENCIA POLINÓMICA (grado 2)
+            // ===============================
+            function polynomialTrendline(x, y, degree = 2) {
+                if (degree !== 2) {
+                    console.warn("Actualmente solo se soporta grado 2");
+                    return y;
+                }
+
+                const n = x.length;
+                let sumX = 0, sumY = 0, sumX2 = 0, sumX3 = 0, sumX4 = 0, sumXY = 0, sumX2Y = 0;
+
+                for (let i = 0; i < n; i++) {
+                    sumX += x[i];
+                    sumY += y[i];
+                    sumX2 += x[i] ** 2;
+                    sumX3 += x[i] ** 3;
+                    sumX4 += x[i] ** 4;
+                    sumXY += x[i] * y[i];
+                    sumX2Y += x[i] ** 2 * y[i];
+                }
+
+                const denom = (n * sumX2 * sumX4 + 2 * sumX * sumX2 * sumX3 - sumX2 ** 3 - n * sumX3 ** 2 - sumX ** 2 * sumX4);
+                const a = (sumY * sumX2 * sumX4 + sumX * sumX3 * sumX2Y + sumX2 * sumX3 * sumXY - sumX2 ** 2 * sumX2Y - sumX3 ** 2 * sumY - sumX * sumX4 * sumXY) / denom;
+                const b = (n * sumXY * sumX4 + sumY * sumX3 * sumX2 + sumX * sumX3 * sumX2Y - sumX2 * sumXY * sumX2 - sumX3 ** 2 * sumY - n * sumX3 * sumX2Y) / denom;
+                const c = (n * sumX2 * sumX2Y + sumX * sumXY * sumX2 + sumX * sumX3 * sumY - sumX2 ** 2 * sumY - sumX3 * sumXY * n - sumX * sumX2 * sumX2Y) / denom;
+
+                return x.map(xi => a + b * xi + c * xi ** 2);
+            }
+
+            const degree = 2; // Cambia el grado si quieres
+            const trendData = polynomialTrendline(labels, data, degree);
+
+            // ===============================
+            // CREAR GRÁFICO
+            // ===============================
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            new Chart(ctx, {
+                type: 'bar', // <-- Gráfico de barras principal
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Datos',
+                            data: data,
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: `Tendencia polinómica (grado ${degree})`,
+                            data: trendData,
+                            type: 'line', // <-- Línea sobre las barras
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 2,
+                            fill: false,
+                            tension: 0.4 // suaviza la curva
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: true, text: 'Histograma con línea de tendencia polinómica' }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

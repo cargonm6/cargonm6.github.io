@@ -1,0 +1,90 @@
+{
+    "relations": [
+        {
+            "node_1": "A",
+            "node_2": "B",
+            "weight": "6",
+            "single": "0"
+        },
+        {
+            "node_1": "A",
+            "node_2": "C",
+            "weight": "10",
+            "single": "0"
+        },
+        {
+            "node_1": "B",
+            "node_2": "C",
+            "weight": "12",
+            "single": "0"
+        },
+        {
+            "node_1": "B",
+            "node_2": "D",
+            "weight": "11",
+            "single": "0"
+        },
+        {
+            "node_1": "B",
+            "node_2": "E",
+            "weight": "14",
+            "single": "1"
+        },
+        {
+            "node_1": "E",
+            "node_2": "F",
+            "weight": "4",
+            "single": "0"
+        },{
+            "node_1": "E",
+            "node_2": "I",
+            "weight": "10",
+            "single": "0"
+        },{
+            "node_1": "C",
+            "node_2": "H",
+            "weight": "16",
+            "single": "0"
+        },{
+            "node_1": "C",
+            "node_2": "G",
+            "weight": "8",
+            "single": "0"
+        },{
+            "node_1": "D",
+            "node_2": "E",
+            "weight": "6",
+            "single": "0"
+        },{
+            "node_1": "D",
+            "node_2": "G",
+            "weight": "3",
+            "single": "0"
+        },{
+            "node_1": "H",
+            "node_2": "J",
+            "weight": "8",
+            "single": "0"
+        },{
+            "node_1": "G",
+            "node_2": "H",
+            "weight": "1",
+            "single": "1"
+        },{
+            "node_1": "G",
+            "node_2": "J",
+            "weight": "6",
+            "single": "0"
+        },{
+            "node_1": "I",
+            "node_2": "J",
+            "weight": "13",
+            "single": "0"
+        },{
+            "node_1": "I",
+            "node_2": "F",
+            "weight": "10",
+            "single": "1"
+        }
+    ]
+}

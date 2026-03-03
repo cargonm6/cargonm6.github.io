@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador Dijkstra</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            overflow-y: scroll;
+        }
+
+        textarea {
+            width: 100%;
+            height: 350px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        canvas {
+            border: 1px solid black;
+            max-width: 100%;
+            height: auto;
+            cursor: default;
+            background-color: #fff;
+        }
+
+        fieldset {
+            display: inline-block;
+            width: 46%;
+            text-align: left;
+            margin: 0;
+        }
+
+        #jsonContainer,
+        #graphContainer {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #jsonContainer {
+            width: calc(80% - 30px - 600px);
+        }
+
+        #tableContainer,
+        #dijkstraContainer {
+            width: 100%;
+            text-align: center;
+        }
+
+        #jsonContainer textarea {
+            margin-bottom: 20px;
+            border: 1px solid black;
+        }
+
+        td.useless {
+            background-color: #ddd;
+        }
+
+        table {
+            width: 80%;
+            /* Ocupa todo el ancho del contenedor */
+            margin: 20px auto;
+            /* Centrado horizontal y espacio superior/inferior */
+            border-collapse: collapse;
+            /* Bordes colapsados */
+            table-layout: fixed;
+            /* Hace que todas las celdas tengan el mismo ancho */
+            text-align: center;
+            /* Texto centrado */
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Algoritmo Dijkstra</h2>
+
+    <div id="jsonContainer">
+        <textarea id="jsonInput"></textarea>
+        <fieldset>
+            <legend>Grafo y tabla de relaciones</legend>
+            Topología:&nbsp;<select id="matrixLayout">
+                <option value="matrix">Matriz</option>
+                <option value="ring">Anillo</option>
+            </select>
+            <br>
+            <button onclick="generateGraph()">Regenerar</button>
+        </fieldset>
+        <fieldset>
+            <legend>Algoritmo Dijkstra</legend>
+            Origen:&nbsp;<select id="originSelect"></select>&nbsp;→&nbsp;
+            Destino:&nbsp;<select id="targetSelect"></select>
+            <br>
+            <button
+                onclick="dijkstraStepByStep(document.getElementById('originSelect').value,    document.getElementById('targetSelect').value)">Calcular
+                ruta óptima</button>
+        </fieldset>
+
+    </div>
+    <div id="graphContainer">
+        <canvas id="graphCanvas" width="600px" height="400px"></canvas>
+    </div>
+    <div id="tableContainer">
+    </div>
+    <div id="dijkstraContainer">
+    </div>
+
+    <script>
+        let nodeList = [];
+        let relations = [];
+        let highlightPath = [];
+        const positions = {}; // posiciones dinámicas
+        const radius = 20; // radio de nodos
+        let draggingNode = null;
+
+        const canvas = document.getElementById("graphCanvas");
+        const ctx = canvas.getContext("2d");
+
+        window.onload = () => reload_window();
+
+        const fetchJSON = async (file) => {
+            try {
+                const r = await fetch(file);
+                if (!r.ok) throw new Error("Error en fetch");
+                return await r.json();
+            } catch (e) {
+                console.error("Error leyendo JSON:", e);
+                return null;
+            }
+        };
+
+        async function reload_window() {
+            const data = await fetchJSON(`./dijkstra/nodes.json`);
+            document.getElementById("jsonInput").value = JSON.stringify(data, null, 4);
+            generateGraph();
+        }
+
+        function generateGraph() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            highlightPath = [];
+
+
+            const input = JSON.parse(document.getElementById("jsonInput").value);
+            relations = input.relations;
+            document.getElementById("dijkstraContainer").innerHTML = "";
+
+            const nodes = new Set();
+            relations.forEach(r => {
+                nodes.add(r.node_1);
+                nodes.add(r.node_2);
+            });
+            nodeList = Array.from(nodes);
+
+            const useMatrix = document.getElementById("matrixLayout").value;
+
+            // Calcular posiciones
+            if (useMatrix === "matrix") {
+                // Matriz: calcular filas y columnas aproximadas
+                const cols = Math.ceil(Math.sqrt(nodeList.length));
+                const rows = Math.ceil(nodeList.length / cols);
+                const marginX = canvas.width / (cols + 1);
+                const marginY = canvas.height / (rows + 1);
+
+                nodeList.forEach((node, i) => {
+                    const col = i % cols;
+                    const row = Math.floor(i / cols);
+                    positions[node] = {
+                        x: (col + 1) * marginX,
+                        y: (row + 1) * marginY
+                    };
+                });
+            } else {
+                // Circular
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                const defaultRadius = 150;
+                nodeList.forEach((node, i) => {
+                    const angle = (2 * Math.PI / nodeList.length) * i;
+                    positions[node] = {
+                        x: centerX + defaultRadius * Math.cos(angle),
+                        y: centerY + defaultRadius * Math.sin(angle)
+                    };
+                });
+            }
+
+            // Tabla de adyacencias
+            const matrix = {};
+            nodeList.forEach(n => {
+                matrix[n] = {};
+                nodeList.forEach(m => matrix[n][m] = "∞");
+                matrix[n][n] = 0;
+            });
+            relations.forEach(r => {
+                matrix[r.node_1][r.node_2] = parseInt(r.weight);
+                if (r.single === "0") matrix[r.node_2][r.node_1] = parseInt(r.weight);
+            });
+
+            generateTable(nodeList, matrix);
+            drawGraph();
+            updateSelects();
+        }
+
+        function generateTable(nodes, matrix) {
+            let html = "<h3>Tabla de relaciones</h3><table><tr><th></th>";
+            nodes.forEach(n => html += `<th>${n}</th>`);
+            html += "</tr>";
+
+            nodes.forEach(n => {
+                html += `<tr><th>${n}</th>`;
+                nodes.forEach(m => {
+                    if (matrix[n][m] === "∞" || matrix[n][m] === 0) {
+                        html += `<td class="useless">${matrix[n][m]}</td>`;
+                    }
+                    else {
+                        html += `<td>${matrix[n][m]}</td>`;
+                    }
+                });
+                html += "</tr>";
+            });
+
+            html += "</table>";
+            document.getElementById("tableContainer").innerHTML = html;
+        }
+
+        function drawGraph() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            relations.forEach(r => {
+                const from = positions[r.node_1];
+                const to = positions[r.node_2];
+
+                const inPath = highlightPath.some(pair =>
+                    (pair[0] === r.node_1 && pair[1] === r.node_2) ||
+                    (pair[0] === r.node_2 && pair[1] === r.node_1 && (r.single === "0" || r.single === ""))
+                );
+
+                ctx.beginPath();
+                ctx.moveTo(from.x, from.y);
+                ctx.lineTo(to.x, to.y);
+                ctx.strokeStyle = inPath ? "red" : "black";
+                ctx.lineWidth = inPath ? 3 : 1;
+                ctx.stroke();
+
+                if (r.single === "1") {
+                    ctx.fillStyle = inPath ? "red" : "black";
+                    drawArrow(ctx, from.x, from.y, to.x, to.y);
+                }
+
+                // Peso
+                const midX = (from.x + to.x) / 2;
+                const midY = (from.y + to.y) / 2;
+                const text = r.weight;
+                const padding = 4;
+                ctx.font = "14px Arial";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                const metrics = ctx.measureText(text);
+                const textWidth = metrics.width;
+                const textHeight = 14;
+
+                ctx.fillStyle = "white";
+                ctx.fillRect(midX - textWidth / 2 - padding, midY - textHeight / 2 - padding, textWidth + padding * 2, textHeight + padding * 2);
+                ctx.fillStyle = "black";
+                ctx.fillText(text, midX, midY);
+            });
+
+            // Nodos
+            nodeList.forEach(node => {
+                const pos = positions[node];
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, radius, 0, 2 * Math.PI);
+                ctx.fillStyle = "#ddd";
+                ctx.fill();
+
+                // Borde especial si es origen o destino
+                let isOrigin = highlightPath.length > 0 && node === highlightPath[0][0];
+                let isTarget = highlightPath.length > 0 && node === highlightPath[highlightPath.length - 1][1];
+
+                if (isOrigin || isTarget) {
+                    ctx.lineWidth = 4;
+                    ctx.strokeStyle = "red";
+                } else {
+                    ctx.lineWidth = 1;
+                    ctx.strokeStyle = "black";
+                }
+                ctx.stroke();
+
+                ctx.fillStyle = "black";
+                ctx.fillText(node, pos.x, pos.y + 1);
+            });
+
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 1;
+        }
+
+        function drawArrow(ctx, x1, y1, x2, y2) {
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+            const angle = Math.atan2(dy, dx);
+            const startX = x1 + radius * Math.cos(angle);
+            const startY = y1 + radius * Math.sin(angle);
+            const endX = x2 - radius * Math.cos(angle);
+            const endY = y2 - radius * Math.sin(angle);
+
+            const arrowLength = 10;
+            ctx.beginPath();
+            ctx.moveTo(endX, endY);
+            ctx.lineTo(endX - arrowLength * Math.cos(angle - Math.PI / 6), endY - arrowLength * Math.sin(angle - Math.PI / 6));
+            ctx.lineTo(endX - arrowLength * Math.cos(angle + Math.PI / 6), endY - arrowLength * Math.sin(angle + Math.PI / 6));
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        // --- Drag ---
+        canvas.addEventListener("mousedown", e => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            draggingNode = getNodeAtPosition(x, y);
+        });
+
+        canvas.addEventListener("mousemove", e => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            if (draggingNode) {
+                positions[draggingNode].x = x;
+                positions[draggingNode].y = y;
+                drawGraph();
+            } else {
+                canvas.style.cursor = getNodeAtPosition(x, y) ? "pointer" : "default";
+            }
+        });
+
+        canvas.addEventListener("mouseup", () => draggingNode = null);
+        canvas.addEventListener("mouseleave", () => draggingNode = null);
+
+        function getNodeAtPosition(mx, my) {
+            for (let node of nodeList) {
+                const pos = positions[node];
+                const dx = mx - pos.x;
+                const dy = my - pos.y;
+                if (Math.sqrt(dx * dx + dy * dy) <= radius) return node;
+            }
+            return null;
+        }
+
+        // Llenar selects de nodos dinámicamente
+        function updateSelects() {
+            const originSelect = document.getElementById("originSelect");
+            const targetSelect = document.getElementById("targetSelect");
+
+            originSelect.innerHTML = "";
+            targetSelect.innerHTML = "";
+
+            nodeList.forEach(n => {
+                const option1 = document.createElement("option");
+                option1.value = n;
+                option1.text = n;
+                originSelect.appendChild(option1);
+
+                const option2 = document.createElement("option");
+                option2.value = n;
+                option2.text = n;
+                targetSelect.appendChild(option2);
+            });
+
+            // Evitar seleccionar el mismo nodo en ambos
+            function syncOptions(changedSelect, otherSelect) {
+                const selectedValue = changedSelect.value;
+                Array.from(otherSelect.options).forEach(opt => {
+                    opt.disabled = (opt.value === selectedValue);
+                });
+                // Si el otro select está actualmente seleccionado en el valor deshabilitado, cambiarlo
+                if (otherSelect.value === selectedValue) {
+                    otherSelect.selectedIndex = 0; // elegir la primera opción habilitada
+                    syncOptions(otherSelect, changedSelect);
+                }
+            }
+
+            originSelect.addEventListener("change", () => syncOptions(originSelect, targetSelect));
+            targetSelect.addEventListener("change", () => syncOptions(targetSelect, originSelect));
+
+            // Inicializar la sincronización
+            syncOptions(originSelect, targetSelect);
+        }
+
+        function dijkstraStepByStep(origin, target) {
+            const nodes = nodeList;
+            const matrix = {};
+
+            // Inicializamos matriz de adyacencia
+            nodes.forEach(n => {
+                matrix[n] = {};
+                nodes.forEach(m => matrix[n][m] = Infinity);
+                matrix[n][n] = 0;
+            });
+            relations.forEach(r => {
+                const w = parseInt(r.weight);
+                matrix[r.node_1][r.node_2] = w;
+                if (r.single === "0" || r.single === "") {
+                    matrix[r.node_2][r.node_1] = w;
+                }
+            });
+
+            // Inicializamos distancias y predecesores
+            const dist = {};
+            const prev = {};
+            nodes.forEach(n => {
+                dist[n] = Infinity;
+                prev[n] = null;
+            });
+            dist[origin] = 0;
+
+            const visited = new Set();
+            const steps = [];
+
+            while (visited.size < nodes.length) {
+                // Selecciona nodo no visitado con distancia mínima
+                let u = null;
+                let minDist = Infinity;
+                nodes.forEach(n => {
+                    if (!visited.has(n) && dist[n] < minDist) {
+                        minDist = dist[n];
+                        u = n;
+                    }
+                });
+
+                if (!u) break; // nodos restantes inalcanzables
+
+                // Actualizar distancias de vecinos **antes de marcar u como visitado**
+                nodes.forEach(v => {
+                    if (!visited.has(v) && matrix[u][v] !== Infinity) {
+                        const alt = dist[u] + matrix[u][v];
+                        if (alt < dist[v]) {
+                            dist[v] = alt;
+                            prev[v] = u;
+                        }
+                    }
+                });
+
+                // Marcar u como visitado
+                visited.add(u);
+
+                // Guardar estado de la fila actual
+                const row = {};
+                nodes.forEach(n => {
+                    if (visited.has(n)) {
+                        row[n] = "*";
+                    } else if (dist[n] < Infinity && prev[n] !== null) {
+                        row[n] = `${dist[n]} / ${prev[n]}`;
+                    } else if (n === origin) {
+                        row[n] = "*";
+                    } else {
+                        row[n] = "";
+                    }
+                });
+                steps.push(row);
+            }
+
+            // Generar tabla HTML
+            let html = "<h3>Tabla de Dijkstra</h3><table><tr><th>Pasos</th>";
+            nodes.forEach(n => html += `<th>${n}</th>`);
+            html += "</tr>";
+
+            steps.forEach((row, i) => {
+                html += `<tr><td>${i + 1}</td>`;
+                nodes.forEach(n => {
+                    html += `<td>${row[n]}</td>`;
+                });
+                html += "</tr>";
+            });
+            html += "</table>";
+
+            document.getElementById("dijkstraContainer").innerHTML = html;
+
+            // Ruta final desde origen a destino
+            const path = [];
+            let current = target;
+            if (dist[current] === Infinity) {
+                document.getElementById("dijkstraContainer").innerHTML += `<p>No hay ruta de ${origin} a ${target}</p>`;
+            } else {
+                while (current) {
+                    path.unshift(current);
+                    current = prev[current];
+                }
+                document.getElementById("dijkstraContainer").innerHTML += `<p>Ruta óptima ${origin} → ${target}:<br>${path.join(" → ")} (peso total: ${dist[target]})</p>`;
+            }
+
+            highlightPath = [];
+            for (let i = 0; i < path.length - 1; i++) {
+                highlightPath.push([path[i], path[i + 1]]);
+            }
+
+            // Redibujar grafo con camino resaltado
+            drawGraph();
+        }
+    </script>
+</body>
+
+</html>
