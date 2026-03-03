@@ -156,7 +156,13 @@
         };
 
         async function reload_window() {
-            const data = await fetchJSON(`./dijkstra/nodes.json`);
+            let data = await fetchJSON(`./dijkstra/nodes.json`);
+            
+            if (!data) {
+                data = await fetchJSON(`./nodes.json`);
+                if (!data) return;
+            }
+
             document.getElementById("jsonInput").value = JSON.stringify(data, null, 4);
             generateGraph();
         }
