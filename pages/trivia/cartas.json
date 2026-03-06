@@ -1,0 +1,1230 @@
+{
+    "categorias": [
+        {
+            "categoria": "Internet",
+            "preguntas": [
+                {
+                    "pregunta": "¿Qué protocolo se utiliza para la transferencia de archivos?",
+                    "respuesta": "FTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo garantiza la entrega sin errores y ordenada?",
+                    "respuesta": "TCP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo permite la resolución de nombres de dominio?",
+                    "respuesta": "DNS"
+                },
+                {
+                    "pregunta": "¿Qué protocolo se utiliza para enviar correos electrónicos?",
+                    "respuesta": "SMTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo se utiliza para recibir correos electrónicos?",
+                    "respuesta": "IMAP/POP3"
+                },
+                {
+                    "pregunta": "¿Qué protocolo se utiliza para navegación web segura?",
+                    "respuesta": "HTTPS"
+                },
+                {
+                    "pregunta": "¿Qué puerto usa HTTPS por defecto?",
+                    "respuesta": "443"
+                },
+                {
+                    "pregunta": "¿Qué puerto usa HTTP por defecto?",
+                    "respuesta": "80"
+                },
+                {
+                    "pregunta": "¿Qué significa OSI?",
+                    "respuesta": "Open Systems Interconnection"
+                },
+                {
+                    "pregunta": "¿Qué capa del modelo OSI se encarga del direccionamiento IP?",
+                    "respuesta": "Capa de red"
+                },
+                {
+                    "pregunta": "¿Qué protocolo de transporte es orientado a conexión?",
+                    "respuesta": "TCP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo de transporte es sin conexión?",
+                    "respuesta": "UDP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo permite la transferencia de páginas web?",
+                    "respuesta": "HTTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo sincroniza relojes en la red?",
+                    "respuesta": "NTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo envía mensajes de error y control de red?",
+                    "respuesta": "ICMP"
+                },
+                {
+                    "pregunta": "¿Qué significa IP?",
+                    "respuesta": "Internet Protocol"
+                },
+                {
+                    "pregunta": "¿Qué es un socket en redes?",
+                    "respuesta": "Punto de comunicación entre procesos en red"
+                },
+                {
+                    "pregunta": "¿Qué protocolo de transferencia de archivos es seguro?",
+                    "respuesta": "SFTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo se usa para la consulta de DNS?",
+                    "respuesta": "DNS"
+                },
+                {
+                    "pregunta": "¿Qué puerto usa FTP para datos por defecto?",
+                    "respuesta": "20"
+                },
+                {
+                    "pregunta": "¿Qué puerto usa FTP para control por defecto?",
+                    "respuesta": "21"
+                },
+                {
+                    "pregunta": "¿Qué significa HTTPS?",
+                    "respuesta": "HTTP Secure"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto lógico?",
+                    "respuesta": "Identificador de aplicación dentro de un host"
+                },
+                {
+                    "pregunta": "¿Qué modelo simplificado de Internet tiene 4 capas?",
+                    "respuesta": "TCP/IP"
+                },
+                {
+                    "pregunta": "¿Qué capa del modelo TCP/IP corresponde a la capa de transporte?",
+                    "respuesta": "Transporte"
+                },
+                {
+                    "pregunta": "¿Qué protocolo permite enviar correo desde cliente a servidor?",
+                    "respuesta": "SMTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo recibe correo POP3?",
+                    "respuesta": "POP3"
+                },
+                {
+                    "pregunta": "¿Qué protocolo mantiene los correos en servidor?",
+                    "respuesta": "IMAP"
+                },
+                {
+                    "pregunta": "¿Qué es encapsulamiento en redes?",
+                    "respuesta": "Añadir cabeceras y trailers a los datos para enviarlos"
+                },
+                {
+                    "pregunta": "¿Qué es un paquete en redes?",
+                    "respuesta": "Unidad de datos transmitida en la capa de red"
+                },
+                {
+                    "pregunta": "¿Qué es un datagrama?",
+                    "respuesta": "Paquete sin conexión en UDP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo permite enviar mensajes entre routers?",
+                    "respuesta": "ICMP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo se utiliza para consultas HTTP seguras?",
+                    "respuesta": "HTTPS"
+                },
+                {
+                    "pregunta": "¿Qué protocolo de transporte no garantiza entrega de datos?",
+                    "respuesta": "UDP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo orientado a conexión garantiza entrega ordenada?",
+                    "respuesta": "TCP"
+                },
+                {
+                    "pregunta": "¿Qué es un host en redes?",
+                    "respuesta": "Dispositivo conectado a la red"
+                },
+                {
+                    "pregunta": "¿Qué es un gateway?",
+                    "respuesta": "Dispositivo que conecta redes distintas"
+                },
+                {
+                    "pregunta": "¿Qué es un broadcast address?",
+                    "respuesta": "Dirección que llega a todos los hosts"
+                },
+                {
+                    "pregunta": "¿Qué es un unicast?",
+                    "respuesta": "Comunicación de un host a otro host"
+                },
+                {
+                    "pregunta": "¿Qué es un multicast?",
+                    "respuesta": "Comunicación de un host a un grupo de hosts"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto en redes?",
+                    "respuesta": "Identificador de servicio dentro de un host"
+                },
+                {
+                    "pregunta": "¿Qué significa encapsulamiento de datos?",
+                    "respuesta": "Añadir cabeceras/trailers para transmisión"
+                },
+                {
+                    "pregunta": "¿Qué protocolo consulta la información en la web?",
+                    "respuesta": "HTTP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo permite transferencia de páginas web de manera segura?",
+                    "respuesta": "HTTPS"
+                },
+                {
+                    "pregunta": "¿Qué es un socket TCP/IP?",
+                    "respuesta": "Punto de comunicación entre aplicaciones"
+                },
+                {
+                    "pregunta": "¿Qué protocolo define mensajes de error de red?",
+                    "respuesta": "ICMP"
+                },
+                {
+                    "pregunta": "¿Qué puerto se usa por defecto para SMTP?",
+                    "respuesta": "25"
+                },
+                {
+                    "pregunta": "¿Qué protocolo permite navegación web no segura?",
+                    "respuesta": "HTTP"
+                },
+                {
+                    "pregunta": "¿Qué significa FTP?",
+                    "respuesta": "File Transfer Protocol"
+                },
+                {
+                    "pregunta": "¿Qué protocolo garantiza integridad de datos en la transmisión?",
+                    "respuesta": "TCP"
+                },
+                {
+                    "pregunta": "¿Qué protocolo se utiliza para transferir archivos vía web de manera segura?",
+                    "respuesta": "HTTPS (o HTTP con TLS)"
+                },
+                {
+                    "pregunta": "¿Qué significa DNSSEC?",
+                    "respuesta": "Extensiones de seguridad del DNS"
+                }
+            ]
+        },
+        {
+            "categoria": "Medios",
+            "preguntas": [
+                {
+                    "pregunta": "¿Qué tipo de cable se utiliza en Ethernet estándar?",
+                    "respuesta": "Cable de par trenzado UTP"
+                },
+                {
+                    "pregunta": "¿Qué tipo de cable permite mayores distancias de transmisión, cobre o fibra óptica?",
+                    "respuesta": "Fibra óptica"
+                },
+                {
+                    "pregunta": "¿Qué es multiplexión?",
+                    "respuesta": "Compartir un medio para varias señales simultáneas"
+                },
+                {
+                    "pregunta": "¿Qué tipo de onda utiliza Wi-Fi?",
+                    "respuesta": "Ondas de radio"
+                },
+                {
+                    "pregunta": "¿Qué tipo de cable es coaxial?",
+                    "respuesta": "Cable con conductor central y pantalla metálica"
+                },
+                {
+                    "pregunta": "¿Qué tipo de fibra óptica permite mayores distancias, monomodo o multimodo?",
+                    "respuesta": "Monomodo"
+                },
+                {
+                    "pregunta": "¿Qué es la modulación?",
+                    "respuesta": "Transformar una señal para transmitir información"
+                },
+                {
+                    "pregunta": "¿Qué velocidad máxima teórica tiene Cat5e?",
+                    "respuesta": "1 Gbps"
+                },
+                {
+                    "pregunta": "¿Qué velocidad máxima teórica tiene Cat6 a 55 metros?",
+                    "respuesta": "10 Gbps"
+                },
+                {
+                    "pregunta": "¿Qué velocidad máxima teórica tiene Cat6a a 100 metros?",
+                    "respuesta": "10 Gbps"
+                },
+                {
+                    "pregunta": "¿Qué velocidad máxima permite la fibra multimodo en distancias cortas?",
+                    "respuesta": "Hasta 100 Gbps"
+                },
+                {
+                    "pregunta": "¿Qué significa STP en cables?",
+                    "respuesta": "Shielded Twisted Pair (par trenzado apantallado)"
+                },
+                {
+                    "pregunta": "¿Qué significa UTP en cables?",
+                    "respuesta": "Unshielded Twisted Pair (par trenzado sin apantallar)"
+                },
+                {
+                    "pregunta": "¿Qué conector usan los cables RJ45?",
+                    "respuesta": "8 pines"
+                },
+                {
+                    "pregunta": "¿Qué es un media converter?",
+                    "respuesta": "Dispositivo que convierte fibra a cobre o viceversa"
+                },
+                {
+                    "pregunta": "¿Qué es la atenuación de un cable?",
+                    "respuesta": "Pérdida de señal con la distancia"
+                },
+                {
+                    "pregunta": "¿Qué tipo de fibra usa luz láser?",
+                    "respuesta": "Monomodo"
+                },
+                {
+                    "pregunta": "¿Qué tipo de fibra usa LED?",
+                    "respuesta": "Multimodo"
+                },
+                {
+                    "pregunta": "¿Qué cable permite conectividad rápida y económica en casa?",
+                    "respuesta": "UTP Cat5e/6"
+                },
+                {
+                    "pregunta": "¿Qué significa ancho de banda?",
+                    "respuesta": "Cantidad máxima de datos transmitidos por segundo"
+                },
+                {
+                    "pregunta": "¿Qué es interferencia electromagnética?",
+                    "respuesta": "Ruido que afecta la señal en cables metálicos"
+                },
+                {
+                    "pregunta": "¿Qué medio tiene menor latencia, cobre o fibra?",
+                    "respuesta": "Fibra óptica"
+                },
+                {
+                    "pregunta": "¿Qué medio permite distancias más largas?",
+                    "respuesta": "Fibra óptica"
+                },
+                {
+                    "pregunta": "¿Qué medio es más económico?",
+                    "respuesta": "Cable de cobre UTP"
+                },
+                {
+                    "pregunta": "¿Qué es diafonía en cables?",
+                    "respuesta": "Interferencia de señales entre pares"
+                },
+                {
+                    "pregunta": "¿Qué es la impedancia de un cable?",
+                    "respuesta": "Resistencia al flujo de señal AC"
+                },
+                {
+                    "pregunta": "¿Qué es un conector SC en fibra óptica?",
+                    "respuesta": "Tipo de conector para cables de fibra"
+                },
+                {
+                    "pregunta": "¿Qué es un conector LC en fibra óptica?",
+                    "respuesta": "Conector pequeño para fibra"
+                },
+                {
+                    "pregunta": "¿Qué tipo de fibra se utiliza en redes LAN?",
+                    "respuesta": "Multimodo"
+                },
+                {
+                    "pregunta": "¿Qué tipo de fibra permite largas distancias en WAN?",
+                    "respuesta": "Monomodo"
+                },
+                {
+                    "pregunta": "¿Qué velocidad soporta Cat5e a 100 metros?",
+                    "respuesta": "100 Mbps"
+                },
+                {
+                    "pregunta": "¿Qué velocidad soporta Cat6 a 100 metros?",
+                    "respuesta": "1 Gbps"
+                },
+                {
+                    "pregunta": "¿Qué velocidad soporta Cat6a a 100 metros?",
+                    "respuesta": "10 Gbps"
+                },
+                {
+                    "pregunta": "¿Qué es simplex?",
+                    "respuesta": "Comunicación en una sola dirección"
+                },
+                {
+                    "pregunta": "¿Qué es half-duplex?",
+                    "respuesta": "Comunicación en ambas direcciones pero no simultánea"
+                },
+                {
+                    "pregunta": "¿Qué es full-duplex?",
+                    "respuesta": "Comunicación en ambas direcciones simultáneamente"
+                },
+                {
+                    "pregunta": "¿Qué tipo de cable se utiliza para telefonía?",
+                    "respuesta": "Par trenzado"
+                },
+                {
+                    "pregunta": "¿Qué es una fibra monomodo?",
+                    "respuesta": "Transmite un solo modo de luz, ideal para largas distancias"
+                },
+                {
+                    "pregunta": "¿Qué es una fibra multimodo?",
+                    "respuesta": "Transmite múltiples modos de luz, ideal para LAN"
+                },
+                {
+                    "pregunta": "¿Qué tipo de señal transmite coaxial?",
+                    "respuesta": "Señal eléctrica o RF (radiofrecuencia)"
+                },
+                {
+                    "pregunta": "¿Qué significa cat en cables Ethernet?",
+                    "respuesta": "Categoría de cable con características de velocidad y frecuencia"
+                },
+                {
+                    "pregunta": "¿Qué cable soporta hasta 1 Gbps?",
+                    "respuesta": "Cat5e"
+                },
+                {
+                    "pregunta": "¿Qué cable soporta hasta 10 Gbps?",
+                    "respuesta": "Cat6a"
+                },
+                {
+                    "pregunta": "¿Qué es modulación AM?",
+                    "respuesta": "Variación de amplitud de la onda portadora"
+                },
+                {
+                    "pregunta": "¿Qué es modulación FM?",
+                    "respuesta": "Variación de frecuencia de la onda portadora"
+                },
+                {
+                    "pregunta": "¿Qué es modulación PM?",
+                    "respuesta": "Variación de fase de la onda portadora"
+                },
+                {
+                    "pregunta": "¿Qué medio y tecnología se usa comúnmente en redes WLAN?",
+                    "respuesta": "Ondas de radio, Wi-Fi"
+                },
+                {
+                    "pregunta": "Qué medio y tecnología se usa comúnmente en redes WPAN?",
+                    "respuesta": "Ondas de radio, Bluetooth"
+                },
+                {
+                    "pregunta": "¿Qué tipo de fibra óptica es más resistente a interferencias electromagnéticas?",
+                    "respuesta": "Monomodo"
+                },
+                {
+                    "pregunta": "¿Qué cable permite transmitir datos y electricidad simultáneamente en redes LAN?",
+                    "respuesta": "Cable PoE (Power over Ethernet)"
+                }
+            ]
+        },
+        {
+            "categoria": "Networking",
+            "preguntas": [
+                {
+                    "pregunta": "¿Qué es una topología de red?",
+                    "respuesta": "Distribución física o lógica de los nodos"
+                },
+                {
+                    "pregunta": "¿Qué es una topología en estrella?",
+                    "respuesta": "Todos los nodos conectados a un nodo central"
+                },
+                {
+                    "pregunta": "¿Qué es una topología en bus?",
+                    "respuesta": "Todos los nodos conectados a un único canal de comunicación"
+                },
+                {
+                    "pregunta": "¿Qué es una topología en anillo?",
+                    "respuesta": "Los nodos forman un círculo y los datos circulan en una dirección"
+                },
+                {
+                    "pregunta": "¿Qué es una topología en malla?",
+                    "respuesta": "Cada nodo conectado a varios nodos para redundancia"
+                },
+                {
+                    "pregunta": "¿Qué es una topología híbrida?",
+                    "respuesta": "Combinación de varias topologías básicas"
+                },
+                {
+                    "pregunta": "¿Qué es LAN?",
+                    "respuesta": "Red de área local, limitada a un edificio o campus"
+                },
+                {
+                    "pregunta": "¿Qué es MAN?",
+                    "respuesta": "Red de área metropolitana, cubre una ciudad o región"
+                },
+                {
+                    "pregunta": "¿Qué es WAN?",
+                    "respuesta": "Red de área amplia, conecta redes a gran escala geográfica"
+                },
+                {
+                    "pregunta": "¿Qué es WLAN?",
+                    "respuesta": "Red LAN inalámbrica, usa ondas de radio"
+                },
+                {
+                    "pregunta": "¿Qué es PAN?",
+                    "respuesta": "Red de área personal, comunicación entre dispositivos cercanos"
+                },
+                {
+                    "pregunta": "¿Qué es unicast?",
+                    "respuesta": "Comunicación de un host a otro host"
+                },
+                {
+                    "pregunta": "¿Qué es multicast?",
+                    "respuesta": "Comunicación de un host a un grupo de hosts"
+                },
+                {
+                    "pregunta": "¿Qué es broadcast?",
+                    "respuesta": "Comunicación de un host a todos los hosts de la red"
+                },
+                {
+                    "pregunta": "¿Qué es full-duplex?",
+                    "respuesta": "Comunicación en ambas direcciones simultáneamente"
+                },
+                {
+                    "pregunta": "¿Qué es half-duplex?",
+                    "respuesta": "Comunicación en ambas direcciones pero no simultánea"
+                },
+                {
+                    "pregunta": "¿Qué es simplex?",
+                    "respuesta": "Comunicación en una sola dirección"
+                },
+                {
+                    "pregunta": "¿Qué es una subred?",
+                    "respuesta": "Parte de una red más grande, identificada por máscara"
+                },
+                {
+                    "pregunta": "¿Qué es subnetting?",
+                    "respuesta": "Dividir una red en subredes más pequeñas"
+                },
+                {
+                    "pregunta": "¿Qué es una máscara de red?",
+                    "respuesta": "Define qué parte de la IP es red y qué parte host"
+                },
+                {
+                    "pregunta": "¿Qué es una máscara /24?",
+                    "respuesta": "255.255.255.0"
+                },
+                {
+                    "pregunta": "¿Qué es una máscara /16?",
+                    "respuesta": "255.255.0.0"
+                },
+                {
+                    "pregunta": "¿Qué es una máscara /8?",
+                    "respuesta": "255.0.0.0"
+                },
+                {
+                    "pregunta": "¿Qué es dirección IP clase A?",
+                    "respuesta": "0.0.0.0 a 127.255.255.255"
+                },
+                {
+                    "pregunta": "¿Qué es dirección IP clase B?",
+                    "respuesta": "128.0.0.0 a 191.255.255.255"
+                },
+                {
+                    "pregunta": "¿Qué es dirección IP clase C?",
+                    "respuesta": "192.0.0.0 a 223.255.255.255"
+                },
+                {
+                    "pregunta": "¿Qué es una dirección privada?",
+                    "respuesta": "IP usada solo dentro de una red local"
+                },
+                {
+                    "pregunta": "¿Qué es una dirección pública?",
+                    "respuesta": "IP accesible desde Internet"
+                },
+                {
+                    "pregunta": "¿Qué es una dirección MAC?",
+                    "respuesta": "Identificador único de 48 bits asignado a la interfaz de red de un dispositivo"
+                },
+                {
+                    "pregunta": "¿Qué es un gateway?",
+                    "respuesta": "Dispositivo que conecta redes distintas"
+                },
+                {
+                    "pregunta": "¿Qué es un switch?",
+                    "respuesta": "Dispositivo que conecta dispositivos y envía tramas a destino"
+                },
+                {
+                    "pregunta": "¿Qué es un hub?",
+                    "respuesta": "Dispositivo que repite señales a todos los puertos"
+                },
+                {
+                    "pregunta": "¿Qué es un DNS?",
+                    "respuesta": "Sistema de nombres de dominio"
+                },
+                {
+                    "pregunta": "¿Qué es un dominio?",
+                    "respuesta": "Nombre que identifica una red o servicio"
+                },
+                {
+                    "pregunta": "¿Qué es un broadcast address?",
+                    "respuesta": "Dirección que llega a todos los hosts de la red"
+                },
+                {
+                    "pregunta": "¿Qué es IP loopback?",
+                    "respuesta": "Dirección que referencia al propio host"
+                },
+                {
+                    "pregunta": "¿Qué es un VLAN?",
+                    "respuesta": "Red lógica separada dentro de una física"
+                },
+                {
+                    "pregunta": "¿Qué es un IP público?",
+                    "respuesta": "Dirección accesible desde Internet"
+                },
+                {
+                    "pregunta": "¿Qué es un IP privado?",
+                    "respuesta": "Dirección solo para LAN"
+                },
+                {
+                    "pregunta": "¿Qué es un paquete?",
+                    "respuesta": "Unidad de transmisión de datos en la red"
+                },
+                {
+                    "pregunta": "¿Qué capa del modelo OSI utiliza la dirección MAC?",
+                    "respuesta": "Capa de enlace (Capa 2)"
+                },
+                {
+                    "pregunta": "¿Qué es un broadcast storm?",
+                    "respuesta": "Exceso de tráfico broadcast que congestiona la red"
+                },
+                {
+                    "pregunta": "¿Qué es VLAN nativa?",
+                    "respuesta": "VLAN por defecto en un trunk"
+                },
+                {
+                    "pregunta": "¿Qué es full-mesh?",
+                    "respuesta": "Cada nodo conectado a todos los demás nodos"
+                },
+                {
+                    "pregunta": "¿Qué es unicast routing?",
+                    "respuesta": "Ruteo de paquetes de un host a otro específico"
+                },
+                {
+                    "pregunta": "¿Qué es multicast routing?",
+                    "respuesta": "Ruteo de paquetes de un host a un grupo de hosts"
+                },
+                {
+                    "pregunta": "¿Qué identifica una dirección MAC en una red?",
+                    "respuesta": "La interfaz de red de un dispositivo"
+                },
+                {
+                    "pregunta": "¿Qué significa que un enlace sea full-duplex?",
+                    "respuesta": "Permite enviar y recibir datos simultáneamente"
+                }
+            ]
+        },
+        {
+            "categoria": "Routing",
+            "preguntas": [
+                {
+                    "pregunta": "¿Qué es un router?",
+                    "respuesta": "Dispositivo que dirige paquetes entre redes"
+                },
+                {
+                    "pregunta": "¿Qué es un hop?",
+                    "respuesta": "Salto entre routers en una ruta"
+                },
+                {
+                    "pregunta": "¿Qué es gateway?",
+                    "respuesta": "Puerta de enlace entre redes"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta estática?",
+                    "respuesta": "Ruta configurada manualmente en el router"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta por defecto?",
+                    "respuesta": "Ruta hacia todos los destinos no conocidos"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta administrativa?",
+                    "respuesta": "Prioridad de la ruta en la tabla de enrutamiento"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo de enrutamiento?",
+                    "respuesta": "Conjunto de reglas para determinar la mejor ruta"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo interior (IGP)?",
+                    "respuesta": "Protocolo de enrutamiento dentro de un AS"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo exterior (EGP)?",
+                    "respuesta": "Protocolo de enrutamiento entre AS"
+                },
+                {
+                    "pregunta": "¿Qué es RIP?",
+                    "respuesta": "Routing Information Protocol, protocolo vector distancia"
+                },
+                {
+                    "pregunta": "¿Qué es OSPF?",
+                    "respuesta": "Open Shortest Path First, protocolo link-state"
+                },
+                {
+                    "pregunta": "¿Qué es EIGRP?",
+                    "respuesta": "Enhanced Interior Gateway Routing Protocol, híbrido"
+                },
+                {
+                    "pregunta": "¿Qué es BGP?",
+                    "respuesta": "Border Gateway Protocol, exterior entre AS"
+                },
+                {
+                    "pregunta": "¿Qué es un AS (Autonomous System)?",
+                    "respuesta": "Conjunto de routers bajo la misma política de enrutamiento"
+                },
+                {
+                    "pregunta": "¿Qué es un loop de routing?",
+                    "respuesta": "Reenvío circular de paquetes por rutas incorrectas"
+                },
+                {
+                    "pregunta": "¿Qué es un broadcast route?",
+                    "respuesta": "Ruta usada para direcciones de broadcast"
+                },
+                {
+                    "pregunta": "¿Qué es un vector distancia?",
+                    "respuesta": "Método que utiliza distancia y dirección para enrutar"
+                },
+                {
+                    "pregunta": "¿Qué es link-state?",
+                    "respuesta": "Método que conoce toda la topología de la red"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo híbrido de routing?",
+                    "respuesta": "Combina vector distancia y link-state"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer muestra la tabla de rutas?",
+                    "respuesta": "show ip route"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer muestra interfaces activas?",
+                    "respuesta": "show ip interface brief"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer muestra la configuración actual del router?",
+                    "respuesta": "show running-config"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer configura IP en una interfaz?",
+                    "respuesta": "ip address X.X.X.X X.X.X.X"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer activa una interfaz?",
+                    "respuesta": "no shutdown"
+                },
+                {
+                    "pregunta": "¿Qué es un paquete en routing?",
+                    "respuesta": "Unidad de datos que se envía entre routers"
+                },
+                {
+                    "pregunta": "¿Qué es encapsulamiento de routing?",
+                    "respuesta": "Agregar cabeceras para envío entre routers"
+                },
+                {
+                    "pregunta": "¿Qué es un router core?",
+                    "respuesta": "Router central que maneja tráfico principal de la red"
+                },
+                {
+                    "pregunta": "¿Qué es un router edge?",
+                    "respuesta": "Router que conecta la red interna con otras redes"
+                },
+                {
+                    "pregunta": "¿Qué es un router distribution?",
+                    "respuesta": "Router intermedio entre core y acceso"
+                },
+                {
+                    "pregunta": "¿Qué es un router access?",
+                    "respuesta": "Router que conecta dispositivos finales a la red"
+                },
+                {
+                    "pregunta": "¿Qué es RIP v1?",
+                    "respuesta": "Versión de RIP sin soporte de subnetting"
+                },
+                {
+                    "pregunta": "¿Qué es RIP v2?",
+                    "respuesta": "Versión de RIP con soporte de subnetting y multicast"
+                },
+                {
+                    "pregunta": "¿Qué es OSPF área 0?",
+                    "respuesta": "Área backbone de OSPF"
+                },
+                {
+                    "pregunta": "¿Qué es un vecino OSPF?",
+                    "respuesta": "Router adyacente con el que se intercambian LSAs"
+                },
+                {
+                    "pregunta": "¿Qué es un LSA?",
+                    "respuesta": "Link-State Advertisement, información enviada en OSPF"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta redundante?",
+                    "respuesta": "Ruta alternativa en caso de fallo de la principal"
+                },
+                {
+                    "pregunta": "¿Qué es un metric en routing?",
+                    "respuesta": "Valor usado para determinar la mejor ruta"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta más corta?",
+                    "respuesta": "Ruta con menor métrica"
+                },
+                {
+                    "pregunta": "¿Qué es un router virtual?",
+                    "respuesta": "Un router simulado o emulado por software, como Packet Tracer"
+                },
+                {
+                    "pregunta": "¿Qué es un router físico?",
+                    "respuesta": "Dispositivo hardware que enruta paquetes"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo de vector distancia?",
+                    "respuesta": "Enrutamiento basado en distancia y dirección hacia destino"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo link-state?",
+                    "respuesta": "Enrutamiento basado en topología completa de la red"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo de enrutamiento estático?",
+                    "respuesta": "Rutas configuradas manualmente, no aprenden dinámicamente"
+                },
+                {
+                    "pregunta": "¿Qué es un protocolo de enrutamiento dinámico?",
+                    "respuesta": "Rutas se aprenden automáticamente mediante protocolos"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta de backup?",
+                    "respuesta": "Ruta alternativa guardada para falla de la principal"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta predeterminada?",
+                    "respuesta": "Ruta usada cuando no se encuentra una ruta específica"
+                },
+                {
+                    "pregunta": "¿Qué es routing entre VLANs?",
+                    "respuesta": "Proceso de enviar paquetes entre VLANs distintas mediante un router"
+                },
+                {
+                    "pregunta": "¿Qué es un paquete encapsulado?",
+                    "respuesta": "Paquete con cabecera añadida para envío por la red"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer se usa para habilitar OSPF en un router?",
+                    "respuesta": "router ospf <id>"
+                },
+                {
+                    "pregunta": "¿Qué es una ruta estática flotante?",
+                    "respuesta": "Ruta alternativa con menor prioridad que se activa si falla la principal"
+                }
+            ]
+        },
+        {
+            "categoria": "Switching",
+            "preguntas": [
+                {
+                    "pregunta": "¿Qué es un switch?",
+                    "respuesta": "Dispositivo que conecta dispositivos y envía tramas al puerto destino"
+                },
+                {
+                    "pregunta": "¿Qué es un hub?",
+                    "respuesta": "Dispositivo que repite señales a todos los puertos"
+                },
+                {
+                    "pregunta": "¿Qué es STP?",
+                    "respuesta": "Spanning Tree Protocol, evita bucles en la red"
+                },
+                {
+                    "pregunta": "¿Qué es RSTP?",
+                    "respuesta": "Rapid Spanning Tree Protocol, versión más rápida de STP"
+                },
+                {
+                    "pregunta": "¿Qué es PVST?",
+                    "respuesta": "Per VLAN Spanning Tree, STP por cada VLAN"
+                },
+                {
+                    "pregunta": "¿Qué es VLAN?",
+                    "respuesta": "Red lógica separada dentro de una física"
+                },
+                {
+                    "pregunta": "¿Qué es VTP?",
+                    "respuesta": "VLAN Trunking Protocol, propaga VLANs automáticamente"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto trunk?",
+                    "respuesta": "Puerto que transporta varias VLANs"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto access?",
+                    "respuesta": "Puerto asignado a una sola VLAN"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto dinámico?",
+                    "respuesta": "Puerto que negocia modo automáticamente"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto estático?",
+                    "respuesta": "Puerto configurado manualmente"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto administrado?",
+                    "respuesta": "Puerto configurado y monitoreado"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto err-disabled?",
+                    "respuesta": "Puerto deshabilitado por error"
+                },
+                {
+                    "pregunta": "¿Qué es flooding?",
+                    "respuesta": "Enviar tramas a todos los puertos excepto el de origen"
+                },
+                {
+                    "pregunta": "¿Qué es un BPDU?",
+                    "respuesta": "Bridge Protocol Data Unit, usado por STP"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto en modo listening?",
+                    "respuesta": "Puerto STP que escucha antes de pasar tráfico"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto en modo learning?",
+                    "respuesta": "Puerto STP que aprende direcciones MAC pero no envía tramas"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto en modo forwarding?",
+                    "respuesta": "Puerto STP que envía y recibe tráfico"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto en modo blocking?",
+                    "respuesta": "Puerto STP bloqueado para evitar bucles"
+                },
+                {
+                    "pregunta": "¿Qué es un switch layer 2?",
+                    "respuesta": "Switch que funciona en capa de enlace de datos"
+                },
+                {
+                    "pregunta": "¿Qué es un switch layer 3?",
+                    "respuesta": "Switch que puede enrutar paquetes entre VLANs"
+                },
+                {
+                    "pregunta": "¿Qué es un EtherChannel?",
+                    "respuesta": "Agrupación de varios puertos físicos en uno lógico"
+                },
+                {
+                    "pregunta": "¿Qué es una VLAN nativa?",
+                    "respuesta": "VLAN por defecto en un puerto trunk"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer crea una VLAN?",
+                    "respuesta": "vlan <id>"
+                },
+                {
+                    "pregunta": "¿Qué comando de Packet Tracer asigna un puerto a VLAN?",
+                    "respuesta": "switchport access vlan <id>"
+                },
+                {
+                    "pregunta": "¿Qué comando activa STP en un switch en Packet Tracer?",
+                    "respuesta": "spanning-tree vlan <id>"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto seguro?",
+                    "respuesta": "Puerto que limita acceso según dirección MAC"
+                },
+                {
+                    "pregunta": "¿Qué es un broadcast storm?",
+                    "respuesta": "Exceso de tráfico de broadcast que congestiona la red"
+                },
+                {
+                    "pregunta": "¿Qué es una VLAN de gestión?",
+                    "respuesta": "VLAN usada para administrar el switch"
+                },
+                {
+                    "pregunta": "¿Qué es una VLAN de datos?",
+                    "respuesta": "VLAN usada para tráfico de usuarios y servicios"
+                },
+                {
+                    "pregunta": "¿Qué es una VLAN de voz?",
+                    "respuesta": "VLAN dedicada al tráfico de telefonía IP"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto trunk nativo?",
+                    "respuesta": "Trunk que no etiqueta la VLAN nativa"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto trunk etiquetado?",
+                    "respuesta": "Trunk que envía etiquetas VLAN en cada trama"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto trunk no etiquetado?",
+                    "respuesta": "Trunk que envía tramas de la VLAN nativa sin etiqueta"
+                },
+                {
+                    "pregunta": "¿Qué es VTP modo servidor?",
+                    "respuesta": "Switch que puede crear, modificar y propagar VLANs"
+                },
+                {
+                    "pregunta": "¿Qué es VTP modo cliente?",
+                    "respuesta": "Switch que recibe información de VLANs pero no las crea"
+                },
+                {
+                    "pregunta": "¿Qué es VTP modo transparente?",
+                    "respuesta": "Switch que no propaga VLANs pero permite configurarlas localmente"
+                },
+                {
+                    "pregunta": "¿Qué es el tiempo de convergencia en STP?",
+                    "respuesta": "Tiempo que tarda la red en estabilizarse tras un cambio"
+                },
+                {
+                    "pregunta": "¿Qué es una topología de red en switching?",
+                    "respuesta": "Distribución de switches y enlaces que conecta dispositivos"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto full-duplex?",
+                    "respuesta": "Puerto que puede enviar y recibir datos simultáneamente"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto half-duplex?",
+                    "respuesta": "Puerto que puede enviar o recibir, pero no ambos a la vez"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto simplex?",
+                    "respuesta": "Puerto que solo puede enviar o solo recibir datos"
+                },
+                {
+                    "pregunta": "¿Qué es un switch administrado?",
+                    "respuesta": "Switch que permite configurar VLANs, STP y seguridad"
+                },
+                {
+                    "pregunta": "¿Qué es un switch no administrado?",
+                    "respuesta": "Switch plug-and-play, sin opciones de configuración"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto trunk dinámico?",
+                    "respuesta": "Puerto que negocia el trunk automáticamente"
+                },
+                {
+                    "pregunta": "¿Qué es un puerto trunk manual?",
+                    "respuesta": "Puerto configurado explícitamente como trunk"
+                },
+                {
+                    "pregunta": "¿Qué protocolo evita bucles en switches que tienen múltiples caminos redundantes?",
+                    "respuesta": "STP (Spanning Tree Protocol)"
+                },
+                {
+                    "pregunta": "¿Qué significa que un puerto sea half-duplex?",
+                    "respuesta": "Solo puede enviar o recibir datos en un momento, no simultáneamente"
+                }
+            ]
+        },
+        {
+            "categoria": "Conversiones",
+            "preguntas": [
+                {
+                    "pregunta": "Convierte 10 decimal a binario",
+                    "respuesta": "1010"
+                },
+                {
+                    "pregunta": "Convierte 15 decimal a binario",
+                    "respuesta": "1111"
+                },
+                {
+                    "pregunta": "Convierte 255 decimal a hexadecimal",
+                    "respuesta": "FF"
+                },
+                {
+                    "pregunta": "Convierte 31 decimal a hexadecimal",
+                    "respuesta": "1F"
+                },
+                {
+                    "pregunta": "Convierte 77 decimal a octal",
+                    "respuesta": "115"
+                },
+                {
+                    "pregunta": "Convierte 1110 binario a decimal",
+                    "respuesta": "14"
+                },
+                {
+                    "pregunta": "Convierte 101 binario a decimal",
+                    "respuesta": "5"
+                },
+                {
+                    "pregunta": "Convierte 64 decimal a binario",
+                    "respuesta": "1000000"
+                },
+                {
+                    "pregunta": "Convierte 100 decimal a hexadecimal",
+                    "respuesta": "64"
+                },
+                {
+                    "pregunta": "Convierte 123 decimal a hexadecimal",
+                    "respuesta": "7B"
+                },
+                {
+                    "pregunta": "Convierte 88 decimal a octal",
+                    "respuesta": "130"
+                },
+                {
+                    "pregunta": "Convierte 1101 binario a decimal",
+                    "respuesta": "13"
+                },
+                {
+                    "pregunta": "Convierte 2A hexadecimal a decimal",
+                    "respuesta": "42"
+                },
+                {
+                    "pregunta": "Convierte 64 decimal a octal",
+                    "respuesta": "100"
+                },
+                {
+                    "pregunta": "Convierte 1011 binario a hexadecimal",
+                    "respuesta": "B"
+                },
+                {
+                    "pregunta": "Convierte FF hexadecimal a binario",
+                    "respuesta": "11111111"
+                },
+                {
+                    "pregunta": "Convierte 10,25 decimal a binario",
+                    "respuesta": "1010,01"
+                },
+                {
+                    "pregunta": "Convierte 7,5 decimal a binario",
+                    "respuesta": "111,1"
+                },
+                {
+                    "pregunta": "Convierte 12,625 decimal a binario",
+                    "respuesta": "1100,101"
+                },
+                {
+                    "pregunta": "Convierte 0,75 decimal a binario",
+                    "respuesta": "0,11"
+                },
+                {
+                    "pregunta": "Convierte 5,5 decimal a hexadecimal",
+                    "respuesta": "5,8"
+                },
+                {
+                    "pregunta": "Convierte 2,25 decimal a octal",
+                    "respuesta": "2,2"
+                },
+                {
+                    "pregunta": "Convierte 3,125 decimal a octal",
+                    "respuesta": "3,1"
+                },
+                {
+                    "pregunta": "Convierte 101,1 binario a decimal",
+                    "respuesta": "5,5"
+                },
+                {
+                    "pregunta": "Convierte 111,01 binario a decimal",
+                    "respuesta": "7,25"
+                },
+                {
+                    "pregunta": "Convierte 1A hexadecimal a decimal",
+                    "respuesta": "26"
+                },
+                {
+                    "pregunta": "Convierte 1F hexadecimal a decimal",
+                    "respuesta": "31"
+                },
+                {
+                    "pregunta": "Convierte 2F hexadecimal a decimal",
+                    "respuesta": "47"
+                },
+                {
+                    "pregunta": "Convierte 1001 binario a decimal",
+                    "respuesta": "9"
+                },
+                {
+                    "pregunta": "Convierte 1010 binario a decimal",
+                    "respuesta": "10"
+                },
+                {
+                    "pregunta": "Convierte 1111 binario a decimal",
+                    "respuesta": "15"
+                },
+                {
+                    "pregunta": "Convierte 255 decimal a binario",
+                    "respuesta": "11111111"
+                },
+                {
+                    "pregunta": "Convierte 256 decimal a binario",
+                    "respuesta": "100000000"
+                },
+                {
+                    "pregunta": "Convierte 500 decimal a hexadecimal",
+                    "respuesta": "1F4"
+                },
+                {
+                    "pregunta": "Convierte 64 decimal a hexadecimal",
+                    "respuesta": "40"
+                },
+                {
+                    "pregunta": "Convierte 255 decimal a octal",
+                    "respuesta": "377"
+                },
+                {
+                    "pregunta": "Convierte 128 decimal a binario",
+                    "respuesta": "10000000"
+                },
+                {
+                    "pregunta": "Convierte 7 decimal a octal",
+                    "respuesta": "7"
+                },
+                {
+                    "pregunta": "Convierte 31 decimal a binario",
+                    "respuesta": "11111"
+                },
+                {
+                    "pregunta": "Convierte 42 decimal a hexadecimal",
+                    "respuesta": "2A"
+                },
+                {
+                    "pregunta": "Convierte 15 decimal a octal",
+                    "respuesta": "17"
+                },
+                {
+                    "pregunta": "Convierte 100 decimal a octal",
+                    "respuesta": "144"
+                },
+                {
+                    "pregunta": "Convierte 1010 binario a octal",
+                    "respuesta": "12"
+                },
+                {
+                    "pregunta": "Convierte 1101 binario a octal",
+                    "respuesta": "15"
+                },
+                {
+                    "pregunta": "Convierte A hexadecimal a binario",
+                    "respuesta": "1010"
+                },
+                {
+                    "pregunta": "Convierte 26 decimal a hexadecimal",
+                    "respuesta": "1A"
+                },
+                {
+                    "pregunta": "Convierte 21 octal a decimal",
+                    "respuesta": "17"
+                },
+                {
+                    "pregunta": "Convierte 12,5 decimal a binario",
+                    "respuesta": "1100,1"
+                },
+                {
+                    "pregunta": "Convierte 9,75 decimal a binario",
+                    "respuesta": "1001,11"
+                },
+                {
+                    "pregunta": "Convierte 10,25 decimal a binario",
+                    "respuesta": "1010,01"
+                },
+                {
+                    "pregunta": "Convierte 7,5 decimal a hexadecimal",
+                    "respuesta": "7,8"
+                }
+            ]
+        }
+    ]
+}

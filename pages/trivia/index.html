@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Cards</title>
+    <link rel="icon" href="../../img/apps/trivia.svg" sizes="any" type="image/svg+xml" />
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 10mm;
+        }
+
+        body {
+            background: #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            margin: 10mm 0;
+            box-sizing: border-box;
+            page-break-after: always;
+        }
+
+        @media screen {
+            .page {
+                transform: scale(0.9);
+                transform-origin: top center;
+            }
+        }
+
+        @media print {
+            body {
+                background: none;
+            }
+
+            .page {
+                margin: 0;
+                transform: none;
+            }
+        }
+
+        .card {
+            display: flex;
+            overflow: hidden;
+            font-size: 12px;
+
+            /* Borde interno negro */
+            border: 1px solid black;
+
+            /* Borde blanco + borde externo negro */
+            box-shadow:
+                0 0 0 4px white,
+                /* borde blanco de 4px */
+                0 0 0 6px black;
+            /* borde negro externo de 2px adicionales */
+        }
+
+        .image-area {
+            width: 25%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            /* <--- ESTO es clave */
+        }
+
+        .content {
+            width: 75%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-style: italic;
+        }
+
+        .question-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            min-height: 2.5em;
+            line-height: 1.25em;
+        }
+
+        .circle {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+
+        .back {
+            background: #f5f5f5;
+        }
+
+        .rotated-logo-left {
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .rotated-logo-left img,
+        .rotated-logo-right img {
+            width: 50px;
+            display: block;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        .rotated-logo-right {
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .rotated-text-left {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: rotate(-90deg) translate(-50%, -50%);
+            transform-origin: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            font-family: 'Courier New', Courier, monospace;
+            /* para no interferir con clicks */
+        }
+
+        .rotated-text-right {
+            position: absolute;
+            top: 92%;
+            left: -21%;
+            transform: rotate(90deg) translate(-50%, -50%);
+            transform-origin: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            font-family: 'Courier New', Courier, monospace;
+            /* para no interferir con clicks */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+        const imagenAnverso = "https://images.unsplash.com/vector-1742735433836-1fac3adfbe80"
+        const imagenReverso = "https://images.unsplash.com/vector-1742735484705-b30abeec6350";
+
+        const categorias = {
+            "Internet": { color: "#d32f2f", letra: "I" },
+            "Medios": { color: "#1976d2", letra: "M" },
+            "Networking": { color: "#388e3c", letra: "N" },
+            "Routing": { color: "#f57c00", letra: "R" },
+            "Switching": { color: "#7b1fa2", letra: "S" },
+            "Conversiones": { color: "#0097a7", letra: "C" }
+        };
+
+        // Crear línea de pregunta/respuesta
+        function crearLinea(item, categoria, esRespuesta = false) {
+            const infoCat = categorias[categoria] || { color: "#555", letra: "?" };
+            return `
+                <div class="question-line">
+                    <div class="circle" style="background:${infoCat.color}">${infoCat.letra}</div>
+                    <div>${esRespuesta ? item.respuesta : item.pregunta}</div>
+                </div>
+            `;
+        }
+
+        // Crear carta completa
+        function crearCarta(carta, numCartas, esReverso = false) {
+            const card = document.createElement("div");
+            card.className = "card" + (esReverso ? " back" : "");
+
+            const imageDiv = document.createElement("div");
+            imageDiv.className = "image-area";
+
+            if (!esReverso) {
+                imageDiv.style.backgroundImage = `url('${imagenAnverso}')`;
+
+                // LOGO GIRADO POR CADA CARTA
+                const logoPreguntas = document.createElement("div");
+                const logo = document.createElement("img");
+                logo.src = "https://cdn-icons-png.flaticon.com/512/5909/5909869.png";
+                logoPreguntas.className = "rotated-logo-left";
+                logoPreguntas.appendChild(logo);
+                imageDiv.appendChild(logoPreguntas);
+
+                // TEXTO GIRADO POR CADA CARTA
+                const textoPreguntas = document.createElement("div");
+                textoPreguntas.className = "rotated-text-left";
+                textoPreguntas.innerText = "PREGUNTAS";
+                imageDiv.appendChild(textoPreguntas);
+
+            } else {
+                imageDiv.style.backgroundImage = `url('${imagenReverso}')`;
+
+                // LOGO GIRADO POR CADA CARTA
+                const logoPreguntas = document.createElement("div");
+                const logo = document.createElement("img");
+                logo.src = "https://cdn-icons-png.flaticon.com/512/5909/5909869.png";
+                logoPreguntas.className = "rotated-logo-right";
+                logoPreguntas.appendChild(logo);
+                imageDiv.appendChild(logoPreguntas);
+
+                // TEXTO GIRADO POR CADA CARTA
+                const textoRespuestas = document.createElement("div");
+                textoRespuestas.className = "rotated-text-right";
+                textoRespuestas.innerText = "RESPUESTAS";
+                imageDiv.appendChild(textoRespuestas);
+            }
+
+            const contentDiv = document.createElement("div");
+            contentDiv.className = "content";
+
+            contentDiv.innerHTML = `
+            ${esReverso ? "<h3 style=\"text-align:left\">" + carta.id + " / " + numCartas + "</h3>" : "<h3 style=\"text-align:right\">" + carta.id + " / " + numCartas + "</h3>"}
+                ${carta.preguntas.map(p => crearLinea(p, p.categoriaAlmacenada, esReverso)).join("")}
+            `;
+
+            if (esReverso) {
+                card.appendChild(contentDiv);
+                card.appendChild(imageDiv);
+            } else {
+                card.appendChild(imageDiv);
+                card.appendChild(contentDiv);
+            }
+
+            return card;
+        }
+
+        // Generar páginas
+        function generarPaginas(cartas) {
+            const output = document.getElementById("output");
+
+            for (let i = 0; i < cartas.length; i += 8) {
+                const bloque = cartas.slice(i, i + 8);
+
+                const pageFront = document.createElement("div");
+                pageFront.className = "page";
+                bloque.forEach(carta => pageFront.appendChild(crearCarta(carta, cartas.length, false)));
+                output.appendChild(pageFront);
+
+                const pageBack = document.createElement("div");
+                pageBack.className = "page";
+                bloque.forEach(carta => pageBack.appendChild(crearCarta(carta, cartas.length, true)));
+                output.appendChild(pageBack);
+            }
+        }
+
+        // Cargar JSON y formar cartas
+        async function loadJSON() {
+            try {
+                const resp = await fetch("cartas.json"); // JSON externo
+                const data = await resp.json();
+
+                // Preparar arrays por categoría
+                const categoriasArray = Object.keys(categorias).map(cat => ({
+                    categoria: cat,
+                    preguntas: data.categorias.find(c => c.categoria === cat)?.preguntas || []
+                }));
+
+                // Determinar cuántas cartas completas podemos generar
+                const numCartas = Math.min(...categoriasArray.map(c => c.preguntas.length));
+
+                // Crear cartas combinando 1 pregunta de cada categoría
+                const cartasFinales = [];
+                for (let i = 0; i < numCartas; i++) {
+                    const preguntasCarta = categoriasArray.map(c => {
+                        return {
+                            ...c.preguntas[i],   // pregunta y respuesta
+                            categoriaAlmacenada: c.categoria  // guardamos la categoría aquí
+                        };
+                    });
+                    cartasFinales.push({ id: i + 1, preguntas: preguntasCarta });
+                }
+
+                generarPaginas(cartasFinales);
+
+            } catch (e) {
+                console.error("Error cargando JSON:", e);
+                document.getElementById("output").innerText = "Error cargando JSON";
+            }
+        }
+
+        loadJSON();
+    </script>
+</body>
+
+</html>
