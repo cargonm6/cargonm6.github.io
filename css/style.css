@@ -19,9 +19,12 @@
     --color-green: rgb(110, 160, 74);
     --trans-speed: 0.5s;
 
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 body {
@@ -227,6 +230,10 @@ div.desc div.position {
     margin-bottom: 10px;
 }
 
+div.left a.analytics {
+    padding: 12px;
+}
+
 div.desc a {
     font-weight: bold;
     margin-top: 3px;
@@ -284,12 +291,12 @@ div.left div.desc a {
     border-radius: 0;
 }
 
-div.left div.desc > a:first-of-type {
+div.left div.desc>a:first-of-type {
     margin-top: 7px;
     border-radius: 10px 10px 0 0;
 }
 
-div.left div.desc > a:last-of-type {
+div.left div.desc>a:last-of-type {
     border-radius: 0 0 10px 10px;
 }
 
@@ -307,7 +314,7 @@ div.desc a:active {
     color: var(--color-medium);
 }
 
-div.category + div.category {
+div.category+div.category {
     margin-top: 10px;
 }
 
@@ -660,7 +667,7 @@ audio {
     border-radius: 10px;
 }
 
-audio + small {
+audio+small {
     color: var(--color-shadow);
 }
 
@@ -832,7 +839,12 @@ button.gallery_btn:active {
     }
 }
 
-@media screen and (max-width: 640px), (max-height: 420px), (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
+@media screen and (max-width: 640px),
+(max-height: 420px),
+(-webkit-min-device-pixel-ratio: 1.5),
+(-o-min-device-pixel-ratio: 3/2),
+(min--moz-device-pixel-ratio: 1.5),
+(min-device-pixel-ratio: 1.5) {
     body {
         font-size: small;
         background-color: var(--color-plain);
@@ -856,6 +868,10 @@ button.gallery_btn:active {
         height: max-content;
         padding: 10px 0 5px 0;
         border-radius: 0;
+    }
+
+    div.left a.analytics {
+        display: none;
     }
 
     div.right {
@@ -899,8 +915,8 @@ button.gallery_btn:active {
     }
 
     div.left div.desc a,
-    div.left div.desc > a:first-of-type,
-    div.left div.desc > a:last-of-type {
+    div.left div.desc>a:first-of-type,
+    div.left div.desc>a:last-of-type {
         border-radius: 10px;
     }
 
@@ -977,7 +993,7 @@ button.gallery_btn:active {
     div.desc a,
     div.foot,
     audio,
-    audio + small,
+    audio+small,
     a img {
         display: none;
     }
@@ -1079,6 +1095,11 @@ button.gallery_btn:active {
     .modal-content {
         width: 100%;
     }
+
+    div.left a.analytics {
+        display: none;
+    }
+
 }
 
 .maker {
@@ -1092,7 +1113,7 @@ button.gallery_btn:active {
     height: fit-content;
 }
 
-.maker + .maker {
+.maker+.maker {
     margin-top: 10px;
 }
 
