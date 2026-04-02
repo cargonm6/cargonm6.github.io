@@ -13,16 +13,20 @@
                     "description": "Profesor de informática en ESO, Bachillerato y Ciclos de Formación Profesional.",
                     "subentries": [
                         {
-                            "title":"<code title=\"Funcionario interino\">FI</code>&nbsp;Curso 23-24: IES Abastos",
-                            "link":"https://ceice.gva.es/es/web/centros-docentes/ficha-centro?codi=46025040"
+                            "title":"<code title=\"Funcionario interino\">FI</code>&nbsp;Curso 2023-2024: IES Abastos",
+                            "link":"http://aplicaciones.edu.gva.es/ocd/areacd/es/centro.asp?codi=46025040"
                         },
                         {
-                            "title":"<code title=\"Funcionario interino\">FI</code>&nbsp;Curso 24-25: IES José Rodrigo Botet",
-                            "link":"https://ceice.gva.es/es/web/centros-docentes/ficha-centro?codi=46005132"
+                            "title":"<code title=\"Funcionario interino\">FI</code>&nbsp;Curso 2024-2025: IES José Rodrigo Botet",
+                            "link":"http://aplicaciones.edu.gva.es/ocd/areacd/es/centro.asp?codi=46005132"
                         },
                         {
-                            "title":"<code title=\"Funcionario en prácticas\">FP</code>&nbsp;Curso 25-26: IES Font de Sant Lluís",
-                            "link":"https://ceice.gva.es/es/web/centros-docentes/ficha-centro?codi=46014224"
+                            "title":"<code title=\"Funcionario en prácticas\">FP</code>&nbsp;Curso 2025-2026: IES Font de Sant Lluís",
+                            "link":"http://aplicaciones.edu.gva.es/ocd/areacd/es/centro.asp?codi=46014224"
+                        },
+                        {
+                            "title":"<code title=\"Funcionario de carrera\">FC</code>&nbsp;Curso 2026-acte.: IES Juan de Garay",
+                            "link":"http://aplicaciones.edu.gva.es/ocd/areacd/es/centro.asp?codi=46012963"
                         }
                     ]
                 },
