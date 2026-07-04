@@ -8,7 +8,17 @@ var view_grid = true;
 var collapsed_list = null;
 var jsonfilepublic = null;
 
+function getGridViewFromSession() {
+    var stored = sessionStorage.getItem("view_grid");
+    return stored !== null ? stored === "true" : true;
+}
+
+function setGridViewToSession(value) {
+    sessionStorage.setItem("view_grid", value.toString());
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+    view_grid = getGridViewFromSession();
     var path = window.location.pathname;
     var page = path.split("/").pop();
     if (page === "gallery.html") {
@@ -39,11 +49,8 @@ function listenAudio() {
 }
 
 function toggleGrid() {
-    if (view_grid) {
-        view_grid = false;
-    } else {
-        view_grid = true;
-    }
+    view_grid = !view_grid;
+    setGridViewToSession(view_grid);
 
     collapsed_list = verify_collapsed();
     loadPage("./pages/main.html", "destination");
