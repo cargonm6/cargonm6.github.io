@@ -22,6 +22,26 @@
             "description": "Tuba de estética similar a los oficleidos de válvulas o bombardones, con la campana y tudel en posiciones opuestas. Similar al modelo 101 \"español\" (catálogo de 1902) pero con 3 cilindros y mayor antigüedad, fue fabricada durante la gestión de František Karel Rott (hijo del fundador de la compañía). Un artístico sello redondo en la campana, grabado con instrumentos y motivos florales, indica: <i class=\"script\">Auguste Henry Rott fils / á Prague, en Bohéme</i><i class=\"descript\">(francés) Augusto Enrique Rott hijo / Praga, Bohemia</i>"
         },
         {
+            "name": "Trompeta Rott",
+            "image": "../../img/music/instruments/rott_trumpet.png",
+            "trademark": [
+                {
+                    "name": "Rott",
+                    "image": "../../img/music/trademarks/rott.svg"
+                }
+            ],
+            "type": "Trompeta",
+            "company": "<a href=\"makers.html#rott\">Rott</a>",
+            "const_year": "1869-1902",
+            "const_place": "<a href=\"https://es.wikipedia.org/wiki/Praga\" target=\"_blank\">Praga (Reino de Bohemia, Austria-Hungría)</a>",
+            "model": "8",
+            "serialno": "12",
+            "tunning": "Fa-Mi♭",
+            "system": "3 cilindros (SARV)",
+            "hlink": "",
+            "description": "Trompeta romántica en Fa, con tonillo para Mi♭. Similar al modelo 8 (catálogo de 1902). Fabricada en Praga durante la dirección de František Karel Rott. En los refuerzos de alpaca presenta grabados florales. Sobre la campana, una guirnalda de alcapa muestra: <i class=\"script\">Praha/Prag A H Rott Sohn/Syn</i><i class=\"descript\">(alemán y checo) Praga, A H Rott hijo</i>"
+        },
+        {
             "name": "Fliscorno Winter & Schöner",
             "image": "../../img/music/instruments/winter_flugelhorn.png",
             "trademark": [
