@@ -1,0 +1,29 @@
+/* Styles for histinf page */
+.hist-section{margin:1rem 0;padding:0;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06);display:block;width:100%;box-sizing:border-box}
+.hist-section.card{display:block!important;flex:0 0 auto;width:100%}
+.hist-section summary{list-style:none;cursor:pointer;padding:0.5rem 1rem;display:flex;align-items:flex-start;gap:1rem;width:100%;box-sizing:border-box;overflow:hidden}
+.hist-section summary h4{margin:0;font-size:1.05rem;flex:1 1 66.66%;max-width:66.66%;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.hist-section summary i{display:block;flex:0 0 33.33%;max-width:33.33%;font-style:italic;font-size:0.92rem;line-height:1.35;align-self:center;min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.hist-section[open] summary{background:linear-gradient(90deg, rgba(3,169,244,0.06), rgba(156,39,176,0.03));}
+.hist-section.card summary{background:linear-gradient(90deg, rgba(255,247,205,0.9), rgba(232,245,233,0.9));box-shadow:inset 0 0 0 1px rgba(255,193,7,0.28);}
+.hist-section.card[open] summary{background:linear-gradient(90deg, rgba(255,247,205,0.95), rgba(219,234,254,0.88));}
+.table-responsive{overflow:auto;padding:0.5rem 1rem;width:100%}
+.table{min-width:0;width:100%;border-collapse:collapse}
+.table th,.table td{padding:0.45rem 0.6rem;text-align:left;vertical-align:top}
+@media (max-width:700px){
+  .table{min-width:480px}
+  .hist-section summary{flex-direction:column;gap:0.5rem}
+  .hist-section summary h4,.hist-section summary i{flex:1 1 100%;max-width:100%;width:100%}
+  summary h4{font-size:1rem}
+}
+
+/* summary marker */
+summary::-webkit-details-marker{display:none}
+summary::before{content:"\25B6";display:inline-block;margin-right:0.6rem;transition:transform .18s ease}
+details[open] summary::before{transform:rotate(90deg)}
+
+/* ensure details don't flow side-by-side in case global styles set flex */
+details.hist-section, .hist-section{display:block}
+
+/* small visual spacing when stacked */
+.hist-section + .hist-section{margin-top:0.8rem}
