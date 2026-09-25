@@ -18,9 +18,8 @@
             <td>
                 <select id="modulo">
                     <option value="example">Ejemplo</option>
-                    <option value="par_25" selected>Planificación y Administración de Redes</option>
-                    <option value="inp_25">Introducción a la Nube Pública</option>
-                    <option value="eso4_25">4.º ESO</option>
+                    <option value="rlo_26" >Redes Locales 26</option>
+                    <option value="inp_26" selected>Introducción a la Nube Pública 26</option>
                 </select>
             </td>
             <td><button id="copiarBtn">COPIAR</button></td>
@@ -306,43 +305,83 @@
         window.categoria_tr = window.categoria_tr || ["Trabajos", ""];
         window.categoria_co = window.categoria_co || ["Complementos", "Participación"];
         window.festivos = [
-            "09/10/2025",
-            "10/10/2025",
-            "08/12/2025",
-            "23/12/2025",
-            "24/12/2025",
-            "25/12/2025",
-            "26/12/2025",
-            "27/12/2025",
-            "28/12/2025",
-            "29/12/2025",
-            "30/12/2025",
-            "31/12/2025",
-            "01/01/2026",
-            "02/01/2026",
-            "03/01/2026",
-            "04/01/2026",
-            "05/01/2026",
-            "06/01/2026",
-            "22/01/2026",
-            "16/03/2026",
-            "17/03/2026",
-            "18/03/2026",
-            "19/03/2026",
-            "02/04/2026",
-            "03/04/2026",
-            "04/04/2026",
-            "05/04/2026",
-            "06/04/2026",
-            "07/04/2026",
-            "08/04/2026",
-            "09/04/2026",
-            "10/04/2026",
-            "11/04/2026",
-            "12/04/2026",
-            "13/04/2026",
-            "01/05/2026",
+            "09/10/2026",
+            "12/10/2026",
+            "07/12/2026-08/12/2026",
+            "24/12/2026-25/12/2026",
+            "28/12/2026-01/01/2027",
+            "04/01/2027-06/01/2027",
+            "22/01/2027",
+            "15/03/2027-19/03/2027",
+            "25/03/2027-26/03/2027",
+            "29/03/2027-02/04/2027",
+            "05/04/2027",
+            "24/06/2027",
         ];
+
+        function formatearFecha(date) {
+            return `${String(date.getDate()).padStart(2, "0")}/${String(date.getMonth() + 1).padStart(2, "0")}/${date.getFullYear()}`;
+        }
+
+        function parsearFechaEsp(dateStr) {
+            if (typeof dateStr !== "string") return null;
+            const limpia = dateStr.trim();
+            if (!limpia) return null;
+
+            const partes = limpia.split("/");
+            if (partes.length !== 3) return null;
+
+            const [dia, mes, año] = partes.map((p) => Number(p));
+            if ([dia, mes, año].some((n) => Number.isNaN(n))) return null;
+
+            const fecha = new Date(año, mes - 1, dia);
+            if (
+                fecha.getFullYear() !== año ||
+                fecha.getMonth() !== mes - 1 ||
+                fecha.getDate() !== dia
+            ) {
+                return null;
+            }
+
+            return fecha;
+        }
+
+        function expandirFestivos(lista) {
+            const resultado = [];
+
+            lista.forEach((valor) => {
+                if (typeof valor !== "string") return;
+
+                const texto = valor.trim();
+                if (!texto) return;
+
+                const rango = texto.split("-").map((parte) => parte.trim());
+                if (rango.length === 2) {
+                    const inicio = parsearFechaEsp(rango[0]);
+                    const fin = parsearFechaEsp(rango[1]);
+                    if (!inicio || !fin) {
+                        resultado.push(texto);
+                        return;
+                    }
+
+                    const paso = inicio <= fin ? 1 : -1;
+                    let fechaActual = new Date(inicio);
+                    while (true) {
+                        resultado.push(formatearFecha(fechaActual));
+                        if (fechaActual.getTime() === fin.getTime()) break;
+                        fechaActual.setDate(fechaActual.getDate() + paso);
+                    }
+                    return;
+                }
+
+                resultado.push(texto);
+            });
+
+            return resultado;
+        }
+
+        window.festivos = expandirFestivos(window.festivos);
+        window.festivosSet = new Set(window.festivos);
 
         function generarCalendario(events, month, year) {
             const hoyStr = (() => {
@@ -392,7 +431,7 @@
                         }
 
                         const borde = f === hoyStr ? "3px solid orange" : "1px solid #ccc";
-                        const esFestivo = window.festivos.includes(f);
+                        const esFestivo = window.festivosSet.has(f);
                         const esFinDeSemana = c === 5 || c === 6;
 
                         let fondoCelda;

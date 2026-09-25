@@ -1,5 +1,6 @@
 # Ignore all JSON files
 *.json
+test*.html
 
 # Except example.json
 !example.json
