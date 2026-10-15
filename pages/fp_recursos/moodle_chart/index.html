@@ -2,104 +2,258 @@
 <html lang="es">
 
 <head>
-    <link rel="icon" type="image/png"
-        href="https://cdn-icons-png.flaticon.com/128/2097/2097055.png" />
-    <style>
-        body {
-            width: calc(100% - 80px);
-            margin-left: 40px;
-        }
-    </style>
-    <!-- Carga Chart.js -->
-    <script src="./moodle_chart/chart.js"></script>
+    <meta charset="UTF-8">
+    <title>Calificaciones</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <canvas id="myChart" width="600" height="400"></canvas>
+    <div style="margin-bottom: 20px; font-family: Arial, sans-serif;">
+        <h2 style="margin-bottom: 10px;">Editar participantes por intervalo</h2>
+        <div id="formParticipantes" style="display: grid; grid-template-columns: repeat(3, minmax(140px, 1fr)); gap: 8px; max-width: 700px;"></div>
+        <div style="margin-top: 12px; display: flex; align-items: center; gap: 8px;">
+            <label for="gradoTendencia" style="font-weight: bold;">Grado de la tendencia:</label>
+            <input id="gradoTendencia" type="number" min="1" max="10" step="1" value="3" style="width: 70px;">
+        </div>
+    </div>
+
+    <canvas id="grafico" width="600" height="400"></canvas>
+
     <script>
-        // Esperar a que el DOM y Chart.js estén cargados
-        window.onload = function () {
+        const intervalos = [
+            "0,00 - 0,50", "0,50 - 1,00", "1,00 - 1,50", "1,50 - 2,00",
+            "2,00 - 2,50", "2,50 - 3,00", "3,00 - 3,50", "3,50 - 4,00",
+            "4,00 - 4,50", "4,50 - 5,00", "5,00 - 5,50", "5,50 - 6,00",
+            "6,00 - 6,50", "6,50 - 7,00", "7,00 - 7,50", "7,50 - 8,00",
+            "8,00 - 8,50", "8,50 - 9,00", "9,00 - 9,50", "9,50 - 10,00"
+        ];
 
-            // ===============================
-            // DATOS
-            // ===============================
-            const data = [5, 10, 8, 12, 7, 15, 10];
-            const labels = data.map((_, i) => i + 1);
+        const participantes = [
+            0, 0, 2, 1, 0, 5, 1, 2, 3, 1,
+            2, 0, 3, 1, 1, 0, 0, 0, 0, 0
+        ];
 
-            // ===============================
-            // FUNCIÓN DE TENDENCIA POLINÓMICA (grado 2)
-            // ===============================
-            function polynomialTrendline(x, y, degree = 2) {
-                if (degree !== 2) {
-                    console.warn("Actualmente solo se soporta grado 2");
-                    return y;
-                }
+        const x = intervalos.map((_, i) => i * 0.5 + 0.25);
+        const gradoTendenciaInput = document.getElementById("gradoTendencia");
 
-                const n = x.length;
-                let sumX = 0, sumY = 0, sumX2 = 0, sumX3 = 0, sumX4 = 0, sumXY = 0, sumX2Y = 0;
+        const totalParticipantesPlugin = {
+            id: "totalParticipantes",
+            afterDraw(chart) {
+                const total = participantes.reduce((sum, valor) => sum + Number(valor || 0), 0);
+                const { ctx, chartArea } = chart;
 
-                for (let i = 0; i < n; i++) {
-                    sumX += x[i];
-                    sumY += y[i];
-                    sumX2 += x[i] ** 2;
-                    sumX3 += x[i] ** 3;
-                    sumX4 += x[i] ** 4;
-                    sumXY += x[i] * y[i];
-                    sumX2Y += x[i] ** 2 * y[i];
-                }
+                if (!chartArea) return;
 
-                const denom = (n * sumX2 * sumX4 + 2 * sumX * sumX2 * sumX3 - sumX2 ** 3 - n * sumX3 ** 2 - sumX ** 2 * sumX4);
-                const a = (sumY * sumX2 * sumX4 + sumX * sumX3 * sumX2Y + sumX2 * sumX3 * sumXY - sumX2 ** 2 * sumX2Y - sumX3 ** 2 * sumY - sumX * sumX4 * sumXY) / denom;
-                const b = (n * sumXY * sumX4 + sumY * sumX3 * sumX2 + sumX * sumX3 * sumX2Y - sumX2 * sumXY * sumX2 - sumX3 ** 2 * sumY - n * sumX3 * sumX2Y) / denom;
-                const c = (n * sumX2 * sumX2Y + sumX * sumXY * sumX2 + sumX * sumX3 * sumY - sumX2 ** 2 * sumY - sumX3 * sumXY * n - sumX * sumX2 * sumX2Y) / denom;
+                const texto = `Total: ${total}`;
+                const paddingX = 5;
+                const paddingY = 5;
+                const x = chartArea.right - 5;
+                const y = chartArea.top + 5;
 
-                return x.map(xi => a + b * xi + c * xi ** 2);
+                ctx.save();
+                ctx.font = "14px Arial";
+                const anchoTexto = ctx.measureText(texto).width;
+                const anchoCaja = anchoTexto + paddingX * 2;
+                const altoCaja = 24;
+
+                ctx.fillStyle = "#333";
+                ctx.textAlign = "right";
+                ctx.textBaseline = "middle";
+                ctx.fillText(texto, x - paddingX, y + altoCaja / 2);
+                ctx.restore();
             }
+        };
 
-            const degree = 2; // Cambia el grado si quieres
-            const trendData = polynomialTrendline(labels, data, degree);
+        function generarFormularioParticipantes() {
+            const contenedor = document.getElementById("formParticipantes");
 
-            // ===============================
-            // CREAR GRÁFICO
-            // ===============================
-            const ctx = document.getElementById('myChart').getContext('2d');
+            intervalos.forEach((intervalo, i) => {
+                const label = document.createElement("label");
+                label.style.display = "flex";
+                label.style.alignItems = "center";
+                label.style.gap = "6px";
+                label.textContent = intervalo;
 
-            new Chart(ctx, {
-                type: 'bar', // <-- Gráfico de barras principal
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: 'Datos',
-                            data: data,
-                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 1
-                        },
-                        {
-                            label: `Tendencia polinómica (grado ${degree})`,
-                            data: trendData,
-                            type: 'line', // <-- Línea sobre las barras
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            borderWidth: 2,
-                            fill: false,
-                            tension: 0.4 // suaviza la curva
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: { position: 'top' },
-                        title: { display: true, text: 'Histograma con línea de tendencia polinómica' }
-                    },
-                    scales: {
-                        y: { beginAtZero: true }
-                    }
-                }
+                const input = document.createElement("input");
+                input.type = "number";
+                input.min = "0";
+                input.step = "1";
+                input.value = participantes[i];
+                input.style.width = "60px";
+                input.dataset.index = i;
+                input.addEventListener("input", (event) => {
+                    const indice = Number(event.target.dataset.index);
+                    const valor = Number(event.target.value);
+                    participantes[indice] = Number.isFinite(valor) ? valor : 0;
+                    actualizarGrafica();
+                });
+
+                label.appendChild(input);
+                contenedor.appendChild(label);
             });
         }
+
+        // --------------------------------------------------
+        // Regresión polinómica de grado 3
+        // --------------------------------------------------
+
+        function regresionPolinomica(x, y, grado = 3) {
+
+            const n = grado + 1;
+
+            // Matriz del sistema
+            const matriz = [];
+            const vector = [];
+
+            for (let i = 0; i < n; i++) {
+                matriz[i] = [];
+
+                for (let j = 0; j < n; j++) {
+                    matriz[i][j] = x.reduce(
+                        (sum, xi) => sum + Math.pow(xi, i + j),
+                        0
+                    );
+                }
+
+                vector[i] = x.reduce(
+                    (sum, xi, k) => sum + y[k] * Math.pow(xi, i),
+                    0
+                );
+            }
+
+            // Eliminación de Gauss
+            for (let i = 0; i < n; i++) {
+
+                let maxRow = i;
+
+                for (let k = i + 1; k < n; k++) {
+                    if (Math.abs(matriz[k][i]) > Math.abs(matriz[maxRow][i])) {
+                        maxRow = k;
+                    }
+                }
+
+                [matriz[i], matriz[maxRow]] =
+                    [matriz[maxRow], matriz[i]];
+
+                [vector[i], vector[maxRow]] =
+                    [vector[maxRow], vector[i]];
+
+                for (let k = i + 1; k < n; k++) {
+
+                    const factor = matriz[k][i] / matriz[i][i];
+
+                    for (let j = i; j < n; j++) {
+                        matriz[k][j] -= factor * matriz[i][j];
+                    }
+
+                    vector[k] -= factor * vector[i];
+                }
+            }
+
+            // Sustitución hacia atrás
+            const coeficientes = new Array(n).fill(0);
+
+            for (let i = n - 1; i >= 0; i--) {
+
+                let suma = vector[i];
+
+                for (let j = i + 1; j < n; j++) {
+                    suma -= matriz[i][j] * coeficientes[j];
+                }
+
+                coeficientes[i] = suma / matriz[i][i];
+            }
+
+            return coeficientes;
+        }
+
+        function evaluarPolinomio(x, coef) {
+            return coef.reduce(
+                (suma, c, i) => suma + c * Math.pow(x, i),
+                0
+            );
+        }
+
+        function obtenerGradoTendencia() {
+            const valor = Number(gradoTendenciaInput.value);
+            if (!Number.isFinite(valor)) return 1;
+            return Math.max(1, Math.min(10, Math.round(valor)));
+        }
+
+        function actualizarGrafica() {
+            const grado = obtenerGradoTendencia();
+            const coef = regresionPolinomica(x, participantes, grado);
+            const tendencia = x.map(valor => evaluarPolinomio(valor, coef));
+
+            chart.data.datasets[0].data = participantes;
+            chart.data.datasets[1].data = tendencia;
+            chart.update();
+        }
+
+        const chart = new Chart(document.getElementById("grafico"), {
+
+            data: {
+
+                labels: intervalos,
+
+                datasets: [
+
+                    {
+                        type: "bar",
+                        label: "Participantes",
+                        data: participantes,
+                        backgroundColor: "blue",
+                        borderColor: "blue",
+                        borderWidth: 1
+                    },
+
+                    {
+                        type: "line",
+                        label: "Tendencia polinómica",
+                        data: [],
+                        borderColor: "red",
+                        backgroundColor: "red",
+                        borderWidth: 3,
+                        pointRadius: 0,
+                        tension: 0.3,
+                        fill: false
+                    }
+
+                ]
+            },
+
+            options: {
+                responsive: false,
+                maintainAspectRatio: false,
+                plugins: {
+                    totalParticipantes: {}
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: "Calificación"
+                        }
+                    },
+                    y: {
+                        min: 0,
+                        title: {
+                            display: true,
+                            text: "Participantes"
+                        }
+                    }
+                }
+            },
+
+            plugins: [totalParticipantesPlugin]
+        });
+
+        gradoTendenciaInput.addEventListener("input", actualizarGrafica);
+
+        generarFormularioParticipantes();
+        actualizarGrafica();
     </script>
+
 </body>
 
 </html>

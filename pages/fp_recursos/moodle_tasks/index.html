@@ -18,8 +18,9 @@
             <td>
                 <select id="modulo">
                     <option value="example">Ejemplo</option>
-                    <option value="rlo_26" >Redes Locales 26</option>
+                    <option value="rlo_26">Redes Locales 26</option>
                     <option value="inp_26" selected>Introducción a la Nube Pública 26</option>
+                    <option value="fci_26">CE RSN Fund. y Config. Inicial 26</option>
                 </select>
             </td>
             <td><button id="copiarBtn">COPIAR</button></td>
@@ -99,7 +100,7 @@
 
         function obtenerColorEstado(estado, esExamen) {
             if (esExamen) return "inherit";
-            if (estado === "Fuera de plazo") return "firebrick";
+            if (estado === "Fuera de plazo") return "#CA762B";
             if (estado === "En plazo") return "green";
             return "inherit";
         }
@@ -282,6 +283,8 @@
                 titulo: t.titulo,
                 categoria: t.categoria,
                 f_entrega: t.f_entrega,
+                f_limite: t.f_limite,
+                corregido: t.corregido,
             }));
 
             document.getElementById("codigo").value =
@@ -319,33 +322,6 @@
             "24/06/2027",
         ];
 
-        function formatearFecha(date) {
-            return `${String(date.getDate()).padStart(2, "0")}/${String(date.getMonth() + 1).padStart(2, "0")}/${date.getFullYear()}`;
-        }
-
-        function parsearFechaEsp(dateStr) {
-            if (typeof dateStr !== "string") return null;
-            const limpia = dateStr.trim();
-            if (!limpia) return null;
-
-            const partes = limpia.split("/");
-            if (partes.length !== 3) return null;
-
-            const [dia, mes, año] = partes.map((p) => Number(p));
-            if ([dia, mes, año].some((n) => Number.isNaN(n))) return null;
-
-            const fecha = new Date(año, mes - 1, dia);
-            if (
-                fecha.getFullYear() !== año ||
-                fecha.getMonth() !== mes - 1 ||
-                fecha.getDate() !== dia
-            ) {
-                return null;
-            }
-
-            return fecha;
-        }
-
         function expandirFestivos(lista) {
             const resultado = [];
 
@@ -381,7 +357,34 @@
         }
 
         window.festivos = expandirFestivos(window.festivos);
-        window.festivosSet = new Set(window.festivos);
+        window.festivosSet = window.festivosSet || new Set(window.festivos);
+
+        function formatearFecha(date) {
+            return `${String(date.getDate()).padStart(2, "0")}/${String(date.getMonth() + 1).padStart(2, "0")}/${date.getFullYear()}`;
+        }
+
+        function parsearFechaEsp(dateStr) {
+            if (typeof dateStr !== "string") return null;
+            const limpia = dateStr.trim();
+            if (!limpia) return null;
+
+            const partes = limpia.split("/");
+            if (partes.length !== 3) return null;
+
+            const [dia, mes, año] = partes.map((p) => Number(p));
+            if ([dia, mes, año].some((n) => Number.isNaN(n))) return null;
+
+            const fecha = new Date(año, mes - 1, dia);
+            if (
+                fecha.getFullYear() !== año ||
+                fecha.getMonth() !== mes - 1 ||
+                fecha.getDate() !== dia
+            ) {
+                return null;
+            }
+
+            return fecha;
+        }
 
         function generarCalendario(events, month, year) {
             const hoyStr = (() => {
@@ -411,17 +414,24 @@
                         html += `<td style="border:1px solid #ccc; height:80px;"></td>`;
                     } else {
                         const f = `${String(dia).padStart(2, "0")}/${String(month + 1).padStart(2, "0")}/${year}`;
-                        const eventos = events.filter((e) => e.f_entrega === f);
+                        const eventosEntrega = events.filter((e) => e.f_entrega === f);
+                        const eventosLimite = events.filter((e) => {
+                            if (e.f_limite !== e.f_entrega && e.f_limite === f) {
+                                if (e.corregido === "Corregido") return false;
+                                return true;
+                            }
+                            return false;
+                        });
 
                         let inner = `<div>${dia}</div>`;
-                        if (eventos.length) {
+
+                        if (eventosEntrega.length) {
                             inner += `<ul style="list-style:none; padding:0; margin:2px;">`;
-                            eventos.forEach((ev) => {
-                                let col = "dodgerblue"
-                                if (categoria_co.includes(ev.categoria)) { col = "green" }
-                                else if (categoria_ex.includes(ev.categoria)) { col = "firebrick" }
-                                else if (categoria_ev.includes(ev.categoria)) { col = "MediumVioletRed" }
-                                // const col =  ? "green" : categoria_ex.includes(ev.categoria) ? "firebrick" : "dodgerblue";
+                            eventosEntrega.forEach((ev) => {
+                                let col = "dodgerblue";
+                                if (categoria_co.includes(ev.categoria)) { col = "green"; }
+                                else if (categoria_ex.includes(ev.categoria)) { col = "firebrick"; }
+                                else if (categoria_ev.includes(ev.categoria)) { col = "MediumVioletRed"; }
 
                                 inner += `<li style="background:${col}; color:white; padding:2px; border-radius:3px; margin: 2px 2px 4px 2px; box-shadow:1px 1px 3px black; font-size:10px">
                                     ${ev.numero ? ev.unidad + "." + ev.numero : ""} ${ev.titulo}
@@ -430,8 +440,18 @@
                             inner += `</ul>`;
                         }
 
-                        const borde = f === hoyStr ? "3px solid orange" : "1px solid #ccc";
-                        const esFestivo = window.festivosSet.has(f);
+                        if (eventosLimite.length) {
+                            inner += `<ul style="list-style:none; padding:0; margin:2px;">`;
+                            eventosLimite.forEach((ev) => {
+                                inner += `<li style="background:#CA762B; color:white; padding:2px; border-radius:3px; margin: 2px 2px 4px 2px; box-shadow:1px 1px 3px black; font-size:10px">
+                                    ${ev.numero ? "Límite &nbsp;" + ev.unidad + "." + ev.numero : "Límite " +  ev.titulo}
+                                </li>`;
+                            });
+                            inner += `</ul>`;
+                        }
+
+                        const borde = f === hoyStr ? "3px solid #CA762B" : "1px solid #ccc";
+                        const esFestivo = (window.festivosSet || new Set(window.festivos || [])).has(f);
                         const esFinDeSemana = c === 5 || c === 6;
 
                         let fondoCelda;
@@ -439,7 +459,7 @@
                         if (esFestivo) {
                             fondoCelda = "grey";
                         } else if (esFinDeSemana) {
-                            fondoCelda = "linear-gradient(to bottom, #fff, LightGrey)"; // gris suave para sábado y domingo
+                            fondoCelda = "linear-gradient(to bottom, #fff, LightGrey)";
                         } else {
                             fondoCelda = "linear-gradient(to bottom, #fff, Moccasin)";
                         }
@@ -490,10 +510,7 @@
                     }
                     render();
                 };
-
             };
-
-
 
             render();
         }
